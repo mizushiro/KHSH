@@ -34,37 +34,6 @@
     background: url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
 }
 
-[data-nav="open"] {
-    .base-header {
-        background-color: #fff;
-        height: 62rem;
-        transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
-    }
-    .logo {background-image: url(../../images/common/logo-dark.svg)}
-    .nav-dep1-link {color:#000;}
-    .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
-    .nav-dep2-item > a {pointer-events: initial;}
-    .nav-dep1-link {
-        &::after        {
-            content:"";
-            display: block;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom:0;
-            width:0%;
-            height: .4rem;
-            background-color: transparent;
-        }
-
-        &[data-state="on"]::after        {
-            width: 100%;
-            background-color: var(--orange);
-            transition: all .4s cubic-bezier(.28,.42,.41,1.44);
-        }
-    }
-}
-
 .nav-wrap {
     position: relative;
     display: flex;
@@ -88,6 +57,7 @@
     color: #fff;
     padding:4rem 4rem;
     text-decoration: none;
+    transition: color .2s ease-out;
 
     &:focus,
     &:hover{color:var(--orange)}  
@@ -106,6 +76,8 @@
     flex-direction: column;
     gap:2.4rem;
     padding: 4rem 0 5rem;
+    opacity: 0;
+    transition: opacity .2s ease-out;
 }
 .nav-dep2-item > a{
     display: block;
@@ -118,4 +90,41 @@
 
     &:focus,
     &:hover{color:var(--orange)}
+}
+
+[data-nav="open"] {
+    .base-header {
+        background-color: #fff;
+        height: 62rem;
+        transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
+    }
+    .logo {background-image: url(../../images/common/logo-dark.svg)}
+    .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
+    .nav-dep2 {
+        opacity: 1;
+        transition: opacity .4s ease-in;
+    }
+    .nav-dep2-item > a {pointer-events: initial;}
+    .nav-dep1-link {
+        color:#000;
+        transition: color .2s ease-in;
+
+        &::after        {
+            content:"";
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom:0;
+            width:0%;
+            height: .4rem;
+            background-color: transparent;
+        }
+
+        &[data-state="on"]::after        {
+            width: 100%;
+            background-color: var(--orange);
+            transition: all .4s cubic-bezier(.28,.42,.41,1.44);
+        }
+    }
 }
