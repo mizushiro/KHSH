@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+:root {
+    --opacity_1: 1;
+    --opacity_0: 0;
+    --vh: 1vh;
+ 
+    /* iOS 11.2 이상 */
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+  
+    --basic: #FFD700;
+    --sub: #FF612D; 
+
+    --navy: #242A5C;
+    --orange: #F47F3F;
+    --skyblue: #C1DAF2;
+    --beige: #F0D5BA;
+    --lightpink: #FACECA;
+
+    --gray_100: #000;
+    --gray_95:  #222;
+    --gray_90:  #444;
+    --gray_80:  #666;
+    --gray_70:  #777;
+    --gray_60:  #999;
+    --gray_50:  #ccc;
+    --gray_40:  #d7d7d7;
+    --gray_30:  #e5e5e5;
+    --gray_20:  #eee;
+    --gray_10:  #f7f7f7;
+    --gray_0:   #fff;
+}
+:root.dark {
+    --gray_0:   #000;
+    --gray_10:  #222;
+    --gray_20:  #444;
+    --gray_30:  #666;
+    --gray_40:  #777;
+    --gray_50:  #999;
+    --gray_60:  #ccc;
+    --gray_70:  #d7d7d7;
+    --gray_80:  #e5e5e5;
+    --gray_90:  #eee;
+    --gray_95:  #f7f7f7;
+    --gray_100: #fff;
+}

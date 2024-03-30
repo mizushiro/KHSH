@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap">
+        <header class="base-header" data-id="header"></header>
+        <main>
+            <!-- visual -->
+            <div class="main-section" data-sec="visual" data-scroll-callback="main1">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <video autoplay="" loop="" muted="" playsinline="">
+                                <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="swiper-slide">
+                            <video autoplay="" loop="" muted="" playsinline="">
+                                <source src="../assets/images/main/main_sec_visual_video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="swiper-slide">
+                            <video autoplay="" loop="" muted="" playsinline="">
+                                <source src="../assets/images/main/main_sec_visual_video3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        ...
+                    </div>
+                    <div class="swiper-control-group">
+                        <button type="button" class="swiper-contral" aria-label="재생/정지" data-state="play"></button>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <!-- story -->
+            <div class="main-section" data-sec="story" data-scroll-callback="main2">
+                <video autoplay="" loop="" muted="" playsinline="">
+                    <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                </video>
+                <div class="stroy-card">
+                    <div class="stroy-card-txt">
+                        아름다운 일상의 공간<br>
+                        당신의 삶을 비추는<br>
+                        아름다움. 아테라
+                    </div>
+                    <div class="stroy-card-link">
+                        <a href="">
+                            <img src="../assets/images/common/simbol.svg" alt="">
+                            <span>Brand Story</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section" data-sec="info" data-scroll-callback="main3">
+                sec3
+            </div>
+
+            <div class="main-section" data-sec="news" data-scroll-callback="main4">
+                sec4
+            </div>
+
+            <div class="main-section" data-sec="etc" data-scroll-callback="main5">
+                sec5
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const mainMotion1 = (v, n) => {
+                // console.log(v,n)
+            }
+            const mainMotion2 = (v, n) => {
+                console.log(v)
+            }
+            const mainMotion3 = (v, n) => {
+                //console.log(v)
+            }
+            const mainMotion4 = (v, n) => {
+                // console.log(v,n)
+            }
+            const mainMotion5 = (v, n) => {
+                // console.log(v,n)
+            }
+            UI.callback.main1 = (v) => { mainMotion1(v, [40]); }
+            UI.callback.main2 = (v) => { mainMotion2(v, [40]); }
+            UI.callback.main3 = (v) => { mainMotion3(v, [40]); }
+            UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
+            UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
+
+            UI.exe.scrollpage = new ScrollPage();
+
+
+
+            UI.exe.visualSwiper = new Swiper('[data-sec="visual"] .swiper', {
+                spaceBetween: 30,
+                effect: "fade",
+                loop: true,
+                speed: 1000,
+                autoplay: {
+                    delay: 8000,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    // autoplayTimeLeft(s, time, progress) {
+                    //     const _on = document.querySelector('[data-sec="visual"] .swiper-pagination-bullet-active');
+                    //     const per = (1 - progress) * 110;
+
+                    //     _on.style.background = `linear-gradient(to right, #fff 0%, #fff ${per}%, rgba(255,255,255,0) ${per}%)`;
+                    // },
+                    // slideChange : () => {
+                    //     const _on = document.querySelector('[data-sec="visual"] .swiper-pagination-bullet[style]');
+
+                    //     _on && _on.removeAttribute('style');
+                    // }
+                }
+              
+            });
+            const swiperContral = document.querySelector('[data-sec="visual"] .swiper-contral');
+            const actPlayStop = (e) => {
+                const _this = e.currentTarget;
+                if (_this.dataset.state === 'play') {
+                    _this.dataset.state = 'pause';
+                    _this.setAttribute('aria-label', 'play');
+                    UI.exe.visualSwiper.autoplay.pause();
+                } else {
+                    UI.exe.visualSwiper.autoplay.start();
+                    _this.dataset.state = 'play';
+                    _this.setAttribute('aria-label', 'pause');
+                }
+            }
+            swiperContral.addEventListener('click', actPlayStop);
+        }); 
+    </script>
+</body>
+</html>

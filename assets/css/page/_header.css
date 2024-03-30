@@ -1,0 +1,121 @@
+
+.base-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+    padding: 0 2.4rem;
+    overflow: hidden;
+    height: 12rem;
+    /* mix-blend-mode: difference;
+    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem); */
+
+    transition: background-color .3s cubic-bezier(.71,.03,.98,.18), height .3s cubic-bezier(.44,.12,.98,.18);
+}
+.base-header-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display: block;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 5rem;
+    width: 21.2rem;
+    height: 2.8rem;
+    background: url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
+}
+
+[data-nav="open"] {
+    .base-header {
+        background-color: #fff;
+        height: 62rem;
+        transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
+    }
+    .logo {background-image: url(../../images/common/logo-dark.svg)}
+    .nav-dep1-link {color:#000;}
+    .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
+    .nav-dep2-item > a {pointer-events: initial;}
+    .nav-dep1-link {
+        &::after        {
+            content:"";
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom:0;
+            width:0%;
+            height: .4rem;
+            background-color: transparent;
+        }
+
+        &[data-state="on"]::after        {
+            width: 100%;
+            background-color: var(--orange);
+            transition: all .4s cubic-bezier(.28,.42,.41,1.44);
+        }
+    }
+}
+
+.nav-wrap {
+    position: relative;
+    display: flex;
+    margin-top: .9rem;
+}
+.nav-dep1 {
+    position: relative;
+    display: flex;
+}
+.nav-dep1-item {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 0 4rem;
+}
+.nav-dep1-link {
+    position: relative;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    padding:4rem 4rem;
+    text-decoration: none;
+
+    &:focus,
+    &:hover{color:var(--orange)}  
+}
+
+.btn-search{
+    position: relative;
+    margin-top: 3rem;
+    width: 5rem;
+    height: 5rem;
+    background: url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+}
+
+.nav-dep2 {
+    display: flex;
+    flex-direction: column;
+    gap:2.4rem;
+    padding: 4rem 0 5rem;
+}
+.nav-dep2-item > a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 2rem;
+    pointer-events: none;
+
+    &:focus,
+    &:hover{color:var(--orange)}
+}

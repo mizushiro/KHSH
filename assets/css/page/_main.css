@@ -1,0 +1,141 @@
+.main-section{
+    position: relative;
+    width:100%;
+    
+    &[data-sec="visual"] {
+        height: 100dvh;
+        background-color: #C1DAF2;
+
+        .swiper-slide{height:100dvh;}
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-pagination {
+            position: static;
+            bottom: 12.5rem;
+            padding:0;
+            width: auto;
+            left: auto;
+            right: 10rem;
+            border-radius: .2rem;
+            margin-right: 1.2rem;
+            opacity: 1;
+            transform: translateY(-.2rem);
+
+            &::before{
+                content:"";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: .4rem;
+                background: rgba(255,255,255,0.3);
+                top:1.3rem;
+                z-index: -1; 
+                left:0;
+                border-radius: .2rem;
+            }
+        }
+        .swiper-pagination-bullet{
+            width: 6.6rem;
+            border-radius: .2rem;
+            height: .4rem;
+            margin: 0 !important;
+            background-color: transparent;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #fff !important;
+        }
+        .swiper-control-group{
+            position: absolute;
+            right: 10rem;
+            bottom: 12.5rem;
+            display: flex;
+            border:.1rem solid red;
+            align-items: center;
+        }
+        .swiper-contral{
+            position: relative;
+            z-index: 1;
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1.2rem;
+            background: url(../../images/common/swiper-play.svg) no-repeat 50% 50% / 1.2rem;
+
+            &[data-state="pause"] {
+                 background: url(../../images/common/swiper-pause.svg) no-repeat 50% 50% / 1.2rem;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next{
+            position: static;
+            width: 4rem;
+            height: 4rem;
+            background: url(../../images/common/swiper-arrow.svg) no-repeat 50% 50% / 1.2rem;
+            margin: 0;
+        }
+        .swiper-button-next {transform: rotate(180deg);}
+    }
+    &[data-sec="story"] {
+        height: 100dvh;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .stroy-card {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            height: 72rem;
+            background-color: rgba(255,255,255,0.9);
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: 20%;
+
+            img {width: 20rem;}
+            a {
+                color: var(--navy);
+                font-size: 3rem;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+        .stroy-card-txt {
+            color: var(--navy);
+            font-size: 5rem;
+            font-weight: 500;
+        }
+    }
+    &[data-sec="info"] {
+        height: 100dvh;
+        max-height: 108rem;
+        background-color: #fff;
+    }
+    &[data-sec="news"] {
+        height: 100dvh;
+        max-height: 108rem;
+        background-color: #F8F8F8;
+    }
+    &[data-sec="etc"] {
+        height: 100dvh;
+        max-height: 108rem;
+        background-color: var(--navy);
+    }
+}

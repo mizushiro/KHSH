@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+html {font-size: 10px;}
+html,body {padding: 0;}
+
+/* See https://hankchizljaw.com/wrote/a-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    hyphens : auto
+}
+
+/* Remove default padding */
+ul,
+ol {padding: 0;}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* html5 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+hgroup,
+nav,
+section,
+summary {
+	display: block;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+    background-color: #fff;
+    font-family: 'Base', sans-serif;
+    color: #000;
+    font-size: 1.6rem;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol,
+li{padding: 0; margin: 0; list-style: none;}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {text-decoration-skip-ink: auto;}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs */
+input,
+textarea,
+select {font: inherit;}
+
+select,
+textarea,
+input {
+	appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {display: none;}
+
+/* Inherit fonts for buttons */
+button {
+	padding: 0;
+	border: 0;
+    font: inherit;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* label */
+label {cursor: pointer;}
+
+/* table */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption {
+    position: relative !important;
+    width: 1px !important;
+    height: 1px !important;
+    color: transparent !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    margin: -1px 0 0;
+}
+
+th,
+td {border-collapse: collapse;}
+
+.a11y-hidden,
+legend,
+.hidden,
+.hide {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    color: transparent !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ellp {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+}
+
+*.disabled,
+*:disabled {
+    pointer-events: none !important;
+    cursor: default !important;
+    opacity: 0.2 !important;
+    box-shadow: none !important;
+}
+
+*:focus {outline: 0;}

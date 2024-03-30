@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.mdl-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .1rem solid #222;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    text-decoration: none;
+
+    &-area {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1.6rem;
+    }
+    &:focus {
+        text-decoration: underline;
+        text-underline-offset: .3rem;
+    }
+}
