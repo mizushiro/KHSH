@@ -17,7 +17,16 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 } 
-
+[data-ellipsis="4"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+} 
+[data-ellipsis="5"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+} 
 [data-marker]{
     position: relative;
     z-index: 1;
@@ -43,10 +52,10 @@
 [data-align="left"] {text-align: left !important;} 
 [data-align="right"] {text-align: right !important;} 
 
-[data-bg="pattern1"] {background: url(../../images/common/pattern1.svg) repeat 50% 50% / 9rem;}
-[data-bg="pattern2"] {background: url(../../images/common/pattern2.svg) repeat 50% 50% / 9rem;}
-[data-bg="pattern3"] {background: url(../../images/common/pattern3.svg) repeat 50% 50% / 9rem;}
-[data-bg="pattern4"] {background: url(../../images/common/pattern4.svg) repeat 50% 50% / 9rem;}
+[data-bg="pattern1"] {background: url(../../images/common/pattern1.svg) repeat 50% 0% / 9rem;}
+[data-bg="pattern2"] {background: url(../../images/common/pattern2.svg) repeat 50% 0% / 9rem;}
+[data-bg="pattern3"] {background: url(../../images/common/pattern3.svg) repeat 50% 0% / 9rem;}
+[data-bg="pattern4"] {background: url(../../images/common/pattern4.svg) repeat 50% 0% / 9rem;}
 
 
 

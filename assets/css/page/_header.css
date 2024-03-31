@@ -105,6 +105,15 @@
     &:hover{color:var(--orange)}
 }
 
+.base-header[data-color="dark"] {
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem);
+    .logo {background-image: url(../../images/common/logo-dark.svg)}
+    .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
+    .nav-dep1-link {color:#000;}
+}
+
 [data-nav="open"] {
     .base-header {
         background-color: #fff;
@@ -179,7 +188,6 @@
         justify-content: space-between;
         padding: 0 1.5rem;
     }
-    
     .btn-nav {
         display: block;
 
