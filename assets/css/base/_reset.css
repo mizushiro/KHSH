@@ -181,6 +181,11 @@ a{text-decoration: none;}
 .swiper-button-prev::after,
 .swiper-button-next::after{display: none;}
 
+body{overflow-x: hidden;}
+.base-wrap {
+    position: relative;
+    width: 100%;
+}
 .base-main {
     position: relative;
     z-index:0;

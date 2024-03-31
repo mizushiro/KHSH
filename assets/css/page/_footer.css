@@ -1,0 +1,42 @@
+.base-footer{
+    width: 100%;
+    background-color: var(--navy);
+    padding: 12rem 2.4rem;
+}
+.base-footer-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.base-footer-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    gap:2rem;
+
+    address {
+        display: block;
+        text-align: right;
+        font-size: 1.6rem;
+        color:rgba(255,255,255,0.5);
+    }
+
+    .copyright {
+        font-size: 1.6rem;
+        color:rgba(255,255,255,0.2);
+        margin-top: 2rem ;
+    }
+}
+
+
+
+
+
+
+

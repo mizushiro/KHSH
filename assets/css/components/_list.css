@@ -1,10 +1,12 @@
 
 .card-item {
     position: relative;
-    width: 40rem;
+    width: 100%;
+    max-width: 40rem;
     height: 50rem;
     display: flex;
     align-items: flex-end;
+    overflow: hidden;
 
     &[data-type="news"] {
         height: 59.6rem;

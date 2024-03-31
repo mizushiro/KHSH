@@ -75,7 +75,13 @@
             UI.exe.toggle = new ToggleUI();
         }
     });
-
+    UI.parts.include({
+        src: 'common/footer.html',
+        id: 'footer',
+        callback:() => {
+         
+        }
+    });
 
    
 });
