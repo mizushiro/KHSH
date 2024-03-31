@@ -1,0 +1,52 @@
+/* 말줄임 */
+[data-ellipsis] {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+[data-ellipsis="1"] {
+    white-space: nowrap;
+    word-break: break-all;
+} 
+[data-ellipsis="2"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+} 
+[data-ellipsis="3"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+} 
+
+[data-marker]{
+    position: relative;
+    z-index: 1;
+    font: inherit;
+    color: var(--gray_100);
+    line-height: inherit;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.3rem;
+        border-radius: 1rem;
+        z-index: -1;
+        background-color: #ccc;
+    }
+}
+[data-marker="yellow"]::after{background-color: #FFD700;}
+  
+[data-align="center"] {text-align: center !important;} 
+[data-align="left"] {text-align: left !important;} 
+[data-align="right"] {text-align: right !important;} 
+
+[data-bg="pattern1"] {background: url(../../images/common/pattern1.svg) repeat 50% 50% / 9rem;}
+[data-bg="pattern2"] {background: url(../../images/common/pattern2.svg) repeat 50% 50% / 9rem;}
+[data-bg="pattern3"] {background: url(../../images/common/pattern3.svg) repeat 50% 50% / 9rem;}
+[data-bg="pattern4"] {background: url(../../images/common/pattern4.svg) repeat 50% 50% / 9rem;}
+
+
+

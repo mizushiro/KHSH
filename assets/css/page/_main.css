@@ -4,9 +4,13 @@
     
     &[data-sec="visual"] {
         height: 100dvh;
-        background-color: #C1DAF2;
+        display: flex;
 
-        .swiper-slide{height:100dvh;}
+        .swiper-slide{
+            display: flex;
+            height:100dvh;
+            align-items: center;
+        }
         video {
             position: fixed;
             top: 0;
@@ -15,17 +19,43 @@
             height: 100%;
             object-fit: cover;
         }
+        .visual-txt {
+            position: relative;
+            z-index: 1;
+            font-size: 6rem;
+            font-weight: 500;
+            line-height: 8.8rem;
+            color:#fff;
+            padding-left: 14.5rem;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 160rem;
+        }
+        .swiper-slide-active .effect-wrap .effect-item {animation-play-state:running;}
+        .swiper-slide-next .effect-wrap .effect-item,
+        .swiper-slide-prev .effect-wrap .effect-item{
+            animation-name:resetSwiper;
+            animation-duration:.3s;
+            animation-iteration-count:1;
+            animation-fill-mode:forwards;
+            animation-timing-function:ease-in;
+        }
+        @keyframes resetSwiper {
+            0%{opacity: 1;}
+            99%{opacity: 0;}
+            100%{opacity: 0; display: none;}
+        }
+
         .swiper-pagination {
             position: static;
-            bottom: 12.5rem;
             padding:0;
-            width: auto;
-            left: auto;
-            right: 10rem;
             border-radius: .2rem;
             margin-right: 1.2rem;
             opacity: 1;
             transform: translateY(-.2rem);
+            display: flex;
+            align-items: center;
+            width: auto;
 
             &::before{
                 content:"";
@@ -34,7 +64,6 @@
                 width: 100%;
                 height: .4rem;
                 background: rgba(255,255,255,0.3);
-                top:1.3rem;
                 z-index: -1; 
                 left:0;
                 border-radius: .2rem;
@@ -58,8 +87,8 @@
             right: 10rem;
             bottom: 12.5rem;
             display: flex;
-            border:.1rem solid red;
             align-items: center;
+            z-index: 1;
         }
         .swiper-contral{
             position: relative;
@@ -67,6 +96,7 @@
             width: 4rem;
             height: 4rem;
             margin-right: 1.2rem;
+            transform: translateY(-.2rem);
             background: url(../../images/common/swiper-play.svg) no-repeat 50% 50% / 1.2rem;
 
             &[data-state="pause"] {
@@ -78,10 +108,11 @@
             position: static;
             width: 4rem;
             height: 4rem;
+            transform: translateY(-.2rem);
             background: url(../../images/common/swiper-arrow.svg) no-repeat 50% 50% / 1.2rem;
             margin: 0;
         }
-        .swiper-button-next {transform: rotate(180deg);}
+        .swiper-button-next {transform: rotate(180deg) translateY(0.3rem);}
     }
     &[data-sec="story"] {
         height: 100dvh;
@@ -108,19 +139,50 @@
             justify-content:center;
             align-items: center;
             gap: 20%;
-
-            img {width: 20rem;}
-            a {
-                color: var(--navy);
-                font-size: 3rem;
-                font-weight: 700;
-                text-decoration: none;
-            }
         }
         .stroy-card-txt {
             color: var(--navy);
             font-size: 5rem;
             font-weight: 500;
+        }
+        .stroy-card-link {
+            color: var(--navy);
+            font-size: 3rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            gap:1.8rem;
+            height: 34rem;
+            
+            span {
+                display: flex;
+                align-items: center;
+                gap:1.3rem;
+            }
+            span::after {
+                content:"";
+                display: block;
+                width: 3.4rem;
+                height: 1.5rem;
+                background: url(../../images/common/link-arrow.svg) no-repeat 50% 50% / 3.4rem;
+            }
+
+            img {
+                width: 20rem; 
+                opacity: .5;
+                transform: translateY(0);
+                transition: all .2s ease-out;
+            }
+        }
+        &[data-state="on"] {
+            .stroy-card-link img{
+                opacity: 1;
+                transform: translateY(-10rem);
+                transition: all .4s ease-in;
+            }
         }
     }
     &[data-sec="info"] {
@@ -137,5 +199,23 @@
         height: 100dvh;
         max-height: 108rem;
         background-color: var(--navy);
+    }
+}
+
+@media (max-width:1280px) {
+    .main-section {
+        &[data-sec="visual"] {
+            .swiper-control-group {
+                right: auto;
+                left:50%;
+                transform: translateX(-50%);
+            }
+            .visual-txt {
+                width: auto;
+                font-size: 4rem;
+                line-height: 4.4rem;
+                padding-left: 2.4rem;
+            }
+        }
     }
 }

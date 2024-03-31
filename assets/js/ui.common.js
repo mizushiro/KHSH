@@ -11,16 +11,11 @@
         const _btns = _header.querySelectorAll('button, a');
 
         const keyStart = (e) => {
-            if (e.shiftKey && e.keyCode == 9) {
-                actClose();
-            }
+           (e.shiftKey && e.keyCode == 9) && actClose();
         }
         const keyEnd = (e) => {
-            if (!e.shiftKey && e.keyCode == 9) {
-                actClose();
-            }
+            (!e.shiftKey && e.keyCode == 9) && actClose();
         }
-
         const onLIne = (v) => {
             const _base = !!v.currentTarget ? v.currentTarget : v;
             const wrapDep1 = _base.closest('.nav-dep1-item');
@@ -60,12 +55,24 @@
             item.addEventListener('mouseover', onLIne);
         }
     }
+    UI.callback.nav = (v) => {
+        console.log(v.state);
+        const wrap = document.querySelector('html');
 
+        if (v.state === 'true') {
+            wrap.dataset.nav = 'open';
+        } else {
+            wrap.dataset.nav = 'close';
+        }
+    }
+
+    //header
     UI.parts.include({
         src: 'common/header.html',
         id: 'header',
         callback:() => {
             UI.exe.nav();
+            UI.exe.toggle = new ToggleUI();
         }
     });
 

@@ -166,16 +166,7 @@ legend,
     margin: 0 !important;
     padding: 0 !important;
 }
-
-.ellp {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-break: normal;
-}
-
+ 
 *.disabled,
 *:disabled {
     pointer-events: none !important;

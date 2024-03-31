@@ -6,7 +6,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="mobile-web-app-capable" content="yes">
-    <title>Document</title>
+    <title>ARTERA 금호건설</title>
 
     <link rel="stylesheet" href="../assets/css/app.css">
     <script src="../assets/js/ui.global.js"></script>
@@ -27,16 +27,40 @@
                             <video autoplay="" loop="" muted="" playsinline="">
                                 <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
                             </video>
+                            <div class="visual-txt">
+                                <div class="effect-wrap" data-eff="hidden-up">
+                                    <div class="effect-item">당신의 삶을 비추는</div>
+                                </div>
+                                <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
+                                    <div class="effect-item">아름다움</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
                             <video autoplay="" loop="" muted="" playsinline="">
                                 <source src="../assets/images/main/main_sec_visual_video2.mp4" type="video/mp4">
                             </video>
+                            <div class="visual-txt">
+                                <div class="effect-wrap" data-eff="hidden-up">
+                                    <div class="effect-item">당신의 삶을 비추는</div>
+                                </div>
+                                <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
+                                    <div class="effect-item">아름다움</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
                             <video autoplay="" loop="" muted="" playsinline="">
                                 <source src="../assets/images/main/main_sec_visual_video3.mp4" type="video/mp4">
                             </video>
+                            <div class="visual-txt">
+                                <div class="effect-wrap" data-eff="hidden-up">
+                                    <div class="effect-item">당신의 삶을 비추는</div>
+                                </div>
+                                <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
+                                    <div class="effect-item">아름다움</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-control-group">
@@ -61,12 +85,10 @@
                         당신의 삶을 비추는<br>
                         아름다움. 아테라
                     </div>
-                    <div class="stroy-card-link">
-                        <a href="">
-                            <img src="../assets/images/common/simbol.svg" alt="">
-                            <span>Brand Story</span>
-                        </a>
-                    </div>
+                    <a href="" class="stroy-card-link">
+                        <img src="../assets/images/common/simbol.svg" alt="">
+                        <span>Brand Story</span>
+                    </a>
                 </div>
             </div>
 
@@ -92,7 +114,7 @@
                 // console.log(v,n)
             }
             const mainMotion2 = (v, n) => {
-                console.log(v)
+                v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
             }
             const mainMotion3 = (v, n) => {
                 //console.log(v)
@@ -104,7 +126,7 @@
                 // console.log(v,n)
             }
             UI.callback.main1 = (v) => { mainMotion1(v, [40]); }
-            UI.callback.main2 = (v) => { mainMotion2(v, [40]); }
+            UI.callback.main2 = (v) => { mainMotion2(v, [60]); }
             UI.callback.main3 = (v) => { mainMotion3(v, [40]); }
             UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
             UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
@@ -118,10 +140,10 @@
                 effect: "fade",
                 loop: true,
                 speed: 1000,
-                autoplay: {
-                    delay: 8000,
-                    disableOnInteraction: false
-                },
+                // autoplay: {
+                //     delay: 8000,
+                //     disableOnInteraction: false
+                // },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,

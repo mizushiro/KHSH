@@ -1,0 +1,24 @@
+.effect-wrap{
+    &[data-eff="hidden-up"] {
+        overflow: hidden;
+        position: relative;
+
+        &[data-delay="1"] .effect-item{animation-delay:.7s;}
+        .effect-item {
+            transform: translateY(10rem);
+
+            animation-name:hiddenup;
+            animation-delay:.4s;
+            animation-duration:.8s;
+            animation-iteration-count:1;
+            animation-fill-mode:forwards;
+            animation-timing-function:cubic-bezier(.07,.26,0,.93);
+            animation-play-state:paused;
+        }
+    }
+}
+@keyframes hiddenup {
+    0% {transform: translateY(10rem);}
+    100% {transform: translateY(0);}
+}
+
