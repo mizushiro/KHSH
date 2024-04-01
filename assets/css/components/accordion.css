@@ -14,7 +14,6 @@
         left:0;
         border-bottom: 0.1rem solid #444;
     }
-    
     &-head { 
         position: relative;
         display: flex;
@@ -31,7 +30,6 @@
         &:hover{
             background-color: #f2f2f2;
         }
-
         &-wrap {
             display: flex;
             gap: .8rem;
@@ -40,8 +38,6 @@
             padding: .8rem 1.2rem;
         }
     }
-    
-
     .mdl-form,
     &-link {
         position: relative;
@@ -89,7 +85,6 @@
 
         .mdl-acco-arrow {transform: rotate(-90deg);}
     }
-
     &-body {
         position: relative;
         visibility: visible;
@@ -106,7 +101,5 @@
             width: 100%;
             padding: 2.4rem;
         }
-    
     }
-    
 }

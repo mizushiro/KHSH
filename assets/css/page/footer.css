@@ -34,7 +34,24 @@
     }
 }
 
+@media (max-width:900px) {
+    .base-footer {padding:4.7rem 3rem 10rem;}
+    .base-footer-wrap{ 
+        flex-direction: column;
+        align-items: flex-start;
 
+        img{width: 11rem; margin-bottom: 3rem;}
+    }
+    .base-footer-group {
+        align-items: flex-start;
+
+        address{
+            text-align: left;
+            span{display: block;}
+        }
+        a{position: absolute; bottom:-4rem; left:0;}
+    }
+}
 
 
 

@@ -191,13 +191,11 @@
         height: 100%;
         max-height: 108rem;
         background-color: #fff;
-   
     }
     &[data-sec="news"] {
         height: 100%;
         max-height: 108rem;
         background-color: #F8F8F8;
-        
     }
     &[data-sec="etc"] {
         height: 100%;
@@ -205,6 +203,7 @@
         background-color: var(--navy);
         display: grid;
         grid-template-rows: 108rem;
+
         .main-etc {
             display: grid;
             grid-template-columns: 1fr 94rem;
@@ -254,12 +253,7 @@
         max-width: 176rem;
         padding-bottom: 6rem;
     }
-    .swiper-slide {
-        max-width: 40rem;
-        /* display: flex;
-        justify-content: center;
-        width: 40rem !important; */
-    }
+    .swiper-slide {max-width: 40rem;}
     .swiper-pagination {
         position: absolute !important;
         margin-top: 0 !important;
@@ -357,8 +351,9 @@
 .btn-more {
     position: relative;
     font-size: 2rem;
-    color:var(--navy);
+    color: var(--navy);
     text-decoration: none;
+
     &::after {
         content:"";
         display: block;
@@ -396,41 +391,32 @@
             }
             
         }
-
         .stroy-card {padding: 0 7rem;}
-    
     }
-    
-
 }
 @media (max-width:1060px){
-    .main-section {
-        &[data-sec="story"] {
-            .stroy-card {
-                padding: 7.5rem 2rem;
-                flex-direction: column;
-                height: auto;
-                gap:10rem;
-
-            }
-            .stroy-card-txt {
-                text-align: center;
-                font-size: 2.5rem;
-                line-height: 3rem;
-            }
-            .stroy-card-link {
-                height: auto;
-                gap:10rem;
-                font-size: 2rem;
-                img {
-                    width: 10rem; 
-                    transform: translateY(0) !important;
-                }
+    .main-section[data-sec="story"] {
+        .stroy-card {
+            padding: 7.5rem 2rem;
+            flex-direction: column;
+            height: auto;
+            gap:10rem;
+        }
+        .stroy-card-txt {
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        .stroy-card-link {
+            height: auto;
+            gap:10rem;
+            font-size: 2rem;
+            img {
+                width: 10rem; 
+                transform: translateY(0) !important;
             }
         }
-
     }
-
 }
 @media (max-width:900px) {
     .main-section {
@@ -462,23 +448,6 @@
                 dd {display: none;}
             }
         }
-        
-    }
-    .main-section[data-sec="visual"] {
-        .swiper-control-group {
-            right: auto;
-            left:50%;
-            transform: translateX(-50%);
-        }
-        .visual-txt {
-            width: auto;
-            font-size: 4rem;
-            line-height: 4.4rem;
-            padding-left: 2.4rem;
-        }
-    }
-
-    .main-section {
         .main-list {
             padding:10rem 4.2rem;
 
@@ -500,6 +469,19 @@
                 width: 100%;
                 justify-content: flex-end;
             }
+        }
+    }
+    .main-section[data-sec="visual"] {
+        .swiper-control-group {
+            right: auto;
+            left:50%;
+            transform: translateX(-50%);
+        }
+        .visual-txt {
+            width: auto;
+            font-size: 4rem;
+            line-height: 4.4rem;
+            padding-left: 2.4rem;
         }
     }
     [data-sec="info"] .main-list .swiper-slide,
@@ -538,24 +520,5 @@
         .card-item-desc {height: 12rem;}
         .card-item-view {padding-bottom: 3rem;}
         .card-item-date{ padding-top: 1.6rem;}
-    }
-    .base-footer {
-        padding:4.7rem 3rem 10rem;
-    }
-    .base-footer-wrap{ 
-        flex-direction: column;
-        align-items: flex-start;
-
-        img{width: 11rem; margin-bottom: 3rem;}
-    }
-    .base-footer-group {
-        align-items: flex-start;
-
-        address{
-            text-align: left;
-            span{display: block;}
-        }
-
-        a{position: absolute; bottom:-4rem; left:0;}
     }
 }

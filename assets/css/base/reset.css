@@ -5,9 +5,7 @@ html,body {padding: 0;}
 
 /* See https://hankchizljaw.com/wrote/a-modern-css-reset/ */
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+*,*::before,*::after {
     box-sizing: border-box;
     color: inherit;
     font: inherit;
@@ -15,42 +13,15 @@ html,body {padding: 0;}
 }
 
 /* Remove default padding */
-ul,
-ol {padding: 0;}
+ul,ol {padding: 0;}
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,figure,figcaption,blockquote,dl,dd {
     margin: 0;
 }
 
 /* html5 */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-hgroup,
-nav,
-section,
-summary {
+article,aside,details,figcaption,figure,footer,header,main,hgroup,nav,section,summary {
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -83,9 +54,7 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul,
-ol,
-li{padding: 0; margin: 0; list-style: none;}
+ul,ol,li{padding: 0; margin: 0; list-style: none;}
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {text-decoration-skip-ink: auto;}
@@ -97,13 +66,8 @@ img {
 }
 
 /* Inherit fonts for inputs */
-input,
-textarea,
-select {font: inherit;}
-
-select,
-textarea,
-input {
+select,textarea,input {
+    font: inherit;
 	appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -137,7 +101,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 caption {
     position: relative !important;
     width: 1px !important;
@@ -148,14 +111,9 @@ caption {
     clip-path: inset(50%);
     margin: -1px 0 0;
 }
+th,td {border-collapse: collapse;}
 
-th,
-td {border-collapse: collapse;}
-
-.a11y-hidden,
-legend,
-.hidden,
-.hide {
+.a11y-hidden,legend,.hidden,.hide {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -166,9 +124,7 @@ legend,
     margin: 0 !important;
     padding: 0 !important;
 }
- 
-*.disabled,
-*:disabled {
+*.disabled,*:disabled {
     pointer-events: none !important;
     cursor: default !important;
     opacity: 0.2 !important;
@@ -178,8 +134,7 @@ legend,
 a{text-decoration: none;}
 *:focus {outline: 0;}
 
-.swiper-button-prev::after,
-.swiper-button-next::after{display: none;}
+.swiper-button-prev::after,.swiper-button-next::after{display: none;}
 
 body{overflow-x: hidden;}
 .base-wrap {
