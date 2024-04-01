@@ -49,6 +49,12 @@
     height: 5rem;
     background: url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
 }
+.btn-etc-nav {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    background: url(../../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
+}
 
 .nav-group {
     position: relative;
@@ -107,14 +113,15 @@
 }
 
 .base-header[data-color="dark"] {
-    /* background-color: rgba(255,255,255,0.5);
+     background-color: rgba(255,255,255,0.5);
     backdrop-filter: blur(1.5rem);
-    -webkit-backdrop-filter: blur(1.5rem); */
-    /* mix-blend-mode:normal !important; */
-    /* .logo {background-image: url(../../images/common/logo-dark.svg)}
+    -webkit-backdrop-filter: blur(1.5rem);
+     mix-blend-mode:normal !important;
+     .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
     .nav-dep1-link {color:#000;}
-    .btn-nav {background-image: url(../../images/common/ico-nav-dark.svg);} */
+    .btn-etc-nav,
+    .btn-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
 }
 
 [data-nav="close"] .base-header {
@@ -240,6 +247,7 @@
     .nav-dep1-link {color:#000;padding: 0 0 .8rem;}
     .nav-dep2 {opacity: 1;gap:0.8rem;padding: 1.6rem 0 0 1.6rem;}
     .nav-dep2-item > a{text-align: left;font-size: 1.6rem;}
+    .btn-etc-nav {display:none}
 }
 
 @media (max-width:360px) {
