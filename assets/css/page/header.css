@@ -10,6 +10,7 @@
     overflow: hidden;
     align-items: center;
     height: 12rem;
+    mix-blend-mode: difference;
     /* mix-blend-mode: difference;
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem); */
@@ -104,11 +105,14 @@
     &:focus,
     &:hover{color:var(--orange)}
 }
-
+[data-nav="open"] .base-header {
+    mix-blend-mode:normal;
+}
 .base-header[data-color="dark"] {
     background-color: rgba(255,255,255,0.5);
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem);
+    mix-blend-mode:normal;
     .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
     .nav-dep1-link {color:#000;}

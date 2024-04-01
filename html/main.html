@@ -438,11 +438,12 @@
             }
             const mainMotion2 = (v, n) => {
                 v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
-            }
-            const mainMotion3 = (v, n) => {
+
                 const _header = document.querySelector('.base-header');
 
                 v.percent > 90 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
+            }
+            const mainMotion3 = (v, n) => {
             }
             const mainMotion4 = (v, n) => {
                
