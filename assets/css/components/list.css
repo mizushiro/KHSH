@@ -22,13 +22,15 @@
             transition: padding .2s ease;
         }
         .card-item-tit {
+            width: 100%;
             color:#000;
             font-size: 3.4rem;
             font-weight: 600;
             line-height: 1.2;
             height: auto;
-             word-break: break-all;
+            word-break: break-all;
             margin-bottom: 3.4rem;
+            min-height: 12.3rem;
         }
         .card-item-date{
             width: 100%;

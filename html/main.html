@@ -340,9 +340,9 @@
                                 <a href="#">
                                     <div class="card-item" data-type="news" data-bg="pattern3">
                                         <div class="card-item-view">
-                                            <h3 class="card-item-tit" data-ellipsis="3">금호건설, ‘문수로 금호 어울림 더 퍼스트’ 15(금) 견본주택 개관 금호건설, ‘문수로 금호 어울림 더 퍼스트’ 15(금) 견본주택 개관</h3>
+                                            <h3 class="card-item-tit" data-ellipsis="3">금호 </h3>
                                             <div class="card-item-desc" data-ellipsis="5">
-                                                금호건설은 울산광역시 남구 신정동 일원에 공급하는 ‘문수로 금호 어울림 더 퍼스트’금호건설은 울산광역시 남구 신정동 일원에 공급하는 ‘문수로 금호어울림 더 퍼스트’금호건설은 울산광역시 남구 신정동 일원에 공급하는 ‘문수로 금호어울림 더 퍼스
+                                                금호건설은 울산광역시 남구 신정동 일원에 공급하는 ‘문수로 금호 어울림 더 퍼스트’금호건설은 울산광
                                             </div>
                                             <div class="card-item-date">2023-09-14</div>
                                         </div>
@@ -437,13 +437,12 @@
                 // console.log(v,n)
             }
             const mainMotion2 = (v, n) => {
-                v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
-
-                const _header = document.querySelector('.base-header');
-
-                v.percent > 90 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
+                
             }
             const mainMotion3 = (v, n) => {
+                v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
+                const _header = document.querySelector('.base-header');
+                v.percent > 90 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
             }
             const mainMotion4 = (v, n) => {
                
@@ -508,7 +507,7 @@
                     prevEl: '[data-sec="info"] .swiper-button-prev',
                 },
                 breakpoints: {
-                    280: {
+                    0: {
                         slidesPerView: 'auto',
                         spaceBetween: 16,
                     },
@@ -546,7 +545,7 @@
                     prevEl: '[data-sec="news"] .swiper-button-prev',
                 },
                 breakpoints: {
-                    280: {
+                    0: {
                         slidesPerView: 'auto',
                         spaceBetween: 16,
                     },

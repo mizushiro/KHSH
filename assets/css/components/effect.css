@@ -1,5 +1,6 @@
 .effect-wrap{
     &[data-eff="hidden-up"] {
+        
         overflow: hidden;
         position: relative;
 

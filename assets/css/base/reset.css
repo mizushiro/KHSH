@@ -185,6 +185,7 @@ body{overflow-x: hidden;}
 .base-wrap {
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 .base-main {
     position: relative;
