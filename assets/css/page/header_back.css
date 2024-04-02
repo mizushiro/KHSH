@@ -6,11 +6,11 @@
     z-index: 2;
     width: 100%;
     justify-content: center;
-    padding: 0 2.4rem;
+    padding: 0 8rem;
     overflow: hidden;
     align-items: center;
     height: 12rem;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     /* mix-blend-mode: difference;
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem); */
@@ -114,13 +114,13 @@
 [data-nav="close"] .base-header[data-color="dark"],
 .base-header[data-color="dark"] {
     background-color: rgba(255,255,255,1);
-    backdrop-filter: blur(1.5rem);
-    -webkit-backdrop-filter: blur(1.5rem);
-    mix-blend-mode:normal !important;
+    /* backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem); */
+    /* mix-blend-mode:normal !important;
     animation-name: blendOff;
     animation-duration: 0s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 
      .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
@@ -129,25 +129,27 @@
     .btn-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
 }
 
-[data-nav="close"] .base-header {
+/* [data-nav="close"] .base-header {
     mix-blend-mode:normal;
     animation-name: blendOn;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
+} */
 [data-nav="open"] {
     .base-header {
         background-color: #fff;
-        height: 62rem;
+        height: 48rem;
         transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
+        /* mix-blend-mode:normal !important;
         animation-name: blendOff;
         animation-duration: 0s;
         animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        animation-fill-mode: forwards; */
     }
     .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
+    .btn-etc-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
     .nav-dep2 {opacity: 1;transition: opacity .4s ease-in;}
     .nav-dep2-item > a {pointer-events: initial;}
     .nav-dep1-link {
@@ -175,16 +177,16 @@
 @keyframes blendOff {
     0% {opacity: 1;}
     99% {opacity: 1;}
-    /* 100% {opacity: 1; mix-blend-mode:normal;} */
+    100% {opacity: 1; mix-blend-mode:normal;}
 }
 @keyframes blendOn {
     0% {opacity: 1;}
     99% {opacity: 1;}
-    /* 100% {opacity: 1; mix-blend-mode:difference;} */
+    100% {opacity: 1; mix-blend-mode:difference;}
 }
 
 
-@media (max-width:1280px) {
+@media (max-width:1440px) {
     .base-header {
         height: 8rem;
         padding: 0;
