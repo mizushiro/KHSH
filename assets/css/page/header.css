@@ -111,9 +111,9 @@
     &:focus,
     &:hover{color:var(--orange)}
 }
-
+[data-nav="close"] .base-header[data-color="dark"],
 .base-header[data-color="dark"] {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.6);
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem);
     mix-blend-mode:normal !important;
@@ -121,7 +121,7 @@
     animation-duration: 0s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    
+
      .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
     .nav-dep1-link {color:#000;}
