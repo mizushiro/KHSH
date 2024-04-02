@@ -139,7 +139,7 @@
 [data-nav="open"] {
     .base-header {
         background-color: #fff;
-        height: 62rem;
+        height: 48rem;
         transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
         /* animation-name: blendOff;
         animation-duration: 0s;
@@ -148,6 +148,7 @@
     }
     .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
+    .btn-etc-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
     .nav-dep2 {opacity: 1;transition: opacity .4s ease-in;}
     .nav-dep2-item > a {pointer-events: initial;}
     .nav-dep1-link {

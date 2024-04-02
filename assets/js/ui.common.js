@@ -73,6 +73,8 @@
         callback:() => {
             UI.exe.nav();
             UI.exe.toggle = new ToggleUI();
+            
+
         }
     });
     UI.parts.include({
@@ -82,6 +84,10 @@
          
         }
     });
-
+    UI.exe.allMenu = new Layer({
+        id :'modal_allMenu',
+        type: 'modal',
+        src: './common/modal_allMenu'
+    });
    
 });

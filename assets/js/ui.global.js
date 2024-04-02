@@ -197,11 +197,14 @@
          * 
          */
         include(opt) {
-            const selector = document.querySelector('[data-id="'+ opt.id +'"]');
+            let selector = document.querySelector('[data-id="'+ opt.id +'"]');
             const src = opt.src;
             const type = !opt.type ? 'HTML' : opt.type;
             const insert = !!opt.insert ? opt.insert : false;
             const callback = !!opt.callback ? opt.callback : false;
+console.log(selector,src);
+
+ !selector ? selector = document.querySelector('body') : '';
 
             if (!!selector && !!src) {
                 switch (type) {
@@ -1124,6 +1127,8 @@ class Layer {
         this.isFocus = false;
         this.timer;
 
+
+
         switch (this.opt.type) {
             case 'system':
                 this.madeSystem();
@@ -1144,7 +1149,8 @@ class Layer {
                 this.tooltip();
                 break;
 
-            default: // modal, bottom, dropdown
+            default: // modal, bottom, dropdow
+
                 if (this.opt.src) {
                     this.setFetch();
                 }
@@ -1280,12 +1286,16 @@ class Layer {
         this.init();
     }
     setFetch() {
+        console.log('setFetch', this.opt.src, UI);
         UI.parts.include({
             id: 'body',
             src: this.opt.src + '.html',
             type: 'HTML',
             insert: true,
             callback: () => {
+
+                console.log('setFetch', this.opt.src);
+
                 let _btn = document.createElement('button');
                 _btn.type = 'button';
                 _btn.setAttribute('aria-lable', '마지막 구간입니다. 클릭하시면 닫힙니다.');
