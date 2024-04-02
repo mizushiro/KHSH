@@ -10,7 +10,7 @@
     overflow: hidden;
     align-items: center;
     height: 12rem;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     /* mix-blend-mode: difference;
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem); */
@@ -113,10 +113,10 @@
 }
 [data-nav="close"] .base-header[data-color="dark"],
 .base-header[data-color="dark"] {
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255,255,255,1);
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem);
-    mix-blend-mode:normal !important;
+    /* mix-blend-mode:normal !important; */
     animation-name: blendOff;
     animation-duration: 0s;
     animation-iteration-count: 1;
@@ -175,12 +175,12 @@
 @keyframes blendOff {
     0% {opacity: 1;}
     99% {opacity: 1;}
-    100% {opacity: 1; mix-blend-mode:normal;}
+    /* 100% {opacity: 1; mix-blend-mode:normal;} */
 }
 @keyframes blendOn {
     0% {opacity: 1;}
     99% {opacity: 1;}
-    100% {opacity: 1; mix-blend-mode:difference;}
+    /* 100% {opacity: 1; mix-blend-mode:difference;} */
 }
 
 
