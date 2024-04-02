@@ -36,32 +36,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <video autoplay="" loop="" muted="" playsinline="">
-                                <source src="../assets/images/main/main_sec_visual_video2.mp4" type="video/mp4">
-                            </video>
-                            <div class="visual-txt">
-                                <div class="effect-wrap" data-eff="hidden-up">
-                                    <div class="effect-item">당신의 삶을 비추는</div>
-                                </div>
-                                <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
-                                    <div class="effect-item">아름다움</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <video autoplay="" loop="" muted="" playsinline="">
-                                <source src="../assets/images/main/main_sec_visual_video3.mp4" type="video/mp4">
-                            </video>
-                            <div class="visual-txt">
-                                <div class="effect-wrap" data-eff="hidden-up">
-                                    <div class="effect-item">당신의 삶을 비추는</div>
-                                </div>
-                                <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
-                                    <div class="effect-item">아름다움</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-control-group">
                         <button type="button" class="swiper-contral" aria-label="재생/정지" data-state="play"></button>
@@ -70,12 +44,13 @@
                         <button type="button" class="swiper-button-next" aria-label="다음"></button>
                     </div>
                 </div>
+                <div class="dim"></div>
             </div>
 
             <!-- story -->
             <div class="main-section" data-sec="story" data-scroll-callback="main2">
                 <video autoplay="" loop="" muted="" playsinline="">
-                    <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                    <source src="../assets/images/main/240322_mono_01.mp4" type="video/mp4">
                 </video>
                 <div class="stroy-card">
                     <div class="stroy-card-txt">
@@ -435,23 +410,33 @@
         document.addEventListener('DOMContentLoaded', () => {
             const _header = document.querySelector('.base-header');
             const mainMotion1 = (v, n) => {
-                // console.log(v,n)
+                console.log(1);
+
+                const dim = v.element.querySelector('.dim');
+                console.log(v.per_e * 0.01)
+                dim.style.opacity = v.per_e * 0.01
+                // console.log(v * 0.01)
+
             }
             const mainMotion2 = (v, n) => {
-                console.log('mainMotion2 callback', v.percent)
-                v.percent > 90 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
+                console.log(2);
+                v.per_s > 85 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
             }
             const mainMotion3 = (v, n) => {
+                console.log(3);
                 _header.dataset.color = "dark"
-                v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
+                // v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
             }
             const mainMotion4 = (v, n) => {
+                console.log(4);
                 _header.dataset.color = "dark"
             }
             const mainMotion5 = (v, n) => {
+                console.log(5);
                 _header.dataset.color = "dark"
             }
             const mainMotion6 = (v, n) => {
+                console.log(6);
                 _header.dataset.color = "dark"
             }
             UI.callback.main1 = (v) => { mainMotion1(v, [40]); }
@@ -467,7 +452,7 @@
             UI.exe.visualSwiper = new Swiper('[data-sec="visual"] .swiper', {
                 spaceBetween: 30,
                 effect: "fade",
-                loop: true,
+                // loop: true,
                 speed: 1000,
                 autoplay: {
                     delay: 8000,

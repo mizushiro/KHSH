@@ -5,11 +5,14 @@
     &[data-sec="visual"] {
         height: 100dvh;
         display: flex;
-
+        
+        .dim{position: absolute; top:0; left:0; width: 100%; height: 100%; background-color: #000; opacity: 0; z-index: 1;}
+        .swiper{width: 100%;}
         .swiper-slide{
             display: flex;
             height:100dvh;
             align-items: center;
+            width: 100%;
         }
         video {
             position: fixed;
@@ -21,7 +24,7 @@
         }
         .visual-txt {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             font-size: 6rem;
             font-weight: 500;
             line-height: 8.8rem;
@@ -31,20 +34,34 @@
             width: 100%;
             max-width: 160rem;
         }
-        .swiper-slide-active .effect-wrap .effect-item {animation-play-state:running;}
-        .swiper-slide-next .effect-wrap .effect-item,
-        .swiper-slide-prev .effect-wrap .effect-item{
+        .effect-wrap[data-eff="hidden-up"] {
+            overflow: hidden;
+            position: relative;
+
+            &[data-delay="1"] .effect-item{animation-delay:.7s;}
+            .effect-item {
+                transform: translateY(10rem);
+
+                animation-name:hiddenup;
+                animation-delay:.4s;
+                animation-duration:.8s;
+                animation-iteration-count:1;
+                animation-fill-mode:forwards;
+                animation-timing-function:cubic-bezier(.07,.26,0,.93);
+                animation-play-state:paused;
+            }
+        }
+        .swiper-slide-next:not(.swiper-slide-visible) .effect-wrap .effect-item,
+        .swiper-slide-prev:not(.swiper-slide-visible) .effect-wrap .effect-item{
             animation-name:resetSwiper;
             animation-duration:.3s;
             animation-iteration-count:1;
             animation-fill-mode:forwards;
             animation-timing-function:ease-in;
         }
-        @keyframes resetSwiper {
-            0%{opacity: 1;}
-            99%{opacity: 0;}
-            100%{opacity: 0; display: none;}
-        }
+        .swiper-slide.swiper-slide-visible .effect-wrap .effect-item,
+        .swiper-slide.swiper-slide-active .effect-wrap .effect-item {animation-play-state:running;}
+       
 
         .swiper-pagination {
             position: static;
@@ -521,4 +538,13 @@
         .card-item-view {padding-bottom: 3rem;}
         .card-item-date{ padding-top: 1.6rem;}
     }
+}
+@keyframes hiddenup {
+    0% {transform: translateY(10rem);}
+    100% {transform: translateY(0);}
+}
+@keyframes resetSwiper {
+    0%{opacity: 1;}
+    99%{opacity: 0;}
+    100%{opacity: 0; display: none;}
 }

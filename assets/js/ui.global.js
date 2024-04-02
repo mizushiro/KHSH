@@ -1613,39 +1613,76 @@ class ScrollPage {
         this.sctop = this.el_wrap.scrollTop;
         this.ary_top_s = [];
         this.ary_top_e = [];
+        this.ary_top_h = [];
         this.init();
     }
     init() {
         for (let item of this.el_items) {
             const rect = item.getBoundingClientRect();
-            this.ary_top_s.push(rect.top + this.sctop - this.wraph)
-            this.ary_top_e.push(rect.top + this.sctop);
+            this.ary_top_s.push(rect.top + this.sctop)
+            this.ary_top_e.push(rect.top + this.sctop + this.wraph);
+            this.ary_top_h.push(rect.height);
         }
 
         const act = () => {
             const n = this.el_wrap.scrollTop;
-
-            
+            const w_h = window.innerHeight;
+           
 
             for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
                 const n_s = Number(this.ary_top_s[i]);
                 const n_e = Number(this.ary_top_e[i]);
+                const n_h = Number(this.ary_top_h[i]);
+                let per_s = 0;
+                let per_e = 0;
+                const _name = this.el_items[i].dataset.scrollCallback;
 
-                if (n_s < n && n_e > n) {
-                    const _n = n_e - n_s;
-                    const __n = n - n_s;
+// if (i === 2)  console.log(_name, n_s +' < '+ (n + w_h) +' < '+ n_e );
+// if (i === 2)  console.log(_name, n_e +' < '+ (n + w_h) +' < '+ (n_e + n_h)  );
+                const if_1 = n_s < (n + w_h) && (n + w_h) < n_e;
+                const if_2 = n_e < (n + w_h) && (n + w_h) < (n_e + n_h);
+                if (if_1 || if_2) {
+                    if (if_1) {
+                        const _n = n_e - n_s;
+                        const __n = n + w_h - n_s;
 
-                    let per = Math.ceil((__n / _n * 100) * 1);
-                    const _name = this.el_items[i].dataset.scrollCallback;
+                        let per = Math.ceil((__n / _n * 100) * 1);
+                        // const _name = this.el_items[i].dataset.scrollCallback;
+                        per > 100 ? per = 100 : '';
+                        // UI.callback[_name] && UI.callback[_name]({
+                        //     percent: per,
+                        //     element: this.el_items[i],
+                        // });
+                        per_s = per;
+                    }
 
-                    console.log(per, this.el_items[i])
+                    if (if_2) {
+                        const _n = (n_e + n_h) - n_e;
+                        const __n = n + w_h - n_e;
 
-                    per > 100 ? per = 100 : '';
+                        let per = Math.ceil((__n / _n * 100) * 1);
+                        // const _name = this.el_items[i].dataset.scrollCallback;
+                        per > 100 ? per = 100 : '';
+                        // UI.callback[_name] && UI.callback[_name]({
+                        //     percent: per,
+                        //     element: this.el_items[i],
+                        // });
+
+                        per_e = per;
+                    }
+                    
                     UI.callback[_name] && UI.callback[_name]({
-                        percent: per,
+                        per_s: per_s,
+                        per_e: per_e,
                         element: this.el_items[i],
                     });
                 }
+                
+
+                
+// console.log(_name, per_s, per_e);
+
+               
             }
         }
         act();

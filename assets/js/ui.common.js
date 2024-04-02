@@ -7,7 +7,7 @@
         const _body = document.body;
         const _header = document.querySelector('.base-header');
         const _firstItem = _header.querySelector('.logo');
-        const _lastItem = _header.querySelector('.btn-searchdar');
+        const _lastItem = _header.querySelector('.btn-etc-nav');
         const _btns = _header.querySelectorAll('button, a');
 
         const keyStart = (e) => {
