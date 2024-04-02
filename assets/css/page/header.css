@@ -113,10 +113,15 @@
 }
 
 .base-header[data-color="dark"] {
-     background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem);
-     mix-blend-mode:normal !important;
+    mix-blend-mode:normal !important;
+    animation-name: blendOff;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
      .logo {background-image: url(../../images/common/logo-dark.svg)}
     .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
     .nav-dep1-link {color:#000;}
@@ -126,27 +131,17 @@
 
 [data-nav="close"] .base-header {
     mix-blend-mode:normal;
-    animation-name: blendOff;
+    animation-name: blendOn;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-@keyframes blendOff {
-    0% {opacity: 1;}
-    99% {opacity: 1;}
-    100% {opacity: 1; mix-blend-mode:difference;}
-}
-@keyframes blendOn {
-    0% {opacity: 1;}
-    99% {opacity: 1;}
-    100% {opacity: 1; mix-blend-mode:normal;}
 }
 [data-nav="open"] {
     .base-header {
         background-color: #fff;
         height: 62rem;
         transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
-        animation-name: blendOn;
+        animation-name: blendOff;
         animation-duration: 0s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -177,6 +172,17 @@
         }
     }
 }
+@keyframes blendOff {
+    0% {opacity: 1;}
+    99% {opacity: 1;}
+    100% {opacity: 1; mix-blend-mode:normal;}
+}
+@keyframes blendOn {
+    0% {opacity: 1;}
+    99% {opacity: 1;}
+    100% {opacity: 1; mix-blend-mode:difference;}
+}
+
 
 @media (max-width:1280px) {
     .base-header {
