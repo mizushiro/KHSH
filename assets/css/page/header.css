@@ -113,7 +113,7 @@
 }
 [data-nav="close"] .base-header[data-color="dark"],
 .base-header[data-color="dark"] {
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0);
     backdrop-filter: blur(1.5rem);
     -webkit-backdrop-filter: blur(1.5rem);
     mix-blend-mode:normal !important;
