@@ -428,32 +428,38 @@
                 </div>
             </div>
         </main>
-        <footer class="base-footer" data-id="footer"></footer>
+        <footer class="base-footer" data-id="footer" data-scroll-callback="main6"></footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const _header = document.querySelector('.base-header');
             const mainMotion1 = (v, n) => {
                 // console.log(v,n)
             }
             const mainMotion2 = (v, n) => {
-                const _header = document.querySelector('.base-header');
+                console.log('mainMotion2 callback', v.percent)
                 v.percent > 90 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
             }
             const mainMotion3 = (v, n) => {
+                _header.dataset.color = "dark"
                 v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
             }
             const mainMotion4 = (v, n) => {
-               
+                _header.dataset.color = "dark"
             }
             const mainMotion5 = (v, n) => {
-               
+                _header.dataset.color = "dark"
+            }
+            const mainMotion6 = (v, n) => {
+                _header.dataset.color = "dark"
             }
             UI.callback.main1 = (v) => { mainMotion1(v, [40]); }
             UI.callback.main2 = (v) => { mainMotion2(v, [60]); }
             UI.callback.main3 = (v) => { mainMotion3(v, [40]); }
             UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
             UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
+            UI.callback.main6 = (v) => { mainMotion5(v, [40]); }
             UI.exe.scrollpage = new ScrollPage();
 
 

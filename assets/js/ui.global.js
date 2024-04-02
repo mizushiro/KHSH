@@ -1625,6 +1625,8 @@ class ScrollPage {
         const act = () => {
             const n = this.el_wrap.scrollTop;
 
+            
+
             for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
                 const n_s = Number(this.ary_top_s[i]);
                 const n_e = Number(this.ary_top_e[i]);
@@ -1636,6 +1638,8 @@ class ScrollPage {
                     let per = Math.ceil((__n / _n * 100) * 1);
                     const _name = this.el_items[i].dataset.scrollCallback;
 
+                    console.log(per, this.el_items[i])
+
                     per > 100 ? per = 100 : '';
                     UI.callback[_name] && UI.callback[_name]({
                         percent: per,
@@ -1646,5 +1650,6 @@ class ScrollPage {
         }
         act();
         window.addEventListener('scroll', act);
+
     }
 }
