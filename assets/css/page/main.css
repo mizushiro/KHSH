@@ -269,6 +269,9 @@
     .swiper{
         max-width: 176rem;
         padding-bottom: 6rem;
+        @media (max-width:900px) {
+            padding-bottom:0;
+        }
     }
     .swiper-slide {max-width: 40rem;}
     .swiper-pagination {
@@ -341,16 +344,13 @@
     }
     .swiper-pagination-bullet-active{background-color: #898989 !important;}
     .swiper-control-group {
-        position: absolute; 
-        top: 1.6REM;
-        right:0;
         display: flex;
         gap:3rem;
         align-items: center;
+        margin-left:auto;
     }
 }
 .main-list-tit{
-    position: relative;
     width: 100%;
     max-width: 172rem;
     margin:0 auto 6rem;
@@ -466,23 +466,29 @@
             }
         }
         .main-list {
-            padding:10rem 4.2rem;
+            padding:6.2rem 2.4rem 12.4rem;
+            position:relative;
 
             .btn-more{display: none;}
             .main-list-tit {margin-bottom: 1.8rem;}
             h2{font-size: 3rem;}
             .swiper-button-prev, 
             .swiper-button-next{
-                width: 4.5rem;
-                height: 4.5rem;
+                width: 3.2rem;
+                height: 3.2rem;
                 background-size: 0.74rem;
             }
             .swiper-pagination {display: none;}
-            .swiper-paginationp-txt{font-size: 1.5rem; justify-self: flex-start; position: absolute; left:0;}
+            .swiper-paginationp-txt{
+                font-size: 1.5rem; justify-self: flex-start; position: absolute; left:2.4rem;
+                gap:.8rem;
+            }
             .swiper-control-group{
-                gap:2.2rem;
+                gap:1.6rem;
                 position: absolute;
-                top:47rem;
+                bottom:6.2rem;
+                left:0;
+                padding:0 2.4rem;
                 width: 100%;
                 justify-content: flex-end;
             }
@@ -505,7 +511,8 @@
     [data-sec="news"] .main-list .swiper-slide {max-width: 25.7rem;}
 
     .card-item {
-        height: 38rem;
+        height:auto;
+        aspect-ratio: 507/938;
 
         .card-item-tit {
             font-size: 2.2rem;
@@ -514,13 +521,20 @@
         .card-item-desc {
             font-size: 1.4rem;
             padding: 5rem 2.4rem 3rem;
-
+            top:0;
             dl > div dt{
                 min-width: 6rem;
                 width: 6rem;
             }
         }
-        .card-item-view {padding: 5rem 2.4rem 6rem;}
+        .card-item-view {
+            padding: 5rem 2.4rem 6rem;
+            top:-50%;
+        }
+        .card-item-img:before {
+            opacity:1;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) 75%);
+        }
     }
     .card-item[data-type="news"] {
         height: 38rem;
