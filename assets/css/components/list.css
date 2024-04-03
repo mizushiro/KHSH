@@ -238,7 +238,8 @@
         .card-item-tit {
             font-size: 2.1rem;
             margin-bottom: 2rem;
-            min-height:8rem ;
+            min-height:7.7rem ;
+            max-height:7.7rem ;
         }
         .card-item-desc {height: 7rem;}
         .card-item-view {padding-bottom: 3.8rem;}
