@@ -520,49 +520,6 @@
     }
     [data-sec="info"] .main-list .swiper-slide,
     [data-sec="news"] .main-list .swiper-slide {max-width: 25.7rem;}
-
-    .card-item {
-        height:auto;
-        aspect-ratio: 507/938;
-
-        .card-item-tit {
-            font-size: 2.2rem;
-            margin-bottom: 2.1rem;
-        }
-        .card-item-desc {
-            font-size: 1.4rem;
-            padding: 5rem 2.4rem 3rem;
-            top:0;
-            dl > div dt{
-                min-width: 6rem;
-                width: 6rem;
-            }
-        }
-        .card-item-view {
-            padding: 5rem 2.4rem 6rem;
-            top:-50%;
-        }
-        .card-item-img:before {
-            opacity:1;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) 75%);
-        }
-    }
-    .card-item[data-type="news"] {
-        height: 38rem;
-        
-        .card-item-tit {
-            font-size: 2.2rem;
-            margin-bottom: 2.1rem;
-        }
-        .card-item-desc {font-size: 1.6rem;}
-        .card-item-view {padding: 5rem 2.4rem 6rem;}
-        .card-item-date {font-size: 1.3rem;}
-    }
-    .card-item[data-type="news"]:hover {
-        .card-item-desc {height: 12rem;}
-        .card-item-view {padding-bottom: 3rem;}
-        .card-item-date{ padding-top: 1.6rem;}
-    }
 }
 @keyframes hiddenup {
     0% {transform: translateY(10rem);}
