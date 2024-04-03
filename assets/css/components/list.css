@@ -73,12 +73,13 @@
     padding: 4rem 4rem 8rem;
     align-items: flex-end;
     top:0;
-    transition: top .3s ease-in;
 }
 .card-item-tit {
     font-size: 4rem;
     font-weight: 500;
     color:#fff;
+    opacity: 1;
+    transition: all 0.2s ease-in;
 }
 .card-item-img{
     position: absolute;
@@ -92,11 +93,10 @@
     align-items: center;
 
     img {
-        height: 112%;
+        height: 100%;
         max-width: none;
         object-fit: cover;
         transform: translateY(0);
-        transition: transform 0.2s ease-out;
     }
 
     &::before {
@@ -105,8 +105,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.1) 75%);
+        background: linear-gradient(to top, rgba(0,0,0,0.5),rgba(0,0,0,0.5));
         z-index: 1;
         transition: opacity .2s ease-in;
     }
@@ -119,15 +118,18 @@
     display: flex;
     padding: 4rem;
     flex-direction: column;
+    opacity: 0;
     color:#fff;
-    top: 100%;
-    transition: top .3s ease-in;
+    top: 0;
+    transition: all .2s ease-in;
     justify-content: flex-end;
 }
 .card-item-desc dl {
     display: flex;
     flex-direction: column;
     gap:2rem;
+    font-size: 2rem;
+    line-height: 1.4;
 
 }
 .card-item-desc dl > div {
@@ -151,55 +153,85 @@
     a {text-decoration: none; display: block;}
 }
 .card-item:hover {
-    .card-item-view{top: -50%;}
-    .card-item-desc{top: 0;}
-    .card-item-img::before{opacity: 1;}
-    .card-item-img img{
-        transform: translateY(5%);
-        transition: transform .3s ease-in;
+    .card-item-tit{
+        opacity: 0; 
+        transition: all .2s ease-in;
+    }
+    .card-item-desc{
+        opacity: 1; 
+        transition: all .2s ease-in;
+    }
+    .card-item-img::before {
+        transition: all .2s ease-in;
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0,0,0,.9),  rgba(0,0,0,0.1) 100%);
     }
 }
+
 @media (max-width:900px) {
     .card-item {
         height:auto;
-        aspect-ratio: 507/938;
+        aspect-ratio: 255/469;
+        flex-direction: column;
+        padding: 5rem 1.5rem 4rem;
+        justify-content: space-between;
+        align-items: flex-start;
 
+        .card-item-view {
+            width: 100%;
+            position: relative;
+            padding: 0;
+            top:0;
+            height: auto;
+        }
         .card-item-tit {
-            font-size: 2.2rem;
-            margin-bottom: 2.1rem;
+            font-size: 3rem;
+            margin-bottom: 0;
+            font-weight: 600;
+            line-height: 1.4;
+
         }
         .card-item-desc {
-            font-size: 1.4rem;
-            padding: 5rem 2.4rem 3rem;
+            position: relative;
+            font-size: 1.6rem;
+            padding: 0 ;
             top:0;
+            opacity: 1;
+
+            dl{font-size: 1.6rem !important;}
             dl > div dt{
                 min-width: 6rem;
                 width: 6rem;
             }
         }
-        .card-item-view {
-            padding: 5rem 2.4rem 6rem;
-            top:-50%;
-        }
+        
         .card-item-img:before {
-            opacity:1;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1) 75%);
+            opacity:0.5;
+            background: #000;
         }
     }
+    .card-item:hover {
+        .card-item-tit {opacity: 1;}
+
+    }
+
     .card-item[data-type="news"] {
-        height: 38rem;
+        height:auto;
+        aspect-ratio: 255/421;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0;
         
         .card-item-tit {
-            font-size: 2.2rem;
-            margin-bottom: 2.1rem;
+            font-size: 2.1rem;
+            margin-bottom: 2rem;
             min-height:8rem ;
         }
         .card-item-desc {font-size: 1.6rem;height: 7rem; }
-        .card-item-view {padding: 5rem 2.4rem 3.8rem; top:0;}
-        .card-item-date {font-size: 1.3rem; padding-top: 1.6rem;}
-        [data-ellipsis="5"] {
-            -webkit-line-clamp: 3;
-        } 
+        .card-item-view {padding: 4rem 2.5rem 3.8rem; top:0;}
+        .card-item-date {font-size: 1.5rem; padding-top: 1.6rem;}
+        [data-ellipsis="5"] {-webkit-line-clamp: 3;} 
     }
     .card-item[data-type="news"]:hover {
         .card-item-tit {

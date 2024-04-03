@@ -349,8 +349,9 @@
             width: 100%;
             max-width: 192rem;
             height: auto;
+            overflow: hidden;
         }
-        .btn-nav-close{background-color: #000;}
+        .btn-nav-close{background-color: #000; z-index: 10}
         .nav-dep1-item{min-width: 30rem;}
         .nav-dep1{width: 100%; height: auto; justify-content: center;}
         .nav-dep2{opacity: 1;}
