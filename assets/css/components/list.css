@@ -226,7 +226,7 @@
         .card-item-tit {
             font-size: 2.1rem;
             margin-bottom: 2rem;
-            min-height:8rem ;
+            min-height:7.8rem ;
         }
         .card-item-desc {font-size: 1.6rem;height: 7rem; }
         .card-item-view {padding: 4rem 2.5rem 3.8rem; top:0;}
@@ -235,8 +235,8 @@
     }
     .card-item[data-type="news"]:hover {
         .card-item-tit {
-            font-size: 2.2rem;
-            margin-bottom: 2.1rem;
+            font-size: 2.1rem;
+            margin-bottom: 2rem;
             min-height:8rem ;
         }
         .card-item-desc {height: 7rem;}
