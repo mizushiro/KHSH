@@ -478,7 +478,18 @@
                 height: 3.2rem;
                 background-size: 0.74rem;
             }
-            .swiper-pagination {display: none;}
+            .swiper-pagination {
+                bottom:-4.7rem !important;
+                margin-right:0 !important;
+                left:47% !important;
+                width:calc(100% - 18rem) !important;
+                &:before {
+                    height:.2rem;
+                }
+            }
+            .swiper-pagination-bullet {
+                height:.2rem;
+            }
             .swiper-paginationp-txt{
                 font-size: 1.5rem; justify-self: flex-start; position: absolute; left:2.4rem;
                 gap:.8rem;
