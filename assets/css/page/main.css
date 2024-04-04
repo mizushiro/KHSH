@@ -419,7 +419,7 @@
             .swiper-slide{margin: 0 .8rem;}
         }
     }
-    .mdl-list .swiper-pagination-bullet{min-width: auto !important;}
+    .swiper-pagination-bullet{min-width: auto !important;}
    
 }
 @media (max-width:1400px) {
