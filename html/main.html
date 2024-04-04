@@ -21,38 +21,23 @@
         <main class="base-main">
             <!-- visual -->
             <div class="main-section" data-sec="visual" data-scroll-callback="main1">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <video autoplay="" loop="" muted="" playsinline="">
-                                <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
-                            </video>
-                            <!-- <div class="visual-txt">
-                                <div class="effect-wrap" data-eff="hidden-up">
-                                    <div class="effect-item">삶을 비추는</div>
-                                </div>
-                                <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
-                                    <div class="effect-item">아름다움</div>
-                                </div>
-                            </div> -->
-                        </div>
-                        <div class="swiper-slide">
-                            <video autoplay="" loop="" muted="" playsinline="">
-                                <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="swiper-slide">
-                            <video autoplay="" loop="" muted="" playsinline="">
-                                <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
+                    <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                </video>
+                <!-- <div class="visual-txt">
+                    <div class="effect-wrap" data-eff="hidden-up">
+                        <div class="effect-item">삶을 비추는</div>
                     </div>
-                    <div class="swiper-control-group">
-                        <button type="button" class="swiper-contral" aria-label="재생/정지" data-state="play"></button>
-                        <div class="swiper-pagination"></div>
-                        <button type="button" class="swiper-button-prev" aria-label="이전"></button>
-                        <button type="button" class="swiper-button-next" aria-label="다음"></button>
+                    <div class="effect-wrap" data-eff="hidden-up" data-delay="1">
+                        <div class="effect-item">아름다움</div>
                     </div>
+                </div> -->
+                <div class="video-control-group">
+                    <button type="button" class="video-control" aria-label="재생/정지" data-state="play"></button>
+                    <progress id="progress-bar" class="video-bar" min="0" max="100" value="0"></progress>
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <!-- <button type="button" class="swiper-button-prev" aria-label="이전"></button>
+                    <button type="button" class="swiper-button-next" aria-label="다음"></button> -->
                 </div>
                 <div class="dim"></div>
             </div>
@@ -473,6 +458,30 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            UI.exe.visualVideo = document.querySelector('#visualVideo');
+            UI.exe.visualVideo.controls = false;
+
+            UI.exe.visualVideo.addEventListener('timeupdate', function(){
+                const progressBar = document.querySelector('#progress-bar');
+                progressBar.value = Math.floor((100 / UI.exe.visualVideo.duration) * UI.exe.visualVideo.currentTime);
+            }, false);
+
+            const videoContral = document.querySelector('.video-control');
+            const actPlayStop = (e) => {
+                const _this = e.currentTarget;
+                if (_this.dataset.state === 'play') {
+                    _this.dataset.state = 'pause';
+                    _this.setAttribute('aria-label', 'play');
+                    UI.exe.visualVideo.pause();
+                } else {
+                    UI.exe.visualVideo.play();
+                    _this.dataset.state = 'play';
+                    _this.setAttribute('aria-label', 'pause');
+                }
+            }
+            videoContral.addEventListener('click', actPlayStop);
+
+
             const _header = document.querySelector('.base-header');
             const mainMotion1 = (v, n) => {
                 console.log(1);
@@ -514,44 +523,14 @@
 
 
             //메인비쥬얼
-            UI.exe.visualSwiper = new Swiper('[data-sec="visual"] .swiper', {
-                spaceBetween: 30,
-                effect: "fade",
-                // loop: true,
-                speed: 1000,
-                autoplay: {
-                    delay: 20000,
-                    disableOnInteraction: false
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-            const swiperContral = document.querySelector('[data-sec="visual"] .swiper-contral');
-            const actPlayStop = (e) => {
-                const _this = e.currentTarget;
-                if (_this.dataset.state === 'play') {
-                    _this.dataset.state = 'pause';
-                    _this.setAttribute('aria-label', 'play');
-                    UI.exe.visualSwiper.autoplay.pause();
-                } else {
-                    UI.exe.visualSwiper.autoplay.start();
-                    _this.dataset.state = 'play';
-                    _this.setAttribute('aria-label', 'pause');
-                }
-            }
-            swiperContral.addEventListener('click', actPlayStop);
+ 
 
 
             //분양정보
             UI.exe.infoSwiper = new Swiper('[data-sec="info"] .swiper', {
-                spaceBetween: 30,
+                spaceBetween: 0,
                 slidesPerView: 4,
+                slidesPerGroup: 4,
                 speed: 1000,
                 pagination: {
                     el: '[data-sec="info"] .swiper-pagination',
@@ -564,11 +543,12 @@
                 breakpoints: {
                     0: {
                         slidesPerView: 'auto',
-                        spaceBetween: 16,
+                        slidesPerGroup: 1,
+                        spaceBetween: 0,
                     },
                     1900: {
                         slidesPerView: 4 ,
-                        spaceBetween: 40,
+                        spaceBetween: 0,
                         slidesPerGroup: 4,
                     },
                 },
@@ -577,19 +557,23 @@
                         const el_num = document.querySelector('[data-sec="info"] .swiper-paginationp-txt');
                         const el_num_b = el_num.querySelector('b');
                         const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.realIndex + 1 < 10 ? '0' + (v.realIndex + 1) : v.realIndex + 1;
+                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
                         el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
                     },
                     slideChange: (v) => {
-                        const el_num_b = document.querySelector('[data-sec="info"] .swiper-paginationp-txt b');
-                        el_num_b.textContent = v.realIndex + 1 < 10 ? '0' + (v.realIndex + 1) : v.realIndex + 1;
+                        console.log(v)
+                        const el_num = document.querySelector('[data-sec="info"] .swiper-paginationp-txt');
+                        const el_num_b = el_num.querySelector('b');
+                        const el_num_span = el_num.querySelector('span');
+                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
+                        el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
                     }
                 }
             });
 
             //분양정보
             UI.exe.newsSwiper = new Swiper('[data-sec="news"] .swiper', {
-                spaceBetween: 40,
+                spaceBetween: 0,
                 slidesPerView: 4,
                 speed: 1000,
                 pagination: {
@@ -603,11 +587,13 @@
                 breakpoints: {
                     0: {
                         slidesPerView: 'auto',
-                        spaceBetween: 16,
+                        slidesPerGroup: 1,
+                        spaceBetween: 0,
                     },
                     1900: {
                         slidesPerView: 4 ,
-                        spaceBetween: 40,
+                        slidesPerGroup: 4,
+                        spaceBetween: 0,
                     },
                 },
                 on: {
@@ -617,14 +603,15 @@
                         const el_num = document.querySelector('[data-sec="news"] .swiper-paginationp-txt');
                         const el_num_b = el_num.querySelector('b');
                         const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.realIndex + 1 < 10 ? '0' + (v.realIndex + 1) : v.realIndex + 1;
+                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
                         el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
                     },
                     slideChange: (v) => {
+                        console.log(v)
                         const el_num = document.querySelector('[data-sec="news"] .swiper-paginationp-txt');
                         const el_num_b = el_num.querySelector('b');
                         const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.realIndex + 1 < 10 ? '0' + (v.realIndex + 1) : v.realIndex + 1;
+                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
                         el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
                     }
                 }
