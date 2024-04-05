@@ -16,7 +16,7 @@
     <script src="../assets/lib/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <div class="base-wrap">
+    <div class="base-wrap" data-page="main">
         <header class="base-header" data-id="header"></header>
         <main class="base-main">
             <!-- visual -->
@@ -458,14 +458,13 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            //비쥬얼 영상
             UI.exe.visualVideo = document.querySelector('#visualVideo');
             UI.exe.visualVideo.controls = false;
-
             UI.exe.visualVideo.addEventListener('timeupdate', function(){
                 const progressBar = document.querySelector('#progress-bar');
                 progressBar.value = Math.floor((100 / UI.exe.visualVideo.duration) * UI.exe.visualVideo.currentTime);
             }, false);
-
             const videoContral = document.querySelector('.video-control');
             const actPlayStop = (e) => {
                 const _this = e.currentTarget;
@@ -481,36 +480,26 @@
             }
             videoContral.addEventListener('click', actPlayStop);
 
-
+            //화면단위 효과
             const _header = document.querySelector('.base-header');
             const mainMotion1 = (v, n) => {
-                console.log(1);
-
                 const dim = v.element.querySelector('.dim');
-                console.log(v.per_e * 0.01)
                 dim.style.opacity = v.per_e * 0.01
-                // console.log(v * 0.01)
-
             }
             const mainMotion2 = (v, n) => {
-                console.log(2);
                 v.per_s > 85 ? _header.dataset.color = "dark" : _header.removeAttribute('data-color');
             }
             const mainMotion3 = (v, n) => {
-                console.log(3);
                 _header.dataset.color = "dark"
                 // v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
             }
             const mainMotion4 = (v, n) => {
-                console.log(4);
                 _header.dataset.color = "dark"
             }
             const mainMotion5 = (v, n) => {
-                console.log(5);
                 _header.dataset.color = "dark"
             }
             const mainMotion6 = (v, n) => {
-                console.log(6);
                 _header.dataset.color = "dark"
             }
             UI.callback.main1 = (v) => { mainMotion1(v, [40]); }
@@ -521,12 +510,16 @@
             UI.callback.main6 = (v) => { mainMotion5(v, [40]); }
             UI.exe.scrollpage = new ScrollPage();
 
-
-            //메인비쥬얼
- 
-
-
-            //분양정보
+            //분양정보 & NEWS 리스트 스와이퍼
+            const actSwiperPaging = (v) => {
+                const _name = v.name;
+                const _this = v.target;
+                const el_num = document.querySelector('[data-sec="'+ _name +'"] .swiper-paginationp-txt');
+                const el_num_b = el_num.querySelector('b');
+                const el_num_span = el_num.querySelector('span');
+                el_num_b.textContent = _this.snapIndex + 1 < 10 ? '0' + (_this.snapIndex + 1) : _this.snapIndex + 1;
+                el_num_span.textContent = _this.snapGrid.length < 10 ? '0' + _this.snapGrid.length : _this.snapGrid.length;
+            }
             UI.exe.infoSwiper = new Swiper('[data-sec="info"] .swiper', {
                 spaceBetween: 0,
                 slidesPerView: 4,
@@ -554,24 +547,19 @@
                 },
                 on: {
                     init: (v) => {
-                        const el_num = document.querySelector('[data-sec="info"] .swiper-paginationp-txt');
-                        const el_num_b = el_num.querySelector('b');
-                        const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
-                        el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
+                        actSwiperPaging({
+                            name: 'info',
+                            target: v
+                        });
                     },
                     slideChange: (v) => {
-                        console.log(v)
-                        const el_num = document.querySelector('[data-sec="info"] .swiper-paginationp-txt');
-                        const el_num_b = el_num.querySelector('b');
-                        const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
-                        el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
+                        actSwiperPaging({
+                            name: 'info',
+                            target: v
+                        });
                     }
                 }
             });
-
-            //분양정보
             UI.exe.newsSwiper = new Swiper('[data-sec="news"] .swiper', {
                 spaceBetween: 0,
                 slidesPerView: 4,
@@ -598,24 +586,18 @@
                 },
                 on: {
                     init: (v) => {
-                        console.log(v);
-
-                        const el_num = document.querySelector('[data-sec="news"] .swiper-paginationp-txt');
-                        const el_num_b = el_num.querySelector('b');
-                        const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
-                        el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
+                        actSwiperPaging({
+                            name: 'news',
+                            target: v
+                        });
                     },
                     slideChange: (v) => {
-                        console.log(v)
-                        const el_num = document.querySelector('[data-sec="news"] .swiper-paginationp-txt');
-                        const el_num_b = el_num.querySelector('b');
-                        const el_num_span = el_num.querySelector('span');
-                        el_num_b.textContent = v.snapIndex + 1 < 10 ? '0' + (v.snapIndex + 1) : v.snapIndex + 1;
-                        el_num_span.textContent = v.snapGrid.length < 10 ? '0' + v.snapGrid.length : v.snapGrid.length;
+                         actSwiperPaging({
+                            name: 'news',
+                            target: v
+                        });
                     }
                 }
-                
             });
         }); 
     </script>

@@ -1646,57 +1646,63 @@ class ScrollPage {
                 let per_s = 0;
                 let per_e = 0;
                 const _name = this.el_items[i].dataset.scrollCallback;
-
-// if (i === 2)  console.log(_name, n_s +' < '+ (n + w_h) +' < '+ n_e );
-// if (i === 2)  console.log(_name, n_e +' < '+ (n + w_h) +' < '+ (n_e + n_h)  );
                 const if_1 = n_s < (n + w_h) && (n + w_h) < n_e;
                 const if_2 = n_e < (n + w_h) && (n + w_h) < (n_e + n_h);
+
                 if (if_1 || if_2) {
                     if (if_1) {
                         const _n = n_e - n_s;
                         const __n = n + w_h - n_s;
-
                         let per = Math.ceil((__n / _n * 100) * 1);
-                        // const _name = this.el_items[i].dataset.scrollCallback;
                         per > 100 ? per = 100 : '';
-                        // UI.callback[_name] && UI.callback[_name]({
-                        //     percent: per,
-                        //     element: this.el_items[i],
-                        // });
                         per_s = per;
                     }
-
                     if (if_2) {
                         const _n = (n_e + n_h) - n_e;
                         const __n = n + w_h - n_e;
-
                         let per = Math.ceil((__n / _n * 100) * 1);
-                        // const _name = this.el_items[i].dataset.scrollCallback;
                         per > 100 ? per = 100 : '';
-                        // UI.callback[_name] && UI.callback[_name]({
-                        //     percent: per,
-                        //     element: this.el_items[i],
-                        // });
-
                         per_e = per;
                     }
-                    
                     UI.callback[_name] && UI.callback[_name]({
                         per_s: per_s,
                         per_e: per_e,
                         element: this.el_items[i],
                     });
                 }
-                
-
-                
-// console.log(_name, per_s, per_e);
-
-               
             }
         }
         act();
         window.addEventListener('scroll', act);
+
+
+        const el_html = document.querySelector('html');
+        let wheelTimer;
+        let curSIdx = 0;
+        let pageNum = 0;
+
+        const doScroll = (v) => {
+            if (v === 'down') {
+                pageNum = pageNum + 1;
+                pageNum > this.el_items.length - 1 ? pageNum = this.el_items.length - 1 : '';
+            } else {
+                pageNum = pageNum - 1;
+                pageNum < 0 ? pageNum = 0 : '';
+            }
+               
+            this.el_items[pageNum].scrollIntoView({
+                block: "start",inline: "nearest", behavior: "smooth"
+            });  	
+        }
+        const actWheel = (e) => {
+            e.preventDefault();
+            clearTimeout(wheelTimer);
+            wheelTimer = setTimeout(() => {
+                (e.deltaY < 0) ? doScroll('up') : doScroll('down');
+
+            }, 100)
+        }
+        window.addEventListener('wheel', actWheel, {passive : false});
 
     }
 }

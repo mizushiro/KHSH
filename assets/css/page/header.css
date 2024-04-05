@@ -1,4 +1,12 @@
-
+[data-page="main"] {
+    .base-header{background-color: transparent;}
+    .logo { background-image: url(../../images/common/logo.svg);}
+    .btn-nav {background-image: url(../../images/common/ico-nav.svg);}
+    .btn-search{background-image: url(../../images/common/ico-search.svg);}
+    .btn-etc-nav {background-image: url(../../images/common/ico-nav.svg);}
+    .nav-dep1-item {color: #fff;}
+    .nav-dep1-link {color: #fff;}
+}
 .base-header {
     position: fixed;
     top: 0;
@@ -10,6 +18,7 @@
     overflow: hidden;
     align-items: center;
     height: 12rem;
+    background-color: #fff;
     /* mix-blend-mode: difference; */
     /* mix-blend-mode: difference;
     backdrop-filter: blur(1.5rem);
@@ -34,26 +43,26 @@
     flex-shrink: 0;
     width: 21.2rem;
     height: 2.8rem;
-    background: url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
+    background: url(../../images/common/logo-dark.svg) no-repeat 0 0 / 21.2rem;
 }
 .btn-nav {
     display: none;
     position: relative;
     width: 5rem;
     height: 5rem;
-    background: url(../../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
+    background: url(../../images/common/ico-nav-dark.svg) no-repeat 50% 50% / 2.3rem;
 }
 .btn-search{
     position: relative;
     width: 5rem;
     height: 5rem;
-    background: url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+    background: url(../../images/common/ico-search-dark.svg) no-repeat 50% 50% / 1.6rem;
 }
 .btn-etc-nav {
     position: relative;
     width: 5rem;
     height: 5rem;
-    background: url(../../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
+    background: url(../../images/common/ico-nav-dark.svg) no-repeat 50% 50% / 2.3rem;
 }
 
 .nav-group {
@@ -75,7 +84,7 @@
 .nav-dep1-item {
     font-size: 2rem;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     padding: 0 4rem;
 }
 .nav-dep1-link {
@@ -83,7 +92,7 @@
     display: flex;
     font-size: 2rem;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     padding:4rem 4rem;
     text-decoration: none;
     transition: color .2s ease-out;
