@@ -54,6 +54,7 @@
         for (let item of dep2Links) {
             item.addEventListener('mouseover', onLIne);
         }
+        _lastItem
     }
     UI.callback.nav = (v) => {
         console.log(v.state);
@@ -73,8 +74,9 @@
         callback:() => {
             UI.exe.nav();
             UI.exe.toggle = new ToggleUI();
-            
-
+            UI.callback.toggle_nav = (v) => {
+                (v.state === 'true') ? UI.exe.allMenu.show() : UI.exe.allMenu.hide();
+            }
         }
     });
     UI.parts.include({

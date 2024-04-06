@@ -10,16 +10,22 @@
     border-radius: 0.8rem;
     text-decoration: none;
 
-    &-area {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.8rem;
-        padding: 1.6rem;
-    }
     &:focus {
         text-decoration: underline;
         text-underline-offset: .3rem;
     }
+
+    &[data-style="primary"] {
+        background-color: var(--navy);
+        color: #fff;
+        border-color: var(--navy) ;
+    }
+}
+.mdl-button-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.6rem;
 }

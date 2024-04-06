@@ -4,28 +4,34 @@
     display: flex;
     overflow-x: auto;
 
-    &-wrap {
+    .mdl-tab-wrap {
         display: flex;
-        gap: 0.8rem;
+        gap: 2rem;
+        width: 100%;
+        margin-bottom: 9rem;
     }
 
-    &-btn {
-        border: .1rem solid #555;
+    .mdl-tab-btn {
+        flex:1;
+        border: .1rem solid #E8E8E8;
         padding: 0.8rem 1.6rem;
-        border-radius: 0.8rem;
+        border-radius: 0;
         white-space: nowrap;
+        background-color: #fff;
+        height: 9rem;
+        font-size: 2.4rem;
 
         &[data-selected="true"] {
-            background-color: #fff;
-            color: #000;
+            background-color: #222;
+            color: #fff;
         }
     }
+}
 
-    &-item {
-        display: none;
+.mdl-tab-item {
+    display: none;
 
-        &[data-selected="true"] {
-            display: block;
-        }
+    &[data-selected="true"] {
+        display: block;
     }
 }

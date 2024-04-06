@@ -311,9 +311,13 @@
     &.all-menu {
         padding:0;
         align-items: flex-start;
-
+        height: auto;
+        top:12rem;
+        background-color: transparent;
+        .mdl-layer-dim{display: none;}
         .mdl-layer-wrap {
-            padding: 7rem 5rem;
+            background-color: var(--navy);
+            padding: 4rem 5rem;
             width: 100%;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
@@ -348,15 +352,19 @@
             margin: 0 auto;
             width: 100%;
             max-width: 192rem;
+            padding:0;
             height: auto;
             overflow: hidden;
         }
-        .btn-nav-close{background-color: #000; z-index: 10}
-        .nav-dep1-item{min-width: 30rem;}
-        .nav-dep1{width: 100%; height: auto; justify-content: center;}
+        .btn-nav-close{
+            z-index: 10;
+            background: url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
+        }
+        .nav-dep1-item{min-width: 23rem;}
+        .nav-dep1{width: 100%; height: auto; justify-content: flex-end;}
         .nav-dep2{opacity: 1;}
-        .nav-dep2-link{color: #000; text-align: left; pointer-events: initial;}
-        .nav-dep1-link{color: #000; font-size: 2.4rem; padding: 0;}
+        .nav-dep2-link{color: #fff; font-size: 2rem; font-weight: 500; opacity: 0.5; text-align: center; pointer-events: initial;}
+        .nav-dep1-link{color: #fff;  text-align: center; font-size: 2.4rem; padding: 0; width: 100%; justify-content: center;}
     }
 }
 
