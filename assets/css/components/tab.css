@@ -6,24 +6,23 @@
 
     .mdl-tab-wrap {
         display: flex;
-        gap: 2rem;
+        gap: 0;
         width: 100%;
         margin-bottom: 9rem;
     }
 
     .mdl-tab-btn {
         flex:1;
-        border: .1rem solid #E8E8E8;
-        padding: 0.8rem 1.6rem;
+        border-bottom: .2rem solid #ccc;
+        padding: 1.2rem 1.6rem;
         border-radius: 0;
         white-space: nowrap;
         background-color: #fff;
-        height: 9rem;
         font-size: 2.4rem;
+        font-weight: 600;
 
         &[data-selected="true"] {
-            background-color: #222;
-            color: #fff;
+            border-color: #222;
         }
     }
 }

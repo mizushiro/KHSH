@@ -19,18 +19,29 @@
     <div class="base-wrap">
         <header class="base-header" data-id="header"></header>
         <main class="base-main">
-            <section class="sub-title" data-bg="pattern1">
+            <div class="sub-title" data-bg="pattern1">
                 <h2>분양단지</h2>
-            </section>
+            </div>
 
             <article class="sub-content">
-                 <div style="width: 100%; border:0.1rem dashed #242A5C; ">
-
+                <div class="breadcrumbs">
+                    <ol>
+                        <li>
+                            <img src="../assets/images/common/ico-home.svg" alt="홈">
+                        </li>
+                        <li>
+                            <span>분양정보</span>
+                        </li>
+                        <li>
+                            <span>분양단지</span>
+                        </li>
+                    </ol>
+                </div>
                 <div class="card-artera">
                     <div class="card-artera-item">
                         <a href="#" class="card-artera-img">
                             <img src="../assets/images/dummy/artera1_d.jpg" alt="">
-                            <em class="card-artera-state">분양중</em>
+                            <em class="card-artera-state" data-state="ing">분양중</em>
                         </a>
                         <div class="card-artera-cont">
                             
@@ -63,9 +74,9 @@
                     <div class="card-artera-item">
                         <div class="card-artera-img">
                             <img src="../assets/images/dummy/img1.jpg" alt="">
+                            <em class="card-artera-state" data-state="complete">분양완료</em>
                         </div>
                         <div class="card-artera-cont">
-                            <em class="card-artera-state">분양중</em>
                             <h3>
                                 <span>청주 테크노폴리스</span>
                                 <span>아테라</span>
@@ -91,7 +102,58 @@
                             <a href="#" class="mdl-button" data-style="primary">홈페이지</a>
                         </div>
                     </div>
- 
+
+                    <div class="card-artera-item">
+                        <div class="card-artera-img">
+                            <img src="../assets/images/dummy/img1.jpg" alt="">
+                            <em class="card-artera-state" data-state="wait">분양예정</em>
+                        </div>
+                        <div class="card-artera-cont">
+                            <h3>
+                                <span>청주 테크노폴리스</span>
+                                <span>아테라</span>
+                            </h3>
+                            <em class="card-artera-tel">1551-1356</em>
+                            <dl>
+                                <div>
+                                    <dt>위치</dt>
+                                    <dd>충북 청주시 송절동 32-3번지 일원</dd>
+                                </div>
+                                <div>
+                                    <dt>세대</dt>
+                                    <dd>오피스텔 806호실 (1단지 513호실 / 2단지 293호실)</dd>
+                                </div>
+                                <div>
+                                    <dt>분양시기</dt>
+                                    <dd>2024년 6월(예정)</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="card-artera-link">
+                            <a href="#" class="mdl-button ">자세히보기</a>
+                            <a href="#" class="mdl-button" data-style="primary">홈페이지</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paging">
+                    <button type="button" class="paging-first" aria-label="처음으로"></button>
+                    <button type="button" class="paging-prev" aria-label="이전"></button>
+
+                    <div class="paging-group">
+                        <button type="button" class="paging-n" data-selected="true">1</button>
+                        <button type="button" class="paging-n">2</button>
+                        <button type="button" class="paging-n">3</button>
+                        <button type="button" class="paging-n">4</button>
+                        <button type="button" class="paging-n">5</button>
+                        <button type="button" class="paging-n">6</button>
+                        <button type="button" class="paging-n">7</button>
+                        <button type="button" class="paging-n">8</button>
+                        <button type="button" class="paging-n">9</button>
+                        <button type="button" class="paging-n">10</button>
+                    </div>
+                    
+                    <button type="button" class="paging-next" aria-label="다음"></button>
+                    <button type="button" class="paging-last" aria-label="마지막으로"></button>
                 </div>
 
                 <div class="artera-detail">
@@ -101,10 +163,15 @@
                             <em class="artera-detail-state">분양중</em>
                         </div>
                         <div class="artera-detail-cont">
-                            <h3>
-                                <span>고양 장항</span>
-                                <span>아테라</span>
-                            </h3>
+                            <div class="artera-detail-tit">
+                                <h3>
+                                    고양 장항 아테라
+                                </h3>
+                                <div class="artera-detail-link">
+                                    <a href="#" class="mdl-button" data-style="primary">홈페이지</a>
+                                </div>
+                            </div>
+                            
                             <dl>
                                 <div>
                                     <dt>위치</dt>
@@ -118,11 +185,8 @@
                                     <dt>분양시기</dt>
                                     <dd>2024년 6월(예정)</dd>
                                 </div>
-                                <div>
-                                    <dt>문의전화</dt>
-                                    <dd>033-261-0543</dd>
-                                </div>
                             </dl>
+                            <em class="artera-detail-tel">문의전화 1551-1356</em>
                         </div>
                     </div>
 
@@ -139,124 +203,129 @@
                         </div>
                         <div class="mdl-tab-pnl" data-tab-id="arteraDetail">
                             <section class="mdl-tab-item" data-tab="1">
-                                <div class="swiper swiper-viewmap" data-id="viewmap">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                <div class="swiper-viewmap-wrap">
+                                    <div class="swiper swiper-viewmap" data-id="viewmap">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
                                     </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                                <div thumbsSlider="" class="swiper swiper-viewmap-thumbs"  data-id="viewmap">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                    <div thumbsSlider="" class="swiper swiper-viewmap-thumbs"  data-id="viewmap">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_3.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_3.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </section>
+
                             <section class="mdl-tab-item" data-tab="2">
-                                <div class="swiper swiper-viewmap" data-id="pdrawing">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                <div class="swiper-viewmap-wrap">
+                                    <div class="swiper swiper-viewmap" data-id="pdrawing">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
                                     </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                                <div thumbsSlider="" class="swiper swiper-viewmap-thumbs"  data-id="pdrawing">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                    <div thumbsSlider="" class="swiper swiper-viewmap-thumbs"  data-id="pdrawing">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_2.jpg" alt="">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                            <div class="swiper-slide">
+                                                <div class="artera-detailview-img">
+                                                    <img src="../assets/images/dummy/detail_1.jpg" alt="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -266,7 +335,6 @@
                     </div>
                 </div>
                 
-               </div>
             </article>
         </main>
         <footer class="base-footer" data-id="footer"></footer>
@@ -284,13 +352,15 @@
 
             //조경도
             const swiperViewmapThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewmap"]', {
-                spaceBetween: 17,
-                slidesPerView: 5,
+                spaceBetween: 22,
+                slidesPerView: 3,
+                direction: "vertical",
                 freeMode: true,
                 watchSlidesProgress: true,
+                mousewheel: true,
             });
             const swiperViewmap = new Swiper('.swiper-viewmap[data-id="viewmap"]', {
-                spaceBetween: 10,
+                spaceBetween: 0,
                 navigation: {
                     nextEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-next',
                     prevEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-prev',
@@ -301,13 +371,15 @@
             });
             //투시도
             const swiperPdrawingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="pdrawing"]', {
-                spaceBetween: 17,
-                slidesPerView: 5,
+                spaceBetween: 22,
+                slidesPerView: 3,
+                direction: "vertical",
                 freeMode: true,
                 watchSlidesProgress: true,
+                mousewheel: true,
             });
             const swiperPdrawing = new Swiper('.swiper-viewmap[data-id="pdrawing"]', {
-                spaceBetween: 10,
+                spaceBetween: 0,
                 navigation: {
                     nextEl: '.swiper-viewmap[data-id="pdrawing"] .swiper-button-next',
                     prevEl: '.swiper-viewmap[data-id="pdrawing"] .swiper-button-prev',
