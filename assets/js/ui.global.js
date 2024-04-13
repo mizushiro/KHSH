@@ -1702,7 +1702,7 @@ class ScrollPage {
 
             }, 100)
         }
-        // window.addEventListener('wheel', actWheel, {passive : false});
+         window.addEventListener('wheel', actWheel, {passive : false});
 
     }
 }

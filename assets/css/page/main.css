@@ -206,11 +206,12 @@
                 transition: all .8s ease-out;
             }
         }
-        .stroy-card:hover {
-            .stroy-card-link img{
+
+        &[data-scroll-view="true"] {
+            .stroy-card .stroy-card-link img{
                 opacity: 1;
                 transform: translateY(-10rem);
-                transition: all .4s ease-in;
+                transition: all .6s ease-in;
             }
         }
     }
@@ -482,8 +483,10 @@
                 transform: translateY(0);
             }
         }
-        .stroy-card:hover {
-            .stroy-card-link img{
+        
+
+        &[data-scroll-view="true"] {
+            .stroy-card .stroy-card-link img{
                 transform: translateY(-7rem);
             }
         }

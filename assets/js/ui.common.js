@@ -91,5 +91,4 @@
         type: 'modal',
         src: './common/modal_allMenu'
     });
-   
 });

@@ -124,7 +124,13 @@
     color:#fff;
     top: 0;
     transition: all .2s ease-in;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    .card-item-tit {
+        margin-top: 2.8rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
 .card-item-desc dl {
     display: flex;
@@ -136,7 +142,6 @@
 }
 .card-item-desc dl > div {
     display: flex;
-
     dt {
         display: block;
         width: 8.6rem;
@@ -147,6 +152,7 @@
 .card-item-link {
     display: flex;
     justify-content: flex-end;
+    justify-self: flex-end;
     padding:0;
     margin-top: 3rem;
     gap:1.6rem;
@@ -156,8 +162,8 @@
 }
 .card-item:hover {
     .card-item-view {
-        top:-50%;
-        transition: all .2s ease-in;
+        opacity: 0;
+        transition: all .3s ease-out;
     }
     /*.card-item-tit{
         opacity: 0;
@@ -165,7 +171,7 @@
     }*/
     .card-item-desc{
         opacity: 1; 
-        transition: all .2s ease-in;
+        transition: all .3s ease-in;
     }
     .card-item-img::before {
         transition: all .2s ease-in;
