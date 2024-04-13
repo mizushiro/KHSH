@@ -219,14 +219,11 @@
         height: 100%;
         max-height: 108rem;
         background-color: #fff;
-
-        .swiper-slide{margin: 0 2rem;}
     }
     &[data-sec="news"] {
         height: 100%;
         max-height: 108rem;
         background-color: #F8F8F8;
-        .swiper-slide{margin: 0 2rem;}
     }
     &[data-sec="etc"] {
         height: 100%;
@@ -415,14 +412,6 @@
 @media (max-width:1900px) {
     [data-sec="info"] .swiper,
     [data-sec="news"] .swiper {overflow: visible;}
-    .main-section {
-        &[data-sec="info"] {
-            .swiper-slide{margin: 0 .8rem;}
-        }
-        &[data-sec="news"] {
-            .swiper-slide{margin: 0 .8rem;}
-        }
-    }
     .swiper-pagination-bullet{min-width: auto !important;}
    
 }

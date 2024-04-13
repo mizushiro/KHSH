@@ -1,15 +1,12 @@
 .card-item {
     position: relative;
-    width: 100%;
-    max-width: 40rem;
-    height: 50rem;
+    aspect-ratio:4/5;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
 
     &[data-type="news"] {
-        height: 59.6rem;
-
+        aspect-ratio: 400/596;
         .card-item-view {
             position: relative;
             padding: 8rem 4rem;
