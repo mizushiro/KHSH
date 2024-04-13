@@ -518,9 +518,15 @@
                     _header.dataset.color = "dark" : 
                     _header.removeAttribute('data-color');
 
-                v.per_s > 85 ?
-                v.element.dataset.scrollView = 'true':
-                v.element.dataset.scrollView = 'false';
+                if (v.per_s > 85 && v.per_e === 0) {
+                    v.element.dataset.scrollView = 'true';
+                } 
+                else if (v.per_s < 85 && v.per_e === 0) {
+                    v.element.dataset.scrollView = 'false';
+                }
+                else if (v.per_e > 60) {
+                    v.element.dataset.scrollView = 'false';
+                }
                 console.log(v);
             }
             const mainMotion3 = (v, n) => {
@@ -573,7 +579,12 @@
                         slidesPerGroup: 1,
                         spaceBetween: 16,
                     },
-                    1600: {
+                    800: {
+                         slidesPerView: 3 ,
+                        spaceBetween: 20,
+                        slidesPerGroup: 3,
+                    },
+                    1400: {
                         slidesPerView: 4 ,
                         spaceBetween: 40,
                         slidesPerGroup: 4,
@@ -612,10 +623,15 @@
                         slidesPerGroup: 1,
                         spaceBetween: 16,
                     },
-                    1900: {
-                        slidesPerView: 4 ,
-                        slidesPerGroup: 4,
+                    800: {
+                         slidesPerView: 3 ,
+                        spaceBetween: 20,
+                        slidesPerGroup: 3,
+                    },
+                    1400: {
+                         slidesPerView: 4 ,
                         spaceBetween: 40,
+                        slidesPerGroup: 4,
                     },
                 },
                 on: {

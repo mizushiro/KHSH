@@ -150,16 +150,6 @@ body{overflow-x: hidden;}
 }
 
 
-@media (max-width:1800px) {
-    html{font-size:.55vw;}
-}
-@media (max-width:1440px) {
-    html{font-size:10px;}
-}
-
-@media (max-width:360px) {
-    html{font-size:2.66vw;}
-}
 
 
 

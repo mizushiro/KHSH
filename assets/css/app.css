@@ -18,3 +18,5 @@
 @import url(./page/footer.css);
 @import url(./page/main.css);
 @import url(./page/sub.css);
+
+@import url(./base/responsive.css);

@@ -10,8 +10,17 @@
             data-callback="nav" 
             data-toggle-state="false">
         </button>
-
+       
         <nav class="base-nav" data-toggle-target="nav">
+            <div class="nav-header">
+                <strong class="logo"><span class="a11y-hidden">ARTERA</span></strong>
+                <button type="button" class="btn-nav" aria-label="전체메뉴" data-toggle-object="nav" data-callback="nav" data-toggle-state="true" data-event="on">
+                </button>
+            </div>
+
+            <div class="nav-util">
+                <a href="#">로그인</a> | <a href="#">회원가입</a> | <a href="#">공지사항</a>
+            </div>
             <ul class="nav-dep1">
                 <li class="nav-dep1-item">
                     <a href="#" class="nav-dep1-link">브랜드</a>
@@ -49,6 +58,7 @@
                 </li>
             </ul>
         </nav>
+
         <button type="button" class="btn-search" aria-label="검색"></button>
         <button type="button" class="btn-etc-nav" aria-label="전체메뉴" data-toggle-object="nav" data-toggle-state="false" data-callback="toggle_nav" ></button>
     </div>
