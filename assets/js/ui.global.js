@@ -934,6 +934,7 @@ class Accordion {
             _body ? _body.style.height = 'auto' : '';
         }
     }
+    
 }
 
 class Tab {
@@ -1127,8 +1128,6 @@ class Layer {
         this.isFocus = false;
         this.timer;
 
-
-
         switch (this.opt.type) {
             case 'system':
                 this.madeSystem();
@@ -1150,7 +1149,6 @@ class Layer {
                 break;
 
             default: // modal, bottom, dropdow
-
                 if (this.opt.src) {
                     this.setFetch();
                 }
@@ -1611,7 +1609,8 @@ class Layer {
 }
 
 class ScrollPage {
-    constructor() {
+    constructor(opt) {
+        this.opt = opt;
         this.el_wrap = document.querySelector('.mdl-scroll');
         if (!this.el_wrap) {
             this.el_wrap = document.querySelector('html');
@@ -1624,6 +1623,8 @@ class ScrollPage {
         this.ary_top_s = [];
         this.ary_top_e = [];
         this.ary_top_h = [];
+        this.pageNum = 0;
+
         this.init();
     }
     init() {
@@ -1633,11 +1634,10 @@ class ScrollPage {
             this.ary_top_e.push(rect.top + this.sctop + this.wraph);
             this.ary_top_h.push(rect.height);
         }
-
+        
         const act = () => {
             const n = this.el_wrap.scrollTop;
             const w_h = window.innerHeight;
-           
 
             for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
                 const n_s = Number(this.ary_top_s[i]);
@@ -1645,9 +1645,10 @@ class ScrollPage {
                 const n_h = Number(this.ary_top_h[i]);
                 let per_s = 0;
                 let per_e = 0;
+
                 const _name = this.el_items[i].dataset.scrollCallback;
-                const if_1 = n_s < (n + w_h) && (n + w_h) < n_e;
-                const if_2 = n_e < (n + w_h) && (n + w_h) < (n_e + n_h);
+                const if_1 = n_s <= (n + w_h) && (n + w_h) <= n_e;
+                const if_2 = n_e <= (n + w_h) && (n + w_h) <= (n_e + n_h);
 
                 if (if_1 || if_2) {
                     if (if_1) {
@@ -1674,35 +1675,78 @@ class ScrollPage {
         }
         act();
         window.addEventListener('scroll', act);
+        this.wheel();
+        
+    }
+    wheel() {
+        if (this.opt && this.opt.wheel) {
+            let wheelTimer;
+            const scope = this.opt.wheelscope
+            const doScroll = (v) => {
+                if (v === 'down') {
+                    this.pageNum = this.pageNum + 1;
+                    this.pageNum > this.el_items.length - 1 ? this.pageNum = this.el_items.length - 1 : '';
+                } else {
+                    this.pageNum = this.pageNum - 1;
+                    this.pageNum < 0 ? this.pageNum = 0 : '';
+                }
+                for (const item of this.el_items) {
+                    item.dataset.stateWheel = false;
+                }
+                this.el_items[this.pageNum].dataset.stateWheel = true;
 
-
-        const el_html = document.querySelector('html');
-        let wheelTimer;
-        let curSIdx = 0;
-        let pageNum = 0;
-
-        const doScroll = (v) => {
-            if (v === 'down') {
-                pageNum = pageNum + 1;
-                pageNum > this.el_items.length - 1 ? pageNum = this.el_items.length - 1 : '';
-            } else {
-                pageNum = pageNum - 1;
-                pageNum < 0 ? pageNum = 0 : '';
+                this.el_items[this.pageNum].scrollIntoView({
+                    block: "start", 
+                    inline: "nearest", 
+                    behavior: "smooth"
+                });  
             }
-               
-            this.el_items[pageNum].scrollIntoView({
-                block: "start",inline: "nearest", behavior: "smooth"
-            });  	
-        }
-        const actWheel = (e) => {
-            e.preventDefault();
-            clearTimeout(wheelTimer);
-            wheelTimer = setTimeout(() => {
-                (e.deltaY < 0) ? doScroll('up') : doScroll('down');
+           
+            const actWheel = (e) => {   
+                if (scope > this.pageNum) {
+                    e.preventDefault();
+                    clearTimeout(wheelTimer);
+                    wheelTimer = setTimeout(() => {
+                        if (e.deltaY < 0){
+                            doScroll('up');
+                            
+                        } else {
+                            doScroll('down');
+                        }
+                    }, 300);
+                } else {
+                    if (e.deltaY < 0 && this.ary_top_s[this.opt.wheelscope] >= this.el_wrap.scrollTop){
+                        e.preventDefault();
+                        clearTimeout(wheelTimer);
+                        wheelTimer = setTimeout(() => {
+                            if (e.deltaY < 0){
+                                doScroll('up');
+                            }
+                        }, 300);
+                       
+                    } else {
+                        if (this.ary_top_s[this.opt.wheelscope] > this.el_wrap.scrollTop) {
+                            if (e.deltaY < 0){
+                                e.preventDefault();
+                                clearTimeout(wheelTimer);
+                                wheelTimer = setTimeout(() => {
+                                    this.pageNum = scope;
+                                    doScroll('up');
+                                }, 300);
+                                
+                            }
+                        }
+                    }
+                }
+            }
 
-            }, 100)
+            if (this.opt.wheel) {
+                window.addEventListener('wheel', actWheel, {passive : false});
+            }
+            
         }
-         window.addEventListener('wheel', actWheel, {passive : false});
-
     }
 }
+
+
+

@@ -1,3 +1,7 @@
+html[data-modal="show"] body{
+    overflow-y: hidden;
+}
+
 .mdl-layer {
     position: fixed;
     width: 100%;
@@ -312,24 +316,54 @@
         padding:0;
         align-items: flex-start;
         height: auto;
-        top:12rem;
+        top:0;
         background-color: transparent;
+
         .mdl-layer-dim{display: none;}
         .mdl-layer-wrap {
             background-color: var(--navy);
-            padding: 4rem 5rem;
+            padding: 0;
             width: 100%;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
-
- 
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             animation-name: top_show;
             animation-delay: .1s;
             animation-duration: .3s;
             animation-iteration-count: 1;
-            animation-fill-mode: backwards;
+            animation-fill-mode: backwards; 
+        }
+        .mdl-layer-header {
+            width: 100%;
+            height: 12rem;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 4rem;
+
+            .mdl-layer-header-wrap {
+                position: relative;
+                display: flex;
+                width: 100%;
+                max-width: 172rem;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 9.7rem;
+            }
+            
+            .nav-dep1-link{
+                color:#000 !important;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            .btn-nav-close{
+                top: 4rem;
+                right: 1rem;
+                z-index: 10;
+                background: url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
+            }
         }
         &[data-state="hide"] {
             .mdl-layer-dim {
@@ -352,21 +386,58 @@
             margin: 0 auto;
             width: 100%;
             max-width: 192rem;
-            padding:0;
+            padding:4rem 0;
             height: auto;
             overflow: hidden;
+
+            .base-nav{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+                flex-direction: row;
+                .mdl-acco,
+                .nav-dep1{width: auto;}
+            }
+            .mdl-acco {
+                display: flex;
+                align-items: flex-start;
+            }
+            .mdl-acco-head-wrap{width: 100%; display: flex; justify-content: center;}
+            .mdl-acco-item{padding: 0 7rem;}
+            .nav-dep1-item {min-width:26rem; }
+            .nav-dep1{width: 100%; height: auto; justify-content: flex-end;}
+            .nav-dep2{opacity: 1; padding-bottom: 0;}
+            .nav-dep2-link{color: #fff; font-size: 2rem; font-weight: 500; opacity: 0.5; text-align: center; pointer-events: initial;}
+            .nav-dep2-link:hover{
+                opacity: 1;
+                text-decoration: underline;
+                text-underline-offset: .8rem;
+            }
+            .mdl-acco-btn{pointer-events: none;}
+            .mdl-acco-body{height: auto;}
+            .mdl-acco-tit,
+            .nav-dep1-link{color: #fff;  text-align: center; font-size: 2.4rem; padding: 0; width: 100%; justify-content: center; width: 100%;}
+
+            .nav-dep1-item.etc .nav-dep2{
+                padding-top: 0;
+
+                .nav-dep2-link {opacity: 1;}
+            }
         }
-        .btn-nav-close{
-            z-index: 10;
-            background: url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
-        }
-        .nav-dep1-item{min-width: 23rem;}
-        .nav-dep1{width: 100%; height: auto; justify-content: flex-end;}
-        .nav-dep2{opacity: 1;}
-        .nav-dep2-link{color: #fff; font-size: 2rem; font-weight: 500; opacity: 0.5; text-align: center; pointer-events: initial;}
-        .nav-dep1-link{color: #fff;  text-align: center; font-size: 2.4rem; padding: 0; width: 100%; justify-content: center;}
+        
+        
     }
 }
+
+@keyframes nav_show {
+    0% {transform: translate(-100dvw, 0);}
+    100% {transform: translate(0, 0);}
+}
+@keyframes nav_hide {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-100dvw, 0);}
+}
+
 
 @keyframes dim_show {
     0% {opacity: 0; }

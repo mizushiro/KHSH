@@ -320,9 +320,7 @@
                                         <strong class="card-item-tit">강릉 회산 <br />아테라</strong>
                                         <div>
                                             <dl>
-                                                <div>
-                                                    <dt class="card-item-tit">강릉 회산 <br>아테라</dt>
-                                                </div>
+
                                                 <div>
                                                     <dt>위치</dt>
                                                     <dd>강원도 강릉시 회산동 536번지 일원</dd>
@@ -527,13 +525,16 @@
                 else if (v.per_e > 60) {
                     v.element.dataset.scrollView = 'false';
                 }
-                console.log(v);
             }
             const mainMotion3 = (v, n) => {
                 _header.dataset.color = "dark"
                 // v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
             }
             const mainMotion4 = (v, n) => {
+                // console.log(v);
+                // if (v.per_e < 10 && v.per_s < 10) {
+                //    UI.exe.scrollpage.wheel();
+                // }
                 _header.dataset.color = "dark"
             }
             const mainMotion5 = (v, n) => {
@@ -548,7 +549,10 @@
             UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
             UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
             UI.callback.main6 = (v) => { mainMotion5(v, [40]); }
-            UI.exe.scrollpage = new ScrollPage();
+            UI.exe.scrollpage = new ScrollPage({
+                wheel: true,
+                wheelscope: 3
+            });
 
             //분양정보 & NEWS 리스트 스와이퍼
             const actSwiperPaging = (v) => {
@@ -580,11 +584,16 @@
                         spaceBetween: 16,
                     },
                     800: {
+                         slidesPerView: 2 ,
+                        spaceBetween: 20,
+                        slidesPerGroup: 2,
+                    },
+                    1200: {
                          slidesPerView: 3 ,
                         spaceBetween: 20,
                         slidesPerGroup: 3,
                     },
-                    1400: {
+                    1500: {
                         slidesPerView: 4 ,
                         spaceBetween: 40,
                         slidesPerGroup: 4,
@@ -624,11 +633,16 @@
                         spaceBetween: 16,
                     },
                     800: {
+                         slidesPerView: 2 ,
+                        spaceBetween: 20,
+                        slidesPerGroup: 2,
+                    },
+                    1200: {
                          slidesPerView: 3 ,
                         spaceBetween: 20,
                         slidesPerGroup: 3,
                     },
-                    1400: {
+                    1500: {
                          slidesPerView: 4 ,
                         spaceBetween: 40,
                         slidesPerGroup: 4,

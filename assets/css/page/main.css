@@ -163,6 +163,7 @@
             width: 100%;
             max-width: 142.6rem;
             height: 72rem;
+            max-height: 70dvh;
             background-color: rgba(255,255,255,0.9);
             display: flex;
             justify-content:center;
@@ -217,7 +218,8 @@
     }
     &[data-sec="info"] {
         height: 100dvh;
-        min-height: 108rem;
+        min-height: 90rem;
+        padding: 0 4rem;
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -226,7 +228,8 @@
     }
     &[data-sec="news"] {
         height: 100dvh;
-        min-height: 108rem;
+        min-height: 90rem;
+        padding: 0 4rem;
         background-color: #F8F8F8;
         display: flex;
         align-items: center;
@@ -298,13 +301,13 @@
 
 .main-list {
     width: 100%;
-    padding: 10rem;
+    padding: 0;
 
     .swiper{
         max-width: 172rem;
         padding-bottom: 6rem;
         @media (max-width:900px) {
-            padding-bottom:0;
+            padding-bottom:0 4rem;
         }
     }
     /* .swiper-slide {max-width: 40rem;} */
@@ -399,6 +402,7 @@
         font-size: 6rem; 
         font-weight: 600;
         color: var(--navy);
+        line-height: 1;
     }
 }
 .btn-more {

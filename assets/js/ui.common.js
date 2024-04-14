@@ -16,7 +16,7 @@
         const keyEnd = (e) => {
             (!e.shiftKey && e.keyCode == 9) && actClose();
         }
-        const onLIne = (v) => {
+        const onLine = (v) => {
             const _base = !!v.currentTarget ? v.currentTarget : v;
             const wrapDep1 = _base.closest('.nav-dep1-item');
             const dep1 = wrapDep1.querySelector('.nav-dep1-link');
@@ -28,7 +28,7 @@
         const isIn = (e) => {
             const _this = e.currentTarget;
             const isHeader = !!_this.closest('.base-header');
-            onLIne(_this)
+            onLine(_this);
             (isHeader) ? _body.dataset.nav = 'open' : _body.dataset.nav = 'close';
         }
         const actClose = (e) => {
@@ -37,7 +37,7 @@
         const actOpen = (e) => {
             const _this = e.currentTarget;
 
-            onLIne(_this);
+            onLine(_this);
             _body.dataset.nav = 'open';
             _header.addEventListener('mouseleave', actClose);
             _lastItem.addEventListener('keydown', keyEnd);
@@ -52,9 +52,8 @@
             item.addEventListener('keyup', isIn);
         }
         for (let item of dep2Links) {
-            item.addEventListener('mouseover', onLIne);
+            item.addEventListener('mouseover', onLine);
         }
-        _lastItem
     }
     UI.callback.nav = (v) => {
         console.log(v.state);
@@ -75,7 +74,8 @@
             UI.exe.nav();
             UI.exe.toggle = new ToggleUI();
             UI.callback.toggle_nav = (v) => {
-                (v.state === 'true') ? UI.exe.allMenu.show() : UI.exe.allMenu.hide();
+                UI.exe.allMenu.show();
+                // (v.state === 'true') ? UI.exe.allMenu.show() : UI.exe.allMenu.hide();
             }
         }
     });
@@ -89,6 +89,19 @@
     UI.exe.allMenu = new Layer({
         id :'modal_allMenu',
         type: 'modal',
-        src: './common/modal_allMenu'
+        src: './common/modal_allMenu',
+        callback: () => {
+            console.log(1111111111);
+            if (!UI.exe.navMobile) {
+                UI.exe.navMobile = new Accordion({
+                    id :'navMobile',
+                    current: 0,
+                    callback: (v) => {
+                        console.log('callback:', v);
+                    }
+                });
+            }
+            
+        }
     });
 });
