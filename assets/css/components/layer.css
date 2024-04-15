@@ -427,6 +427,105 @@ html[data-modal="show"] body{
         
         
     }
+    &.search {
+        padding:0;
+        align-items: flex-start;
+        height: auto;
+        top:0;
+        background-color: transparent;
+
+        .mdl-layer-dim{display: none;}
+        .mdl-layer-wrap {
+            background-color: var(--navy);
+            padding: 0;
+            width: 100%;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            animation-name: top_show;
+            animation-delay: .1s;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards; 
+        }
+        .mdl-layer-header {
+            width: 100%;
+            height: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:0 4rem;
+
+            .logo{
+                background: url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
+            }
+            .mdl-layer-header-wrap {
+                position: relative;
+                display: flex;
+                width: 100%;
+                max-width: 172rem;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 9.7rem;
+            }
+            
+            .nav-dep1-link{
+                color:#000 !important;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            .btn-nav-close{
+                top: 0rem;
+                right: 1rem;
+                z-index: 10;
+                background: url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+            }
+        }
+        &[data-state="hide"] {
+            .mdl-layer-dim {
+                animation-name: dim_hide;
+                animation-delay: .1s;
+                animation-duration: .3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+            }
+            .mdl-layer-wrap {
+                animation-name: top_hide;
+                animation-delay: .1s;
+                animation-duration: .3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+            }
+        }
+
+        .mdl-layer-body{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 192rem;
+            padding:0 0 14rem;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 4rem;
+            font-size: 3rem;
+            color: #fff;
+            font-weight: 500;
+
+            input {
+                width: 62.7rem;
+                height: 6rem;
+                font-size: 2.4rem;
+                padding: 0 4rem;
+                color: #000;
+            }
+        }
+        
+        
+    }
 }
 
 @keyframes nav_show {

@@ -8,6 +8,7 @@
         const _header = document.querySelector('.base-header');
         const _firstItem = _header.querySelector('.logo');
         const _lastItem = _header.querySelector('.btn-etc-nav');
+        const searchBtn = _header.querySelector('.btn-search');
         const _btns = _header.querySelectorAll('button, a');
 
         const keyStart = (e) => {
@@ -54,6 +55,7 @@
         for (let item of dep2Links) {
             item.addEventListener('mouseover', onLine);
         }
+        searchBtn.addEventListener('click', UI.exe.search.show);
     }
     UI.callback.nav = (v) => {
         console.log(v.state);
@@ -79,6 +81,7 @@
             }
         }
     });
+    //footer
     UI.parts.include({
         src: 'common/footer.html',
         id: 'footer',
@@ -91,7 +94,6 @@
         type: 'modal',
         src: './common/modal_allMenu',
         callback: () => {
-            console.log(1111111111);
             if (!UI.exe.navMobile) {
                 UI.exe.navMobile = new Accordion({
                     id :'navMobile',
@@ -101,6 +103,14 @@
                     }
                 });
             }
+        }
+    });
+
+    UI.exe.search = new Layer({
+        id :'modal_search',
+        type: 'modal',
+        src: './common/modal_search',
+        callback: () => {
             
         }
     });
