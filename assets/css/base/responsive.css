@@ -70,8 +70,7 @@
     }
     
     .main-section {
-        &[data-sec="info"],
-        &[data-sec="news"] {padding-top:8rem}
+
         &[data-sec="etc"] {
             max-height:100%;
             grid-template-rows: 1fr;
