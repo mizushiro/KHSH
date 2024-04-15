@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.form-input {
+    height:4rem;
+    padding:0 1.2rem;
+    font-size:1.8rem;
+    border:.1rem solid var(--form_line);
+    &:focus {
+        border-color:var(--black);
+    }
+    @media (max-width:1023px) {
+        height:3rem;
+        padding:0 .4rem;
+        font-size:1.5rem;
+    }
+}
+.choice-item {
+    display:flex;
+    align-items:flex-start;
+    gap:1rem;
+    @media (max-width:1023px) {
+        gap:.4rem;
+    }
+    .form-checkbox {
+        flex-shrink:0;
+        margin:0;
+        width:2.4rem;
+        height:2.4rem;
+        position:relative;
+        border:.1rem solid var(--gray_300);
+        background-color:var(--white);
+        &:checked {
+            border-color:var(--orange);
+            background-color:var(--orange);
+            &:before {
+                content:'';
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                display:block;
+                aspect-ratio:18/13;
+                width:1.8rem;
+                background:url("../../images/common/ico-check.svg") no-repeat 50% 50%;
+                background-size:contain;
+            }
+        }
+        @media (max-width:1023px) {
+            width:1.6rem;
+            height:1.6rem;
+            &:checked:before {
+                width:1rem;
+            }
+        }
+    }
+    .form-radio {
+        flex-shrink:0;
+        margin:0;
+        width:2.4rem;
+        height:2.4rem;
+        position:relative;
+        border:.2rem solid var(--form_line);
+        background-color:var(--white);
+        border-radius:999em;
+        &:checked {
+            border-color:var(--orange);
+            background-color:var(--orange);
+            &:before {
+                content:'';
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+                background-color:var(--white);
+                border-radius:999em;
+                display:block;
+                aspect-ratio:1/1;
+                width:.8rem;
+            }
+        }
+        @media (max-width:1023px) {
+            width:1.6rem;
+            height:1.6rem;
+            &:checked:before {
+                width:.6rem;
+            }
+        }
+    }
+    label {
+        color:var(--gray_300);
+        line-height:2.4rem;
+        font-size:2rem;
+        font-weight:500;
+        @media (max-width:1023px) {
+            font-size:1.5rem;
+            line-height:1.6rem;
+        }
+    }
+}

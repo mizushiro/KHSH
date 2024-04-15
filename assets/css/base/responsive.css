@@ -168,7 +168,6 @@
             max-width: 100%;
             flex:1;
             padding:0 0 4rem;
-            height: auto;
             overflow: hidden;
             overflow-y: auto;
             height: 100%;
@@ -525,7 +524,7 @@
             min-height:7.7rem !important;
             max-height:7.7rem ;
         }
-        .card-item-desc {font-size: 1.6rem;height: 7rem; opacity: 1; font-size: 500; text-align: justify;}
+        .card-item-desc {font-size: 1.6rem;height: 7rem; opacity: 1; font-weight: 500; text-align: justify;}
         .card-item-view {padding: 4rem 2.5rem 3.8rem !important; top:0;}
         .card-item-date {font-size: 1.5rem; padding-top: 1.6rem !important;}
         [data-ellipsis="5"] {-webkit-line-clamp: 3;} 
