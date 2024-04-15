@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.form-input {
+    height:4rem;
+    padding:0 1.2rem;
+    font-size:1.8rem;
+    border:.1rem solid var(--form_line);
+    border-radius:.4rem;
+    &:focus {
+        border-color:var(--black);
+    }
+    @media (max-width:1023px) {
+        height:3rem;
+        padding:0 .4rem;
+        font-size:1.5rem;
+    }
+}

@@ -20,30 +20,18 @@
     --beige: #F0D5BA;
     --lightpink: #FACECA;
 
-    --gray_100: #000;
-    --gray_95:  #222;
-    --gray_90:  #444;
-    --gray_80:  #666;
-    --gray_70:  #777;
-    --gray_60:  #999;
-    --gray_50:  #ccc;
-    --gray_40:  #d7d7d7;
-    --gray_30:  #e5e5e5;
-    --gray_20:  #eee;
-    --gray_10:  #f7f7f7;
-    --gray_0:   #fff;
-}
-:root.dark {
-    --gray_0:   #000;
-    --gray_10:  #222;
-    --gray_20:  #444;
-    --gray_30:  #666;
-    --gray_40:  #777;
-    --gray_50:  #999;
-    --gray_60:  #ccc;
-    --gray_70:  #d7d7d7;
-    --gray_80:  #e5e5e5;
-    --gray_90:  #eee;
-    --gray_95:  #f7f7f7;
-    --gray_100: #fff;
+
+    --black: #000;
+    --white: #fff;
+
+    --gray_200: #222;
+    --gray_300: #333;
+    --gray_400: #444;
+    --gray_500: #555;
+    --gray_600: #666;
+    --gray_700: #777;
+    --gray_800: #888;
+    --gray_900: #999;
+
+    --form_line: #ccc;
 }

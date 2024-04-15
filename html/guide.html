@@ -9,17 +9,20 @@
     <title>ARTERA 금호건설</title>
 
     <link rel="stylesheet" href="../assets/css/app.css">
-    <script src="../assets/js/ui.global.js"></script>
-    <script src="../assets/js/ui.common.js"></script>
+    <!--<script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>-->
 
     <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
     <script src="../assets/lib/swiper-bundle.min.js"></script>
     <style>
         .base-wrap {padding: 2rem 6rem;}
-        t1{display: block; font-size: 50px; margin: 4rem 0 4rem;}
-        t2{display: block; font-size: 20px; font-weight: 700; margin-bottom: 1.2rem;}
+        t1{display: block; font-size: 5rem; margin: 4rem 0 4rem;}
+        t2{display: block; font-size: 2rem; font-weight: 700; margin-bottom: 1.2rem;}
+        t3{display: block; width:100%; font-size: 1.4rem; font-weight: 700;}
+        t3 ~ t3 {margin-top:1.2rem}
         box{display: flex; gap:1.4rem; padding:2.4rem; border: .1rem solid #ccc; border-radius: .8rem; align-items: flex-start; flex-wrap: wrap;}
         sec{display: block; margin: 5rem 0;}
+        .box-row {width:100%;display:flex;gap:.8rem;flex-wrap:wrap;align-items:flex-end}
     </style>
 </head>
 <body>
@@ -77,10 +80,41 @@
                     </div>
                 </box>
             </sec>
+
+            <sec>
+                <t2>Button</t2>
+                <box>
+                    <t3>Button type</t3>
+                    <div class="box-row">
+                        <button type="button" class="button-base" data-style="bg-primary" data-size="size-60">bg-primary</button>
+                        <button type="button" class="button-base" data-style="bg-dark" data-size="size-60">bg-primary</button>
+                        <button type="button" class="button-base" data-style="bg-sky-blue" data-size="size-60">bg-primary</button>
+                        <button type="button" class="button-base" data-style="line-primary" data-size="size-60">line-primary</button>
+                    </div>
+                    <t3>Button size</t3>
+                    <div class="box-row">
+                        <button type="button" class="button-base" data-style="bg-primary" data-size="size-60">size-60</button>
+                        <button type="button" class="button-base" data-style="bg-primary" data-size="size-40">size-40</button>
+                    </div>
+                    <t3>Button radius</t3>
+                    <div class="box-row">
+                        <button type="button" class="button-base" data-style="bg-primary" data-size="size-60" data-radius="radius-xs">radius-xs</button>
+                    </div>
+                </box>
+            </sec>
+
+            <sec>
+                <t2>Form</t2>
+                <box>
+                    <t3>input</t3>
+                    <div class="box-row">
+                        <input type="text" class="form-input" />
+                    </div>
+                </box>
+            </sec>
             
              
         </main>
-        <footer></footer>
     </div>
 
     <script>

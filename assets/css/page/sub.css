@@ -92,7 +92,10 @@
     justify-self: flex-end;
     align-self: flex-end;
     padding: 0 3.8rem 6rem;
-    .mdl-button{flex:1; height: 6rem; font-size: 1.8rem; border-radius: 0;}
+    .button-base {
+        min-width:0;
+        flex:1;
+    }
 
 }
 .card-artera-tel {
