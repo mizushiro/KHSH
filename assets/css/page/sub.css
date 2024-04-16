@@ -32,9 +32,6 @@
     display:flex;
     justify-content:flex-end;
     margin:6rem 0;
-    @media (max-width:1023px) {
-        margin:3rem 0;
-    }
     ol {
         display:flex;
         justify-content:flex-end;
@@ -45,9 +42,6 @@
         font-size:1.8rem;
         color:#ccc;
         align-items:center;
-        @media (max-width:1023px) {
-            font-size:1.6rem;
-        }
     }
     li::before {
         content:"";
@@ -62,6 +56,18 @@
     }
     li:last-child {
         color:var(--black);
+    }
+    @media (max-width:1023px) {
+        margin:3rem 0;
+        ol {
+            gap:1rem;
+        }
+        li {
+            font-size:1.5rem;
+            &::before {
+                margin-right:1rem;
+            }
+        }
     }
 }
 
