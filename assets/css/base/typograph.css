@@ -71,8 +71,6 @@
 }
 
 
-
-
 @font-face {
     font-family: 'Base';
     font-weight: 100;
@@ -153,4 +151,16 @@
          url('../../fonts/Poppins-Black.woff') format('woff');
     font-display: swap;
 	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
-} 
+}
+
+.title-size-40 {
+    font-size:4rem;
+    font-weight:600;
+    color:#000;
+    line-height:4.8rem;
+    word-break:keep-all;
+    @media (max-width:1023px) {
+        font-size:3rem;
+        line-height:3.6rem;
+    }
+}

@@ -9,8 +9,8 @@
     <title>ARTERA 금호건설</title>
 
     <link rel="stylesheet" href="../assets/css/app.css">
-    <!--<script src="../assets/js/ui.global.js"></script>
-    <script src="../assets/js/ui.common.js"></script>-->
+    <script src="../assets/js/ui.global.js"></script>
+    <!--<script src="../assets/js/ui.common.js"></script>-->
 
     <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
     <script src="../assets/lib/swiper-bundle.min.js"></script>
@@ -122,6 +122,55 @@
                     </div>
                 </box>
             </sec>
+
+            <sec>
+                <t2>Tab</t2>
+                <box>
+                    <t3>Line Type</t3>
+                    <div class="box-row">
+                        <div class="mdl-tab" data-tab-id="tabLinie">
+                            <div class="tab-type-line">
+                                <button type="button" class="mdl-tab-btn" data-tab="1">
+                                    <span>조감도</span>
+                                </button>
+                                <button type="button" class="mdl-tab-btn" data-tab="2">
+                                    <span>투시도</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mdl-tab-pnl" data-tab-id="tabLinie">
+                            <section class="mdl-tab-item" data-tab="1">
+                                1
+                            </section>
+                            <section class="mdl-tab-item" data-tab="2">
+                                2
+                            </section>
+                        </div>
+                    </div>
+
+                    <t3>Box Type</t3>
+                    <div class="box-row">
+                        <div class="mdl-tab" data-tab-id="tabBox">
+                            <div class="tab-type-box">
+                                <button type="button" class="mdl-tab-btn" data-tab="1-1">
+                                    <span>조감도</span>
+                                </button>
+                                <button type="button" class="mdl-tab-btn" data-tab="2-1">
+                                    <span>투시도</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mdl-tab-pnl" data-tab-id="tabBox">
+                            <section class="mdl-tab-item" data-tab="1-1">
+                                1
+                            </section>
+                            <section class="mdl-tab-item" data-tab="2-1">
+                                2
+                            </section>
+                        </div>
+                    </div>
+                </box>
+            </sec>
             
              
         </main>
@@ -129,8 +178,20 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-
-             
+            UI.exe.idpwTab = new Tab({
+                id: 'tabLinie',
+                current: '1',
+                callback: (v) => {
+                    console.log(v)
+                }
+            });
+            UI.exe.idpwTab = new Tab({
+                id: 'tabBox',
+                current: '1',
+                callback: (v) => {
+                    console.log(v)
+                }
+            });
         }); 
     </script>
 </body>

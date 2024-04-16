@@ -1,36 +1,73 @@
 .mdl-tab {
-    position: relative;
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-
-    .mdl-tab-wrap {
-        display: flex;
-        gap: 0;
-        width: 100%;
-        margin-bottom: 9rem;
+    position:relative;
+    width:100%;
+    display:flex;
+    [class^="tab-type-"] {
+        display:flex;
+        width:100%;
     }
-
+    .tab-type-line {
+        gap:0;
+        margin-bottom:4rem;
+        .mdl-tab-btn {
+            border-bottom:.1rem solid var(--form_line);
+            padding:2rem 1.6rem;
+            background-color:var(--white);
+            font-size:2.4rem;
+            line-height:2.8rem;
+            font-weight:600;
+            color:var(--gray_800);
+            &[data-selected="true"] {
+                position:relative;
+                color:var(--black);
+                &::after {
+                    content:'';
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    bottom:-.1rem;
+                    height:.2rem;
+                    background-color:var(--black);
+                }
+            }
+            @media (max-width:1023px) {
+                font-size:1.8rem;
+            }
+        }
+    }
+    .tab-type-box {
+        gap:1rem;
+        margin-bottom:4rem;
+        .mdl-tab-btn {
+            border:.1rem solid var(--navy);
+            padding:.8rem 1.6rem;
+            height:8rem;
+            background-color:var(--white);
+            font-size:2.4rem;
+            line-height:2.8rem;
+            font-weight:600;
+            color:var(--navy);
+            word-break:keep-all;
+            &[data-selected="true"] {
+                position:relative;
+                color:var(--white);
+                background-color:var(--navy);
+            }
+            @media (max-width:1023px) {
+                font-size:1.8rem;
+                height:5.6rem;
+            }
+        }
+    }
     .mdl-tab-btn {
         flex:1;
-        border-bottom: .2rem solid #ccc;
-        padding: 1.2rem 1.6rem;
-        border-radius: 0;
-        white-space: nowrap;
-        background-color: #fff;
-        font-size: 2.4rem;
-        font-weight: 600;
-
-        &[data-selected="true"] {
-            border-color: #222;
-        }
+        border-radius:0;
     }
 }
 
 .mdl-tab-item {
-    display: none;
-
+    display:none;
     &[data-selected="true"] {
-        display: block;
+        display:block;
     }
 }
