@@ -70,32 +70,50 @@
     width:auto;
     display:flex;
     flex-wrap:wrap;
-    gap:5rem;
+    gap:8rem 5rem;
     margin:0 auto;
+    .card-artera-item {
+        width:calc((100% - 10rem) / 3);
+    }
+    @media (max-width:1400px) {
+        gap:6rem 4rem;
+        .card-artera-item {
+            width:calc((100% - 4rem) / 2);
+        }
+    }
+    @media (max-width:1023px) {
+        gap:3rem 2rem;
+        .card-artera-item {
+            width:calc((100% - 2rem) / 2);
+        }
+    }
+    @media (max-width:767px) {
+        .card-artera-item {
+            width:100%;
+        }
+    }
 }
 .card-artera-item {
     display:flex;
     flex-direction:column;
     position:relative;
-    width:50rem;
     box-shadow:.6rem .6rem 3rem rgba(0,0,0,0.2);
     background-color:var(--white);
-    h3 {
-        font-size:4rem;
-        line-height:4.8rem;
-        color:var(--black);
-        font-weight:600;
+    .title-size-40 {
         margin-bottom:2rem;
         span {
             display:block;
         }
     }
-    dl {
+    .card-artera-summary {
         display:flex;
         flex-direction:column;
         gap:2rem;
+        @media (max-width:1023px) {
+            gap:1rem;
+        }
     }
-    dl > div {
+    .card-artera-summary-item {
         display:flex;
         gap:2rem;
         font-size:2rem;
@@ -107,6 +125,15 @@
         }
         dd {
             flex:1;
+            word-break:keep-all;
+        }
+        @media (max-width:1023px) {
+            font-size:1.5rem;
+            line-height:1.8rem;
+            gap:1.2rem;
+            dt {
+                width:5.6rem;
+            }
         }
     }
 }
@@ -121,6 +148,14 @@
         min-width:0;
         flex:1;
     }
+    @media (max-width:1023px) {
+        padding:0 2rem 3rem;
+        gap:1rem;
+        .button-base {
+            min-height:3.6rem;
+            font-size:1.6rem;
+        }
+    }
 }
 .card-artera-tel {
     margin-bottom:4rem;
@@ -133,9 +168,17 @@
     &::before {
         content:"";
         display:block;
+        aspect-ratio:33/34;
         width:2rem;
-        height:2.1rem;
-        background:url(../../images/common/ico-tel.svg) no-repeat 50% 50% / 2rem;
+        background:url(../../images/common/ico-tel.svg) no-repeat 50% 50%;
+        background-size:contain;
+    }
+    @media (max-width:1023px) {
+        font-size:2rem;
+        margin-bottom:2rem;
+        &::before {
+            width:1.6rem;
+        }
     }
 }
 .card-artera-img {
@@ -145,10 +188,11 @@
     justify-content:center;
     align-items:center;
     flex-shrink:0;
-    aspect-ratio:1 / 0.654;
+    aspect-ratio:501/327;
     img {
         display:block;
-        max-width:100%;
+        width:100%;
+        height:100%;
         object-fit:cover;
         
     }
@@ -159,6 +203,9 @@
     flex:1;
     display:flex;
     flex-direction:column;
+    @media (max-width:1023px) {
+        padding:2rem;
+    }
 }
 .card-artera-state {
     position:absolute;
@@ -170,7 +217,10 @@
     justify-content:center;
     align-items:center;
     height:5.4rem;
-    padding:0 2.6rem;
+    padding:0 1.6rem;
+    min-width:10.4rem;
+    font-size:2rem;
+    font-weight:600;
     &[data-state="complete"] {
         background-color:var(--black);
     }
@@ -179,7 +229,7 @@
     }
     &[data-state="wait"] {
         background-color:var(--skyblue);
-        color:var(--black);
+        color:var(--navy);
     }
 }
 
@@ -198,12 +248,17 @@
         color:var(--black);
         border:0.1rem solid #ccc;
         border-radius:50%;
-        width:4.7rem;
+        min-width:4.7rem;
+        padding:0 .4rem;
         height:4.7rem;
+        flex-shrink:0;
         &[data-selected="true"] {
             background-color:var(--navy);
             color:var(--white);
         }
+    }
+    .paging-text {
+        padding:0 .4rem;
     }
     .paging-first {
         background:url(../../images/common/paging-arrow2.svg) no-repeat 50% 50% / 2.1rem;
@@ -219,6 +274,15 @@
     .paging-prev {
         background:url(../../images/common/paging-arrow.svg) no-repeat 50% 50% / 2.1rem;
     }
+    @media (max-width:1023px) {
+        padding:6rem 0;
+        button {
+            min-width:3.4rem;
+            height:3.4rem;
+            font-size:1.4rem;
+            line-height:1;
+        }
+    }
 }
 .paging-group {
     display:flex;
@@ -226,6 +290,9 @@
     align-items:center;
     gap:0.8rem;
     margin:0 1.2rem;
+    @media (max-width:1023px) {
+        margin:0;
+    }
 }
 
 .artera-detail {
