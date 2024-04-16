@@ -4,6 +4,12 @@
         padding-top:8rem;
     }
 }
+.content-area {
+    &[data-bg="sky"] {
+        background-color:var(--skyblue);
+        padding-top:12rem;
+    }
+}
 .sub-content {
     max-width:176rem;
     margin:0 auto;
@@ -31,7 +37,7 @@
 .breadcrumbs {
     display:flex;
     justify-content:flex-end;
-    margin:6rem 0;
+    padding:6rem 0;
     ol {
         display:flex;
         justify-content:flex-end;
@@ -58,7 +64,7 @@
         color:var(--black);
     }
     @media (max-width:1023px) {
-        margin:3rem 0;
+        padding:3rem 0;
         ol {
             gap:1rem;
         }
@@ -628,4 +634,8 @@
 .swiper-viewmap .swiper-button-next {
     transform:rotate(180deg);
     right:4rem;
+}
+.box-white {
+    background-color:var(--white);
+    padding:8rem;
 }
