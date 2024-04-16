@@ -1,5 +1,4 @@
  document.addEventListener('DOMContentLoaded', () => {
-    console.log('header');
 
     UI.exe.nav = () => {
         const dep1Links = document.querySelectorAll('.nav-dep1-link');
@@ -69,26 +68,33 @@
     }
 
     //header
-    UI.parts.include({
-        src: 'common/header.html',
-        id: 'header',
-        callback:() => {
-            UI.exe.nav();
-            UI.exe.toggle = new ToggleUI();
-            UI.callback.toggle_nav = (v) => {
-                UI.exe.allMenu.show();
-                // (v.state === 'true') ? UI.exe.allMenu.show() : UI.exe.allMenu.hide();
+    if (document.querySelector('[data-id="header"]')) {
+        UI.parts.include({
+            src: 'common/header.html',
+            id: 'header',
+            callback:() => {
+                UI.exe.nav();
+                UI.exe.toggle = new ToggleUI();
+                UI.callback.toggle_nav = (v) => {
+                    UI.exe.allMenu.show();
+                    // (v.state === 'true') ? UI.exe.allMenu.show() : UI.exe.allMenu.hide();
+                }
             }
-        }
-    });
+        });
+    }
     //footer
-    UI.parts.include({
-        src: 'common/footer.html',
-        id: 'footer',
-        callback:() => {
-         
-        }
-    });
+    if (document.querySelector('[data-id="footer"]')) {
+        UI.parts.include({
+            src: 'common/footer.html',
+            id: 'footer',
+            callback:() => {
+             
+            }
+        });
+    }
+   
+
+    //전체메뉴
     UI.exe.allMenu = new Layer({
         id :'modal_allMenu',
         type: 'modal',
@@ -105,7 +111,7 @@
             }
         }
     });
-
+    //검색
     UI.exe.search = new Layer({
         id :'modal_search',
         type: 'modal',

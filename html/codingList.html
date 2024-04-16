@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ui codinglist */
+        .ui-codinglist {
+        width: 100%;
+        padding: 1rem;
+        }
+        .ui-codinglist[data-state] tbody tr.srch-hidden, .ui-codinglist[data-pub] tbody tr.srch-hidden {
+        display: none !important;
+        }
+        .ui-codinglist[data-state] tbody tr, .ui-codinglist[data-pub] tbody tr {
+        display: none;
+        }
+        .ui-codinglist[data-pub] tbody tr.worker-view {
+        display: table-row;
+        }
+        .ui-codinglist[data-state] tbody tr.state-view {
+        display: table-row;
+        }
+        .ui-codinglist[data-state][data-pub] tbody tr.state-view, .ui-codinglist[data-state][data-pub] tbody tr.worker-view {
+        display: none;
+        }
+        .ui-codinglist[data-state][data-pub] tbody tr.worker-view.state-view {
+        display: table-row;
+        }
+        .ui-codinglist tr[data-state=제외] td {
+        background-color: var(--gray100);
+        }
+        .ui-codinglist tr[data-state=제외] td:not(.d) * {
+        text-decoration-line: line-through;
+        pointer-events: none;
+        color: #ccc !important;
+        }
+        .ui-codinglist .srch-area {
+        display: flex;
+        }
+        .ui-codinglist .btn-outlined {
+        margin-left: 0.4rem;
+        }
+        .ui-codinglist .srch-hidden {
+        display: none;
+        }
+        .ui-codinglist .sch_warn .state span,
+        .ui-codinglist .sch_warn .state:before {
+        color: #f44336 !important;
+        }
+        .ui-codinglist .state span {
+        display: inline-block;
+        vertical-align: middle;
+        color: var(--gray900);
+        }
+        .ui-codinglist .state span::before {
+        content: "panorama_fish_eye";
+        font-family: "Material Icons";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.3rem;
+        margin-top: -0.2rem;
+        font-weight: 900;
+        font-size: 1rem;
+        line-height: 1;
+        color: var(--gray900);
+        }
+        .ui-codinglist .end .state span {
+        color: #3182f6;
+        }
+        .ui-codinglist .end .state span::before {
+        content: "check_circle_outline";
+        color: #3182f6;
+        }
+        .ui-codinglist .del .state span {
+        color: var(--gray800);
+        }
+        .ui-codinglist .del .state span::before {
+        content: "remove_circle_outline";
+        color: var(--gray300);
+        }
+        .ui-codinglist .tbl-base table {
+        table-layout: auto;
+        }
+        .ui-codinglist .tbl-base .name {
+        white-space: nowrap;
+        }
+        .ui-codinglist .tbl-base thead th {
+        white-space: nowrap;
+        }
+        .ui-codinglist .tbl-base thead th .btn-base {
+        min-width: 1.2rem;
+        width: 1.2rem;
+        height: 1.4rem;
+        display: inline-block;
+        }
+        .ui-codinglist .tbl-base tbody tr.on {
+        outline: 1px dashed #3a3a3a;
+        transform: scale(1.002);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .ui-codinglist .tbl-base tbody tr:hover {
+        outline: 1px solid #3a3a3a;
+        }
+        .ui-codinglist .tbl-base tbody tr td {
+        border-left: 0;
+        line-height: 1.1;
+        vertical-align: top;
+        transition: padding 0.2s ease-in;
+        }
+        .ui-codinglist .tbl-base th, .ui-codinglist .tbl-base td {
+        border-left: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0.4rem;
+        white-space: nowrap;
+        }
+        .ui-codinglist .tbl-base .d1, .ui-codinglist .tbl-base .d2, .ui-codinglist .tbl-base .d3, .ui-codinglist .tbl-base .d4, .ui-codinglist .tbl-base .d5, .ui-codinglist .tbl-base .d6, .ui-codinglist .tbl-base .d7, .ui-codinglist .tbl-base .d8 {
+        color: var(--gray300);
+        }
+        .ui-codinglist .tbl-base .d2, .ui-codinglist .tbl-base .d3, .ui-codinglist .tbl-base .d4, .ui-codinglist .tbl-base .d5, .ui-codinglist .tbl-base .d6, .ui-codinglist .tbl-base .d7, .ui-codinglist .tbl-base .d8 {
+        white-space: normal;
+        }
+        .ui-codinglist .tbl-base .c1 .d1, .ui-codinglist .tbl-base .c2 .d2, .ui-codinglist .tbl-base .c3 .d3, .ui-codinglist .tbl-base .c4 .d4, .ui-codinglist .tbl-base .c5 .d5, .ui-codinglist .tbl-base .c6 .d6, .ui-codinglist .tbl-base .c7 .d7, .ui-codinglist .tbl-base .c8 .d8 {
+        color: var(--gray900);
+        }
+        .ui-codinglist .tbl-base .today-mod .date,
+        .ui-codinglist .tbl-base .today-mod .mod {
+        color: red !important;
+        }
+        .ui-codinglist .tbl-base .today-mod td.state::after {
+        content: "수정";
+        display: inline-block;
+        background-color: tomato;
+        color: #fff;
+        margin: -2px 0 0 -20px;
+        vertical-align: middle;
+        }
+        .ui-codinglist .tbl-base .today-mod td {
+        background-color: rgb(253, 234, 234);
+        }
+        .ui-codinglist .tbl-base .name-tg {
+        display: none;
+        }
+        .ui-codinglist.name-toggle-view .btn-base[data-material]::before {
+        content: "first_page";
+        }
+        .ui-codinglist.name-toggle-view tr .name-tg {
+        display: table-cell;
+        }
+        .ui-codinglist.name-toggle-view tr td.name-tg {
+        background-color: var(--gray100);
+        }
+        .ui-codinglist-header {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        padding: 0.8rem 0;
+        }
+        .ui-codinglist-state {
+        position: relative;
+        top: 0;
+        padding: 0.8rem 1.6rem;
+        overflow: hidden;
+        border-radius: 0.4rem;
+        z-index: 3;
+        background: #424242;
+        color: #FAFAFA;
+        font-size: 1.2rem;
+        border: 1px solid #4dcbe3;
+        }
+        .ui-codinglist-state dt {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #4dcbe3;
+        }
+        .ui-codinglist-state .bar {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        z-index: 1;
+        height: 100%;
+        background-color: #6200ee;
+        box-shadow: 0 0 3rem rgba(74, 238, 0, 0.5);
+        transition: all 0.3s ease-out;
+        }
+        .ui-codinglist-state dl {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        }
+        .ui-codinglist-state ul {
+        display: flex;
+        }
+        .ui-codinglist-state li {
+        flex: 1 auto;
+        margin-left: 1.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui-codinglist">
+        <div class="tbl-base">
+            <table>
+                <caption>코딩리스트</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">상태</th>
+                        <th scope="col">일정</th>
+                        <th scope="col">작업일</th>
+                        <th scope="col">수정</th>
+                       
+                        <th scope="col" class="name-tg">기획</th>
+                        <th scope="col" class="name-tg">디자인</th>
+                        <th scope="col" class="name-tg">개발</th>
+                        <th scope="col">유형</th>
+                        <th scope="col">파일명</th>
+                        <th scope="col">D1</th>
+                        <th scope="col">D2</th>
+                        <th scope="col">D3</th>
+                        <th scope="col">D4</th>
+                        <th scope="col">D5</th>
+                        <th scope="col">D6</th>
+                        <th scope="col">D7</th>
+                        <th scope="col">D8</th>
+                        <th scope="col">D9</th>
+                        <th scope="col">D10</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="" data-id="P01">
+                        <td class="state"><span>완료</span></td>
+                        <td class="date"><span>1018</span></td>
+                        <td class="date"><span></span></td>
+                        <td class="mod"><span></span></td>
+                        
+                        <td class="type-page"><span>page</span></td>
+                        <td class="id ico_pg"><span><a class="ui-coding-link"
+                                    href="https://asever77.github.io/project/html/dir/P01.html" target="coding">P01</a>
+                                (P01)</span></td>
+                        <td class="d d1"><span>연금</span></td>
+                        <td class="d d2"><span>퇴직연금</span></td>
+                        <td class="d d3"><span>퇴직연금 안내가이드</span></td>
+                        <td class="d d4"><span>퇴직연금 상품 매수하기</span></td>
+                        <td class="d d5"><span></span></td>
+                        <td class="d d6"><span></span></td>
+                        <td class="d d7"><span></span></td>
+                        <td class="d d8"><span></span></td>
+                        <td class="d d9"><span></span></td>
+                        <td class="d d10"><span></span></td>
+                        <td class="memo"><span></span></td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>  
+</body>
+
+</html>

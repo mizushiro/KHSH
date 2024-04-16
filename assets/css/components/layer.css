@@ -207,17 +207,35 @@ html[data-modal="show"] body{
         height: auto;
         padding: 0;
         overflow: visible;
-       
+        transform: translateY(-.1rem);
+        input[type="radio"], 
+        input[type="checkbox"] {
+            opacity: 0;
+            filter: alpha(opacity = 0);
+            display: inline-block;
+            position: absolute;
+            z-index: -1;
+            vertical-align: top;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            margin: 0;
+        }
         .mdl-layer-header {display: none;}
         .mdl-layer-wrap {
-            padding:0.8rem 0;
+           
+            padding:0;
             width:100%;
             min-width: 0;
-            max-height: calc(12rem + 1.6rem);
+            max-height: calc(4rem * 7);
             overflow-y: auto;
-            border-radius: 0.8rem;
+            border-radius: 0;
+            border:0.1rem solid #ccc;
+            border-top-color: #fff;
+            box-shadow: none;
+           
 
-            &:hover :checked + .mdl-select-option {
+            &:hover :checked + .form-select-option {
                 background-color: transparent;
             }
         }
@@ -225,20 +243,26 @@ html[data-modal="show"] body{
             margin: 0;
             padding: 0;
         }
-        :checked + .mdl-select-option {
-            background-color: #ccc;
-            span {font-weight: 700;}
+        :checked + .form-select-option {
+            background-color: var(--skyblue);
         }
-        .mdl-select-option {
+        .form-select-option {
             display: flex;
-            min-height: 3.2rem;
-            padding:0 1.6rem;
+            min-height: 4rem;
+            padding:0 1rem;
             align-items: center;
+            font-size: 1.8rem;
             &:active,
-            &:hover {background-color: #ccc !important;}
-            &::before{display: none;}
+            &:hover {
+                background-color: var(--skyblue) !important;
+            }
+            &::before {
+                display: none;
+            }
 
-            span {font-size: 1.4rem;}
+            span {
+                font-size: 1.8rem;
+            }
         }
         .mdl-layer-dim{display: none;}
 

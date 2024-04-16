@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../assets/css/app.css">
     <script src="../assets/js/ui.global.js"></script>
-    <!--<script src="../assets/js/ui.common.js"></script>-->
+    <script src="../assets/js/ui.common.js"></script>
 
     <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
     <script src="../assets/lib/swiper-bundle.min.js"></script>
@@ -120,6 +120,21 @@
                             <label for="radio1-1">라디오</label>
                         </span>
                     </div>
+                    <t3>select</t3>
+                    <div class="box-row">
+                        <div class="form-select">
+                            <select title="년도 선택" id="test_a0_1">
+                                <option value="1" selected="">2024</option>
+                                <option value="2">2023</option>
+                                <option value="3">2022</option>
+                                <option value="4">2021</option>
+                                <option value="5">2020</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+          
+
                 </box>
             </sec>
 
@@ -185,13 +200,16 @@
                     console.log(v)
                 }
             });
+
             UI.exe.idpwTab = new Tab({
                 id: 'tabBox',
-                current: '1',
+                current: '2-1',
                 callback: (v) => {
                     console.log(v)
                 }
             });
+
+            UI.form.setSelect();
         }); 
     </script>
 </body>

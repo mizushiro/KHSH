@@ -798,7 +798,7 @@ console.log(selector,src);
 			}
 		},
 		setSelect() {
-			const selects = document.querySelectorAll('.mdl-select');
+			const selects = document.querySelectorAll('.form-select');
 			let n = 0;
 			for (let item of selects) {
 				if (!!item.dataset.id) {
@@ -968,16 +968,21 @@ class Tab {
     }
     ps = (e) => {
         const _this = e;
-        const _wrap = _this.closest('.mdl-tab'); 
-        const _rect_wrap = _wrap.getBoundingClientRect();  
-        const _rect = _this.getBoundingClientRect();   
         
-        UI.scroll.move({ 
-            selector: _wrap, 
-            left: (_rect.left - _rect_wrap.left) + _wrap.scrollLeft + (_rect.width / 2), 
-            add : 0,
-            align: 'center' 
-        });
+        console.log(_this)
+
+        if (!_this) {
+            const _wrap = _this.closest('.mdl-tab'); 
+            const _rect_wrap = _wrap.getBoundingClientRect();  
+            const _rect = _this.getBoundingClientRect();   
+            
+            UI.scroll.move({ 
+                selector: _wrap, 
+                left: (_rect.left - _rect_wrap.left) + _wrap.scrollLeft + (_rect.width / 2), 
+                add : 0,
+                align: 'center' 
+            });
+        }
     }
     act = (e) => {
         const _this = e.currentTarget;
@@ -1177,19 +1182,19 @@ class Layer {
         }
     }
     resetSelect() {
-        this.selectBtn = document.querySelector('.mdl-select-btn[data-select-id="'+ this.id +'"]');
+        this.selectBtn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'"]');
         this.selectLayer = document.querySelector('.mdl-layer[data-type="select"][data-select-id="'+ this.id +'"]');
 
         this.selectBtn && this.selectBtn.remove();
         this.selectLayer && this.selectLayer.remove();
     }
     madeSelect() {
-        this.select = document.querySelector('.mdl-select[data-id="'+ this.id +'"]');
+        this.select = document.querySelector('.form-select[data-id="'+ this.id +'"]');
         const select = this.select.querySelector('select');
         const options = select.querySelectorAll('option');
 
         let html_select_button = `
-        <button type="button" class="mdl-select-btn" data-select-id="${ this.id }_select" value="${ select.value }" tabindex="-1" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+        <button type="button" class="form-select-btn" data-select-id="${ this.id }_select" value="${ select.value }" tabindex="-1" role="combobox" aria-haspopup="listbox" aria-expanded="false">
             <span>${ select.querySelector('[selected]').text }</span>
         </button>`;
         this.select.insertAdjacentHTML('beforeend', html_select_button);
@@ -1203,13 +1208,13 @@ class Layer {
                     <button type="button" class="mdl-layer-close" data-material="close"  aria-label="닫기"></button>
                 </div>
                 <div class="mdl-layer-body">
-                    <ul class="mdl-select-wrap">`;
+                    <ul class="form-select-wrap">`;
 
         for (let i = 0, len = options.length; i < len; i++) {
             html_select += `
             <li>
                 <input type="radio" id="${ this.id }_r${ i }" value="${ options[i].value }"  name="${ this.id }_r" ${ ((options[i].selected) && 'checked') }>
-                <label for="${ this.id }_r${ i }" class="mdl-select-option" data-type="radio" data-value="${ options[i].value }" role="option">
+                <label for="${ this.id }_r${ i }" class="form-select-option" data-type="radio" data-value="${ options[i].value }" role="option">
                     <span>${ options[i].text }</span>
                 </label>
             </li>`;
@@ -1227,7 +1232,7 @@ class Layer {
         this.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'_select"]');
         this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
         this.btn_close = this.modal.querySelector('.mdl-layer-close');
-        this.select_btn = this.select.querySelector('.mdl-select-btn');
+        this.select_btn = this.select.querySelector('.form-select-btn');
 
         select.addEventListener('change', (e) => {
             let _this = e.currentTarget;
@@ -1394,10 +1399,10 @@ class Layer {
         let _this = e.currentTarget;
        
         if (_this.type === 'radio') {
-            _this = this.modal.querySelector('.mdl-select-option[for="'+ _this.id +'"]');
+            _this = this.modal.querySelector('.form-select-option[for="'+ _this.id +'"]');
         }
-        this.select.querySelector('.mdl-select-btn span').textContent = _this.textContent;
-        this.select.querySelector('.mdl-select-btn').value = _this.dataset.value;
+        this.select.querySelector('.form-select-btn span').textContent = _this.textContent;
+        this.select.querySelector('.form-select-btn').value = _this.dataset.value;
         this.select.querySelector('select option[value="'+ _this.dataset.value +'"]').selected = true;
        
         e.type !== 'keyup' && this.hide();
@@ -1420,7 +1425,7 @@ class Layer {
         const _prev = document.querySelector('[data-layer-current="true"]');
         let btn = false;
 
-        (this.type === 'select') ? btn = document.querySelector('.mdl-select-btn[data-select-id="'+ this.id +'_select"]') : '';
+        (this.type === 'select') ? btn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'_select"]') : '';
         (this.type === 'dropdown') ? btn = document.querySelector('[data-dropdown="'+ this.id +'"]') : '';
         (this.type === 'tooltip') ? btn = document.querySelector('.mdl-tooltip[aria-describedby="'+ this.id +'"]') : '';
 
@@ -1509,7 +1514,7 @@ class Layer {
             console.log(this.select_btn.offsetWidth, this.select_btn.dataset.selectId);
             document.querySelector('.mdl-layer[data-id="'+ this.select_btn.dataset.selectId +'"]').style.width = (this.select_btn.offsetWidth / 10) + 'rem';
             
-            const el_options = this.modal.querySelectorAll('.mdl-select-option');
+            const el_options = this.modal.querySelectorAll('.form-select-option');
             const el_inputs = this.modal.querySelectorAll('input');
             const el_options_checked = this.modal.querySelector('input:checked');
 
