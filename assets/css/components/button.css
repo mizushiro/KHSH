@@ -52,3 +52,13 @@
         }
     }
 }
+.btn-area-center {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:8rem;
+    width:100%;
+    @media (max-width:1023px) {
+        margin-top:6rem;
+    }
+}

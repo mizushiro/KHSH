@@ -302,8 +302,25 @@
     flex-wrap:wrap;
     gap:6rem;
     margin:0 auto;
+    .btn-area-center {
+        .button-base {
+            min-width:30rem;
+        }
+    }
     @media (max-width:1023px) {
         gap:2rem;
+        .btn-area-center {
+            .button-base {
+                min-height:5rem;
+            }
+        }
+    }
+    @media (max-width:767px) {
+        .btn-area-center {
+            .button-base {
+                min-width:16rem;
+            }
+        }
     }
 }
 
