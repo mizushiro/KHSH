@@ -242,15 +242,38 @@
                     console.log(v)
                 }
             });
+            
+            const getDirection = () => {
+                const isHorizontal = window.innerWidth <= 1400;
+                const direction = isHorizontal ? 'horizontal' : 'vertical';
+                const swiperWraps = document.querySelectorAll('.swiper-viewmap-wrap');
+
+                for (item of swiperWraps) {
+                    isHorizontal ? item.dataset.dir = 'horizontal' : item.dataset.dir = 'vertical';
+                }
+
+                return direction;
+            }
 
             //조경도
             const swiperViewmapThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewmap"]', {
-                spaceBetween: 22,
+                spaceBetween: 10,
                 slidesPerView: 3,
-                direction: "vertical",
+                direction: getDirection(),
                 freeMode: true,
                 watchSlidesProgress: true,
                 mousewheel: true,
+                breakpoints: {
+                    1400: {
+                        spaceBetween: 20,
+                    }
+                },
+                on: {
+                    resize: function () {
+                        console.log(1111111111111)
+                        swiperViewmapThumbs.changeDirection(getDirection());
+                    }
+                }
             });
             const swiperViewmap = new Swiper('.swiper-viewmap[data-id="viewmap"]', {
                 spaceBetween: 0,
@@ -261,15 +284,31 @@
                 thumbs: {
                     swiper: swiperViewmapThumbs,
                 },
+                on: {
+                    resize: function () {
+                        console.log(1111111111111)
+                        swiperViewmapThumbs.changeDirection(getDirection());
+                    }
+                }
             });
             //투시도
             const swiperPdrawingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="pdrawing"]', {
-                spaceBetween: 22,
+                spaceBetween: 10,
                 slidesPerView: 3,
-                direction: "vertical",
+                direction: getDirection(),
                 freeMode: true,
                 watchSlidesProgress: true,
                 mousewheel: true,
+                breakpoints: {
+                    1400: {
+                        spaceBetween: 20,
+                    }
+                },
+                on: {
+                    resize: function () {
+                        swiperPdrawingThumbs.changeDirection(getDirection());
+                    }
+                }
             });
             const swiperPdrawing = new Swiper('.swiper-viewmap[data-id="pdrawing"]', {
                 spaceBetween: 0,
@@ -280,7 +319,15 @@
                 thumbs: {
                     swiper: swiperPdrawingThumbs,
                 },
+                on: {
+                    resize: function () {
+                        swiperPdrawingThumbs.changeDirection(getDirection());
+                    }
+                }
             });
+          
+            
+           
         }); 
     </script>
 </body>

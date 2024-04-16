@@ -98,8 +98,19 @@
     text-decoration: none;
     transition: color .2s ease-out;
 
+    &[data-selected="true"]::after {
+        width: 100%;
+        content:"";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom:0;
+        height: .4rem;
+        background-color: var(--orange);
+    }
     &:focus,
-    &:hover{color:var(--orange)}  
+    &:hover{color:var(--orange);}  
 }
 .nav-dep2 {
     display: flex;
@@ -125,16 +136,21 @@
 .base-header[data-color="dark"] {
     background-color: rgba(255,255,255,1);
 
-    .logo {background-image: url(../../images/common/logo-dark.svg)}
-    .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
-    .nav-dep1-link {color:#000;}
+    .logo {
+        background-image: url(../../images/common/logo-dark.svg)
+    }
+    .btn-search {
+        background-image: url(../../images/common/ico-search-dark.svg);
+    }
+    .nav-dep1-link {
+        color: #000;
+    }
     .btn-etc-nav,
-    .btn-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
+    .btn-nav {
+        background-image: url(../../images/common/ico-nav-dark.svg);
+    }
 }
 
-[data-nav="close"] .base-header {
-
-}
 [data-nav="open"] {
     .base-header {
         background-color: #fff;
@@ -161,7 +177,8 @@
             height: .4rem;
             background-color: transparent;
         }
-        &[data-state="on"]::after        {
+
+        &[data-state="on"]::after {
             width: 100%;
             background-color: var(--orange);
             transition: all .4s cubic-bezier(.28,.42,.41,1.44);

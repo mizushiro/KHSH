@@ -577,6 +577,7 @@
     img {
         display:block;
         max-width:none;
+        width: 100%;
         height:100%;
         object-fit:cover;
     }
@@ -585,13 +586,46 @@
 .swiper-viewmap-wrap {
     width:100%;
     display:flex;
+    gap: 2rem;
     justify-content:space-between;
+
+    &[data-dir="horizontal"] {
+        flex-direction: column;
+        gap: 1rem;
+        .swiper-viewmap-thumbs {
+            width: 100%;
+            height: 23.4rem;
+        }
+        .artera-detailview-img {
+            aspect-ratio: 64/75;
+            width: auto;
+            height: auto;
+        }
+        .swiper-viewmap-thumbs .artera-detailview-img {
+            aspect-ratio: 31/23;
+            width: auto;
+            height: auto;
+        }
+        .swiper-viewmap-thumbs{
+            height: auto;
+        }
+        .swiper-vertical>.swiper-wrapper{
+            flex-direction: row;
+        }
+    }
+    &[data-dir="vertical"] {
+        .swiper-vertical>.swiper-wrapper{
+            flex-direction: column;
+        }
+
+    }
 }
 .swiper-viewmap-thumbs {
     margin:0 !important;
 }
 .swiper-viewmap {
-    width:126.8rem; 
+    flex: 1;
+    max-width:126.8rem; 
     height:74.4rem; 
     margin:0 !important; 
 }
