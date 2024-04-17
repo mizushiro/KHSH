@@ -13,12 +13,12 @@
     }*/
     &[data-style="bg-primary"] {
         background-color: var(--navy);
-        color: #fff;
+        color:var(--white);
         border-color: var(--navy) ;
     }
     &[data-style="bg-dark"] {
         background-color: var(--gray_300);
-        color: #fff;
+        color:var(--white);
         border-color: var(--gray_300) ;
     }
     &[data-style="bg-sky-blue"] {
@@ -27,8 +27,13 @@
         border-color: var(--skyblue) ;
     }
     &[data-style="line-primary"] {
-        color: #000;
+        color:var(--black);
         border-color: var(--navy);
+        background-color:var(--white);
+        &[data-state="selected"] {
+            background-color:var(--navy);
+            color:var(--white);
+        }
     }
     &[data-radius="radius-xs"] {
         border-radius:.4rem;
@@ -39,6 +44,10 @@
         font-size:1.8rem;
         font-weight:500;
         padding:.8rem 1.6rem;
+        gap:2rem;
+        @media (max-width:1023px) {
+            gap:1rem;
+        }
     }
     &[data-size="size-40"] {
         min-width:12rem;
