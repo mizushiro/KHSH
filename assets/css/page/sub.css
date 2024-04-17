@@ -171,30 +171,30 @@
             }
         }
     }
-    .progress-area {
-        display:flex;
-        flex-wrap:wrap;
-        align-items:center;
-        gap:2.4rem;
-        @media (max-width:1023px) {
-            gap:1.2rem;
-        }
+}
+.progress-area {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:2.4rem;
+    @media (max-width:1023px) {
+        gap:1.2rem;
     }
-    .progress-value {
-        flex-shrink:0;
-    }
-    .progress-bar {
-        height:.8rem;
-        flex:1;
-        background-color:#D9D9D9;
-        position:relative;
-        .progress-bar-value {
-            height:100%;
-            position:absolute;
-            left:0;
-            top:0;
-            background-color:var(--orange);
-        }
+}
+.progress-value {
+    flex-shrink:0;
+}
+.progress-bar {
+    height:.8rem;
+    flex:1;
+    background-color:#D9D9D9;
+    position:relative;
+    .progress-bar-value {
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        background-color:var(--orange);
     }
 }
 .card-artera-link {
@@ -464,11 +464,24 @@
         font-weight:400;
         word-break:keep-all;
     }
+    &[data-type="point"] {
+        .artera-detail-content {
+            font-size:3.2rem;
+            font-weight:700;
+            color:var(--orange);
+        }
+    }
     @media (max-width:1023px) {
         font-size:1.5rem;
         gap:1.6rem;
+        line-height:2.6rem;
         .artera-detail-title {
             width:5.6rem;
+        }
+        &[data-type="point"] {
+            .artera-detail-content {
+                font-size:2.4rem;
+            }
         }
     }
 }
@@ -816,5 +829,174 @@
     }
     .guide-desc-gray {
         color:var(--gray_800);
+    }
+}
+.tab-sub-title {
+    font-size:3.6rem;
+    color:var(--black);
+    line-height:4.2rem;
+    font-weight:600;
+    margin-bottom:4rem;
+    ~ .tab-sub-title {
+        margin-top:8rem;
+    }
+    @media (max-width:1023px) {
+        font-size:2.4rem;
+        line-height:3.6rem;
+        margin-bottom:2rem;
+        ~ .tab-sub-title {
+            margin-top:4rem;
+        }
+    }
+}
+.construction-step {
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.6rem;
+    padding-top:4rem;
+    margin-bottom:8rem;
+    .construction-step-item {
+        height:12rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        font-size:2.4rem;
+        line-height:2.8rem;
+        border-radius:0 2rem 2rem 0;
+        background-color:#eee;
+        color:#bbb;
+        width:calc((100% - 9.6rem) / 7);
+        font-weight:600;
+        &[data-state="end"] {
+            &[data-color="beige"] {
+                background-color:var(--beige);
+                color:var(--navy);
+            }
+            &[data-color="sky"] {
+                background-color:var(--skyblue);
+                color:var(--navy);
+            }
+            &[data-color="navy"] {
+                background-color:var(--navy);
+                color:var(--white);
+            }
+        }
+    }
+    @media (max-width:1023px) {
+        gap:.4rem;
+        padding-top:0;
+        margin-bottom:4rem;
+        .construction-step-item {
+            border-radius:0 1rem 1rem 0;
+            height:4.6rem;
+            font-size:1.5rem;
+            line-height:1.8rem;
+            width:calc((100% - 2.4rem) / 7);
+        }
+    }
+    @media (max-width:767px) {
+        .construction-step-item {
+            width:calc((100% - 1.2rem) / 4);
+        }
+    }
+}
+.year-month-area {
+    background-color:#F8F8F8;
+    height:12rem;
+    margin-bottom:4rem;
+    display:flex;
+    align-items:center;
+    gap:1.6rem;
+    padding-right:2rem;
+    .year-choice {
+        padding:0 4rem;
+        display:flex;
+        align-items:center;
+        gap:4.8rem;
+        flex-shrink:0;
+        .year-choice-value {
+            font-size:4rem;
+            line-height:1;
+            font-weight:600;
+            color:var(--navy);
+        }
+        .btn-year-choice {
+            width:6rem;
+            height:6rem;
+            border-radius:999em;
+            border:.1rem solid var(--navy);
+            background-image:url(../../images/common/swiper-arrow-dark.svg);
+            background-repeat:no-repeat;
+            background-position:50% 50%;
+            background-size:1.2rem;
+            &[data-type="next"] {
+                transform:rotate(180deg);
+            }
+            &:hover {
+                background-color:var(--navy);
+                background-image:url(../../images/common/swiper-arrow.svg);
+            }
+        }
+    }
+    .month-choice {
+        flex:1;
+        display:flex;
+        align-items:center;
+        flex-wrap:wrap;
+        .btn-month-choice {
+            width:calc(100% / 12);
+            text-align:center;
+            font-size:2.4rem;
+            font-weight:500;
+            color:#ccc;
+            &[data-state="selected"] {
+                font-size:3.2rem;
+                font-weight:600;
+                color:var(--navy);
+            }
+        }
+    }
+    @media (max-width:1400px) {
+        padding-right:1rem;
+        .year-choice {
+            padding:0 2rem;
+            gap:2.8rem;
+        }
+    }
+    @media (max-width:1023px) {
+        flex-wrap:wrap;
+        height:auto;
+        padding:3rem 2rem;
+        gap:2.4rem;
+        .year-choice {
+            width:100%;
+            justify-content:space-between;
+            padding:0;
+            .year-choice-value {
+                font-size:3.2rem;
+            }
+            .btn-year-choice {
+                width:4rem;
+                height:4rem;
+                background-size:.6rem;
+            }
+        }
+        .month-choice {
+            .btn-month-choice {
+                font-size:1.6rem;
+                &[data-state="selected"] {
+                    font-size:2.4rem;
+                }
+            }
+        }
+    }
+    @media (max-width:767px) {
+        .month-choice {
+            gap:1.6rem 0;
+            .btn-month-choice {
+                width:calc(100% / 6);
+            }
+        }
     }
 }
