@@ -175,6 +175,7 @@ html[data-modal="show"] body {
                 animation-fill-mode:backwards;
             }
         }
+        .mdl-layer-dim{display: none;}
     }
     &[data-type="tooltip"] {
         position:absolute;

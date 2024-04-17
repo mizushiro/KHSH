@@ -1266,9 +1266,9 @@ class Layer {
                 <div class="mdl-layer-body">
                     ${(!!this.title) ? `<h1 class="mdl-layer-tit">${ this.title }</h1>` : ''}
                     <div>${ this.content }</div>
-                    <div class="mdl-button-wrap">
-                        ${(this.btn.length === 2) ? `<button type="button" class="mdl-button" data-state="cancel" data-style="primary-gray"><span>${ this.btn[1].text }</span></button>` : ''}
-                        <button type="button" class="mdl-button" data-state="ok" data-style="primary">
+                    <div class="button-base-wrap">
+                        ${(this.btn.length === 2) ? `<button type="button" class="button-base" data-state="cancel" data-style="primary-gray"><span>${ this.btn[1].text }</span></button>` : ''}
+                        <button type="button" class="button-base" data-state="ok" data-style="primary">
                             <span>${ this.btn[0].text }</span>
                         </button>
                     </div>
@@ -1281,8 +1281,8 @@ class Layer {
 
         this.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'"]');
         this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
-        this.ok = this.modal.querySelector('.mdl-button[data-state="ok"]');
-        this.cancel = this.modal.querySelector('.mdl-button[data-state="cancel"]');
+        this.ok = this.modal.querySelector('.button-base[data-state="ok"]');
+        this.cancel = this.modal.querySelector('.button-base[data-state="cancel"]');
         this.ok && this.ok.addEventListener('click', this.btn[0].callback);
         this.cancel && this.cancel.addEventListener('click', this.btn[1].callback);
 

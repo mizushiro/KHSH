@@ -186,13 +186,103 @@
                     </div>
                 </box>
             </sec>
+
+            <sec>
+                <t2>Modal</t2>
+                <box>
+                    <button type="button" class="button-base" data-style="bg-primary" data-size="size-60" onclick="UI.exe.modal_1.show()">모달</button>
+                    <button type="button" class="button-base" data-style="bg-primary" data-size="size-60" data-dropdown="modal3" onclick="UI.exe.dropdown1.show()">드롭다운</button>
+                    <button type="button" class="button-base" data-style="bg-primary" data-size="size-60" onclick="UI.exe.bottom_1.show()">바텀시트</button>
+
+                    <button type="button" class="button-base" data-style="bg-dark" data-size="size-60" onclick="UI.exe.alert_1.show()">alert</button>
+                    <button type="button" class="button-base" data-style="bg-dark" data-size="size-60" onclick="UI.exe.toast_1.show()">toast</button>
+                </box>
+            </sec>
             
              
         </main>
     </div>
 
+    <!-- 모달 -->
+    <section class="mdl-layer" data-id="modal1" data-state="" role="dialog">
+        <div class="mdl-layer-wrap">
+            <div class="mdl-layer-header">
+                <h1>제목</h1>
+                <button type="button" class="mdl-layer-close" data-material="close" 
+                    aria-label="닫기"></button>
+            </div>
+            <div class="mdl-layer-body" style="height: 100vh;">
+                내용<div style="height: 100vh;">
+                    <button type="button" class="mdl-button" data-toggle-object="modal1_a" data-callback="modal1_a">
+                        <span>버튼</span>
+                    </button>
+                    <div data-toggle-target="modal1_a" class="test" style="margin-top: .8rem; width: 100%;"></div>
+    
+                </div>내용 끝
+            </div>
+            <div class="mdl-layer-footer">
+                <button type="button" class="mdl-button" onclick="UI.exe.modal_1.hide()">
+                    <span>확인</span>
+                </button>
+            </div>
+        </div>
+        <div class="mdl-layer-dim"></div>
+    </section>
+
+    <section class="mdl-layer" data-id="modal2" data-state="" role="dialog">
+        <div class="mdl-layer-wrap">
+            <div class="mdl-layer-header">
+                <h1>제목</h1>
+                <button type="button" class="mdl-layer-close" data-material="close" 
+                    aria-label="닫기"></button>
+            </div>
+            <div class="mdl-layer-body" style="height: 100vh;">
+                내용<div style="height: 100vh;">
+                    <button type="button" class="mdl-button" data-toggle-object="modal1_a" data-callback="modal1_a">
+                        <span>버튼</span>
+                    </button>
+                    <div data-toggle-target="modal1_a" class="test" style="margin-top: .8rem; width: 100%;"></div>
+    
+                </div>내용 끝
+            </div>
+            <div class="mdl-layer-footer">
+                <button type="button" class="mdl-button" onclick="UI.exe.bottom_1.hide()">
+                    <span>확인</span>
+                </button>
+            </div>
+        </div>
+        <div class="mdl-layer-dim"></div>
+    </section>
+
+    <section class="mdl-layer" data-id="modal3" data-state="" role="dialog">
+        <div class="mdl-layer-wrap">
+            <div class="mdl-layer-header">
+                <h1>제목</h1>
+                <button type="button" class="mdl-layer-close" data-material="close" 
+                    aria-label="닫기"></button>
+            </div>
+            <div class="mdl-layer-body">
+                내용<div >
+                    <button type="button" class="mdl-button" data-toggle-object="modal1_a" data-callback="modal1_a">
+                        <span>버튼</span>
+                    </button>
+                    <div data-toggle-target="modal1_a" class="test" style="margin-top: .8rem; width: 100%;"></div>
+    
+                </div>내용 끝
+            </div>
+            <div class="mdl-layer-footer">
+                <button type="button" class="mdl-button" onclick="UI.exe.dropdown1.hide()">
+                    <span>확인</span>
+                </button>
+            </div>
+        </div>
+        <div class="mdl-layer-dim"></div>
+    </section>
+    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            //tab
             UI.exe.idpwTab = new Tab({
                 id: 'tabLinie',
                 current: '1',
@@ -200,7 +290,6 @@
                     console.log(v)
                 }
             });
-
             UI.exe.idpwTab = new Tab({
                 id: 'tabBox',
                 current: '2-1',
@@ -209,7 +298,53 @@
                 }
             });
 
+            //select
             UI.form.setSelect();
+
+            //modal    
+            UI.exe.modal_1 = new Layer({
+                id :'modal1',
+                type: 'modal',
+                callback: () => {
+                    console.log('modal1 콜백');
+                }
+            });
+            UI.exe.bottom_1 = new Layer({
+                id :'modal2',
+                type: 'bottom',
+                callback: () => {
+                    console.log('bottomsheet 콜백');
+                }
+            });
+            UI.exe.dropdown1 = new Layer({
+                id :'modal3',
+                type: 'dropdown',
+                ps : 'BL', //bottom Left
+            });
+
+
+            UI.exe.alert_1 = new Layer({
+                id :'alert1',
+                type: 'system',
+                title: 'alert title',
+                content: '안녕하세요<br> 저장이 완료되었습니다.',
+                button: [
+                    {text: '확인', callback: () => { 
+                        console.log('확인 콜백');
+                        UI.exe.alert_1.hide();
+                    }},
+                    {text: '취소', callback: () => { 
+                        console.log('취소 콜백');
+                        UI.exe.alert_1.hide();
+                    }},
+                ]
+            });
+            UI.exe.toast_1 = new Layer({
+                id :'toast1',
+                type: 'toast',
+                content: '안녕하세요<br> 저장이 완료되었습니다.'
+            });
+           
         }); 
     </script>
 </body>
