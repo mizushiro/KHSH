@@ -244,7 +244,7 @@
             });
             
             const getDirection = () => {
-                const isHorizontal = window.innerWidth <= 1400;
+                const isHorizontal = window.innerWidth <= 1023;
                 const direction = isHorizontal ? 'horizontal' : 'vertical';
                 const swiperWraps = document.querySelectorAll('.swiper-viewmap-wrap');
 
@@ -264,8 +264,8 @@
                 watchSlidesProgress: true,
                 mousewheel: true,
                 breakpoints: {
-                    1400: {
-                        spaceBetween: 20,
+                    1023: {
+                        spaceBetween: 18,
                     }
                 },
                 on: {
@@ -300,8 +300,8 @@
                 watchSlidesProgress: true,
                 mousewheel: true,
                 breakpoints: {
-                    1400: {
-                        spaceBetween: 20,
+                    1023: {
+                        spaceBetween: 18,
                     }
                 },
                 on: {

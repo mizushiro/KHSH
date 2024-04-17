@@ -566,8 +566,6 @@
     margin:0 auto;
 }
 .artera-detailview-img {
-    width:126.8rem;
-    height:74.4rem;
     overflow:hidden;
     display:flex;
     justify-content:center;
@@ -580,6 +578,7 @@
         width: 100%;
         height:100%;
         object-fit:cover;
+        object-position:center;
     }
 }
 
@@ -588,7 +587,7 @@
     display:flex;
     gap: 2rem;
     justify-content:space-between;
-
+    aspect-ratio:1600/626;
     &[data-dir="horizontal"] {
         flex-direction: column;
         gap: 1rem;
@@ -597,7 +596,7 @@
             height: 23.4rem;
         }
         .artera-detailview-img {
-            aspect-ratio: 64/75;
+            aspect-ratio:640/753;
             width: auto;
             height: auto;
         }
@@ -617,7 +616,9 @@
         .swiper-vertical>.swiper-wrapper{
             flex-direction: column;
         }
-
+    }
+    @media (max-width:1023px) {
+        aspect-ratio:inherit;
     }
 }
 .swiper-viewmap-thumbs {
@@ -625,13 +626,16 @@
 }
 .swiper-viewmap {
     flex: 1;
-    max-width:126.8rem; 
-    height:74.4rem; 
-    margin:0 !important; 
+    width:79.25%;
+    aspect-ratio:1268/626;
+    margin:0 !important;
+    @media (max-width:1023px) {
+        aspect-ratio:640/753;
+        width:100%;
+    }
 }
 .swiper-viewmap-thumbs {
-    height:74.4rem;
-    width:31.1rem;
+    width:calc(20.75% - 2rem);
     .swiper-slide {
         height:auto !important; 
         opacity:0.5;
@@ -641,8 +645,7 @@
     }
 }
 .swiper-viewmap-thumbs .artera-detailview-img {
-    width:31.1rem;
-    height:23.4rem;
+    aspect-ratio:311/197;
     overflow:hidden;
     display:flex;
     justify-content:center;
@@ -664,13 +667,24 @@
     left:auto;
     right:auto;
     background:rgba(255,255,255,0.8) url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
+    @media (max-width:1023px) {
+        width:3rem;
+        height:3rem;
+        background-size:.6rem;
+    }
 }
 .swiper-viewmap .swiper-button-prev {
     left:4rem;
+    @media (max-width:1023px) {
+        left:1.5rem;
+    }
 }
 .swiper-viewmap .swiper-button-next {
     transform:rotate(180deg);
     right:4rem;
+    @media (max-width:1023px) {
+        right:1.5rem;
+    }
 }
 .box-white {
     background-color:var(--white);
