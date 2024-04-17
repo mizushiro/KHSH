@@ -12,7 +12,7 @@
             position: relative;
             width: 1200px;
             margin: 0 auto;
-            caption{font-size: 3rem; padding: 2rem 0; font-weight: 700 ; color: #242A5C;}
+            caption p {font-size: 3rem; padding: 2rem 0; margin:0; font-weight: 700 ; color: #242A5C;}
             table{
                 table-layout: auto;
                 width: 100%;
@@ -30,6 +30,22 @@
                     background-color: #edf5fd; color:#000; font-weight: 500;
                     a{color:#F47F3F !important; font-weight: 700;}
                 }
+                td:last-child {
+                    text-align:center;
+                }
+            }
+            .state-info {
+                display:flex;
+                gap:2rem;
+                align-items:center;
+                font-size:1.4rem;
+                margin-bottom:1.2rem;
+            }
+            .state-ing {
+                color:#03c75a;
+            }
+            .state-end {
+                color:red;
             }
         }
     </style>
@@ -38,7 +54,17 @@
 <body>
     <div class="codinglist">
         <table>
-            <caption>금호건설 브랜드 홈페이지 리뉴얼</caption>
+            <caption>
+                <p>금호건설 브랜드 홈페이지 리뉴얼</p>
+                <div class="state-info">
+                    <span>
+                        <span class="state-ing">▲</span> : 미확정 영역 제외하고 진행 완료
+                    </span>
+                    <span>
+                        <span class="state-end">●</span> : 전체 진행 완료
+                    </span>
+                </div>
+            </caption>
             <thead>
                 <tr>
                     <th scope="col">유형</th>
@@ -48,7 +74,7 @@
                     <th scope="col">D3</th>
                     <th scope="col">D4</th>
 
-                    <th scope="col">비고</th>
+                    <th scope="col">현황</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,7 +98,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
             </tbody>
 
@@ -159,7 +185,7 @@
                     <td>분양단지</td>
                     <td>목록</td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
                 <tr>
                     <td>page</td>
@@ -168,7 +194,7 @@
                     <td>분양단지</td>
                     <td>상세</td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
                 <tr>
                     <td>page</td>
@@ -196,16 +222,16 @@
                     <td>page</td>
                     <td><a target="_page" href="./html/sub3-1-1.html">sub3-1-1.html</a></td>
                     <td>단지정보</td>
-                    <td>공사현장</td>
+                    <td>공사단지</td>
                     <td>목록</td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
                 <tr>
                     <td>page</td>
                     <td><a target="_page" href="./html/sub3-1-2.html">sub3-1-2.html</a></td>
                     <td>단지정보</td>
-                    <td>공사현장</td>
+                    <td>공사단지</td>
                     <td>상세</td>
                     <td></td>
                     <td></td>
@@ -217,7 +243,7 @@
                     <td>입주단지</td>
                     <td>목록</td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
                 <tr>
                     <td>page</td>
@@ -226,7 +252,7 @@
                     <td>입주단지</td>
                     <td>상세</td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
                 <tr>
                     <td>page</td>
@@ -235,7 +261,7 @@
                     <td>입주단지</td>
                     <td>입주가이드</td>
                     <td></td>
-                    <td></td>
+                    <td><span class="state-ing">▲</span></td>
                 </tr>
             </tbody>
 
