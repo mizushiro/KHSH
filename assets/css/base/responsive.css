@@ -108,7 +108,6 @@
         top:0;
         background-color: transparent;
 
-        .mdl-layer-dim{display: none;}
         .mdl-layer-wrap {
             background-color: #fff;
             border-radius: 0;
@@ -161,7 +160,8 @@
                 animation-fill-mode: backwards;
             }
         }
-
+        .banner-nav {display: none;}
+    
         .mdl-layer-body{
             margin: 0 auto;
             width: 100%;
@@ -176,6 +176,8 @@
             
 
             .base-nav{
+
+                width: 100%;
                 padding-top: 6rem;
                 display: flex;
                 flex-direction: column-reverse;
@@ -184,6 +186,7 @@
                     width:100%;
                 }
             }
+            .mdl-acco-head{height: auto;}
             .mdl-acco-body{height: 0;}
             .mdl-acco-btn {pointer-events: inherit;}
             .mdl-acco {padding:0 2rem; flex-direction: column; width: 100% !important;}
@@ -295,6 +298,90 @@
                 padding-top: 0;
 
                 .nav-dep2-link {opacity: 1;}
+            }
+        }
+    }
+
+    .mdl-layer.search {
+        padding:0;
+        align-items:flex-start;
+        height:100%;
+        top:0;
+        background-color:transparent;
+       
+        .mdl-layer-wrap {
+            height: 100%;
+            background-color:var(--navy);
+            padding:0;
+            width:100%;
+            border-radius:0;
+        }
+        .mdl-layer-header {
+            width:100%;
+            height:8rem;
+            padding:0 2rem;
+            .logo {
+                width: 12.3rem;
+                height: 1.6rem;
+                background:url(../../images/common/logo.svg) no-repeat 0 0 / 12.3rem;
+            }
+
+            .mdl-layer-header-wrap {
+                position:relative;
+                display:flex;
+                padding-right:0;
+            }
+           
+            .btn-nav-close{
+                position: relative;
+                top:0;
+                right:0;
+                z-index:10;
+                background:url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+            }
+        }
+        .mdl-layer-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0 2rem;
+
+            strong{
+                display: block; 
+                width:20rem; 
+                margin: 0 auto; 
+                text-align: center;
+            }
+
+            input {
+                width:100%;
+                height:6rem;
+                font-size:2.4rem;
+                padding:0 4rem 0 1.6rem;
+                color:#fff;
+                background-color: transparent;
+                border: 0;
+                border-bottom: .2rem solid var(--orange);
+            }
+            .search-form {position: relative;}
+            .btn-clear {
+                position: absolute;
+                right: 5.2rem;
+                bottom: 1.9rem;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                background: #545A8E url(../../images/common/input-clear.svg) no-repeat 50% 50% / 1rem;
+            }
+            .btn-search {
+                position: absolute;
+                right: 1rem;
+                bottom: 1.4rem;
+                width: 3rem;
+                height: 3rem;
+                background: url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
             }
         }
     }
@@ -506,10 +593,12 @@
             min-height:7.7rem !important;
             max-height:7.7rem ;
         }
-        .card-item-desc {font-size: 1.6rem;height: 7rem; opacity: 1; font-weight: 500; text-align: justify;}
-        .card-item-view {padding: 4rem 2.5rem 3.8rem !important; top:0;}
-        .card-item-date {font-size: 1.5rem; padding-top: 1.6rem !important;}
-        [data-ellipsis="5"] {-webkit-line-clamp: 3;} 
+        .card-item-desc {font-size: 1.6rem;height: 7rem; opacity: 1; font-weight: 500; text-align: justify;
+            .date {font-size: 1.5rem; padding-top: 1.6rem !important;}
+        }
+        .card-item-view {padding: 4rem 2.5rem 2.7rem !important; top:0;}
+        .card-item-date {display: none;}
+        [data-ellipsis="5"] {-webkit-line-clamp: 3; min-height: 7rem !important;} 
     }
     .card-item[data-type="news"]:hover {
         .card-item-tit {
@@ -526,4 +615,6 @@
     [data-bg="pattern2"], 
     [data-bg="pattern3"],
     [data-bg="pattern4"] {background-size:5.2rem}
+
+   
 }

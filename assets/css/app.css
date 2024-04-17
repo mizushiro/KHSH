@@ -18,6 +18,7 @@
 @import url(./page/header.css);
 @import url(./page/footer.css);
 @import url(./page/main.css);
-@import url(./page/sub.css);
+@import url(./page/parcel-info.css);
+@import url(./page/my-artera.css);
 
 @import url(./base/responsive.css);

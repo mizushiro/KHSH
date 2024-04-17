@@ -216,7 +216,8 @@
             .stroy-card .stroy-card-link img{
                 opacity: 1;
                 transform: translateY(-10rem);
-                transition: all .6s ease-in;
+                transition-delay: .3s;
+                transition: all 1s ease-out;
             }
         }
     }

@@ -12,7 +12,7 @@
         height: 59.6rem;
         .card-item-view {
             position: relative;
-            padding: 8rem 4rem 10rem;
+            padding: 8rem 4rem 0;
             background-color: #fff;
             display: flex;
             flex-direction: column;
@@ -31,11 +31,14 @@
             min-height: 12.3rem;
         }
         .card-item-date{
+            position: absolute;
+            bottom: 8rem;
+            left:4rem;
             width: 100%;
             font-size: 2rem;
             font-weight: 200;
             padding-top: 0;
-            transition: padding .2s ease-out;
+            transition: opacity .2s ease-out;
         }
         .card-item-desc {
             position: relative;
@@ -45,13 +48,21 @@
             font-size: 2.3rem;
             color: #000;
             padding:0;
-            height: 0;
+            height: 10rem;
             overflow: hidden;
             transition: all .3s ease-out;
+            justify-content: flex-start;
+
+            [data-ellipsis] {min-height: 17.4rem;}
+            .date{
+                width: 100%;
+                font-size: 2rem;
+                padding-top: 3.3rem;
+                font-weight: 200;
+            }
         }
     }
 }
-
 .card-item[data-type="news"]:hover {
     .card-item-view{
         top: 0; 
@@ -60,8 +71,8 @@
         transition: padding .3s ease;
     }
     .card-item-tit {min-height: 12.3rem;};
-    .card-item-date{ padding-top: 3.2rem; transition: padding .3s ease-in;}
-    .card-item-desc{height: 17.4rem; opacity: 1; transition: all .3s ease-iout;}
+    .card-item-date{ opacity: 0; transition: opacity .2s ease-out;}
+    .card-item-desc{height: 24.4rem; opacity: 1; transition: all .3s ease-out;}
     .card-item-img::before{opacity: 0;}
     .card-item-img img{scale:1.2; transition: scale 4s ease-in;}
 }

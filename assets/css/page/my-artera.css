@@ -1,0 +1,141 @@
+.myinfo-head {
+    width: 100%;
+    position: relative;
+    border: 0.1rem solid #CCCCCC;
+    background-color: #FBFBFB;
+    padding:6rem;
+    text-align: center;
+
+    .btn-area-center {
+        margin-top: 4rem;
+        gap:2rem;
+    }
+}
+.myinfo-head-tit {
+    font-size: 4rem;
+    font-weight: 500;
+
+    em {
+        font-weight: 700;
+        color: var(--orange);
+    }
+    b {
+        font-weight: 700;
+    }
+}
+.myinfo-txt {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+
+
+.conts-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .2rem solid #000;
+    padding:1.2rem 2rem;
+    margin-top: 4.5rem;
+}
+.conts-head-tit {
+    font-size: 3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: var(--beige);
+    }
+}
+
+.bul-star{
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 2rem;
+    line-height: 1.2;
+
+    &::before {
+        content:"*";
+        display: inline-block;
+        color:var(--orange);
+        text-indent: -1.6rem;
+    }
+}
+.ico-req {
+    color:var(--orange);
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+
+    &[data-type="email"] {
+        .form-select {
+            width: 16.4rem;
+        }
+    }
+    &[data-type="rec-info"] {
+        display: flex;
+        gap:4rem;
+        align-items: center;
+    }
+    &[data-type="zip-code"] {
+        .form-input {
+            width: 16rem;
+        }
+    }
+    &[data-type="address"] {
+        .form-input {
+            width: 38.3rem;
+        }
+    }
+
+    + .form-group{
+        margin-top: 2rem;
+    }
+}
+
+.table-input {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+    border-bottom: .1rem solid #CCCCCC;
+    margin-bottom: 6rem;
+
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 2rem;
+        font-weight: 500;
+        color:#333;
+    }
+    col.col-th {
+        width: 20.7rem;
+    }
+    th {
+        padding: 2rem 4rem;
+        text-align: left;
+    }
+    td {
+        padding: 2rem 4rem;
+        text-align: left;
+    }
+    .form-input{
+        width: 30rem;
+    }
+}
+.table-bottom {
+    position: relative;
+    display: flex;
+    height: 2rem;
+    margin-top: -4rem;
+
+}
