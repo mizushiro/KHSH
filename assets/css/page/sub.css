@@ -992,6 +992,9 @@
         }
     }
     @media (max-width:767px) {
+        margin-left:-2rem;
+        margin-right:-2rem;
+        margin-bottom:2rem;
         .month-choice {
             gap:1.6rem 0;
             .btn-month-choice {
