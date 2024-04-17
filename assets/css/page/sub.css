@@ -161,6 +161,9 @@
                 width:5.6rem;
             }
             &[data-type="point"] {
+                dt {
+                    line-height:2.8rem;
+                }
                 dd {
                     font-size:2.4rem;
                     line-height:2.8rem;
