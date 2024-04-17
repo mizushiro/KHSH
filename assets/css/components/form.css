@@ -98,7 +98,22 @@
     }
 }
 
-select,
+select {
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    border:none;
+    background-color:var(--white);
+    height:4rem;
+    padding:0 3rem 0 1rem;
+    outline:0;
+    margin:0;
+    color:#333;
+    font-size:1.8rem;
+    z-index:1;
+}
 .form-select-btn {
     position:relative;
     display:inline-flex;
