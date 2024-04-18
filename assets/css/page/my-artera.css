@@ -205,7 +205,7 @@
     }
     th {
         vertical-align: top;
-        padding-top: 2.4rem;
+        padding: 2.4rem 4rem 2rem;
         text-align: left;
         @media (max-width:1023px) {
             padding: 1rem 1rem;
