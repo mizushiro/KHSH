@@ -359,14 +359,56 @@
             }
             let swiperPdrawingThumbs = null;
             let swiperPdrawing = null;
-            UI.exe.idpwTab = new Tab({
+            let swiperViewmapThumbs = null;
+            let swiperViewmap = null;
+            UI.exe.arteraDetailTab = new Tab({
                 id: 'arteraDetail',
                 current: '1',
                 callback: (v) => {
                     switch (v.current) {
                         case '2' :
-                        //투시도
+                        
                          setTimeout(() => {
+                            //조경도
+                            if (!swiperViewmapThumbs) {
+                                swiperViewmapThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewmap"]', {
+                                    spaceBetween: 10,
+                                    slidesPerView: 3,
+                                    direction: getDirection(),
+                                    freeMode: true,
+                                    watchSlidesProgress: true,
+                                    mousewheel: true,
+                                    breakpoints: {
+                                        1023: {
+                                            spaceBetween: 18,
+                                        }
+                                    },
+                                    on: {
+                                        resize: function () {
+                                            swiperViewmapThumbs.changeDirection(getDirection());
+                                        }
+                                    }
+                                });
+                            }
+                            if (!swiperViewmap) {
+                                swiperViewmap = new Swiper('.swiper-viewmap[data-id="viewmap"]', {
+                                    spaceBetween: 0,
+                                    navigation: {
+                                        nextEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-next',
+                                        prevEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-prev',
+                                    },
+                                    thumbs: {
+                                        swiper: swiperViewmapThumbs,
+                                    },
+                                    on: {
+                                        resize: function () {
+                                            swiperViewmapThumbs.changeDirection(getDirection());
+                                        }
+                                    }
+                                });
+                            }
+
+                            //투시도
                             if (!swiperPdrawingThumbs) {
                                 swiperPdrawingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="pdrawing"]', {
                                     spaceBetween: 10,
@@ -409,7 +451,8 @@
                     }
                 }
             });
-            const swiperViewmapThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewmap"]', {
+            //공사진행
+            const swiperViewingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewing"]', {
                 spaceBetween: 10,
                 slidesPerView: 3,
                 direction: getDirection(),
@@ -423,22 +466,22 @@
                 },
                 on: {
                     resize: function () {
-                        swiperViewmapThumbs.changeDirection(getDirection());
+                        swiperViewingThumbs.changeDirection(getDirection());
                     }
                 }
             });
-            const swiperViewmap = new Swiper('.swiper-viewmap[data-id="viewmap"]', {
+            const swiperViewing = new Swiper('.swiper-viewmap[data-id="viewing"]', {
                 spaceBetween: 0,
                 navigation: {
-                    nextEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-next',
-                    prevEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-prev',
+                    nextEl: '.swiper-viewmap[data-id="viewing"] .swiper-button-next',
+                    prevEl: '.swiper-viewmap[data-id="viewing"] .swiper-button-prev',
                 },
                 thumbs: {
-                    swiper: swiperViewmapThumbs,
+                    swiper: swiperViewingThumbs,
                 },
                 on: {
                     resize: function () {
-                        swiperViewmapThumbs.changeDirection(getDirection());
+                        swiperViewingThumbs.changeDirection(getDirection());
                     }
                 }
             });
