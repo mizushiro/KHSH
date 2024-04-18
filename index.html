@@ -47,12 +47,32 @@
                 color:red;
             }
         }
-    </style>
-
-    <style>
-        .wrap{display: flex; justify-content: center; width: auto; margin:0 auto; gap: 2rem; }
-        .iframe{margin-top: 10rem; width: calc(192rem / 2); height: 85dvh;border:0.1rem solid #ccc; display: block;position: sticky; top:10rem; overflow: hidden;}
-        iframe{width: 192rem; height: 170dvh; scale:0.5; transform-origin: 0 0;}
+        .wrap {
+            display: flex;
+            justify-content: center;
+            width: auto;
+            margin:0 auto;
+            gap: 2rem;
+        }
+        .iframe{
+            margin-top: 10rem;
+            width: calc(192rem / 2);
+            height: 85dvh;
+            border:0.1rem solid #ccc;
+            display: block;
+            position: sticky;
+            top:10rem;
+            overflow: hidden;
+            @media (max-width:1023px) {
+                display:none;
+            }
+        }
+        iframe{
+            width: 192rem;
+            height: 170dvh;
+            scale:0.5;
+            transform-origin: 0 0;
+        }
     </style>
 </head>
 
@@ -215,14 +235,14 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr class="ok">
                         <td>page</td>
                         <td><a target="_page" href="./html/sub2-2-2.html">sub2-2-2.html</a></td>
                         <td>분양정보</td>
                         <td>분양일정</td>
                         <td>캘린더보기</td>
                         <td></td>
-                        <td></td>
+                        <td><span class="state-ing">▲</span></td>
                     </tr>
                 </tbody>
 

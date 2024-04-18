@@ -79,7 +79,6 @@
         }
     }
 }
-
 .card-artera {
     max-width:160rem;
     width:auto;
@@ -1010,7 +1009,7 @@
             padding-right:0;
             .button-base {
                 flex:1;
-                height:5rem;
+                min-height:5rem;
                 min-width:0;
             }
         }
@@ -1054,10 +1053,88 @@
     .month-value {
         display:flex;
         gap:1rem;
+        align-items:center;
         .month-number {
             font-size:5rem;
             font-weight:500;
+            line-height:4rem;
             color:var(--black);
+        }
+        .month-value-en {
+            font-size:1.8rem;
+            line-height:2.6rem;
+            color:var(--gray_800);
+        }
+    }
+    .info-item-list {
+        margin-top:4rem;
+        display:flex;
+        flex-direction:column;
+        gap:2rem;
+    }
+    .info-item {
+        width:100%;
+        display:flex;
+        gap:1.4rem;
+        align-items:center;
+        .info-state {
+            min-width:8.8rem;
+            height:3.2rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:600;
+            font-size:1.6rem;
+            &[data-state="end"] {
+                background-color:var(--black);
+                color:var(--white);
+            }
+            &[data-state="ing"] {
+                background-color:var(--orange);
+                color:var(--white);
+            }
+            &[data-state="ready"] {
+                background-color:var(--skyblue);
+                color:var(--navy);
+            }
+        }
+        .info-data {
+            font-size:2rem;
+            color:var(--black);
+            font-weight:500;
+            line-height:3.2rem;
+        }
+    }
+    @media (max-width:1023px) {
+        gap:1rem;
+        .view-type-box-item {
+            width:100%;
+            padding:1rem 1.5rem;
+        }
+        .month-value {
+            gap:.4rem;
+            .month-number {
+                font-size:3.2rem;
+                line-height:4.8rem;
+            }
+            .month-value-en {
+                font-size:1.3rem;
+                line-height:2rem;
+            }
+        }
+        .info-item-list {
+            margin-top:.8rem;
+            gap:1rem;
+            margin-bottom:1rem;
+        }
+        .info-item {
+            gap:1rem;
+            .info-state {
+                min-width:7.6rem;
+            }
+            .info-data {
+                font-size:1.6rem;
+            }
         }
     }
 }
