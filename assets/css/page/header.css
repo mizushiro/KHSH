@@ -201,42 +201,44 @@
         background-color: #fff;
         height:60rem;
         transition: background-color .3s cubic-bezier(.07,.26,0,.93), height .4s cubic-bezier(.07,.26,0,.93);
-    }
-    .logo {background-image: url(../../images/common/logo-dark.svg)}
-    .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
-    .btn-etc-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
-    .nav-dep2 {opacity: 1;transition: opacity .4s ease-in;}
-    .nav-dep2-item > a {pointer-events: initial;}
-    .nav-dep1-link {
-        color:#000;
-        transition: color .2s ease-in;
-        &::after        {
-            content:"";
-            display: block;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+
+        .logo {background-image: url(../../images/common/logo-dark.svg)}
+        .btn-search {background-image: url(../../images/common/ico-search-dark.svg);}
+        .btn-etc-nav {background-image: url(../../images/common/ico-nav-dark.svg);}
+        .nav-dep2 {opacity: 1;transition: opacity .4s ease-in;}
+        .nav-dep2-item > a {pointer-events: initial;}
+        .nav-dep1-link {
+            color:#000;
+            transition: color .2s ease-in;
+            &::after        {
+                content:"";
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom:0;
+                width:0;
+                height: .4rem;
+                background-color: transparent;
+            }
+            &[data-state="on"]::after {
+                width: 100%;
+                background-color: var(--orange);
+                transition: all .4s cubic-bezier(.28,.42,.41,1.44);
+            }
+        }
+        .base-wrap::before {
+            content:'';
+            position:fixed;
+            top:0;
+            right:0;
             bottom:0;
-            width:0;
-            height: .4rem;
-            background-color: transparent;
-        }
-        &[data-state="on"]::after {
-            width: 100%;
-            background-color: var(--orange);
-            transition: all .4s cubic-bezier(.28,.42,.41,1.44);
+            left:0;
+            background-color:rgba(0,0,0,.5);
+            z-index:2;
         }
     }
-    .base-wrap::before {
-        content:'';
-        position:fixed;
-        top:0;
-        right:0;
-        bottom:0;
-        left:0;
-        background-color:rgba(0,0,0,.5);
-        z-index:2;
-    }
+    
 }
 
 

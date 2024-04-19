@@ -88,7 +88,13 @@
             src: 'common/footer.html',
             id: 'footer',
             callback:() => {
-             
+                const btnTop = document.querySelector('.btn-top');
+                btnTop.addEventListener('click', () => {
+                    document.querySelector('html').scrollTo({
+						top: 0,
+						behavior: 'smooth'
+					});
+                });
             }
         });
     }
