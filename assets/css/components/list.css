@@ -220,7 +220,6 @@
             font-size:2rem;
             font-weight:200;
             padding-top:0;
-            transition:opacity .2s ease-out;
         }
         .card-item-desc {
             position:relative;
@@ -257,7 +256,6 @@
             }
             .card-item-date {
                 opacity:0;
-                transition:opacity .2s ease-out;
             }
             .card-item-desc {
                 height:24.4rem;
