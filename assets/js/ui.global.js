@@ -1171,11 +1171,11 @@ class Layer {
                     this.setFetch();
                 }
                 else {
-                    this.el.modal = document.querySelector('.mdl-layer[data-id="'+ this.opt.id +'"]');
+                    this.el.modal = document.querySelector('.layer-modal[data-id="'+ this.opt.id +'"]');
 
-                    this.modal = document.querySelector('.mdl-layer[data-id="'+ this.opt.id +'"]');
-                    this.btn_close = this.modal.querySelector('.mdl-layer-close');
-                    this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
+                    this.modal = document.querySelector('.layer-modal[data-id="'+ this.opt.id +'"]');
+                    this.btn_close = this.modal.querySelector('.layer-modal-close');
+                    this.modal_wrap = this.modal.querySelector('.layer-modal-wrap');
 
                     switch(this.opt.type) {
                         case 'modal' :
@@ -1196,7 +1196,7 @@ class Layer {
     }
     resetSelect() {
         this.selectBtn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'"]');
-        this.selectLayer = document.querySelector('.mdl-layer[data-type="select"][data-select-id="'+ this.id +'"]');
+        this.selectLayer = document.querySelector('.layer-modal[data-type="select"][data-select-id="'+ this.id +'"]');
 
         this.selectBtn && this.selectBtn.remove();
         this.selectLayer && this.selectLayer.remove();
@@ -1214,13 +1214,13 @@ class Layer {
         html_select_button = null;
 
         let html_select = `
-        <section class="mdl-layer" data-id="${ this.id }_select" data-type="select" role="listbox">
-            <div class="mdl-layer-wrap">
-                <div class="mdl-layer-header">
+        <section class="layer-modal" data-id="${ this.id }_select" data-type="select" role="listbox">
+            <div class="layer-modal-wrap">
+                <div class="layer-modal-header">
                     <h2>${ select.title }</h2>
-                    <button type="button" class="mdl-layer-close" data-material="close"  aria-label="닫기"></button>
+                    <button type="button" class="layer-modal-close" data-material="close"  aria-label="닫기"></button>
                 </div>
-                <div class="mdl-layer-body">
+                <div class="layer-modal-body">
                     <ul class="form-select-wrap">`;
 
         for (let i = 0, len = options.length; i < len; i++) {
@@ -1237,14 +1237,14 @@ class Layer {
                     </ul>
                 </div>
             </div>
-            <div class="mdl-layer-dim"></div>
+            <div class="layer-modal-dim"></div>
         </section>`;  
         document.querySelector('body').insertAdjacentHTML('beforeend', html_select);
         html_select = null;
 
-        this.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'_select"]');
-        this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
-        this.btn_close = this.modal.querySelector('.mdl-layer-close');
+        this.modal = document.querySelector('.layer-modal[data-id="'+ this.id +'_select"]');
+        this.modal_wrap = this.modal.querySelector('.layer-modal-wrap');
+        this.btn_close = this.modal.querySelector('.layer-modal-close');
         this.select_btn = this.select.querySelector('.form-select-btn');
 
         select.addEventListener('change', (e) => {
@@ -1258,26 +1258,26 @@ class Layer {
     }
     madeToast() {
         let html_toast = `
-        <div class="mdl-layer ${ this.classname }" data-id="${ this.id }" data-type="toast" aria-live="${ this.status }">
-            <div class="mdl-layer-wrap">
-                <div class="mdl-layer-body">${ this.content }</div>
-                ${ !this.auto ? '<button type="button" class="mdl-layer-close" data-material="close" aria-label="닫기"></button>' : ''}
+        <div class="layer-modal ${ this.classname }" data-id="${ this.id }" data-type="toast" aria-live="${ this.status }">
+            <div class="layer-modal-wrap">
+                <div class="layer-modal-body">${ this.content }</div>
+                ${ !this.auto ? '<button type="button" class="layer-modal-close" data-material="close" aria-label="닫기"></button>' : ''}
             </div>
         </div>`;
         this.el_body.insertAdjacentHTML('beforeend', html_toast);
 
-        this.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'"]');
-        this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
+        this.modal = document.querySelector('.layer-modal[data-id="'+ this.id +'"]');
+        this.modal_wrap = this.modal.querySelector('.layer-modal-wrap');
 
         this.init();
     }
     madeSystem() {
         //alert & confirm
         let html_system = `
-        <section class="mdl-layer" data-id="${ this.id }" data-type="alert">
-            <div class="mdl-layer-wrap">
-                <div class="mdl-layer-body">
-                    ${(!!this.title) ? `<h1 class="mdl-layer-tit">${ this.title }</h1>` : ''}
+        <section class="layer-modal" data-id="${ this.id }" data-type="alert">
+            <div class="layer-modal-wrap">
+                <div class="layer-modal-body">
+                    ${(!!this.title) ? `<h1 class="layer-modal-tit">${ this.title }</h1>` : ''}
                     <div>${ this.content }</div>
                     <div class="button-base-wrap">
                         ${(this.btn.length === 2) ? `<button type="button" class="button-base" data-state="cancel" data-style="primary-gray"><span>${ this.btn[1].text }</span></button>` : ''}
@@ -1287,13 +1287,13 @@ class Layer {
                     </div>
                 </div>
             </div>
-            <div class="mdl-layer-dim"></div>
+            <div class="layer-modal-dim"></div>
         </section>`;
         document.querySelector('body').insertAdjacentHTML('beforeend', html_system);
         html_system = null;
 
-        this.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'"]');
-        this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
+        this.modal = document.querySelector('.layer-modal[data-id="'+ this.id +'"]');
+        this.modal_wrap = this.modal.querySelector('.layer-modal-wrap');
         this.ok = this.modal.querySelector('.button-base[data-state="ok"]');
         this.cancel = this.modal.querySelector('.button-base[data-state="cancel"]');
         this.ok && this.ok.addEventListener('click', this.btn[0].callback);
@@ -1315,20 +1315,20 @@ class Layer {
                 let _btn = document.createElement('button');
                 _btn.type = 'button';
                 _btn.setAttribute('aria-lable', '마지막 구간입니다. 클릭하시면 닫힙니다.');
-                _btn.classList.add('mdl-layer-last');
+                _btn.classList.add('layer-modal-last');
 
-                this.el.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'"]');
-                this.el.btn_close = this.el.modal.querySelector('.mdl-layer-close');
-                this.el.modal_wrap = this.el.modal.querySelector('.mdl-layer-wrap');
+                this.el.modal = document.querySelector('.layer-modal[data-id="'+ this.id +'"]');
+                this.el.btn_close = this.el.modal.querySelector('.layer-modal-close');
+                this.el.modal_wrap = this.el.modal.querySelector('.layer-modal-wrap');
                 // this.el.modal_wrap.appendChild(_btn);
-                this.el.last_layer = this.el.modal.querySelector('.mdl-layer-last');
+                this.el.last_layer = this.el.modal.querySelector('.layer-modal-last');
 
-                this.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'"]');
-                this.btn_close = this.modal.querySelector('.mdl-layer-close');
-                this.modal_wrap = this.modal.querySelector('.mdl-layer-wrap');
+                this.modal = document.querySelector('.layer-modal[data-id="'+ this.id +'"]');
+                this.btn_close = this.modal.querySelector('.layer-modal-close');
+                this.modal_wrap = this.modal.querySelector('.layer-modal-wrap');
 
                 this.modal_wrap.appendChild(_btn);
-                this.last = this.modal.querySelector('.mdl-layer-last');
+                this.last = this.modal.querySelector('.layer-modal-last');
 
                 switch(this.type) {
                     case 'modal' :
@@ -1525,7 +1525,7 @@ class Layer {
         // select layer
         if (this.type === 'select') {
             console.log(this.select_btn.offsetWidth, this.select_btn.dataset.selectId);
-            document.querySelector('.mdl-layer[data-id="'+ this.select_btn.dataset.selectId +'"]').style.width = (this.select_btn.offsetWidth / 10) + 'rem';
+            document.querySelector('.layer-modal[data-id="'+ this.select_btn.dataset.selectId +'"]').style.width = (this.select_btn.offsetWidth / 10) + 'rem';
             
             const el_options = this.modal.querySelectorAll('.form-select-option');
             const el_inputs = this.modal.querySelectorAll('input');
@@ -1560,7 +1560,7 @@ class Layer {
     backClick = (e) => {
         //mouse click, touch 인 경우만 실행. ''값은 방향키로 이동 시
         if (e.pointerType !== '') {
-            e.srcElement.querySelector('.mdl-layer[role="listbox]') ?? this.hide();
+            e.srcElement.querySelector('.layer-modal[role="listbox]') ?? this.hide();
         }
         
     }
@@ -1595,7 +1595,7 @@ class Layer {
         if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
             console.log(Number(this.html.dataset.layerN));
             if (Number(this.html.dataset.layerN) !== 0) {
-                document.querySelector('.mdl-layer[data-layer-n="'+ this.html.dataset.layerN +'"]').dataset.layerCurrent = 'true';
+                document.querySelector('.layer-modal[data-layer-n="'+ this.html.dataset.layerN +'"]').dataset.layerCurrent = 'true';
             }
         }
         

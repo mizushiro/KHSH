@@ -48,6 +48,8 @@
 }
 [data-marker="yellow"]::after{background-color: #FFD700;}
   
+[data-color="point"] {color: var(--orange);}
+
 [data-align="center"] {text-align: center !important;} 
 [data-align="left"] {text-align: left !important;} 
 [data-align="right"] {text-align: right !important;} 

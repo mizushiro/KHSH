@@ -1,7 +1,7 @@
 html[data-modal="show"] body {
     overflow-y:hidden;
 }
-.mdl-layer {
+.layer-modal {
     position:fixed;
     width:100%;
     height:100%;
@@ -13,7 +13,7 @@ html[data-modal="show"] body {
     display:none;
     overflow:hidden;
     padding:2.4rem;
-    &[data-layer-current="false"] .mdl-layer-dim {
+    &[data-layer-current="false"] .layer-modal-dim {
         opacity:0;
     }
     &[data-state="show"] {
@@ -22,7 +22,7 @@ html[data-modal="show"] body {
     &[data-state="hide"] {
         display:flex;
     }
-    .mdl-layer-dim {
+    .layer-modal-dim {
         position:absolute;
         width:100%;
         height:100%;
@@ -34,53 +34,102 @@ html[data-modal="show"] body {
         animation-iteration-count:1;
         animation-fill-mode:backwards;
     }
-    .mdl-layer-wrap {
+    .layer-modal-wrap {
         position:relative;
         display:flex;
         flex-direction:column;
-        padding:2.4rem;
+        padding:1rem 2rem;
         min-width:30rem;
         background-color:#fff;
-        border-radius:1.6rem;
         box-shadow:0 0.8rem 1.6rem rgba(0,0,0,0.4);
         z-index:1;
-    }
-    .mdl-layer-header {
-        position:relative;
-        width:100%;
-        display:flex;
-        align-items:center;
-    }
-    .mdl-layer-body {
-        position:relative;
-        width:100%;
-        padding:1.6rem 0;
-        max-height:calc(100vh - 20rem);
-        overflow-y:auto;
-    }
-    .mdl-layer-footer {
-        position:relative;
-        width:100%;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        gap:0.8rem;
-        button {
-            flex:1;
+
+        @media (max-width:1023px) {
+            padding:0 1rem;
         }
     }
-    .mdl-layer-close {
-        position:absolute;
-        top:0; 
-        right:0;
+    .layer-modal-header {
+        position:relative;
+        width:100%;
         display:flex;
-        justify-content:center;
         align-items:center;
+        min-height: 8.8rem;
+        padding: 0 2rem;
+        justify-content: space-between;
+        border-bottom: .2rem solid #000;
+
+        @media (max-width:1023px) {
+            padding: 0 1rem;
+            min-height: 6.4rem;
+        }
+    }
+    .layer-modal-title {
+        font-size: 3rem;
+        font-weight: 600;
+        @media (max-width:1023px) {
+            font-size: 2rem;
+        }
+    }
+    .layer-modal-subject {
+        width: 100%;
+        text-align: center;
+        font-size: 2.8rem;
+        line-height: 1.5;
+        font-weight: 500;
+        padding: 2rem;
+        margin-bottom: 2rem;
+
+        @media (max-width:1023px) {
+            padding: 1rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .layer-modal-close {
+        position:relative;
+        display:block;
         width:3rem;
         height:3rem;
-        font-size:3rem;
+        z-index:10;
+        background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
+
+        @media (max-width:1023px) {
+            width:2.2rem;
+            height:2.2rem;
+        }
     }
-    .mdl-layer-last {
+
+    .layer-modal-body {
+        position:relative;
+        width:100%;
+        padding:2rem 2rem 0;
+        max-height:calc(100vh - 20rem);
+        overflow-y:auto;
+
+        @media (max-width:1023px) {
+             padding:2rem 2rem 0;
+        }
+    }
+    .layer-modal-footer {
+        position:relative;
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding: 4rem 6rem 5rem;
+        gap:2rem;
+
+        @media (max-width:1023px) {
+            padding: 2rem 2rem 3rem;
+            .button-base {
+                width: auto;
+                flex: none;
+                padding: 0 1.8rem
+            }
+        }
+    }
+    
+    .layer-modal-last {
         width:3rem;
         height:3rem;
         position:fixed;
@@ -97,9 +146,17 @@ html[data-modal="show"] body {
             opacity:1;
         }
     }
+
+    &[data-size="large"] {
+        .layer-modal-wrap {
+            width: 100%;
+            max-width: 100rem;
+        }
+    }
+
     &[data-type="alert"],
     &[data-type="modal"] {
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             animation-name:modal_show;
             animation-delay:.1s;
             animation-duration:.4s;
@@ -107,14 +164,14 @@ html[data-modal="show"] body {
             animation-fill-mode:backwards;
         }
         &[data-state="hide"] {
-            .mdl-layer-dim {
+            .layer-modal-dim {
                 animation-name:dim_hide;
                 animation-delay:.1s;
                 animation-duration:.2s;
                 animation-iteration-count:1;
                 animation-fill-mode:backwards;
             }
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:modal_hide;
                 animation-delay:.1s;
                 animation-duration:.2s;
@@ -126,7 +183,7 @@ html[data-modal="show"] body {
     &[data-type="bottom"] {
         padding:0;
         align-items:flex-end;
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             width:100%;
             border-bottom-left-radius:0;
             border-bottom-right-radius:0;
@@ -137,14 +194,14 @@ html[data-modal="show"] body {
             animation-fill-mode:backwards;
         }
         &[data-state="hide"] {
-            .mdl-layer-dim {
+            .layer-modal-dim {
                 animation-name:dim_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
                 animation-iteration-count:1;
                 animation-fill-mode:backwards;
             }
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:bottom_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
@@ -159,7 +216,7 @@ html[data-modal="show"] body {
         height:auto;
         padding:0;
         overflow:visible;
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             animation-name:dropdown_show;
             animation-delay:.1s;
             animation-duration:.4s;
@@ -167,7 +224,7 @@ html[data-modal="show"] body {
             animation-fill-mode:backwards;
         }
         &[data-state="hide"] {
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:dropdown_hide;
                 animation-delay:.1s;
                 animation-duration:.2s;
@@ -175,7 +232,7 @@ html[data-modal="show"] body {
                 animation-fill-mode:backwards;
             }
         }
-        .mdl-layer-dim {display:none;}
+        .layer-modal-dim {display:none;}
     }
     &[data-type="tooltip"] {
         position:absolute;
@@ -183,24 +240,24 @@ html[data-modal="show"] body {
         height:auto;
         padding:0;
         overflow:visible;
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             padding:1.6rem;
             border-radius:0.8rem;
         }
-        .mdl-layer-header {
+        .layer-modal-header {
             font-size:1.3rem;
             font-weight:700;
         }
-        .mdl-layer-body {
+        .layer-modal-body {
             margin:0;
             padding:0;
             font-size:1.2rem;
         }
-        .mdl-layer-close,
-        .mdl-layer-dim {
+        .layer-modal-close,
+        .layer-modal-dim {
             display:none;
         }
-        &[data-state="hide"] .mdl-layer-wrap {
+        &[data-state="hide"] .layer-modal-wrap {
             display:none;
         }
     }
@@ -224,10 +281,10 @@ html[data-modal="show"] body {
             -webkit-appearance:none;
             margin:0;
         }
-        .mdl-layer-header {
+        .layer-modal-header {
             display:none;
         }
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             padding:0;
             width:100%;
             min-width:0;
@@ -241,7 +298,7 @@ html[data-modal="show"] body {
                 background-color:transparent;
             }
         }
-        .mdl-layer-body {
+        .layer-modal-body {
             margin:0;
             padding:0;
         }
@@ -272,10 +329,10 @@ html[data-modal="show"] body {
                 }
             }
         }
-        .mdl-layer-dim {
+        .layer-modal-dim {
             display:none;
         }
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             animation-name:select_show;
             animation-delay:.1s;
             animation-duration:.4s;
@@ -283,7 +340,7 @@ html[data-modal="show"] body {
             animation-fill-mode:backwards;
         }
         &[data-state="hide"] {
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:select_hide;
                 animation-delay:.1s;
                 animation-duration:.2s;
@@ -300,10 +357,10 @@ html[data-modal="show"] body {
         overflow:visible;
         bottom:0;
         top:auto;
-        .mdl-layer-header {
+        .layer-modal-header {
             display:none;
         }
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             background-color:#fff;
             color:#000;
             padding:1.6rem;
@@ -313,20 +370,20 @@ html[data-modal="show"] body {
             bottom:0;
             transform:translate(0, 20vh);
         }
-        .mdl-layer-body {
+        .layer-modal-body {
             margin:0;
             padding:0;
         }
-        .mdl-layer-dim {
+        .layer-modal-dim {
             display:none;
         }
         &[data-layer-current="true"][data-state="hide"] {
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 transform:translate(0, -1.2rem);
             }
         }
         &[data-state="show"] {
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:toast_show;
                 animation-delay:.1s;
                 animation-duration:.3s;
@@ -335,7 +392,7 @@ html[data-modal="show"] body {
             }
         }
         &[data-state="hide"] {
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:toast_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
@@ -351,7 +408,7 @@ html[data-modal="show"] body {
         top:0;
         background-color:transparent;
         
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             background-color:var(--navy);
             padding:0;
             width:100%;
@@ -362,7 +419,7 @@ html[data-modal="show"] body {
             animation-iteration-count:1;
             animation-fill-mode:backwards; 
         }
-        .mdl-layer-header {
+        .layer-modal-header {
             width:100%;
             height:12rem;
             background-color:#fff;
@@ -371,7 +428,7 @@ html[data-modal="show"] body {
             justify-content:center;
             padding:0 4rem;
 
-            .mdl-layer-header-wrap {
+            .layer-modal-header-wrap {
                 position:relative;
                 display:flex;
                 width:100%;
@@ -393,14 +450,14 @@ html[data-modal="show"] body {
             }
         }
         &[data-state="hide"] {
-            .mdl-layer-dim {
+            .layer-modal-dim {
                 animation-name:dim_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
                 animation-iteration-count:1;
                 animation-fill-mode:backwards;
             }
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:top_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
@@ -408,7 +465,7 @@ html[data-modal="show"] body {
                 animation-fill-mode:backwards;
             }
         }
-        .mdl-layer-body {
+        .layer-modal-body {
             margin:0 auto;
             width:100%;
             max-width:192rem;
@@ -418,7 +475,7 @@ html[data-modal="show"] body {
             display:flex;
             justify-content:center;
             gap:4rem;
-            .mdl-layer-body-box {
+            .layer-modal-body-box {
                 max-width:172rem;
                 width:100%;
                 display:flex;
@@ -520,7 +577,7 @@ html[data-modal="show"] body {
             top:0;
             background-color:transparent;
 
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 background-color:#fff;
                 border-radius:0;
                 height:100dvh;
@@ -533,13 +590,13 @@ html[data-modal="show"] body {
                 animation-iteration-count:1;
                 animation-fill-mode:backwards;
             }
-            .mdl-layer-header {
+            .layer-modal-header {
                 height:8rem;
                 background-color:var(--navy);
                 padding:0 2rem;
                 flex-shrink:0;
 
-                .mdl-layer-header-wrap {
+                .layer-modal-header-wrap {
                     max-width:100%;
                     justify-content:space-between;
                     align-items:center;
@@ -565,7 +622,7 @@ html[data-modal="show"] body {
                 }
             }
             &[data-state="hide"] {
-                .mdl-layer-wrap {
+                .layer-modal-wrap {
                     animation-name:nav_hide;
                     animation-delay:.1s;
                     animation-duration:.3s;
@@ -575,7 +632,7 @@ html[data-modal="show"] body {
             }
             .banner-nav {display:none;}
         
-            .mdl-layer-body {
+            .layer-modal-body {
                 margin:0 auto;
                 width:100%;
                 max-width:100%;
@@ -743,7 +800,7 @@ html[data-modal="show"] body {
         top:0;
         background-color:transparent;
        
-        .mdl-layer-wrap {
+        .layer-modal-wrap {
             background-color:var(--navy);
             padding:0;
             width:100%;
@@ -754,7 +811,7 @@ html[data-modal="show"] body {
             animation-iteration-count:1;
             animation-fill-mode:backwards; 
         }
-        .mdl-layer-header {
+        .layer-modal-header {
             width:100%;
             height:12rem;
             display:flex;
@@ -764,7 +821,7 @@ html[data-modal="show"] body {
             .logo {
                 background:url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
             }
-            .mdl-layer-header-wrap {
+            .layer-modal-header-wrap {
                 position:relative;
                 display:flex;
                 width:100%;
@@ -782,14 +839,14 @@ html[data-modal="show"] body {
             }
         }
         &[data-state="hide"] {
-            .mdl-layer-dim {
+            .layer-modal-dim {
                 animation-name:dim_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
                 animation-iteration-count:1;
                 animation-fill-mode:backwards;
             }
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 animation-name:top_hide;
                 animation-delay:.1s;
                 animation-duration:.3s;
@@ -797,7 +854,7 @@ html[data-modal="show"] body {
                 animation-fill-mode:backwards;
             }
         }
-        .mdl-layer-body {
+        .layer-modal-body {
             margin:0 auto;
             width:100%;
             max-width:192rem;
@@ -850,14 +907,14 @@ html[data-modal="show"] body {
             top:0;
             background-color:transparent;
         
-            .mdl-layer-wrap {
+            .layer-modal-wrap {
                 height:100%;
                 background-color:var(--navy);
                 padding:0;
                 width:100%;
                 border-radius:0;
             }
-            .mdl-layer-header {
+            .layer-modal-header {
                 width:100%;
                 height:8rem;
                 padding:0 2rem;
@@ -868,7 +925,7 @@ html[data-modal="show"] body {
                     background:url(../../images/common/logo.svg) no-repeat 0 0 / 12.3rem;
                 }
 
-                .mdl-layer-header-wrap {
+                .layer-modal-header-wrap {
                     position:relative;
                     display:flex;
                     padding-right:0;
@@ -882,7 +939,7 @@ html[data-modal="show"] body {
                     background:url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
                 }
             }
-            .mdl-layer-body {
+            .layer-modal-body {
                 display:flex;
                 justify-content:center;
                 align-items:center;
