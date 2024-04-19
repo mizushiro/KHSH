@@ -327,6 +327,7 @@
                     width:100%;
                     padding:0;
                     margin-bottom:1rem;
+                    border-right:none;
                 }
             }
             &[data-bg="sky"] {
