@@ -416,13 +416,20 @@ html[data-modal="show"] body {
             height:auto;
             overflow:hidden;
             display:flex;
-            justify-content:flex-end;
+            justify-content:center;
             gap:4rem;
-
+            .mdl-layer-body-box {
+                max-width:172rem;
+                width:100%;
+                display:flex;
+                align-items:flex-start;
+            }
             .banner-nav {
-                width:40rem;
-                height:42.9rem;
-
+                aspect-ratio:400/429;
+                max-width:40rem;
+                width:23%;
+                margin:0 2rem;
+                flex-shrink:0;
                 img {
                     object-fit:cover;
                     width:100%;
@@ -434,9 +441,12 @@ html[data-modal="show"] body {
                 align-items:flex-start;
                 justify-content:flex-end;
                 flex-direction:row;
-                .mdl-acco,
+                flex:1;
+                .mdl-acco {
+                    width:80%
+                }
                 .nav-dep1 {
-                    width:auto;
+                    width:20%;
                 }
             }
             .mdl-acco {
@@ -449,14 +459,17 @@ html[data-modal="show"] body {
                 justify-content:center;
             }
             .mdl-acco-item {
-                padding:0 7rem;
+                flex:1;
+                /*padding:0 7rem;*/
             }
             .nav-dep1-item {
-                min-width:26rem; 
+                /*min-width:26rem;*/
+                padding:0;
+                width:100%;
             }
             .nav-dep1 {
                 width:100%;
-                height:auto; 
+                height:auto;
                 justify-content:flex-end;
             }
             .nav-dep2 {
@@ -511,13 +524,14 @@ html[data-modal="show"] body {
                 background-color:#fff;
                 border-radius:0;
                 height:100dvh;
-                max-width:31.7rem;
+                width:100%;
+                max-width:34rem;
 
                 animation-name:nav_show;
                 animation-delay:.1s;
                 animation-duration:.3s;
                 animation-iteration-count:1;
-                animation-fill-mode:backwards; 
+                animation-fill-mode:backwards;
             }
             .mdl-layer-header {
                 height:8rem;
@@ -651,7 +665,7 @@ html[data-modal="show"] body {
                 }
                 .nav-dep2-link {
                     color:#000;
-                    font-size:1.8rem;
+                    font-size:1.6rem;
                     font-weight:500;
                     text-align:left;
                     padding:1rem 0;
