@@ -65,7 +65,7 @@
             y: 0,
             direction: 'down'
         },		
-        breakPoint: [600, 905],
+        breakPoint: [600, 1400],
     };
     Global.parts = {
         scroll(){
@@ -121,6 +121,21 @@
                 el_html.dataset.browser = browser.chrome ? 'chrome' : browser.firefox ? 'firefox' : browser.opera ? 'opera' : browser.safari ? 'safari' : browser.ie ? 'ie' + browser.ie : 'other';
                 el_html.dataset.platform = device.ios ? "ios" : device.android ? "android" : 'window';
                 el_html.dataset.device = device.mobile ? device.app ? 'app' : 'mobile' : 'desktop';
+
+                // const reset_acco = document.querySelectorAll('.base-nav .mdl-acco-body[style]');
+                // if (Number(device.col) === 12) {
+                //     if (reset_acco) {
+                //         for (const item of reset_acco) {
+                //             item.removeAttribute('style');
+                //         }
+                //     }
+                // } else {
+                //     if (reset_acco) {
+                //         for (const item of reset_acco) {
+                //             item.removeAttribute('style');
+                //         }
+                //     }
+                // }
             }
             window.addEventListener('resize', act);
             act();
@@ -1011,7 +1026,6 @@ class Tab {
         item.dataset.selected = true;
     }
 }
-
 class ToggleUI {
     constructor(opt) {
         this.scope = !!opt ? opt.scope : false;
@@ -1065,7 +1079,6 @@ class ToggleUI {
         });
     }
 }
-
 class Layer {
     constructor(opt) {
         const defaults = {
@@ -1612,7 +1625,6 @@ class Layer {
         }
     }
 }
-
 class ScrollPage {
     constructor(opt) {
         this.opt = opt;
@@ -1655,6 +1667,8 @@ class ScrollPage {
                 const if_1 = n_s <= (n + w_h) && (n + w_h) <= n_e;
                 const if_2 = n_e <= (n + w_h) && (n + w_h) <= (n_e + n_h);
 
+                console.log(if_1, if_2, i)
+
                 if (if_1 || if_2) {
                     if (if_1) {
                         const _n = n_e - n_s;
@@ -1668,6 +1682,7 @@ class ScrollPage {
                         const __n = n + w_h - n_e;
                         let per = Math.ceil((__n / _n * 100) * 1);
                         per > 100 ? per = 100 : '';
+                        per_s = 100;
                         per_e = per;
                     }
                     UI.callback[_name] && UI.callback[_name]({

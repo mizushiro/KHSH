@@ -493,7 +493,7 @@
                 </div>
             </div>
         </main>
-        <footer class="base-footer" data-id="footer" data-scroll-callback="main6"></footer>
+        <footer class="base-footer" data-id="footer" data-scroll-callback="footerScroll"></footer>
     </div>
 
     <script>
@@ -546,7 +546,6 @@
                 // v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
             }
             const mainMotion4 = (v, n) => {
-                // console.log(v);
                 // if (v.per_e < 10 && v.per_s < 10) {
                 //    UI.exe.scrollpage.wheel();
                 // }
@@ -555,15 +554,13 @@
             const mainMotion5 = (v, n) => {
                 _header.dataset.color = "dark"
             }
-            const mainMotion6 = (v, n) => {
-                _header.dataset.color = "dark"
-            }
+            
             UI.callback.main1 = (v) => { mainMotion1(v, [40]); }
             UI.callback.main2 = (v) => { mainMotion2(v, [60]); }
             UI.callback.main3 = (v) => { mainMotion3(v, [40]); }
             UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
             UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
-            UI.callback.main6 = (v) => { mainMotion5(v, [40]); }
+           
             UI.exe.scrollpage = new ScrollPage({
                 wheel: true,
                 wheelscope: 2

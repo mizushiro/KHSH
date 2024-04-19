@@ -916,6 +916,10 @@ html[data-modal="show"] body {
     }
 }
 
+[data-col="12"] {
+   .mdl-acco .mdl-acco-item .mdl-acco-body {height: auto !important;}
+}
+
 @keyframes nav_show {
     0% {transform:translate(-100dvw, 0);}
     100% {transform:translate(0, 0);}

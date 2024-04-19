@@ -57,7 +57,6 @@
         searchBtn.addEventListener('click', UI.exe.search.show);
     }
     UI.callback.nav = (v) => {
-        console.log(v.state);
         const wrap = document.querySelector('html');
 
         if (v.state === 'true') {
@@ -95,6 +94,20 @@
 						behavior: 'smooth'
 					});
                 });
+                !UI.exe.scrollpage ? 
+                UI.exe.scrollpage = new ScrollPage() : '';
+                const footerMotion = (v, n) => {
+                console.log();
+                    const _top = document.querySelector('.btn-top');
+                    if (v.per_s > 1) { 
+                        _top.style.transform = 'translateY('+ (v.element.offsetHeight * -1) / 10 +'rem)';
+                        _top.style.position = 'absolute';
+                    } else {
+                        _top.style.transform = 'translateY(0rem)';
+                        _top.style.position = 'fixed';
+                    }
+                }
+                UI.callback.footerScroll = (v) => { footerMotion(v, [0]); }
             }
         });
     }
@@ -109,7 +122,7 @@
             if (!UI.exe.navMobile) {
                 UI.exe.navMobile = new Accordion({
                     id :'navMobile',
-                    current: 0,
+                    current: null,
                     callback: (v) => {
                         console.log('callback:', v);
                     }
@@ -126,4 +139,6 @@
             
         }
     });
+    
+    
 });
