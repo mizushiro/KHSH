@@ -327,6 +327,7 @@
                     width:100%;
                     padding:0;
                     margin-bottom:1rem;
+                    border-right:none;
                 }
             }
             &[data-bg="sky"] {
@@ -346,6 +347,42 @@
 .fake-table-row {
     border-bottom:.1rem solid var(--form_line);
     display:flex;
+    &[data-align="col"] {
+        .fake-table-item {
+            flex-direction:column;
+            @media (max-width:1023px) {
+                flex-direction:row;
+            }
+            ~ .fake-table-item {
+                border-left:.1rem solid var(--form_line);
+                @media (max-width:1023px) {
+                    border-left:none;
+                    width:100%;
+                }
+            }
+            .fake-table-item-cell {
+                width:100%;
+                justify-content:center;
+                @media (max-width:1023px) {
+                    justify-content:flex-start;
+                }
+                &[data-type="title"] {
+                    border-bottom:.1rem solid var(--form_line);
+                    @media (max-width:1023px) {
+                        width:10.5rem;
+                        border-bottom:none;
+                    }
+                }
+            }
+            &[data-size="20%"] {
+                width:20%;
+                flex:none;
+                @media (max-width:1023px) {
+                    width:100%;
+                }
+            }
+        }
+    }
     @media (max-width:1023px) {
         flex-direction:column;
     }
@@ -354,6 +391,17 @@
     display:flex;
     flex:1;
     flex-wrap:wrap;
+    &[data-rows="2"] {
+        [data-type="title"] {
+            min-height:16rem;
+            @media (max-width:1400px) {
+                min-height:12.8rem;
+            }
+            @media (max-width:1023px) {
+                min-height:4rem;
+            }
+        }
+    }
     .fake-table-item-cell {
         min-height:8rem;
         display:flex;
@@ -402,7 +450,24 @@
             &[data-type="title"] {
                 width:10.5rem;
                 justify-content:flex-start;
+                border-right:.1rem solid var(--form_line);
             }
         }
+    }
+}
+.fake-table-item-group {
+    display:flex;
+    .fake-table-item {
+        flex:1;
+    }
+    @media (max-width:1023px) {
+        flex-direction:column;
+        flex:1;
+    }
+}
+.fake-table-item-cell-group {
+    @media (max-width:1023px) {
+        display:flex;
+        width:100%;
     }
 }
