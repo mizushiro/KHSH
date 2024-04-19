@@ -45,7 +45,6 @@
         font-weight:500;
         padding:.8rem 1.6rem;
         gap:2rem;
-
         @media (max-width:1023px) {
             flex:1;
             gap:1rem;
@@ -80,8 +79,7 @@
     justify-content:center;
     margin-top:2rem;
     width:100%;
-    gap: 2rem;
-
+    gap:2rem;
     @media (max-width:1023px) {
         gap:1.5rem
     }
