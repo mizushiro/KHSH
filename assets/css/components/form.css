@@ -114,6 +114,10 @@ select {
     color:#333;
     font-size:1.8rem;
     z-index:1;
+    @media (max-width:1023px) {
+        height:3rem;
+        font-size:1.5rem;
+    }
 }
 .form-select-btn {
     position:relative;
