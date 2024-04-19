@@ -56,6 +56,11 @@
 [data-bg="pattern2"] {background: url(../../images/common/pattern2.svg) repeat 50% 0% / 9rem;}
 [data-bg="pattern3"] {background: url(../../images/common/pattern3.svg) repeat 50% 0% / 9rem;}
 [data-bg="pattern4"] {background: url(../../images/common/pattern4.svg) repeat 50% 0% / 9rem;}
-
+@media (max-width:800px) {
+    [data-bg="pattern1"],
+    [data-bg="pattern2"], 
+    [data-bg="pattern3"],
+    [data-bg="pattern4"] {background-size:5.2rem}
+}
 
 

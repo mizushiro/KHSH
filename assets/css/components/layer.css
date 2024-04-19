@@ -498,6 +498,209 @@ html[data-modal="show"] body {
                 }
             }
         }
+
+        @media (max-width:1400px) {
+            padding:0;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 100%;
+            top:0;
+            background-color: transparent;
+
+            .mdl-layer-wrap {
+                background-color: #fff;
+                border-radius: 0;
+                height: 100dvh;
+                max-width: 60rem;
+
+                animation-name: nav_show;
+                animation-delay: .1s;
+                animation-duration: .3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards; 
+            }
+            .mdl-layer-header {
+                height: 8rem;
+                background-color: var(--navy);
+                padding:0 2rem;
+                flex-shrink: 0;
+
+                .mdl-layer-header-wrap {
+                    max-width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-right: 0;
+
+                    .logo {
+                        background-image: url(../../images/common/logo.svg);
+                        background-size: 12.4rem 1.6rem;
+                    }
+                }
+                .nav-dep1{display: none !important;}
+                .nav-dep1-link{
+                    color:#000 !important;
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+                .btn-nav-close{
+                    position: relative;
+                    top: 0 ;
+                    right: 0;
+                    z-index: 10;
+                    background: url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+                }
+            }
+            &[data-state="hide"] {
+                .mdl-layer-wrap {
+                    animation-name: nav_hide;
+                    animation-delay: .1s;
+                    animation-duration: .3s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: backwards;
+                }
+            }
+            .banner-nav {display: none;}
+        
+            .mdl-layer-body{
+                margin: 0 auto;
+                width: 100%;
+                max-width: 100%;
+                flex:1;
+                padding:0 0 4rem;
+                overflow: hidden;
+                overflow-y: auto;
+                height: 100%;
+                max-height:100%;
+                position: relative;
+                
+
+                .base-nav{
+
+                    width: 100%;
+                    padding-top: 6rem;
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .mdl-acco-head-wrap{
+                        width:100%;
+                    }
+                }
+                .mdl-acco-head{height: auto;}
+                .mdl-acco-body{height: 0;}
+                .mdl-acco-btn {pointer-events: inherit;}
+                .mdl-acco {padding:0 2rem; flex-direction: column; width: 100% !important;}
+                .mdl-acco-item{padding: 0; width: 100%;}
+                .mdl-acco-wrap{border-bottom: 0.1rem solid rgba(204, 204, 204, 0.5);}
+                .nav-dep1{flex-direction: column; width: 100% !important;}
+                .mdl-acco-tit{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    color: #000;  
+                    font-weight: 500;
+                    text-align: left; 
+                    font-size: 2rem; 
+                    padding: 2.8rem 0 1.8rem; 
+                    width: 100%; 
+                    align-items: center;
+                    border-bottom: 0.1rem solid rgba(204, 204, 204, 0.5);
+
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 2.3rem;
+                        height: 2.3rem;
+                        background: url(../../images/common/nav-acco-open.svg) no-repeat 50% 50% / 2.3rem;
+                    }
+                }
+                .mdl-acco-item[data-expanded="true"] {
+                    .mdl-acco-head::after {
+                        content:"";
+                        display: block;
+                        position: absolute;
+                        bottom:0;
+                        left:0;
+                        width: 16rem;
+                        height: .2rem;
+                        background-color: var(--orange);
+                    }
+                    .mdl-acco-tit::after{
+                        background-image: url(../../images/common/nav-acco-close.svg)
+                    }
+                }
+                .nav-dep2-link {
+                    color: #000;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    text-align: left;
+                    padding:1rem 0;
+                    opacity: 1;
+                }
+                .nav-dep2{
+                    opacity: 1; 
+                    padding: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    gap:0;
+                    max-height: 19rem;
+                    height: 100%;
+                    margin: 1.6rem 0;
+                    transition: height 0.2s ease-in;
+                }
+                .nav-dep1-item.etc {
+                    position: absolute;
+                    top :-6rem;
+                    left:0; 
+                    width: 100%;
+                    height: 6rem;
+                    background-color: var(--skyblue);
+                    
+                    padding:0 2rem;
+                    
+                    .nav-dep2{
+                        margin: 0;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        gap:0;
+                        flex-direction: row;
+                    }
+                    .nav-dep2-item {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .nav-dep2-item:first-child::before{display: none;}
+                    .nav-dep2-item::before {
+                        content: "";
+                        display: block;
+                        width: 0.1rem;
+                        height: 1.3rem;
+                        background-color: var(--navy);
+
+                    }
+                    .nav-dep2-link{
+                        color: var(--navy); 
+                        font-size: 1.8rem; 
+                        font-weight: 500; 
+                        opacity: 1; 
+                        padding: 0 1rem;
+                        text-align: center; 
+                        pointer-events: initial;
+                    }
+                }
+                
+                .nav-dep1-item.etc .nav-dep2{
+                    padding-top: 0;
+
+                    .nav-dep2-link {opacity: 1;}
+                }
+            }
+
+        }
     }
     &.search {
         padding:0;
@@ -603,6 +806,91 @@ html[data-modal="show"] body {
                 width: 3rem;
                 height: 3rem;
                 background: url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+            }
+        }
+
+        @media (max-width:1400px) {
+            padding:0;
+            align-items:flex-start;
+            height:100%;
+            top:0;
+            background-color:transparent;
+        
+            .mdl-layer-wrap {
+                height: 100%;
+                background-color:var(--navy);
+                padding:0;
+                width:100%;
+                border-radius:0;
+            }
+            .mdl-layer-header {
+                width:100%;
+                height:8rem;
+                padding:0 2rem;
+                
+                .logo {
+                    width: 12.3rem;
+                    height: 1.6rem;
+                    background:url(../../images/common/logo.svg) no-repeat 0 0 / 12.3rem;
+                }
+
+                .mdl-layer-header-wrap {
+                    position:relative;
+                    display:flex;
+                    padding-right:0;
+                }
+            
+                .btn-nav-close{
+                    position: relative;
+                    top:0;
+                    right:0;
+                    z-index:10;
+                    background:url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+                }
+            }
+            .mdl-layer-body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                margin: 0;
+                padding: 0 2rem;
+
+                strong{
+                    display: block; 
+                    width:20rem; 
+                    margin: 0 auto; 
+                    text-align: center;
+                }
+
+                input {
+                    width:100%;
+                    height:6rem;
+                    font-size:2.4rem;
+                    padding:0 4rem 0 1.6rem;
+                    color:#fff;
+                    background-color: transparent;
+                    border: 0;
+                    border-bottom: .2rem solid var(--orange);
+                }
+                .search-form {position: relative;}
+                .btn-clear {
+                    position: absolute;
+                    right: 5.2rem;
+                    bottom: 1.9rem;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    background: #545A8E url(../../images/common/input-clear.svg) no-repeat 50% 50% / 1rem;
+                }
+                .btn-search {
+                    position: absolute;
+                    right: 1rem;
+                    bottom: 1.4rem;
+                    width: 3rem;
+                    height: 3rem;
+                    background: url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+                }
             }
         }
     }

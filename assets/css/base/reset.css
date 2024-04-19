@@ -1,6 +1,16 @@
 @charset "utf-8";
 
-html {font-size: 10px;}
+html {
+    font-size: 10px;
+
+    @media (max-width:800px) {
+        font-size:10px;
+    }
+    
+    @media (max-width:360px) {
+        font-size:2.66vw;
+    }
+}
 html,body {padding: 0;}
 
 /* See https://hankchizljaw.com/wrote/a-modern-css-reset/ */
@@ -154,9 +164,9 @@ body{overflow-x: hidden;}
 
 ::-webkit-scrollbar {
     position: absolute;
-    width: 1.2rem;
+    width: 1rem;
     height: 1rem;
-    background-color: transparent
+    background-color: transparent;
 }
 ::-webkit-scrollbar-track {
     background-color: transparent;
