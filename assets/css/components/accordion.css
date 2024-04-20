@@ -1,67 +1,67 @@
 /* mdl-acco */
 .mdl-acco {
-    width: 100%;
-    position: relative;
-    margin: 0;
+    width:100%;
+    position:relative;
+    margin:0;
 
-    &::after{
-        content: "";
-        display: block;
-        width: 100%;
-        height: 0.1rem;
-        position: absolute;
+    &::after {
+        content:"";
+        display:block;
+        width:100%;
+        height:0.1rem;
+        position:absolute;
         bottom:0;
         left:0;
-        opacity: 0.5;
+        opacity:0.5;
         
     }
     .mdl-acco-head { 
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: -0.1rem 0 0;
+        position:relative;
+        display:flex;
+        align-items:center;
+        width:100%;
+        height:100%;
+        margin:-0.1rem 0 0;
 
         &-wrap {
-            display: flex;
-            width: auto;
-            align-items: center;
+            display:flex;
+            width:auto;
+            align-items:center;
         }
     }
     .mdl-form,
     .mdl-acco-link {
-        position: relative;
-        z-index: 2;
+        position:relative;
+        z-index:2;
     }
     .mdl-acco-btn {
-        cursor: pointer;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        letter-spacing: 0;
-        text-align: left;
+        cursor:pointer;
+        position:absolute;
+        z-index:1;
+        top:0;
+        right:0;
+        width:100%;
+        height:100%;
+        padding:0;
+        letter-spacing:0;
+        text-align:left;
     }
     a.mdl-acco-btn {
-        display: inline-block;
+        display:inline-block;
     }
     .mdl-acco-body {
-        position: relative;
-        visibility: visible;
-        transition: height .3s ease-in-out;
+        position:relative;
+        visibility:visible;
+        transition:height .3s ease-in-out;
         height:0;
-        overflow: hidden;
+        overflow:hidden;
 
-        &.off[aria-hidden="false"] .mdl-acco-pnl-wrap{display: block;}
-        &.off .mdl-acco-pnl-wrap{display: none;}
+        &.off[aria-hidden="false"] .mdl-acco-pnl-wrap {display:block;}
+        &.off .mdl-acco-pnl-wrap {display:none;}
 
         .mdl-acco-wrap {
-            position: relative;
-            width: 100%;
+            position:relative;
+            width:100%;
         }
     }
 }

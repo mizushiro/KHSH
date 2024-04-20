@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>ARTERA 금호건설</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap">
+        <header class="base-header" data-id="header"></header>
+        <main class="base-main">
+            <div class="sub-title" data-bg="pattern1">
+                <h2>분양대금조회</h2>
+            </div>
+
+            <article class="content-area">
+                <div class="sub-content">
+                    <div class="breadcrumbs">
+                        <ol>
+                            <li>
+                                <img src="../assets/images/common/ico-home.svg" alt="홈">
+                            </li>
+                            <li>
+                                <span>마이 아테라</span>
+                            </li>
+                            <li>
+                                <span>분양대금조회</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="sub-depth-list">
+                        <a href="" class="button-base" data-style="line-primary" data-size="size-60">분양계약내역/입금내역</a>
+                        <a href="" class="button-base" data-style="line-primary" data-size="size-60" data-state="selected">예상납부액 조회</a>
+                    </div>
+                    
+                    <div data-gap="body">
+                        <section data-gap="content">
+                            <p data-bul="symbol">
+                                금호건설은 아파트 분양 계약자의 편의를 위하여 별도의 분양대금 납부조회 시스템을 운영하고 있습니다.
+                            </p>
+
+                            <div class="myinfo-head">
+                                <h2 class="myinfo-head-tit mb-30">
+                                    <span>안녕하세요? </span>
+                                    <span><em data-color="point">김금호</em> 고객님</span>
+                                </h2>
+                                <p data-bul="dot" class="mt-m">입금금액을 입력하시면 입금액 기준으로 조회가 됩니다.</p>
+                                <p data-bul="dot" data-color="point2">차수를 선택하시더라도 입금액을 입력하셨을 시에는 입금액으로 조회가 됩니다.</p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="conts-head">
+                                <h3 class="conts-head-tit">예상납부액 조회</h3>
+                            </div>
+                            <!-- 여기요 -->
+                            <div class="fake-table-box" data-style="mobile-full-bg" data-bg="sky">
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">금액구분</dt>
+                                        <dd class="fake-table-item-cell">
+                                            <div class="form-select">
+                                                <select title="금액구분 선택">
+                                                    <option value="1" selected>분양금</option>
+                                                </select>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">예상 입금일</dt>
+                                        <dd class="fake-table-item-cell">
+                                            <div class="form-group" data-type="date">
+                                                <input type="date" class="form-input" value="" title="입금일" />
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">입금차수</dt>
+                                        <dd class="fake-table-item-cell">
+                                            <div class="form-select">
+                                                <select title="입금차수 선택">
+                                                    <option value="1" selected>분양금</option>
+                                                </select>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">예상 입금금액</dt>
+                                        <dd class="fake-table-item-cell">
+                                            <div class="form-group">
+                                                <input type="tel" class="form-input" value="" title="예상 입금금액" />
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!-- //여기요 -->
+                            
+                            <div class="table-scroll">
+                                <div class="table-scroll-fix">
+                                    <table>
+                                        <colgroup>
+                                            <col class="fix-th">
+                                        </colgroup>
+                                        <tbody class="thead">
+                                            <tr><td>차수</td></tr>
+                                        </tbody>
+                                        <tbody class="tbody">
+                                            <tr><td>5차</td</tr>
+                                            <tr><td>4차</td></tr>
+                                            <tr><td>3차</td></tr>
+                                            <tr><td>2차</td></tr>
+                                            <tr><td>1차</td></tr>
+                                        </tbody>
+                                        <tbody class="tfoot">
+                                            <tr><td>합계</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-scroll-x">
+                                    <table>
+                                        <caption>입금내역 정보 표입니다.</caption>
+                                        <colgroup>
+                                            <col class="fix-th">
+                                            <col span="8">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">차수</th>
+                                                <th scope="col">약정일자</th>
+                                                <th scope="col">약정금액</th>
+                                                <th scope="col">입금일자</th>
+                                                <th scope="col">차수금액</th>
+                                                <th scope="col">일수</th>
+                                                <th scope="col">연체료</th>
+                                                <th scope="col">할인료</th>
+                                                <th scope="col">통장입금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>5차</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>30</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4차</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>30</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3차</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>30</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2차</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>30</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1차</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>2016-05-01</td>
+                                                <td>500,000,000원</td>
+                                                <td>30</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                                <td>500,000,000원</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th scope="row">합계</th>
+                                                <td></td>
+                                                <td>500,000,000원</td>
+                                                <td></td>
+                                                <td>500,000,000원</td>
+                                                <td></td>
+                                                <td><b data-color="point2">500,000,000원</b></td>
+                                                <td><b data-color="point2">500,000,000원</b></td>
+                                                <td><b data-color="point2">500,000,000원</b></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="fake-table-box">
+                                <div class="fake-table-row" data-align="col">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="gray">분양금액</dt>
+                                        <dd class="fake-table-item-cell">500,000,000원</dd>
+                                    </dl>
+                                    <dl class="fake-table-item" >
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="gray">연체료누계</dt>
+                                        <dd class="fake-table-item-cell">500,000,000원</dd>
+                                    </dl>
+                                    <dl class="fake-table-item" >
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="gray">할인료누계</dt>
+                                        <dd class="fake-table-item-cell">500,000,000원</dd>
+                                    </dl>
+                                    <dl class="fake-table-item" >
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="gray">차수금액누계</dt>
+                                        <dd class="fake-table-item-cell">500,000,000원</dd>
+                                    </dl>
+                                    <dl class="fake-table-item" >
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="gray">잔금액</dt>
+                                        <dd class="fake-table-item-cell">500,000,000원</dd>
+                                    </dl>
+                                    <dl class="fake-table-item" >
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="gray">입금하실금액</dt>
+                                        <dd class="fake-table-item-cell">500,000,000원</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer class="base-footer" data-id="footer"></footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //select
+            UI.form.setSelect();
+        }); 
+    </script>
+</body>
+</html>

@@ -1205,10 +1205,11 @@ class Layer {
         this.select = document.querySelector('.form-select[data-id="'+ this.id +'"]');
         const select = this.select.querySelector('select');
         const options = select.querySelectorAll('option');
+        const text = select.querySelector('[selected]') ? select.querySelector('[selected]').text : select.title;
 
         let html_select_button = `
         <button type="button" class="form-select-btn" data-select-id="${ this.id }_select" value="${ select.value }" tabindex="-1" role="combobox" aria-haspopup="listbox" aria-expanded="false">
-            <span>${ select.querySelector('[selected]').text }</span>
+            <span>${ text }</span>
         </button>`;
         this.select.insertAdjacentHTML('beforeend', html_select_button);
         html_select_button = null;

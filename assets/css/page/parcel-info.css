@@ -590,7 +590,7 @@
     img {
         display:block;
         max-width:none;
-        width: 100%;
+        width:100%;
         height:100%;
         object-fit:cover;
         object-position:center;
@@ -600,36 +600,36 @@
 .swiper-viewmap-wrap {
     width:100%;
     display:flex;
-    gap: 2rem;
+    gap:2rem;
     justify-content:space-between;
     aspect-ratio:1600/626;
     &[data-dir="horizontal"] {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction:column;
+        gap:1rem;
         .swiper-viewmap-thumbs {
-            width: 100%;
-            height: 23.4rem;
+            width:100%;
+            height:23.4rem;
         }
         .artera-detailview-img {
             aspect-ratio:640/753;
-            width: auto;
-            height: auto;
+            width:auto;
+            height:auto;
         }
         .swiper-viewmap-thumbs .artera-detailview-img {
-            aspect-ratio: 31/23;
-            width: auto;
-            height: auto;
+            aspect-ratio:31/23;
+            width:auto;
+            height:auto;
         }
-        .swiper-viewmap-thumbs{
-            height: auto;
+        .swiper-viewmap-thumbs {
+            height:auto;
         }
-        .swiper-vertical>.swiper-wrapper{
-            flex-direction: row;
+        .swiper-vertical>.swiper-wrapper {
+            flex-direction:row;
         }
     }
     &[data-dir="vertical"] {
-        .swiper-vertical>.swiper-wrapper{
-            flex-direction: column;
+        .swiper-vertical>.swiper-wrapper {
+            flex-direction:column;
         }
     }
     @media (max-width:1023px) {
@@ -640,7 +640,7 @@
     margin:0 !important;
 }
 .swiper-viewmap {
-    flex: 1;
+    flex:1;
     width:79.25%;
     aspect-ratio:1268/626;
     margin:0 !important;

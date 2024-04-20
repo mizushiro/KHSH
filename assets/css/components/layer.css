@@ -1,5 +1,21 @@
 html[data-modal="show"] body {
     overflow-y:hidden;
+    padding-right:1rem;
+    .base-header {
+        padding-right:5rem;
+    }
+
+    &::after {
+        content:"";
+        display:block;
+        position:fixed;
+        right:0;
+        top:0;
+        width:1rem;
+        height:100%;
+        background-color:#ccc;
+        z-index:10;
+    }
 }
 .layer-modal {
     position:fixed;
@@ -38,7 +54,7 @@ html[data-modal="show"] body {
         position:relative;
         display:flex;
         flex-direction:column;
-        padding:1rem 2rem;
+        padding:0 2rem;
         min-width:30rem;
         background-color:#fff;
         box-shadow:0 0.8rem 1.6rem rgba(0,0,0,0.4);
@@ -53,36 +69,32 @@ html[data-modal="show"] body {
         width:100%;
         display:flex;
         align-items:center;
-        min-height: 8.8rem;
-        padding: 0 2rem;
-        justify-content: space-between;
-        border-bottom: .2rem solid #000;
+        min-height:10.8rem;
+        padding:0.8rem 2rem 0;
+        justify-content:space-between;
+        border-bottom:.2rem solid #000;
 
         @media (max-width:1023px) {
-            padding: 0 1rem;
-            min-height: 6.4rem;
+            padding:0 1rem;
+            min-height:6.4rem;
         }
     }
     .layer-modal-title {
-        font-size: 3rem;
-        font-weight: 600;
+        font-size:3rem;
+        font-weight:600;
         @media (max-width:1023px) {
-            font-size: 2rem;
+            font-size:2rem;
         }
     }
     .layer-modal-subject {
-        width: 100%;
-        text-align: center;
-        font-size: 2.8rem;
-        line-height: 1.5;
-        font-weight: 500;
-        padding: 2rem;
-        margin-bottom: 2rem;
+        width:100%;
+        text-align:center;
+        font-size:2.8rem;
+        line-height:1.5;
+        font-weight:500;
 
         @media (max-width:1023px) {
-            padding: 1rem;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
+            font-size:1.6rem;
         }
     }
     .layer-modal-close {
@@ -102,12 +114,24 @@ html[data-modal="show"] body {
     .layer-modal-body {
         position:relative;
         width:100%;
-        padding:2rem 2rem 0;
-        max-height:calc(100vh - 20rem);
+        padding:6rem 2rem 0;
+        max-height:calc(100vh - 35rem);
         overflow-y:auto;
 
+        &[data-gap="M"] {
+            display:flex;
+            flex-direction:column;
+            gap:4rem;
+
+            > * {width:100%;}
+
+            @media (max-width:1023px) {
+                gap:2rem;
+            }
+        }
+
         @media (max-width:1023px) {
-             padding:2rem 2rem 0;
+            padding:2rem 2rem 0;
         }
     }
     .layer-modal-footer {
@@ -116,16 +140,17 @@ html[data-modal="show"] body {
         display:flex;
         align-items:center;
         justify-content:center;
-        padding: 4rem 6rem 5rem;
-        gap:2rem;
+        padding:4rem 2rem 6rem;
+        gap:1.6rem;
+
+        .button-base {
+            max-width:20rem;
+            padding:0 1.8rem;
+        }
 
         @media (max-width:1023px) {
-            padding: 2rem 2rem 3rem;
-            .button-base {
-                width: auto;
-                flex: none;
-                padding: 0 1.8rem
-            }
+            padding:2rem 2rem 3rem;
+            gap:1rem;
         }
     }
     
@@ -147,10 +172,16 @@ html[data-modal="show"] body {
         }
     }
 
-    &[data-size="large"] {
+    &[data-size="L"] {
         .layer-modal-wrap {
-            width: 100%;
-            max-width: 100rem;
+            width:100%;
+            max-width:100rem;
+        }
+    }
+    &[data-size="M"] {
+        .layer-modal-wrap {
+            width:100%;
+            max-width:60rem;
         }
     }
 
@@ -427,6 +458,7 @@ html[data-modal="show"] body {
             align-items:center;
             justify-content:center;
             padding:0 4rem;
+            border:0;
 
             .layer-modal-header-wrap {
                 position:relative;
@@ -443,6 +475,7 @@ html[data-modal="show"] body {
                 font-weight:500;
             }
             .btn-nav-close {
+                position:absolute;
                 top:4rem;
                 right:1rem;
                 z-index:10;
@@ -655,29 +688,29 @@ html[data-modal="show"] body {
                     }
                 }
                 .mdl-acco-head {
-                    height: auto;
+                    height:auto;
                 }
                 .mdl-acco-body {
-                    height: 0;
+                    height:0;
                 }
                 .mdl-acco-btn {
-                    pointer-events: inherit;
+                    pointer-events:inherit;
                 }
                 .mdl-acco {
-                    padding: 0 2rem;
-                    flex-direction: column;
-                    width: 100% !important;
+                    padding:0 2rem;
+                    flex-direction:column;
+                    width:100% !important;
                 }
                 .mdl-acco-item {
-                    padding: 0;
-                    width: 100%;
+                    padding:0;
+                    width:100%;
                 }
                 .mdl-acco-wrap {
-                    border-bottom: 0.1rem solid rgba(204, 204, 204, 0.5);
+                    border-bottom:0.1rem solid rgba(204, 204, 204, 0.5);
                 }
                 .nav-dep1 {
-                    flex-direction: column;
-                    width: 100% !important;
+                    flex-direction:column;
+                    width:100% !important;
                 }
                 .mdl-acco-tit {
                     position:relative;
@@ -706,15 +739,15 @@ html[data-modal="show"] body {
                     position:absolute;
                     bottom:0;
                     left:0;
-                    width: 0%;
+                    width:0%;
                     height:.2rem;
                     background-color:var(--orange);
-                    transition: width .3s ease-in;
+                    transition:width .3s ease-in;
                 }
                 .mdl-acco-item[data-expanded="true"] {
                     .mdl-acco-head::after {
                         width:100%;
-                        transition: width .3s ease-in;
+                        transition:width .3s ease-in;
                     }
                     .mdl-acco-tit::after {
                         background-image:url(../../images/common/nav-acco-close.svg)
@@ -818,6 +851,7 @@ html[data-modal="show"] body {
             align-items:center;
             justify-content:center;
             padding:0 4rem;
+            border:0;
             .logo {
                 background:url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
             }
@@ -828,7 +862,7 @@ html[data-modal="show"] body {
                 max-width:172rem;
                 justify-content:space-between;
                 align-items:center;
-                padding-right:9.7rem;
+                /* padding-right:9.7rem; */
             }
            
             .btn-nav-close {
@@ -988,7 +1022,7 @@ html[data-modal="show"] body {
 }
 
 [data-col="12"] {
-   .mdl-acco .mdl-acco-item .mdl-acco-body {height: auto !important;}
+   .base-nav .mdl-acco .mdl-acco-item .mdl-acco-body {height:auto !important;}
 }
 
 @keyframes nav_show {
@@ -1040,12 +1074,12 @@ html[data-modal="show"] body {
     100% {opacity:0; transform:translate(0, 1rem);}
 }
 @keyframes select_show {
-    0% {opacity:0; transform:scale(0.9);}
-    100% {opacity:1; transform:scale(1);}
+    0% {opacity:0; transform:translate(0, -0.8rem);}
+    100% {opacity:1; transform:translate(0, 0);}
 }
 @keyframes select_hide {
-    0% {opacity:1; transform:scale(1);}
-    100% {opacity:0; transform:scale(0.9);}
+    0% {opacity:1; transform:translate(0, 0);}
+    100% {opacity:0; transform:translate(0, -0.8rem);}
 }
 @keyframes toast_show {
     0% {transform:translate(0, 20vh);}

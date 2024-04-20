@@ -5,14 +5,37 @@
     padding:0 1.2rem;
     font-size:1.8rem;
     border:.1rem solid var(--form_line);
+    width:100%;
     &:focus {
         border-color:var(--black);
     }
     @media (max-width:1023px) {
         height:3rem;
-        min-height: 3rem;
-        padding:0 .4rem;
+        min-height:3rem;
+        padding:0 0.4rem;
         font-size:1.5rem;
+    }
+
+    &[type="date"] {
+        position:relative;
+        width:100%;
+        background:#fff url(../../images/common/ico-date.svg) no-repeat right 2rem center / 2.5rem;
+        padding-right:6rem;
+        &::-webkit-calendar-picker-indicator {
+            position:absolute; 
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background:transparent;  
+            color:transparent;  
+            cursor:pointer;
+        }
+        @media (max-width:1023px) {
+            padding-right:3rem;
+            background-position:right 1rem center;
+            background-size:1.25rem;
+        }
     }
 }
 .choice-item {

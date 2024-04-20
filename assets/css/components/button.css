@@ -8,27 +8,27 @@
     border:.1rem solid transparent;
     text-decoration:none;
     /*&:focus {
-        text-decoration: underline;
-        text-underline-offset: .3rem;
+        text-decoration:underline;
+        text-underline-offset:.3rem;
     }*/
     &[data-style="bg-primary"] {
-        background-color: var(--navy);
+        background-color:var(--navy);
         color:var(--white);
-        border-color: var(--navy) ;
+        border-color:var(--navy) ;
     }
     &[data-style="bg-dark"] {
-        background-color: var(--gray_300);
+        background-color:var(--gray_300);
         color:var(--white);
-        border-color: var(--gray_300) ;
+        border-color:var(--gray_300) ;
     }
     &[data-style="bg-sky-blue"] {
-        background-color: var(--skyblue);
-        color: var(--navy);
-        border-color: var(--skyblue) ;
+        background-color:var(--skyblue);
+        color:var(--navy);
+        border-color:var(--skyblue) ;
     }
     &[data-style="line-primary"] {
         color:var(--black);
-        border-color: var(--navy);
+        border-color:var(--navy);
         background-color:var(--white);
         &[data-state="selected"] {
             background-color:var(--navy);
@@ -48,23 +48,23 @@
         @media (max-width:1023px) {
             flex:1;
             gap:1rem;
-            font-size: 1.6rem;
-            height: 5rem;
-            padding: .4rem 1rem;
-            min-width: 0;
-            min-height: 5rem;
+            font-size:1.6rem;
+            height:5rem;
+            padding:.4rem 1rem;
+            min-width:0;
+            min-height:5rem;
         }
     }
     &[data-size="size-40"] {
-        min-width:12rem;
+        /* min-width:12rem; */
         min-height:4rem;
         font-size:1.8rem;
         font-weight:500;
-        padding:.4rem;
+        padding:.4rem 2.4rem;
         @media (max-width:1023px) {
             min-width:8.6rem;
             font-size:1.4rem;
-            padding: .2rem .4rem;
+            padding:.2rem .4rem;
             .form-group & {
                 min-height:3rem;
             }

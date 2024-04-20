@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>ARTERA 금호건설</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap">
+        <header class="base-header" data-id="header"></header>
+        <main class="base-main">
+            <div class="sub-title" data-bg="pattern1">
+                <h2>입주일 예약</h2>
+            </div>
+
+            <article class="content-area">
+                <div class="sub-content">
+                    <div class="breadcrumbs">
+                        <ol>
+                            <li>
+                                <img src="../assets/images/common/ico-home.svg" alt="홈">
+                            </li>
+                            <li>
+                                <span>마이 아테라</span>
+                            </li>
+                            <li>
+                                <span>입주일 예약</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="sub-depth-list">
+                        <a href="" class="button-base" data-style="line-primary" data-size="size-60" data-state="selected">입주예약</a>
+                        <a href="" class="button-base" data-style="line-primary" data-size="size-60">예약조회</a>
+                    </div>
+
+                    <div data-gap="body">
+                        <section data-gap="content">
+                            <p data-bul="symbol">금호 아테라 가족을 위한 <em data-color="point">입주예약 서비스</em> 입니다.</p>
+
+                            <div>
+                                <div class="conts-head">
+                                    <h3 class="conts-head-tit">입주 시 유의사항</h3>
+                                </div>
+                                <div class="conts-body">
+                                    <ul class="conts-ul">
+                                        <li data-bul="text" data-text="1.">입주날짜 예약은 잔금납부와 관계없이 신청 가능합니다.
+                                            <ul>
+                                                <li data-bul="hyphen">변경/취소의 경우 예약조회 메뉴에서 가능(예약 변경/취소는 최대 3회까지 가능하며, 3회 초과 시 담당 영업소에 별도 문의)</li>
+                                                <li data-bul="hyphen">입주 전 잔금(분양금, 플러스옵션, 추가분담금) 완납 후 실입주 가능</li>
+                                            </ul>
+                                        </li>
+                                        <li data-bul="text" data-text="2.">이사 시간대 구분은 평균 이사 시간을 고려하여 지정한 것이니, 다른 고객님의 권리보호를 위해 반드시 시간을 준수하셔야 합니다.</li>
+                                        <li data-bul="text" data-text="3.">입주일 예약 없이 입주할 경우, 온라인 예약고객을 우선으로 이사할 수 있음을 양지하시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="conts-head">
+                                <h3 class="conts-head-tit">계약자 정보 확인</h3>
+                            </div>
+                            <div class="fake-table-box" data-style="mobile-full-bg" data-bg="sky">
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">계약자명</dt>
+                                        <dd class="fake-table-item-cell">김금호</dd>
+                                    </dl>
+                                </div>
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">입주단지</dt>
+                                        <dd class="fake-table-item-cell">한남더힐2차현장 101동/0501</dd>
+                                    </dl>
+                                </div>
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">동/호수</dt>
+                                        <dd class="fake-table-item-cell">1동 0501호</dd>
+                                    </dl>
+                                </div>
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">입주 예약 신청기간</dt>
+                                        <dd class="fake-table-item-cell">2024-03-20 ~ 2024-08-23</dd>
+                                    </dl>
+                                </div>
+                                <div class="fake-table-row">
+                                    <dl class="fake-table-item">
+                                        <dt class="fake-table-item-cell" data-type="title" data-bg="sky">실 입주 기간</dt>
+                                        <dd class="fake-table-item-cell">2024-03-20 ~ 2024-08-23</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="conts-head">
+                                <h3 class="conts-head-tit">입주날짜 예약</h3>
+                            </div>
+                            <div class="table-calendar">
+                                <table>
+                                    <caption>일주날짜 예약 선택 표입니다.</caption>
+                                    <colgroup>
+                                        <col span="7">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">월</th>
+                                            <th scope="col">화</th>
+                                            <th scope="col">수</th>
+                                            <th scope="col">목</th>
+                                            <th scope="col">금</th>
+                                            <th scope="col">토</th>
+                                            <th scope="col">일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/18</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-318-1" class="form-radio" name="movein">
+                                                            <label for="movein-318-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-318-2" class="form-radio" name="movein">
+                                                            <label for="movein-318-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-318-3" class="form-radio" name="movein">
+                                                            <label for="movein-318-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/19</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-319-1" class="form-radio" name="movein">
+                                                            <label for="movein-319-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-319-2" class="form-radio" name="movein">
+                                                            <label for="movein-319-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-319-3" class="form-radio" name="movein">
+                                                            <label for="movein-319-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/20</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-320-1" class="form-radio" name="movein">
+                                                            <label for="movein-320-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-320-2" class="form-radio" name="movein">
+                                                            <label for="movein-320-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-320-3" class="form-radio" name="movein">
+                                                            <label for="movein-320-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/21</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-321-1" class="form-radio" name="movein">
+                                                            <label for="movein-321-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-321-2" class="form-radio" name="movein">
+                                                            <label for="movein-321-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-321-3" class="form-radio" name="movein">
+                                                            <label for="movein-321-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/22</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-322-1" class="form-radio" name="movein">
+                                                            <label for="movein-322-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-322-2" class="form-radio" name="movein">
+                                                            <label for="movein-322-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-322-3" class="form-radio" name="movein">
+                                                            <label for="movein-322-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/23</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-323-1" class="form-radio" name="movein">
+                                                            <label for="movein-323-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-323-2" class="form-radio" name="movein">
+                                                            <label for="movein-323-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-323-3" class="form-radio" name="movein">
+                                                            <label for="movein-323-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/24</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-324-1" class="form-radio" name="movein">
+                                                            <label for="movein-324-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-324-2" class="form-radio" name="movein">
+                                                            <label for="movein-324-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-324-3" class="form-radio" name="movein">
+                                                            <label for="movein-324-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/25</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-325-1" class="form-radio" name="movein">
+                                                            <label for="movein-325-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-325-2" class="form-radio" name="movein">
+                                                            <label for="movein-325-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-325-3" class="form-radio" name="movein">
+                                                            <label for="movein-325-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/26</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-326-1" class="form-radio" name="movein">
+                                                            <label for="movein-326-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-326-2" class="form-radio" name="movein">
+                                                            <label for="movein-326-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-326-3" class="form-radio" name="movein">
+                                                            <label for="movein-326-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/27</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-327-1" class="form-radio" name="movein">
+                                                            <label for="movein-327-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-327-2" class="form-radio" name="movein">
+                                                            <label for="movein-327-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-327-3" class="form-radio" name="movein">
+                                                            <label for="movein-327-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/28</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-328-1" class="form-radio" name="movein">
+                                                            <label for="movein-328-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-328-2" class="form-radio" name="movein">
+                                                            <label for="movein-328-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-328-3" class="form-radio" name="movein">
+                                                            <label for="movein-328-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/29</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-329-1" class="form-radio" name="movein">
+                                                            <label for="movein-329-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-329-2" class="form-radio" name="movein">
+                                                            <label for="movein-329-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-329-3" class="form-radio" name="movein">
+                                                            <label for="movein-329-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/30</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-330-1" class="form-radio" name="movein">
+                                                            <label for="movein-330-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-330-2" class="form-radio" name="movein">
+                                                            <label for="movein-330-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-330-3" class="form-radio" name="movein">
+                                                            <label for="movein-330-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                            <td>
+                                                <dl>
+                                                    <dt>3/31</dt>
+                                                    <dd>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-331-1" class="form-radio" name="movein">
+                                                            <label for="movein-331-1">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-331-2" class="form-radio" name="movein">
+                                                            <label for="movein-331-2">10:00~11:00</label>
+                                                        </span>
+                                                        <span class="choice-item">
+                                                            <input type="radio" id="movein-331-3" class="form-radio" name="movein">
+                                                            <label for="movein-331-3">10:00~11:00</label>
+                                                        </span>
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="table-bottom">
+                                <a href="#" class="button-base" data-style="bg-primary" data-size="size-60">확인</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer class="base-footer" data-id="footer"></footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //select
+            UI.form.setSelect();
+        }); 
+    </script>
+</body>
+</html>

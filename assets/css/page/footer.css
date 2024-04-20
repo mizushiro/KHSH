@@ -1,4 +1,4 @@
-.base-footer{
+.base-footer {
     width:100%;
     background-color:var(--navy);
     padding:12rem 2.4rem;
@@ -71,5 +71,8 @@
     height:4.8rem;
     background:rgba(36, 42, 92, 0.8) url(../../images/common/top.svg) no-repeat 50% 50% / 2.4rem;
 
-   
+    @media (max-width:800px) {
+        bottom:3rem;
+        right:3rem;
+    }
 }

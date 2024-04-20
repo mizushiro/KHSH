@@ -1,69 +1,69 @@
 /* ui file */
 .mdl-file {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    margin-right: 0.8rem;
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+    margin-right:0.8rem;
 
     input:active + .mdl-button,
     input:hover + .mdl-button,
     input:focus + .mdl-button {
-        border: 1px solid #616161;
-        background: #FAFAFA;
+        border:1px solid #616161;
+        background:#FAFAFA;
     }
 
     &-inp {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        direction: ltr;
-        cursor: pointer;
-        z-index: 1;
+        position:absolute;
+        top:0;
+        left:0;
+        margin:0;
+        opacity:0;
+        width:100%;
+        height:100%;
+        direction:ltr;
+        cursor:pointer;
+        z-index:1;
     }
     &-list {
-        position: relative;
-        min-height: 4rem;
-        margin-top: 0;
-        display: none;
+        position:relative;
+        min-height:4rem;
+        margin-top:0;
+        display:none;
     
-        &.on { display: block;}
+        &.on { display:block;}
 
         ul {
-            padding: 0;
-            margin: 0;
+            padding:0;
+            margin:0;
         }
         li {
-            position: relative;
-            padding: 0.8rem 3.2rem 0 0;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            border-bottom: 1px solid #EEEEEE;
+            position:relative;
+            padding:0.8rem 3.2rem 0 0;
+            display:flex;
+            justify-content:left;
+            align-items:center;
+            border-bottom:1px solid #EEEEEE;
         }
         img {
-            height: 3rem;
-            margin-right: .5rem;
+            height:3rem;
+            margin-right:.5rem;
         }
         .mdl-file-del {
-            position: absolute;
-            right: .5rem;
-            top: 1rem;
-            line-height: 1;
+            position:absolute;
+            right:.5rem;
+            top:1rem;
+            line-height:1;
     
             &::after {
-                content: "clear";
-                display: block;
-                width: 2rem;
-                height: 2rem;
-                font-family: 'Material Symbols Outlined';
-                font-feature-settings: 'liga';
-                font-weight: 600;
-                font-size: 2rem;
+                content:"clear";
+                display:block;
+                width:2rem;
+                height:2rem;
+                font-family:'Material Symbols Outlined';
+                font-feature-settings:'liga';
+                font-weight:600;
+                font-size:2rem;
             }
         }
     }
