@@ -19,8 +19,8 @@
     &[type="date"] {
         position:relative;
         width:100%;
-        background:#fff url(../../images/common/ico-date.svg) no-repeat right 2rem center / 2.5rem;
-        padding-right:6rem;
+        background:#fff url(../../images/common/ico-date.svg) no-repeat right 1.2rem center / 2.5rem;
+        padding-right:4rem;
         &::-webkit-calendar-picker-indicator {
             position:absolute; 
             left:0;
