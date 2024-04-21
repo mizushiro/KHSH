@@ -552,7 +552,6 @@
             margin-top: 2rem;
         } */
         & ~ .fake-table-row {
-            border-top: .1rem solid var(--form_line);
             .fake-table-item-cell[data-type="title"] {
                 display: flex;
             }
