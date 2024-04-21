@@ -475,6 +475,9 @@
             border-bottom:.1rem solid var(--form_line);
             .fake-table-row {
                 border-bottom:none;
+                ~ .fake-table-row {
+                    margin-top:2rem;
+                }
             }
             .fake-table-item-cell {
                 min-height:0;
