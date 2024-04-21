@@ -156,8 +156,6 @@
 .table-scroll {
     position:relative;
     width:100%;
-    border-top:.2rem solid var(--black);
-
     .table-scroll-fix {
         display:none;
         position:absolute;
@@ -170,12 +168,18 @@
         @media (max-width:1023px) {
             display:block;
         }
+
+    }
+    table {
+        border-top:.2rem solid var(--black);
     }
     .table-scroll-x {
         position:relative;
         width:100%;
         overflow-x:auto;
         background-color:#fff;
+        padding-right:2rem;
+        -webkit-overflow-scrolling:touch;
         /* overscroll-behavior: none; */
         table {
             width:100%;
