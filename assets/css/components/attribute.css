@@ -159,7 +159,7 @@
 }
 [data-bul="text"] {
     position:relative;
-    padding-left:1.8rem;
+    padding-left:1.4em;
     font-size:2rem;
     font-weight: 500;
     line-height:1.4;
@@ -167,17 +167,16 @@
         content:attr(data-text);
         display:inline-block;
         color:#000;
-        text-indent:-1.8rem;
+        text-indent:-1.4em;
+    }
+    &[data-color="point2"]::before {
+        color:var(--red);
     }
     & ~ [data-bul="text"] {
         margin-top: 2rem;
     }
     @media (max-width:1023px) {
         font-size:1.2rem;
-        padding-left:0.8rem;
-        &::before {
-            text-indent:-0.8rem;
-        }
     }
 }
 [data-bul="care"] {

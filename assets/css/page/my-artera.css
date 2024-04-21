@@ -284,6 +284,11 @@
     .btn-group {
         display:flex;
         gap:2rem;
+        align-items: center;
+        .text-30 {
+            flex: none;
+            white-space: nowrap;
+        }
         .button-base {
             min-width:15rem;
             padding:0 1rem;
@@ -366,7 +371,11 @@
     }
     
 }
-
+.sign-wrap {
+    display: flex;
+    width: 100%;
+    
+}
 .conts-body {
     display:flex;
     border-top:.2rem solid var(--black);
@@ -444,9 +453,9 @@
 }
 .fake-table-box {
     border-top:.2rem solid var(--black);
-    ~ .fake-table-box {
+    /* ~ .fake-table-box {
         margin-top:4rem;
-    }
+    } */
     &[data-type="check1"] {
         .fake-table-item-cell[data-type="title"] {
             text-align: left;
@@ -458,9 +467,9 @@
         }
     }
     @media (max-width:1023px) {
-        & ~ .fake-table-box {
+        /* & ~ .fake-table-box {
             margin-top: 2rem;
-        }
+        } */
         &[data-style="mobile-full-bg"] {
             padding:3rem 1rem;
             border-bottom:.1rem solid var(--form_line);
