@@ -88,8 +88,20 @@
     margin-top:2rem;
     width:100%;
     gap:2rem;
-    @media screen and (max-width:1023px) {
-        gap:1.5rem
+    &.mt-80 {
+        margin-top:8rem;
+    }
+    @media (max-width:1023px) {
+        gap:1.5rem;
+        &.mt-80 {
+            margin-top:4rem;
+        }
+        &.flex-none {
+            .button-base {
+                flex:none;
+                min-width:15rem;
+            }
+        }
     }
 }
 .sub-depth-list {

@@ -386,7 +386,7 @@
         align-items:center;
         font-size:2rem;
         font-weight:500;
-        color:var(--gray_50);
+        color:var(--form_line);
         b {
             color:#12255B;
         }

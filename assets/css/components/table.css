@@ -46,7 +46,7 @@
 
         table {
             .col-th {
-                width:16rm;
+                width:16rem;
             }
             th {
                 padding:1.4rem 3rem 1rem;
@@ -131,7 +131,7 @@
     transform:translateY(2rem);
     @media screen and (max-width:1023px) {
         padding-left:0;
-        htransform:translateY(1.5rem);
+        transform:translateY(1.5rem);
         .button-base {
             min-height:3rem;
             font-size:1.4rem;
@@ -156,27 +156,17 @@
 .table-scroll {
     position:relative;
     width:100%;
-    border-top:.2rem solid var(--black);
-
-    .table-scroll-fix {
-        display:none;
-        position:absolute;
-        top:0; 
-        left:0;
-        z-index:1;
-        table {
-            border-right:.1rem solid var(--form_line) !important;
-        }
-        @media screen and (max-width:1023px) {
-            display:block;
-        }
+    table {
+        border-top:.2rem solid var(--black);
     }
     .table-scroll-x {
         position:relative;
         width:100%;
         overflow-x:auto;
         background-color:#fff;
-        /* overscroll-behavior:none; */
+        padding-right:2rem;
+        -webkit-overflow-scrolling:touch;
+        /* overscroll-behavior: none; */
         table {
             width:100%;
             @media screen and (max-width:1023px) {
