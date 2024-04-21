@@ -70,43 +70,90 @@
             @media (max-width:1023px) {
                 display:none;
             }
+             > div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #fff;
+                font-weight: 700;
+                width: 100%;
+                padding: .4rem 1rem;
+                font-size: 1.4rem;
+                background-color: #242A5C;
+                height: 3rem;
+                box-sizing: border-box;
+            }
+            a {
+                color: #fff;
+            }
+            button {
+                width: 2rem;
+                height: 2rem;
+                background-color: #03c75a;
+                border: 0;
+            }
+            iframe{
+                width: calc(100% * 2);
+                height: calc((100dvh - 4rem) * 2);
+                scale:0.5;
+                transform-origin: 0 0;
+            }
         }
-        .iframe > div{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            font-weight: 700;
-            width: 100%;
-            padding: .4rem 1rem;
-            font-size: 1.4rem;
-            background-color: #242A5C;
-            height: 3rem;
-            box-sizing: border-box;
+
+        .iframe.m {
+            margin-top: 0;
+            width: 36rem;
+            height: 100dvh;
+            border:0.1rem solid #ccc;
+            background-color: #fff;
+            display: block;
+            position: sticky;
+            top:2rem;
+            overflow: hidden;
+            @media (max-width:1023px) {
+                display:none;
+            }
+             > div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #fff;
+                font-weight: 700;
+                width: 100%;
+                padding: .4rem 1rem;
+                font-size: 1.4rem;
+                background-color: #242A5C;
+                height: 3rem;
+                box-sizing: border-box;
+            }
+            a {
+                color: #fff;
+            }
+            button {
+                width: 2rem;
+                height: 2rem;
+                background-color: #e2bb0e;
+                border: .1rem solid #fff;
+            }
+            /* iframe{
+                width: 100%;
+                height: calc(100dvh - 4rem);
+                scale:0.5;
+                transform-origin: 0 0;
+            } */
         }
-        .iframe a {
-            color: #fff;
-        }
-        .iframe button {
-            width: 2rme;
-            height: 2rem;
-            background-color: #03c75a;
-            border: 0;
-        }
-        iframe{
-            width: calc(100% * 2);
-            height: calc((100dvh - 4rem) * 2);
-            scale:0.5;
-            transform-origin: 0 0;
-        }
+
+
+        
     </style>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="iframe">
+        <div class="iframe m">
             <div>
                 <a href=""></a>
+                <button type="button"></button>
             </div>
             
             <iframe src="./html/guide.html" frameborder="0"></iframe>
@@ -825,6 +872,7 @@
     
     <script>
         const links = document.querySelectorAll('td a');
+        const btn = document.querySelector('.iframe button');
         for (const item of links) {
             item.addEventListener('mouseover', (e) => {
                 const _this = e.currentTarget;
@@ -835,6 +883,11 @@
                 document.querySelector('.iframe a').textContent = _href
             })
         }
+        btn.addEventListener('click', () => {
+            const ifr = document.querySelector('.iframe');
+
+            ifr.classList.contains('m') ? ifr.classList.remove('m') : ifr.classList.add('m')
+        });
     </script>
 </body>
 
