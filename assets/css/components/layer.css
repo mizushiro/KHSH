@@ -134,6 +134,7 @@ html[data-modal="show"] body {
             > * {width:100%;}
             @media screen and (max-width:1023px) {
                 gap:2rem;
+                padding:3rem 0 0;
             }
         }
         @media screen and (max-width:1023px) {
@@ -141,7 +142,7 @@ html[data-modal="show"] body {
             .table-input {
                 margin-top:0;
                 .col-th {
-                    width:8rem;
+                    width:12rem;
                 }
             }
         }
