@@ -19,7 +19,7 @@
     &[type="date"] {
         position:relative;
         width:100%;
-        background:#fff url(../../images/common/ico-date.svg) no-repeat right 1.2rem center / 2.5rem;
+        background:#fff url(../../images/common/ico-date.svg) no-repeat right 1.2rem top .4rem / 2.5rem;
         padding-right:4rem;
         &::-webkit-calendar-picker-indicator {
             position:absolute; 
@@ -33,7 +33,7 @@
         }
         @media (max-width:1023px) {
             padding-right:3rem;
-            background-position:right 1rem center;
+            background-position:right 1rem top 0.6rem;
             background-size:1.25rem;
         }
     }
@@ -157,6 +157,9 @@ select {
     color:#333;
     font-size:1.8rem;
     z-index:1;
+    [data-device="mobile"] & {
+        pointer-events: none;
+    }
     &:hover {
         border:.1rem solid #ccc;
     }
@@ -184,7 +187,7 @@ select {
     position:relative;
     select {
         position:relative;
-        width:auto;
+        width:100%;
         z-index:0;
         &:focus + .form-select-btn {
             border:.1rem solid #ccc;
