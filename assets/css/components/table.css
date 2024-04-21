@@ -156,20 +156,6 @@
 .table-scroll {
     position:relative;
     width:100%;
-    .table-scroll-fix {
-        display:none;
-        position:absolute;
-        top:0; 
-        left:0;
-        z-index:1;
-        table {
-            border-right:.1rem solid var(--form_line) !important;
-        }
-        @media (max-width:1023px) {
-            display:block;
-        }
-
-    }
     table {
         border-top:.2rem solid var(--black);
     }
