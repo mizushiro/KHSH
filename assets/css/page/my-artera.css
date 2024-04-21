@@ -548,14 +548,6 @@
     
     @media (max-width:1023px) {
         flex-direction:column;
-        /* & ~ .fake-table-row {
-            margin-top: 2rem;
-        } */
-        & ~ .fake-table-row {
-            .fake-table-item-cell[data-type="title"] {
-                display: flex;
-            }
-        }
     }
 }
 .fake-table-item {
