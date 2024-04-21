@@ -1,4 +1,7 @@
 @charset "utf-8";
+::placeholder {
+    color:var(--form_line);
+}
 
 .form-input {
     height:4rem;
