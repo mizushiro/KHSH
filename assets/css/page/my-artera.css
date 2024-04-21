@@ -84,7 +84,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 2rem 1.2rem;
+    padding:0 1.4rem 1.2rem;
     @media (max-width:1023px) {
         padding:0.6rem 0.6rem;
     }
@@ -93,6 +93,28 @@
     display: flex;
     align-items: center;
     gap:3rem;
+}
+.radio-text {
+    position: relative;
+    border:0;
+    align-self: flex-end;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap:0.9rem;
+    :checked + label{
+        color:var(--orange)
+    }
+    input{
+        position: absolute;
+    }
+    label {
+        font-size: 1.8rem;
+    }
+    span {
+        font-size: 1.2rem;
+        color:#ccc;
+    }
 }
 .conts-head-tit {
     font-size:3rem;
@@ -204,6 +226,12 @@
             margin-top:1rem;
         }
     }
+}
+.gray-box {
+    padding: 1.6rem 2rem;
+    background-color: #F5F5F5;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 .notice-box {
     max-width:100%;
@@ -419,6 +447,16 @@
     ~ .fake-table-box {
         margin-top:4rem;
     }
+    &[data-type="check1"] {
+        .fake-table-item-cell[data-type="title"] {
+            text-align: left;
+            justify-content: flex-start;
+            padding: 0 2rem;
+        }
+        .fake-table-item-cell {
+            padding: 0 4rem;
+        }
+    }
     @media (max-width:1023px) {
         & ~ .fake-table-box {
             margin-top: 2rem;
@@ -492,11 +530,23 @@
                 }
             }
         }
+        & ~ .fake-table-row {
+            .fake-table-item-cell[data-type="title"] {
+                display: none;
+            }
+        }
     }
+    
     @media (max-width:1023px) {
         flex-direction:column;
         & ~ .fake-table-row {
             margin-top: 2rem;
+        }
+        & ~ .fake-table-row {
+            border-top: .1rem solid var(--form_line);
+            .fake-table-item-cell[data-type="title"] {
+                display: flex;
+            }
         }
     }
 }
@@ -534,6 +584,7 @@
         line-height:2.4rem;
         padding:.8rem 2.4rem;
         word-break:keep-all;
+        gap:1rem;
         &[data-type="title"] {
             justify-content:center;
             padding:.8rem;

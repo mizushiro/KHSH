@@ -158,10 +158,6 @@
     width:100%;
     border-top:.2rem solid var(--black);
 
-    .fake-table-box ~ & {
-        margin-top:4rem;
-    }
-
     .table-scroll-fix {
         display:none;
         position:absolute;

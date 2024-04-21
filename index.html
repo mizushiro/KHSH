@@ -58,21 +58,44 @@
             gap: 2rem;
         }
         .iframe{
-            margin-top: 10rem;
+            margin-top: 0;
             width: calc(192rem / 2);
-            height: 85dvh;
+            height: calc(100dvh - 4rem);
             border:0.1rem solid #ccc;
+            background-color: #fff;
             display: block;
             position: sticky;
-            top:10rem;
+            top:2rem;
             overflow: hidden;
             @media (max-width:1023px) {
                 display:none;
             }
         }
+        .iframe > div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            font-weight: 700;
+            width: 100%;
+            padding: .4rem 1rem;
+            font-size: 1.4rem;
+            background-color: #242A5C;
+            height: 3rem;
+            box-sizing: border-box;
+        }
+        .iframe a {
+            color: #fff;
+        }
+        .iframe button {
+            width: 2rme;
+            height: 2rem;
+            background-color: #03c75a;
+            border: 0;
+        }
         iframe{
-            width: 192rem;
-            height: 170dvh;
+            width: calc(100% * 2);
+            height: calc((100dvh - 4rem) * 2);
             scale:0.5;
             transform-origin: 0 0;
         }
@@ -82,6 +105,10 @@
 <body>
     <div class="wrap">
         <div class="iframe">
+            <div>
+                <a href=""></a>
+            </div>
+            
             <iframe src="./html/guide.html" frameborder="0"></iframe>
         </div>
 
@@ -451,7 +478,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr class="ing">
                         <td>page</td>
                         <td><a target="_page" href="./html/sub4-4-2.html">sub4-4-2.html</a></td>
                         <td>마이 아테라</td>
@@ -460,7 +487,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>popup</td>
                         <td><a target="_page" href="./html/sub4-4-3p.html">sub4-4-3p.html</a></td>
                         <td>마이 아테라</td>
@@ -468,19 +495,19 @@
                         <td>일반 방문예약 확인/취소</td>
                         <td>방문예약 확인하기</td>
                         <td></td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <tr class="ing">
                         <td>page</td>
-                        <td><a target="_page" href="./html/sub4-4-4.html">sub4-4-4.html</a></td>
+                        <td><a target="_page" href="./html/sub4-4-3.html">sub4-4-3.html</a></td>
                         <td>마이 아테라</td>
                         <td>방문 사전예약 신청</td>
                         <td>당첨자 및 계약자 방문예약 확인/취소</td>
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr class="ing">
                         <td>popup</td>
-                        <td><a target="_page" href="./html/sub4-4-5p.html">sub4-4-5p.html</a></td>
+                        <td><a target="_page" href="./html/sub4-4-4p.html">sub4-4-4p.html</a></td>
                         <td>마이 아테라</td>
                         <td>방문 사전예약 신청</td>
                         <td>당첨자 및 계약자 방문예약 확인/취소</td>
@@ -488,16 +515,16 @@
                         <td></td>
                     </tr>
 
-                    <tr>
+                    <tr class="ing">
                         <td>page</td>
                         <td><a target="_page" href="./html/sub4-5-1.html">sub4-5-1.html</a></td>
                         <td>마이 아테라</td>
                         <td>무순위/잔여세대 청약</td>
-                        <td>무순위/잔여세대 청약 신청(청약접수)</td>
+                        <td>무순위/잔여세대 청약 신청(자격여부)</td>
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr class="ing">
                         <td>page</td>
                         <td><a target="_page" href="./html/sub4-5-2.html">sub4-5-2.html</a></td>
                         <td>마이 아테라</td>
@@ -804,6 +831,8 @@
                 const _href = _this.href;
 
                 document.querySelector('.iframe iframe').setAttribute('src', _href);
+                document.querySelector('.iframe a').setAttribute('href', _href);
+                document.querySelector('.iframe a').textContent = _href
             })
         }
     </script>

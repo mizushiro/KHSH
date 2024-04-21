@@ -118,6 +118,15 @@ html[data-modal="show"] body {
         max-height:calc(100vh - 35rem);
         overflow-y:auto;
 
+        .table-input{
+            border: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: -3rem;
+            table{
+                width: auto;
+            }
+        }
         &[data-gap="M"] {
             display:flex;
             flex-direction:column;
@@ -299,6 +308,7 @@ html[data-modal="show"] body {
         padding:0;
         overflow:visible;
         transform:translateY(-.1rem);
+        z-index: 200;
         input[type="radio"], 
         input[type="checkbox"] {
             opacity:0;
