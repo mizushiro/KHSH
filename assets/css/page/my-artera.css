@@ -525,6 +525,12 @@
                 justify-content:center;
                 @media (max-width:1023px) {
                     justify-content:flex-start;
+                    .button-base {
+                        min-height:3rem;
+                        min-width:0;
+                        padding:.2rem 1.2rem;
+                        font-size:1.4rem;
+                    }
                 }
                 &[data-type="title"] {
                     border-bottom:.1rem solid var(--form_line);
