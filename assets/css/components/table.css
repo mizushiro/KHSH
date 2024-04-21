@@ -178,9 +178,24 @@
         background-color:#fff;
         table {
             width:100%;
-
             @media (max-width:1023px) {
                 width:120rem;
+            }
+            &[data-fix="1"] {
+                tr td:first-child,
+                tr th:first-child {
+                    position:sticky;
+                    left:0;
+                    &::after {
+                        content:'';
+                        position:absolute;
+                        right:-.1rem;
+                        top:0;
+                        bottom:0;
+                        width:.1rem;
+                        background-color:var(--form_line);
+                    }
+                }
             }
         }
         
