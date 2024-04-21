@@ -176,6 +176,7 @@
         width:100%;
         overflow-x:auto;
         background-color:#fff;
+        overscroll-behavior: none;
         table {
             width:100%;
 
