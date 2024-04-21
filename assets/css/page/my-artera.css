@@ -374,7 +374,7 @@
 .sign-wrap {
     display: flex;
     width: 100%;
-    
+
 }
 .conts-body {
     display:flex;
@@ -548,9 +548,9 @@
     
     @media (max-width:1023px) {
         flex-direction:column;
-        & ~ .fake-table-row {
+        /* & ~ .fake-table-row {
             margin-top: 2rem;
-        }
+        } */
         & ~ .fake-table-row {
             border-top: .1rem solid var(--form_line);
             .fake-table-item-cell[data-type="title"] {
