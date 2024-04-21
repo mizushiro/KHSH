@@ -286,18 +286,18 @@
 .mt-l{
     margin-top: 6rem;
     @media (max-width:1023px) {
-        gap:3rem;
+        margin-top: 3rem;
     }
 }
 .mt-m{
     margin-top: 4rem;
     @media (max-width:1023px) {
-        gap:2rem;
+         margin-top: 2rem;
     }
 }
 .mt-s{
     margin-top: 2rem;
     @media (max-width:1023px) {
-        gap:1rem;
+        margin-top: 1rem;
     }
 }
