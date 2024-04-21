@@ -16,7 +16,7 @@
         color:#000;
         margin-bottom:2rem;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             margin-bottom:1rem;
             font-size:1.7rem;
             font-weight:600;
@@ -24,7 +24,7 @@
             span {display:block;}
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:2rem 1rem 3rem;
     }
     
@@ -56,7 +56,7 @@
             }
         }
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             table {
                 font-size:1.5rem;
                 .col-th {
@@ -80,13 +80,13 @@
         font-weight:500;
         color:#333;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.5rem;
         }
     }
     col.col-th {
         width:20.7rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             width:10.5rem;
         }
     }
@@ -94,7 +94,7 @@
         vertical-align:top;
         padding:2.4rem 4rem 2rem;
         text-align:left;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:1rem 1rem;
         }
     }
@@ -102,7 +102,7 @@
         padding:2rem 4rem;
         text-align:left;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:.8rem 1rem;
         }
     }
@@ -110,13 +110,13 @@
         display:flex;
         align-items:center;
         min-height:4rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             min-height:3rem;
         }
     }
     .form-input {
         width:30rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             flex:1;
             width:100%;
         }
@@ -129,7 +129,7 @@
     height:0;
     padding-left:2rem;
     transform:translateY(2rem);
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding-left:0;
         htransform:translateY(1.5rem);
         .button-base {
@@ -147,7 +147,7 @@
     width:100%;
     gap:2rem;
     
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         margin-top:6.2rem;
         gap:1.5rem;
     }
@@ -167,7 +167,7 @@
         table {
             border-right:.1rem solid var(--form_line) !important;
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             display:block;
         }
     }
@@ -176,10 +176,10 @@
         width:100%;
         overflow-x:auto;
         background-color:#fff;
-        /* overscroll-behavior: none; */
+        /* overscroll-behavior:none; */
         table {
             width:100%;
-            @media (max-width:1023px) {
+            @media screen and (max-width:1023px) {
                 width:120rem;
             }
             &[data-fix="1"] {
@@ -211,19 +211,19 @@
     }
     .table-scroll-fix table tr > *:first-child {
         width:11rem;
-        @media (max-width:1400px) {
+        @media screen and (max-width:1400px) {
             width:9rem;
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             width:7rem;
         }
     }
     .table-scroll-x table tr > *:first-child {
         width:10rem;
-        @media (max-width:1400px) {
+        @media screen and (max-width:1400px) {
             width:8rem;
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             width:6rem;
         }
     }
@@ -266,7 +266,7 @@
         }
     }
 
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         .thead, .tbody, .tfoot, thead, tbody, tfoot {
             th, td {
                 font-size:1.6rem;
@@ -278,7 +278,7 @@
             }
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         width:calc(100% + 2rem);
         &::after {
             content:"";
@@ -321,61 +321,168 @@
         font-weight:500;
         color:#333;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.5rem;
         }
     }
     thead th {
         background-color:#FAFAFA;
-        border-left: 0.1rem solid #ccc;
-        border-bottom: 0.1rem solid #ccc;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: 500;
-        padding: 3rem 0;
-        text-align: center;
+        border-left:0.1rem solid #ccc;
+        border-bottom:0.1rem solid #ccc;
+        font-size:2rem;
+        line-height:1;
+        font-weight:500;
+        padding:3rem 0;
+        text-align:center;
         &:first-child {
             border-left:0;
         }
     }
     td {
         background-color:#FFF;
-        border-left: 0.1rem solid #ccc;
-        border-bottom: 0.1rem solid #ccc;
+        border-left:0.1rem solid #ccc;
+        border-bottom:0.1rem solid #ccc;
         &:first-child {
             border-left:0;
         }
     }
     dl {
-        width: 100%;
+        width:100%;
     }
     dt {
         background-color:#FAFAFA;
-        border-bottom: 0.1rem solid #ccc;
-        font-size: 2.4rem;
-        line-height: 1;
-        font-weight: 600;
-        padding: 2.75rem 0;
-        text-align: center;
+        border-bottom:0.1rem solid #ccc;
+        font-size:2.4rem;
+        line-height:1;
+        font-weight:600;
+        padding:2.75rem 0;
+        text-align:center;
     }
     dd {
-        padding: 3rem;
-        display: flex;
-        flex-direction: column;
+        padding:3rem;
+        display:flex;
+        flex-direction:column;
         gap:1.2rem;
     }
-    @media (max-width:1600px) {
+    @media screen and (max-width:1600px) {
         thead, tbody {
             th, td {
                 font-size:1.6rem;
             }
         }
         dt {
-            font-size: 1.8rem;
-            padding: 2.25rem 0;
+            font-size:1.8rem;
+            padding:2.25rem 0;
         }
         dd {
-            padding: 1.5rem;
+            padding:1.5rem;
+        }
+    }
+}
+.table-data {
+    position:relative;
+    width:100%;
+    padding:0;
+    border-top:.2rem solid var(--black);
+
+    table {
+        table-layout:fixed;
+        border-collapse:collapse;
+        border-spacing:0;
+        font-size:2rem;
+        font-weight:500;
+        color:#333;
+
+        @media screen and (max-width:1023px) {
+            font-size:1.5rem;
+        }
+    }
+    tfoot th,
+    thead th {
+        background-color:#FAFAFA;
+        border-left:0.1rem solid #ccc;
+        border-bottom:0.1rem solid #ccc;
+        font-size:2rem;
+        line-height:1.4;
+        font-weight:500;
+        padding:2.55rem 0;
+        text-align:center;
+        &:first-child {
+            border-left:0;
+        }
+    }
+    tbody th,
+    td {
+        background-color:#FFF;
+        border-left:0.1rem solid #ccc;
+        border-right:0.1rem solid #ccc;
+        border-bottom:0.1rem solid #ccc;
+        font-size:2rem;
+        line-height:1.4;
+        text-align:center;
+        padding:2.55rem 2.4rem;
+
+        [data-bul="text"] {
+            font-size:1.6rem;
+        }
+        &:first-child {
+            border-left:0;
+        }
+        &:last-child {
+            border-right:0;
+        }
+    }
+    tfoot td{
+        font-weight:700;
+        border-left:0;
+        border-right:0;
+    }
+    tfoot th{
+        font-weight:700;
+        border-right:0.1rem solid #ccc;
+    }
+    &[data-color="skyblue"] {
+        tbody th {
+            background-color:#F2F9FF;
+            border-left:0.1rem solid #ccc;
+            border-bottom:0.1rem solid #ccc;
+            font-size:2rem;
+            line-height:1.4;
+            font-weight:500;
+            padding:2.55rem 2.4rem;
+            text-align:center;
+            &:first-child {
+                border-left:0;
+            }
+            &:last-child {
+                border-right:0;
+            }
+        }
+        tbody td{
+            text-align:left;
+            padding:2.55rem 2.4rem;
+        }
+        @media screen and (max-width:1600px) {
+            thead, tbody, tfoot {
+                th, td {
+                    font-size:1.6rem;
+                }
+            }
+        }
+    }
+
+    tr > *:first-child {
+        width: 15rem;
+    }
+
+    @media screen and (max-width:1600px) {
+        thead, tbody, tfoot {
+            th, td {
+                font-size:1.6rem;
+            }
+        }
+        tr > *:first-child {
+            width: 11rem;
         }
     }
 }

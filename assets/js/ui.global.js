@@ -956,6 +956,7 @@ class Tab {
     constructor(opt) {
         this.current = opt.current ? opt.current : false;
         this.id = opt.id;
+        this.onepanel = opt.onepanel;
         this.callback = opt.callback;
         this.tab = document.querySelector('.mdl-tab[data-tab-id="'+ this.id +'"]');
         this.tab_btns = this.tab.querySelectorAll('.mdl-tab-btn');
@@ -983,8 +984,6 @@ class Tab {
     }
     ps = (e) => {
         const _this = e;
-        
-        console.log(_this)
 
         if (!_this) {
             const _wrap = _this.closest('.mdl-tab'); 
@@ -1008,13 +1007,21 @@ class Tab {
     selected(tab) {
         const btn = this.tab.querySelector('.mdl-tab-btn[data-tab="'+ tab +'"]');
         const _selected = this.tab.querySelector('.mdl-tab-btn[data-selected="true"]');
-        const item = this.pnl.querySelector('.mdl-tab-item[data-tab="'+ tab +'"]');
-        const _selected_pnl = this.pnl.querySelector('.mdl-tab-item[data-selected="true"]');
-
+        let item;
+        if (this.onepanel) {
+            item = this.pnl.querySelector('.mdl-tab-item[data-tab]');
+            _selected ? _selected.dataset.selected = false : '';
+            item.dataset.selected = true;
+        } else {
+           item = this.pnl.querySelector('.mdl-tab-item[data-tab="'+ tab +'"]');
+            const _selected_pnl = this.pnl.querySelector('.mdl-tab-item[data-selected="true"]');
+            
+             _selected ? _selected.dataset.selected = false : '';
+            _selected_pnl ? _selected_pnl.dataset.selected = false : '';
+            item.dataset.selected = true;
+        }
+        
         sessionStorage.setItem(this.id, tab);
-
-        _selected ? _selected.dataset.selected = false : '';
-        _selected_pnl ? _selected_pnl.dataset.selected = false : '';
 
         this.ps(btn);
         this.callback && this.callback({
@@ -1023,7 +1030,7 @@ class Tab {
         });
 
         btn.dataset.selected = true;
-        item.dataset.selected = true;
+        
     }
 }
 class ToggleUI {

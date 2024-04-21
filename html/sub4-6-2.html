@@ -40,8 +40,10 @@
                     </div>
 
                     <div class="sub-depth-list">
-                        <a href="" class="button-base" data-style="line-primary" data-size="size-60" data-state="selected">옵션예약 신청</a>
-                        <a href="" class="button-base" data-style="line-primary" data-size="size-60">옵션예약 확인/취소</a>
+                        <div class="sub-depth-list-wrap">
+                            <a href="" class="button-base" data-style="line-primary" data-size="size-60" data-state="selected">옵션예약 신청</a>
+                            <a href="" class="button-base" data-style="line-primary" data-size="size-60">옵션예약 확인/취소</a>
+                        </div>
                     </div>
 
                     <div class="pink-line-box mt-l">
@@ -400,13 +402,58 @@
                         </div>
                     </div>
 
-                    <div class="sign-wrap">
-                        위 내용에 동의합니다.<br>
-                        김  금  호 (인)
+                    <div class="sign-wrap mt-l">
+                        <p><b>위 내용에 동의합니다.</b></p>
+                        <p>김  금  호 <b>(인)</b></p>
+                    </div>
+
+                    <div class="table-input mt-l">
+                        <table>
+                            <caption>회원정보 수정을 위한 정보 등록 입력 표입니다.</caption>
+                            <colgroup>
+                                <col class="col-th" />
+                                <col class="col-td" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">방문일정</th>
+                                    <td>
+                                        <div class="form-group" data-type="day-time">
+                                            <div class="form-select" >
+                                                <select title="날짜선택">
+                                                    <option value="1">날짜선택</option>
+                                                    <option value="1">05/01</option>
+                                                    <option value="1">05/02</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-select">
+                                                <select title="시간선택">
+                                                    <option value="1">시간선택</option>
+                                                    <option value="1">11:00~12:00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">방문장소</th>
+                                    <td>
+                                        <div class="form-group"  >
+                                            <div class="form-select" >
+                                                <select title="방문장소선택">
+                                                    <option value="1">방문장소선택</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     
                     <div class="table-bottom">
-                        <a href="#" class="button-base" data-style="bg-primary" data-size="size-60">다음</a>
+                        <a href="#" class="button-base" data-style="line-primary" data-size="size-60">취소</a>
+                        <a href="#" class="button-base" data-style="bg-primary" data-size="size-60">저장</a>
                     </div>
                    
                 </div>
@@ -417,8 +464,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            //select
-            UI.form.setSelect();
+            
         }); 
     </script>
 </body>

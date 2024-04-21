@@ -140,5 +140,5 @@
         }
     });
     
-    
+    UI.form.setSelect();
 });

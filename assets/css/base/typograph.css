@@ -159,7 +159,7 @@
     color:#000;
     line-height:4.8rem;
     word-break:keep-all;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:3rem;
         line-height:3.6rem;
     }

@@ -1,6 +1,6 @@
 .base-main {
     padding-top:12rem;
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         padding-top:8rem;
     }
 }
@@ -8,7 +8,7 @@
     &[data-bg="sky"] {
         background-color:var(--skyblue);
         padding-top:12rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding-top:6rem;
         }
     }
@@ -17,10 +17,10 @@
     max-width:176rem;
     margin:0 auto;
     padding:0 8rem 15.6rem;
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         padding:0 4rem 15.6rem;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:0 2rem 10rem;
     }
 }
@@ -66,7 +66,7 @@
     li:last-child {
         color:var(--black);
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:3rem 0;
         ol {
             gap:1rem;
@@ -89,19 +89,19 @@
     .card-artera-item {
         width:calc((100% - 10rem) / 3);
     }
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         gap:6rem 4rem;
         .card-artera-item {
             width:calc((100% - 4rem) / 2);
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:4rem 2rem;
         .card-artera-item {
             width:calc((100% - 2rem) / 2);
         }
     }
-    @media (max-width:767px) {
+    @media screen and (max-width:767px) {
         .card-artera-item {
             width:100%;
         }
@@ -123,7 +123,7 @@
         display:flex;
         flex-direction:column;
         gap:2rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             gap:1rem;
         }
     }
@@ -152,7 +152,7 @@
                 line-height:3.8rem;
             }
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.5rem;
             line-height:1.8rem;
             gap:1.2rem;
@@ -176,7 +176,7 @@
     flex-wrap:wrap;
     align-items:center;
     gap:2.4rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:1.2rem;
     }
 }
@@ -207,7 +207,7 @@
         min-width:0;
         flex:1;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:0 2rem 3rem;
         gap:1rem;
         .button-base {
@@ -232,7 +232,7 @@
         right:0;
         bottom:0;
         display:none;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             display:block;
         }
     }
@@ -244,7 +244,7 @@
         background:url(../../images/common/ico-tel.svg) no-repeat 50% 50%;
         background-size:contain;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:2rem;
         margin-bottom:2rem;
         &::before {
@@ -274,7 +274,7 @@
     flex:1;
     display:flex;
     flex-direction:column;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:2rem;
     }
 }
@@ -302,7 +302,7 @@
         background-color:var(--skyblue);
         color:var(--navy);
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         height:3.6rem;
         min-width:7.8rem;
         font-size:1.6rem;
@@ -351,7 +351,7 @@
     .paging-prev {
         background:url(../../images/common/paging-arrow.svg) no-repeat 50% 50% / 2.1rem;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:6rem 0;
         button {
             min-width:3.4rem;
@@ -367,7 +367,7 @@
     align-items:center;
     gap:0.8rem;
     margin:0 1.2rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         margin:0;
     }
 }
@@ -384,7 +384,7 @@
             min-width:30rem;
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:2rem;
         .btn-area-center {
             .button-base {
@@ -392,7 +392,7 @@
             }
         }
     }
-    @media (max-width:767px) {
+    @media screen and (max-width:767px) {
         .btn-area-center {
             .button-base {
                 min-width:16rem;
@@ -410,7 +410,7 @@
     .title-size-40 {
         padding-right:20.8rem;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding-bottom:3rem;
         .title-size-40 {
             padding-right:0;
@@ -423,11 +423,11 @@
     position:relative;
     width:100%;
     gap:8rem;
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         flex-direction:column;
         gap:6rem;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:3rem;
     }
 }
@@ -437,10 +437,10 @@
     gap:4rem;
     margin-top:4rem;
     margin-bottom:4rem;
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         gap:2.8rem;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:1rem;
         margin-top:2.8rem;
     }
@@ -470,7 +470,7 @@
             color:var(--orange);
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:1.5rem;
         gap:1.6rem;
         line-height:2.6rem;
@@ -495,7 +495,7 @@
     height:6rem;
     margin-top:auto;
     position:relative;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:1.8rem;
         height:5rem;
     }
@@ -506,7 +506,7 @@
         right:0;
         bottom:0;
         display:none;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             display:block;
         }
     }
@@ -520,7 +520,7 @@
     align-items:center;
     flex-shrink:0;
     align-self:flex-start;
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         width:100%;
     }
     img {
@@ -541,7 +541,7 @@
         position:absolute;
         top:1.2rem;
         right:0;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             position:static;
             margin-top:1.2rem;
             .button-base {
@@ -549,7 +549,7 @@
             }
         }
     }
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         padding-top:0;
         .artera-detail-link {
             top:0;
@@ -568,7 +568,7 @@
     align-items:center;
     height:5.4rem;
     padding:0 2.6rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         height:3.6rem;
         padding:0 1.8rem;
         font-size:1.6rem;
@@ -632,7 +632,7 @@
             flex-direction:column;
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         aspect-ratio:inherit;
     }
 }
@@ -644,7 +644,7 @@
     width:79.25%;
     aspect-ratio:1268/626;
     margin:0 !important;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         aspect-ratio:640/753;
         width:100%;
     }
@@ -682,7 +682,7 @@
     left:auto;
     right:auto;
     background:rgba(255,255,255,0.8) url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         width:3rem;
         height:3rem;
         background-size:.6rem;
@@ -690,21 +690,21 @@
 }
 .swiper-viewmap .swiper-button-prev {
     left:4rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         left:1.5rem;
     }
 }
 .swiper-viewmap .swiper-button-next {
     transform:rotate(180deg);
     right:4rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         right:1.5rem;
     }
 }
 .box-white {
     background-color:var(--white);
     padding:8rem;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         padding:4rem 2.4rem;
     }
 }
@@ -715,7 +715,7 @@
     word-break:keep-all;
     margin-bottom:6rem;
     font-weight:500;
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:2rem;
         line-height:2.8rem;
         margin-bottom:3rem;
@@ -739,7 +739,7 @@
         .mdl-acco-tit {
             color:var(--black);
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:1.2rem 1rem;
             font-size:1.8rem;
             gap:1.6rem;
@@ -770,7 +770,7 @@
             background-size:contain;
             background-image:url("../../images/common/ico-plus.svg");
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding-right:1rem;
             &::after {
                 width:1.5rem;
@@ -783,7 +783,7 @@
         display:flex;
         flex-direction:column;
         gap:2rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:2rem 1rem;
             gap:1rem;
         }
@@ -797,7 +797,7 @@
         .guide-point {
             color:var(--orange);
         }
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.5rem;
             line-height:2.2rem;
         }
@@ -806,7 +806,7 @@
         font-size:2.4rem;
         color:var(--orange);
         font-weight:700;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.5rem;
         }
     }
@@ -814,7 +814,7 @@
         font-size:2rem;
         line-height:2.8rem;
         font-weight:500;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.4rem;
             line-height:2.2rem;
         }
@@ -822,7 +822,7 @@
     .link-underline {
         text-decoration:underline;
         text-underline-offset:.4rem;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             text-underline-offset:.2rem;
         }
     }
@@ -839,7 +839,7 @@
     ~ .tab-sub-title {
         margin-top:8rem;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:2.4rem;
         line-height:3.6rem;
         margin-bottom:2rem;
@@ -882,7 +882,7 @@
             }
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:.4rem;
         padding-top:0;
         margin-bottom:4rem;
@@ -894,7 +894,7 @@
             width:calc((100% - 2.4rem) / 7);
         }
     }
-    @media (max-width:767px) {
+    @media screen and (max-width:767px) {
         .construction-step-item {
             width:calc((100% - 1.2rem) / 4);
         }
@@ -971,14 +971,14 @@
             }
         }
     }
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         padding-right:1rem;
         .year-choice {
             padding:0 2rem;
             gap:2.8rem;
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         flex-wrap:wrap;
         height:auto;
         padding:3rem 2rem;
@@ -1014,7 +1014,7 @@
             }
         }
     }
-    @media (max-width:767px) {
+    @media screen and (max-width:767px) {
         margin-left:-2rem;
         margin-right:-2rem;
         margin-bottom:2rem;
@@ -1105,7 +1105,7 @@
             line-height:3.2rem;
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         gap:1rem;
         .view-type-box-item {
             width:100%;
@@ -1229,7 +1229,7 @@
             }
         }
     }
-    @media (max-width:1400px) {
+    @media screen and (max-width:1400px) {
         .info-item {
             .info-data {
                 flex-direction:column;
@@ -1238,7 +1238,7 @@
             }
         }
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         margin-top:-2rem;
         .view-type-list-item {
             flex-direction:column;
@@ -1298,7 +1298,7 @@
             }
         }
     }
-    @media (max-width:767px) {
+    @media screen and (max-width:767px) {
         margin-top:-1rem;
     }
 }
@@ -1313,7 +1313,7 @@
     .ico-notice {
         flex-shrink:0;
     }
-    @media (max-width:1023px) {
+    @media screen and (max-width:1023px) {
         font-size:1.5rem;
         gap:.5rem;
         margin-top:2rem;

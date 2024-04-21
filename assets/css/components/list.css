@@ -116,7 +116,7 @@
             background:linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.1) 100%);
         }
     }
-    @media (max-width:1700px) {
+    @media screen and (max-width:1700px) {
         .card-item-tit {
             font-size:3.2rem;
         }
@@ -134,7 +134,7 @@
             }
         }
     }
-    @media (max-width:800px) {
+    @media screen and (max-width:800px) {
         width:25.5rem;
         aspect-ratio:255/469;
         flex-direction:column;
@@ -269,7 +269,7 @@
                 scale:1.2;
                 transition:scale 4s ease-in;
             }
-            @media (max-width:800px) {
+            @media screen and (max-width:800px) {
                 .card-item-desc {
                     height:14.4rem;
                 }
@@ -290,7 +290,7 @@
                 }
             }
         }
-        @media (max-width:800px) {
+        @media screen and (max-width:800px) {
             height:auto;
             aspect-ratio:255/421;
             display:flex;

@@ -3,11 +3,11 @@
 html {
     font-size:10px;
 
-    @media (max-width:800px) {
+    @media screen and (max-width:800px) {
         font-size:10px;
     }
     
-    @media (max-width:370px) {
+    @media screen and (max-width:370px) {
         font-size:2.66vw;
     }
 }
@@ -141,7 +141,7 @@ th,td {border-collapse:collapse;}
     box-shadow:none !important;
 }
 
-strong{font-weight: 700;}
+strong{font-weight:700;}
 
 a {text-decoration:none;}
 *:focus {outline:0;}
@@ -185,7 +185,7 @@ body {overflow-x:hidden;}
 .only-m{
     display:none;
 }
-@media (max-width:1023px) {
+@media screen and (max-width:1023px) {
     .only-m{
         display:block;
     }

@@ -60,7 +60,7 @@ html[data-modal="show"] body {
         box-shadow:0 0.8rem 1.6rem rgba(0,0,0,0.4);
         z-index:1;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:0 1rem;
         }
     }
@@ -74,7 +74,7 @@ html[data-modal="show"] body {
         justify-content:space-between;
         border-bottom:.2rem solid #000;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:0 1rem;
             min-height:6.4rem;
         }
@@ -82,7 +82,7 @@ html[data-modal="show"] body {
     .layer-modal-title {
         font-size:3rem;
         font-weight:600;
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:2rem;
         }
     }
@@ -93,7 +93,7 @@ html[data-modal="show"] body {
         line-height:1.5;
         font-weight:500;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             font-size:1.6rem;
         }
     }
@@ -105,7 +105,7 @@ html[data-modal="show"] body {
         z-index:10;
         background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             width:2.2rem;
             height:2.2rem;
         }
@@ -118,29 +118,32 @@ html[data-modal="show"] body {
         max-height:calc(100vh - 35rem);
         overflow-y:auto;
 
-        .table-input{
-            border: 0;
-            display: flex;
-            justify-content: center;
-            margin-top: -3rem;
+        .table-input {
+            border:0;
+            display:flex;
+            justify-content:center;
+            margin-top:-3rem;
             table{
-                width: auto;
+                width:auto;
             }
         }
         &[data-gap="M"] {
             display:flex;
             flex-direction:column;
             gap:4rem;
-
             > * {width:100%;}
-
-            @media (max-width:1023px) {
+            @media screen and (max-width:1023px) {
                 gap:2rem;
             }
         }
-
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:2rem 2rem 0;
+            .table-input {
+                margin-top:0;
+                .col-th {
+                    width:8rem;
+                }
+            }
         }
     }
     .layer-modal-footer {
@@ -157,7 +160,7 @@ html[data-modal="show"] body {
             padding:0 1.8rem;
         }
 
-        @media (max-width:1023px) {
+        @media screen and (max-width:1023px) {
             padding:2rem 2rem 3rem;
             gap:1rem;
         }
@@ -181,6 +184,12 @@ html[data-modal="show"] body {
         }
     }
 
+    &[data-size="LX"] {
+        .layer-modal-wrap {
+            width:100%;
+            max-width:160rem;
+        }
+    }
     &[data-size="L"] {
         .layer-modal-wrap {
             width:100%;
@@ -308,7 +317,7 @@ html[data-modal="show"] body {
         padding:0;
         overflow:visible;
         transform:translateY(-.1rem);
-        z-index: 200;
+        z-index:200;
         input[type="radio"], 
         input[type="checkbox"] {
             opacity:0;
@@ -362,7 +371,7 @@ html[data-modal="show"] body {
             span {
                 font-size:1.8rem;
             }
-            @media (max-width:1023px) {
+            @media screen and (max-width:1023px) {
                 font-size:1.5rem;
                 min-height:3rem;
                 span {
@@ -612,7 +621,7 @@ html[data-modal="show"] body {
             }
         }
 
-        @media (max-width:1400px) {
+        @media screen and (max-width:1400px) {
             padding:0;
             align-items:flex-start;
             justify-content:flex-start;
@@ -944,7 +953,7 @@ html[data-modal="show"] body {
             }
         }
 
-        @media (max-width:1400px) {
+        @media screen and (max-width:1400px) {
             padding:0;
             align-items:flex-start;
             height:100%;
