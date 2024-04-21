@@ -46,7 +46,7 @@
 
         table {
             .col-th {
-                width:16rm;
+                width:16rem;
             }
             th {
                 padding:1.4rem 3rem 1rem;
@@ -131,7 +131,7 @@
     transform:translateY(2rem);
     @media (max-width:1023px) {
         padding-left:0;
-        htransform:translateY(1.5rem);
+        transform:translateY(1.5rem);
         .button-base {
             min-height:3rem;
             font-size:1.4rem;

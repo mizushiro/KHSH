@@ -33,7 +33,7 @@
     position:relative;
     z-index:1;
     font:inherit;
-    color:var(--gray_100);
+    color:var(--gray_200);
     line-height:inherit;
 
     &::after {
@@ -73,16 +73,16 @@
 
 /* pattern bg */
 [data-bg="pattern1"] {
-    background:url(../../images/common/pattern1.svg) repeat 50% 0% / 9rem;
+    background:url(../../images/common/pattern1.svg) repeat 50% 0 / 9rem;
 }
 [data-bg="pattern2"] {
-    background:url(../../images/common/pattern2.svg) repeat 50% 0% / 9rem;
+    background:url(../../images/common/pattern2.svg) repeat 50% 0 / 9rem;
 }
 [data-bg="pattern3"] {
-    background:url(../../images/common/pattern3.svg) repeat 50% 0% / 9rem;
+    background:url(../../images/common/pattern3.svg) repeat 50% 0 / 9rem;
 }
 [data-bg="pattern4"] {
-    background:url(../../images/common/pattern4.svg) repeat 50% 0% / 9rem;
+    background:url(../../images/common/pattern4.svg) repeat 50% 0 / 9rem;
 }
 @media (max-width:800px) {
     [data-bg="pattern1"],
@@ -243,7 +243,7 @@
             width:1rem;
             background-size:1rem;
             top:0.2rem;
-            left:0rem;
+            left:0;
         }
     }
 }
