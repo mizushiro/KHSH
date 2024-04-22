@@ -40,7 +40,7 @@
         max-width: none;
 
         animation-name:imgZoom;
-        animation-duration: 15s;
+        animation-duration: 5s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
@@ -70,19 +70,15 @@
             bottom:8rem;
         }
     }
-    @keyframes imgZoom {
-        0% {
-            scale: 1;
-        }
-        100% {
-            scale:1.2; 
-        }
+}
+@keyframes imgZoom {
+    0% {
+        scale: 1.2;
+    }
+    100% {
+        scale:1;
     }
 }
-
-
-
-
 .scrollbar-4 {
     -webkit-overflow-scrolling:touch;
     &::-webkit-scrollbar {
