@@ -38,6 +38,18 @@
     .tab-type-box {
         gap:1rem;
         margin-bottom:4rem;
+        &[data-flex="wrap"] {
+            flex-wrap:wrap;
+            @media screen and (max-width:1023px) {
+                gap:.5rem;
+                .mdl-tab-btn {
+                    flex:none;
+                    width:calc((100% - .5rem) / 2);
+                    font-size:1.4rem;
+                    height:5rem;
+                }
+            }
+        }
         .mdl-tab-btn {
             border:.1rem solid var(--navy);
             padding:.8rem 1.6rem;
