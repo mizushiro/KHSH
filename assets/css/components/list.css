@@ -139,7 +139,7 @@
         aspect-ratio:255/469;
         flex-direction:column;
         padding:5rem 1.5rem 4rem;
-
+        height:auto;
         .card-item-view {
             width:100%;
             position:relative;
