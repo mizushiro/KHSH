@@ -164,8 +164,8 @@ body {overflow-x:hidden;}
 
     ::-webkit-scrollbar {
         position:absolute;
-        width:1rem;
-        height:1rem;
+        width:.8rem;
+        height:.8rem;
         background-color:transparent;
     }
     ::-webkit-scrollbar-track {
