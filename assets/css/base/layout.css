@@ -54,15 +54,14 @@
 }
 
 .sub-depth-nav {
-    /*overflow-x:auto;
+    overflow-x:auto;
     overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;*/
+    -webkit-overflow-scrolling:touch;
     margin-bottom:8rem;
     position:sticky;
-    top:12rem;
+    top:0;
     background-color:var(--white);
     z-index:2;
-    border-top:.1rem solid var(--form_line);
     &::before {
         content:'';
         position:absolute;
@@ -72,9 +71,6 @@
         height:.1rem;
         background-color:var(--form_line);
 
-    }
-    @media screen and (max-width:1400px) {
-        top:8rem;
     }
     @media screen and (max-width:1023px) {
         margin-bottom:2.8rem;
