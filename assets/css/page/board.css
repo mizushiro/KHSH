@@ -117,3 +117,62 @@
     right:0;
     bottom:0;
 }
+.contact-list {
+    margin-top:4rem;
+    border-top:.2rem solid var(--black);
+    @media screen and (max-width:1023px) {
+        margin-top:2rem;
+    }
+    .contact-item {
+        display:flex;
+        gap:4rem;
+        align-items:center;
+        padding:2.8rem 2rem;
+        border-bottom:.1rem solid var(--form_line);
+        @media screen and (max-width:1023px) {
+            flex-direction:column;
+            align-items:flex-start;
+            gap:.8rem;
+            padding:1.6rem 0;
+        }
+    }
+    .contact-name {
+        font-size:2rem;
+        line-height:2.4rem;
+        font-weight:500;
+        color:var(--gray_300);
+        width:30%;
+        @media screen and (max-width:1023px) {
+            width:100%;
+            font-size:1.5rem;
+            line-height:2rem;
+        }
+    }
+    .contact-address {
+        font-size:2rem;
+        line-height:2.4rem;
+        font-weight:500;
+        flex:1;
+        color:var(--gray_300);
+        @media screen and (max-width:1023px) {
+            font-size:1.5rem;
+            line-height:2rem;
+        }
+    }
+    .contact-number {
+        color:var(--orange);
+        font-size:2rem;
+        line-height:2.4rem;
+        font-weight:600;
+        a {
+            pointer-events:none;
+        }
+        @media screen and (max-width:1023px) {
+            font-size:1.8rem;
+            line-height:2rem;
+            a {
+                pointer-events:auto;
+            }
+        }
+    }
+}
