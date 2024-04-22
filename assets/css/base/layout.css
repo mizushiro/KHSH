@@ -1,9 +1,9 @@
-.base-main {
+/*.base-main {
     padding-top:12rem;
     @media screen and (max-width:1400px) {
         padding-top:8rem;
     }
-}
+}*/
 .content-area {
     &[data-bg="sky"] {
         background-color:var(--skyblue);
@@ -26,7 +26,7 @@
 }
 .sub-title {
     width:100%;
-    height:30rem;
+    height:38.4rem;
     display:flex;
     justify-content:center;
     align-items:center;
