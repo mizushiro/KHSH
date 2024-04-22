@@ -30,12 +30,59 @@
     display:flex;
     justify-content:center;
     align-items:center;
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+
+        animation-name:imgZoom;
+        animation-duration: 15s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
     h2 {
-        font-size:5rem;
-        font-weight:600;
-        color:var(--white);
+        position: absolute;
+        width: 100%;
+        left:50%;
+        transform:translateX(-50%);
+        bottom:13.2rem;
+        max-width: 168rem;
+        padding: 0 4rem;
+        font-size: 5rem;
+        font-weight: 600;
+        color:#fff;
+        z-index: 1;
+    }
+
+    &[data-bg="sub1-1"] {
+        background: #251319;
+    }
+
+    @media screen and (max-width:1023px) {
+        height:23rem;
+        h2 {
+            font-size: 3rem;
+            bottom:8rem;
+        }
+    }
+    @keyframes imgZoom {
+        0% {
+            scale: 1;
+        }
+        100% {
+            scale:1.2; 
+        }
     }
 }
+
+
+
+
 .scrollbar-4 {
     -webkit-overflow-scrolling:touch;
     &::-webkit-scrollbar {
