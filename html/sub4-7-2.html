@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>ARTERA 금호건설</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap">
+        <header class="base-header" data-id="header"></header>
+        <main class="base-main">
+            <div class="sub-title" data-bg="sub4-7">
+                <h2>1:1 문의</h2>
+                <img src="../assets/images/sub/sub-visual-4-7.jpg" alt="">
+            </div>
+
+            <article class="content-area">
+                <div class="sub-depth-nav">
+                    <div class="sub-depth-nav-list scrollbar-4" data-type="auto">
+                        <a href="" class="sub-depth-nav-item">나의 정보</a>
+                        <a href="" class="sub-depth-nav-item">분양대금조회</a>
+                        <a href="" class="sub-depth-nav-item">입주일 예약</a>
+                        <a href="" class="sub-depth-nav-item">방문 사전예약 신청</a>
+                        <a href="" class="sub-depth-nav-item">무순위/잔여세대 청약</a>
+                        <a href="" class="sub-depth-nav-item">옵션신청</a>
+                        <a href="" class="sub-depth-nav-item" data-state="selected">1:1문의</a>
+                        <a href="" class="sub-depth-nav-item">AS센터</a>
+                    </div>
+                </div>
+                <div class="sub-content">
+                    <div class="pink-line-box mt-l" data-color="gray">
+                        <p class="text-30">고객상담을 신청하시면 SMS로 처리 결과를 알려드립니다.</p>
+                        <div class="btn-group">
+                            <a href="#" class="button-base" data-style="bg-primary" data-size="size-40">자주 묻는 질문</a>
+                            <a href="#" class="button-base" data-style="line-primary" data-size="size-40">문의 내역</a>
+                        </div>
+                    </div>
+
+                    <div class="text-20 mt-s">
+                        아래 입력화면에서 고객님의 'SMS 수신동의' 항목에 동의를 해주세요.<br>
+                        회원정보의 정보수신 여부와는 별도로 회원 가입 시 입력하신 이메일로 보내드립니다.
+                    </div>
+                    
+                    <div class="table-input mt-m consulting" >
+                        <table>
+                            <caption>고객상담 신청 정보 등록 입력 표입니다.</caption>
+                            <colgroup>
+                                <col class="col-th" />
+                                <col class="col-td" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">성명</th>
+                                    <td>김금호</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">문의유형</th>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="form-select">
+                                                <select title="이메일주소 선택" id="mem3_2">
+                                                    <option value="1" selected>문의유형을 선택해주세요.</option>
+                                                    <option value="2">분양</option>
+                                                    <option value="3">대출</option>
+                                                    <option value="4">해지</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p data-bul="star">문의유형을 지정하시면 빠른 답변을 받으실 수 있습니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="hp1">제목</label>
+                                    </th>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" class="form-input" id="hp1" value="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="hp2">내용</label>
+                                    </th>
+                                    <td>
+                                        <div class="form-group">
+                                            <textarea class="form-input" id="hp2" >
+
+                                            </textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">SMS수신동의</th>
+                                    <td>
+                                        <div class="form-group" data-type="rec-info">
+                                            <span class="choice-item">
+                                                <input type="radio" id="hp3-1" class="form-radio" name="hp3">
+                                                <label for="hp3-1">수신</label>
+                                            </span>
+                                            <span class="choice-item">
+                                                <input type="radio" id="hp3-2" class="form-radio" name="hp3">
+                                                <label for="hp3-2">수신하지 않음</label>
+                                            </span>
+                                            <span class="form-innertxt" data-bul="star">1:1문의 SMS 수신동의는 회원정보의 정보수신여부와는 별도로 처리됩니다.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  
+                    <div class="table-bottom">
+                        <a href="#" class="button-base" data-style="line-primary" data-size="size-60">취소</a>
+                        <a href="#" class="button-base" data-style="bg-primary" data-size="size-60">저장</a>
+                    </div>
+
+
+
+                </div>
+            </article>
+        </main>
+        <footer class="base-footer" data-id="footer"></footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+           
+        }); 
+    </script>
+</body>
+</html>

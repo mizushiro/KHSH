@@ -65,7 +65,7 @@
         z-index: 1;
     }
 
-    &[data-bg="sub1-1"] {
+    &[data-bg="sub2-1"] {
         background: #251319;
     }
 
