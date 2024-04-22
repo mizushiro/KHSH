@@ -44,6 +44,7 @@
                 gap:.5rem;
                 .mdl-tab-btn {
                     flex:none;
+                    word-break:keep-all;
                     width:calc((100% - .5rem) / 2);
                     font-size:1.4rem;
                     line-height:1.6rem;
