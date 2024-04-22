@@ -387,8 +387,7 @@
             font-size:1.5rem;
         }
     }
-    tfoot th,
-    thead th {
+    tfoot th {
         background-color:#FAFAFA;
         border-left:0.1rem solid #ccc;
         border-bottom:0.1rem solid #ccc;
@@ -399,6 +398,23 @@
         text-align:center;
         &:first-child {
             border-left:0;
+        }
+    }
+    thead th {
+        background-color:#FAFAFA;
+        border-left:0.1rem solid #ccc;
+        border-right:0.1rem solid #ccc;
+        border-bottom:0.1rem solid #ccc;
+        font-size:2rem;
+        line-height:1.4;
+        font-weight:500;
+        padding:2.55rem 0;
+        text-align:center;
+        &:first-child {
+            border-left:0;
+        }
+        &:last-child {
+            border-right:0;
         }
     }
     tbody th,
@@ -461,18 +477,28 @@
         }
     }
 
-    tr > *:first-child {
-        width: 15rem;
-    }
-
+    
     @media screen and (max-width:1600px) {
         thead, tbody, tfoot {
             th, td {
                 font-size:1.6rem;
             }
         }
+    }
+}
+.table-scroll {
+    tr > *:first-child {
+        width: 15rem;
+    }
+    @media screen and (max-width:1600px) {
         tr > *:first-child {
             width: 11rem;
         }
+    }
+
+}
+.table-data.repair {
+    .circle-check {
+        margin: 0 auto;
     }
 }
