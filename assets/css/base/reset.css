@@ -148,11 +148,12 @@ a {text-decoration:none;}
 
 .swiper-button-prev::after,.swiper-button-next::after {display:none;}
 
-body {overflow-x:hidden;}
+body {
+    overflow-x:hidden;
+}
 .base-wrap {
     position:relative;
     width:100%;
-    overflow-x:hidden;
 }
 .base-main {
     position:relative;
