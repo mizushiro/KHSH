@@ -126,6 +126,7 @@
         .button-base {
             width:calc((100% - .5rem) / 2);
             font-size:1.4rem;
+            line-height:1.6rem;
             flex:none;
             text-align:center;
             word-break:keep-all;

@@ -46,6 +46,7 @@
                     flex:none;
                     width:calc((100% - .5rem) / 2);
                     font-size:1.4rem;
+                    line-height:1.6rem;
                     height:5rem;
                 }
             }
