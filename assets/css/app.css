@@ -3,6 +3,7 @@
 @import url(./base/reset.css);
 @import url(./base/variable.css);
 @import url(./base/typograph.css);
+@import url(./base/layout.css);
 
 @import url(./components/attribute.css);
 @import url(./components/tab.css);
@@ -20,3 +21,4 @@
 @import url(./page/main.css);
 @import url(./page/parcel-info.css);
 @import url(./page/my-artera.css);
+@import url(./page/board.css);
