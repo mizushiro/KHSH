@@ -35,7 +35,7 @@
     font-weight:600;
     color:var(--black);
     line-height:4.2rem;
-    margin-bottom:.8rem;
+    margin-bottom:0.8rem;
     @media screen and (max-width:1023px) {
         font-size:1.8rem;
         line-height:2.4rem;
@@ -46,7 +46,7 @@
     font-weight:600;
     color:var(--black);
     line-height:3.6rem;
-    margin-bottom:.8rem;
+    margin-bottom:0.8rem;
     margin-top:3rem;
     @media screen and (max-width:1023px) {
         font-size:1.6rem;
@@ -73,7 +73,7 @@
         font-weight:500;
         color:var(--gray_300);
         text-decoration:underline;
-        text-underline-offset:.4rem;
+        text-underline-offset:0.4rem;
     }
     @media screen and (max-width:1023px) {
         font-size:1.6rem;
@@ -88,7 +88,7 @@
     &[data-type="hyphen"] {
         text-indent:-1.4rem;
         padding-left:1.4rem;
-        margin-top:.8rem;
+        margin-top:0.8rem;
     }
     @media screen and (max-width:1023px) {
         font-size:1.5rem;
@@ -96,7 +96,7 @@
     }
 }
 .privacy-desc-list {
-    margin-top:.8rem;
+    margin-top:0.8rem;
 }
 .privacy-desc-item {
     line-height:3.4rem;
@@ -107,7 +107,7 @@
     position:relative;
     &::before {
         content:'';
-        width:.6rem;
+        width:0.6rem;
         aspect-ratio:1/1;
         border-radius:999em;
         position:absolute;
@@ -136,13 +136,13 @@
             margin-top:1rem;
             thead th {
                 font-size:1.4rem;
-                padding:.4rem;
+                padding:0.4rem;
                 height:4.8rem;
             }
             td {
                 font-size:1.4rem;
                 word-break:break-all;
-                padding:.4rem;
+                padding:0.4rem;
                 height:4.8rem;
             }
         }

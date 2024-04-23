@@ -47,11 +47,11 @@
         }
         img {
             height:3rem;
-            margin-right:.5rem;
+            margin-right:0.5rem;
         }
         .mdl-file-del {
             position:absolute;
-            right:.5rem;
+            right:0.5rem;
             top:1rem;
             line-height:1;
     

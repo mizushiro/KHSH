@@ -7,7 +7,7 @@
     height:4rem;
     padding:0 1.2rem;
     font-size:1.8rem;
-    border:.1rem solid var(--form_line);
+    border:1px solid var(--form_line);
     width:100%;
     &:focus {
         border-color:var(--black);
@@ -22,7 +22,7 @@
     &[type="date"] {
         position:relative;
         width:100%;
-        background:#fff url(../../images/common/ico-date.svg) no-repeat right 1.2rem top .4rem / 2.5rem;
+        background:#fff url(../../images/common/ico-date.svg) no-repeat right 1.2rem top 0.4rem / 2.5rem;
         padding-right:4rem;
         &::-webkit-calendar-picker-indicator {
             position:absolute; 
@@ -46,7 +46,7 @@
     align-items:flex-start;
     gap:1rem;
     @media screen and (max-width:1023px) {
-        gap:.4rem;
+        gap:0.4rem;
     }
     .form-checkbox {
         flex-shrink:0;
@@ -54,7 +54,7 @@
         width:2.4rem;
         height:2.4rem;
         position:relative;
-        border:.1rem solid var(--gray_300);
+        border:1px solid var(--gray_300);
         background-color:var(--white);
         &:checked {
             border-color:var(--orange);
@@ -86,7 +86,7 @@
         width:2.4rem;
         height:2.4rem;
         position:relative;
-        border:.2rem solid var(--form_line);
+        border:0.2rem solid var(--form_line);
         background-color:var(--white);
         border-radius:999em;
         &:checked {
@@ -102,14 +102,14 @@
                 border-radius:999em;
                 display:block;
                 aspect-ratio:1/1;
-                width:.8rem;
+                width:0.8rem;
             }
         }
         @media screen and (max-width:1023px) {
             width:1.6rem;
             height:1.6rem;
             &:checked:before {
-                width:.6rem;
+                width:0.6rem;
             }
         }
     }
@@ -164,7 +164,7 @@ select {
         pointer-events:none;
     }
     &:hover {
-        border:.1rem solid #ccc;
+        border:1px solid #ccc;
     }
     &[aria-expanded="true"]::after {
         transform:translateY(50%);
@@ -177,8 +177,8 @@ select {
         top:50%;
         transform:translateY(-50%);
         display:block;
-        width:.9rem;
-        height:.5rem;
+        width:0.9rem;
+        height:0.5rem;
         background-image:url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.78037 4.88191L8.89304 0.638906C8.9617 0.56811 9 0.474051 9 0.37624C9 0.278429 8.9617 0.184371 8.89304 0.113575L8.8884 0.109006C8.85511 0.0745664 8.81505 0.047143 8.77065 0.0284033C8.72624 0.00966356 8.67842 -2.81134e-08 8.6301 -3.23381e-08C8.58177 -3.65627e-08 8.53395 0.00966354 8.48955 0.0284032C8.44514 0.0471429 8.40508 0.0745663 8.3718 0.109006L4.49923 4.10457L0.628206 0.109006C0.594922 0.0745656 0.55486 0.0471422 0.510455 0.0284025C0.466049 0.00966284 0.41823 -7.50242e-07 0.369906 -7.54467e-07C0.321581 -7.58691e-07 0.273762 0.00966282 0.229357 0.0284025C0.184951 0.0471422 0.144888 0.0745656 0.111605 0.109006L0.106958 0.113574C0.0383009 0.184371 4.12773e-07 0.278428 4.04222e-07 0.376239C3.95671e-07 0.474051 0.0383009 0.568109 0.106958 0.638906L4.21963 4.88191C4.25579 4.91923 4.29929 4.94894 4.34749 4.96923C4.39568 4.98953 4.44757 5 4.5 5C4.55243 5 4.60432 4.98953 4.65251 4.96923C4.70071 4.94894 4.74421 4.91923 4.78037 4.88191Z' fill='black'/%3E%3C/svg%3E%0A");
     }
     @media screen and (max-width:1023px) {
@@ -193,7 +193,7 @@ select {
         width:100%;
         z-index:0;
         &:focus + .form-select-btn {
-            border:.1rem solid #ccc;
+            border:1px solid #ccc;
         }
     }
     .form-select-btn {

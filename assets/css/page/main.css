@@ -51,13 +51,13 @@
             position:relative;
 
             &[data-delay="1"] .effect-item {
-                animation-delay:.7s;
+                animation-delay:0.7s;
             }
             .effect-item {
                 transform:translateY(10rem);
                 animation-name:hiddenup;
-                animation-delay:.4s;
-                animation-duration:.8s;
+                animation-delay:0.4s;
+                animation-duration:0.8s;
                 animation-iteration-count:1;
                 animation-fill-mode:forwards;
                 animation-timing-function:cubic-bezier(.07,.26,0,.93);
@@ -67,7 +67,7 @@
         .swiper-slide-next:not(.swiper-slide-visible) .effect-wrap .effect-item,
         .swiper-slide-prev:not(.swiper-slide-visible) .effect-wrap .effect-item {
             animation-name:resetSwiper;
-            animation-duration:.3s;
+            animation-duration:0.3s;
             animation-iteration-count:1;
             animation-fill-mode:forwards;
             animation-timing-function:ease-in;
@@ -79,7 +79,7 @@
         .swiper-pagination {
             position:static;
             padding:0;
-            border-radius:.2rem;
+            border-radius:0.2rem;
             margin-right:1.2rem;
             opacity:1;
             transform:translateY(-.2rem);
@@ -91,17 +91,17 @@
                 position:absolute;
                 display:block;
                 width:100%;
-                height:.4rem;
+                height:0.4rem;
                 background:rgba(255,255,255,0.3);
                 z-index:-1; 
                 left:0;
-                border-radius:.2rem;
+                border-radius:0.2rem;
             }
         }
         .swiper-pagination-bullet {
             width:6.6rem;
-            border-radius:.2rem;
-            height:.4rem;
+            border-radius:0.2rem;
+            height:0.4rem;
             margin:0 !important;
             background-color:transparent;
             opacity:1;
@@ -126,8 +126,8 @@
         ::-webkit-progress-bar {
             background-color:rgba(255,255,255,0.3);
             width:18rem;
-            border-radius:.2rem;
-            height:.4rem;
+            border-radius:0.2rem;
+            height:0.4rem;
         }
         ::-webkit-progress-value {
             background-color:#fff;
@@ -154,7 +154,7 @@
         padding:12rem 4rem 0;
         background-color:#000;
         video {
-            opacity:.3;
+            opacity:0.3;
             position:absolute;
             top:0;
             left:0;
@@ -206,7 +206,7 @@
             }
             img {
                 width:20rem; 
-                opacity:.5;
+                opacity:0.5;
                 transform:translateY(0);
                 transition:all .8s ease-out;
             }
@@ -215,7 +215,7 @@
             .stroy-card .stroy-card-link img {
                 opacity:1;
                 transform:translateY(-10rem);
-                transition-delay:.3s;
+                transition-delay:0.3s;
                 transition:all 1s ease-out;
             }
         }
@@ -357,7 +357,7 @@
     .swiper-pagination {
         position:absolute !important;
         margin-top:0 !important;
-        border-radius:.2rem;
+        border-radius:0.2rem;
         margin-right:1.2rem;
         opacity:1;
         transform:translateX(-50%);
@@ -373,11 +373,11 @@
             position:absolute;
             display:block;
             width:100%;
-            height:.4rem;
+            height:0.4rem;
             background:#ECECEC;
             z-index:-1; 
             left:0;
-            border-radius:.2rem;
+            border-radius:0.2rem;
         }
     }
     .swiper-paginationp-txt {
@@ -400,7 +400,7 @@
         justify-content:center;
         align-items:center;
         border-radius:50%;
-        border:.1rem solid var(--navy) !important;
+        border:1px solid var(--navy) !important;
         margin:0;
         top:auto;
         opacity:1;
@@ -419,8 +419,8 @@
         min-width:16.3rem;
         width:auto;
         flex:1;
-        border-radius:.2rem;
-        height:.4rem;
+        border-radius:0.2rem;
+        height:0.4rem;
         margin:0 !important;
         background-color:transparent;
         opacity:1;
@@ -515,18 +515,18 @@
                 left:47% !important;
                 width:calc(100% - 18rem) !important;
                 &:before {
-                    height:.2rem;
+                    height:0.2rem;
                 }
             }
             .swiper-pagination-bullet { 
-                height:.2rem; 
+                height:0.2rem; 
             }
             .swiper-paginationp-txt {
                 font-size:1.5rem; 
                 justify-self:flex-start; 
                 position:absolute; 
                 left:0;
-                gap:.8rem;
+                gap:0.8rem;
             }
             .swiper-control-group {
                 gap:1.6rem;

@@ -10,7 +10,7 @@
         gap:0;
         margin-bottom:4rem;
         .mdl-tab-btn {
-            border-bottom:.1rem solid var(--form_line);
+            border-bottom:1px solid var(--form_line);
             padding:2rem 1.6rem;
             background-color:var(--white);
             font-size:2.4rem;
@@ -26,7 +26,7 @@
                     left:0;
                     right:0;
                     bottom:-.1rem;
-                    height:.2rem;
+                    height:0.2rem;
                     background-color:var(--black);
                 }
             }
@@ -41,11 +41,11 @@
         &[data-flex="wrap"] {
             flex-wrap:wrap;
             @media screen and (max-width:1023px) {
-                gap:.5rem;
+                gap:0.5rem;
                 .mdl-tab-btn {
                     flex:none;
                     word-break:keep-all;
-                    width:calc((100% - .5rem) / 2);
+                    width:calc((100% - 0.5rem) / 2);
                     font-size:1.4rem;
                     line-height:1.6rem;
                     height:5rem;
@@ -53,8 +53,8 @@
             }
         }
         .mdl-tab-btn {
-            border:.1rem solid var(--navy);
-            padding:.8rem 1.6rem;
+            border:1px solid var(--navy);
+            padding:0.8rem 1.6rem;
             height:8rem;
             background-color:var(--white);
             font-size:2.4rem;

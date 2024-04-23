@@ -6,7 +6,7 @@
     .search-form {
         max-width:80rem;
         margin:0 auto;
-        border-bottom:.2rem solid var(--orange);
+        border-bottom:0.2rem solid var(--orange);
         display:flex;
         align-items:center;
         padding:0 4rem;
@@ -38,7 +38,7 @@
         background-size:1rem;
         @media screen and (max-width:1023px) {
             width:2rem;
-            background-size:.8rem;
+            background-size:0.8rem;
         }
     }
     .btn-search {
@@ -53,14 +53,14 @@
     }
 }
 .board-list-type {
-    border-top:.2rem solid var(--black);
+    border-top:0.2rem solid var(--black);
     @media screen and (max-width:1023px) {
         margin-bottom:-2rem;
     }
     .board-list-item {
         position:relative;
         display:flex;
-        border-bottom:.1rem solid var(--form_line);
+        border-bottom:1px solid var(--form_line);
         padding:2rem;
         gap:4rem;
         align-items:center;
@@ -119,7 +119,7 @@
 }
 .contact-list {
     margin-top:4rem;
-    border-top:.2rem solid var(--black);
+    border-top:0.2rem solid var(--black);
     @media screen and (max-width:1023px) {
         margin-top:2rem;
     }
@@ -128,11 +128,11 @@
         gap:4rem;
         align-items:center;
         padding:2.8rem 2rem;
-        border-bottom:.1rem solid var(--form_line);
+        border-bottom:1px solid var(--form_line);
         @media screen and (max-width:1023px) {
             flex-direction:column;
             align-items:flex-start;
-            gap:.8rem;
+            gap:0.8rem;
             padding:1.6rem 0;
         }
     }

@@ -47,7 +47,7 @@
             height:100%;
             background:linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
             z-index:1;
-            transition:opacity .2s ease-in;
+            transition:opacity 0.2s ease-in;
         }
     }
     .card-item-desc {
@@ -61,7 +61,7 @@
         opacity:0;
         color:#fff;
         top:0;
-        transition:all .2s ease-in;
+        transition:all 0.2s ease-in;
         justify-content:space-between;
         .card-item-tit {
             margin-top:2.8rem;
@@ -104,16 +104,16 @@
     &:hover {
         .card-item-view {
             opacity:0;
-            transition:all .3s ease-out;
+            transition:all 0.3s ease-out;
         }
         .card-item-desc {
             opacity:1;
-            transition:all .3s ease-in;
+            transition:all 0.3s ease-in;
         }
         .card-item-img::before {
-            transition:all .2s ease-in;
+            transition:all 0.2s ease-in;
             opacity:1;
-            background:linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.1) 100%);
+            background:linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1) 100%);
         }
     }
     @media screen and (max-width:1700px) {
@@ -199,7 +199,7 @@
             display:flex;
             flex-direction:column;
             height:auto;
-            transition:padding .2s ease;
+            transition:padding 0.2s ease;
         }
         .card-item-tit {
             width:100%;
@@ -231,7 +231,7 @@
             padding:0;
             height:10rem;
             overflow:hidden;
-            transition:all .3s ease-out;
+            transition:all 0.3s ease-out;
             justify-content:flex-start;
 
             [data-ellipsis] {
@@ -249,7 +249,7 @@
                 top:0;
                 opacity:1;
                 padding-bottom:6.3rem;
-                transition:padding .3s ease;
+                transition:padding 0.3s ease;
             }
             .card-item-tit {
                 min-height:12.3rem;
@@ -260,7 +260,7 @@
             .card-item-desc {
                 height:24.4rem;
                 opacity:1;
-                transition:all .3s ease-out;
+                transition:all 0.3s ease-out;
             }
             .card-item-img::before {
                 opacity:0;
