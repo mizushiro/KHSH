@@ -152,7 +152,41 @@
         gap:1.5rem;
     }
 }
-
+.table-basic {
+    border-top:.2rem solid var(--black);
+    width:100%;
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-size:2rem;
+    font-weight:500;
+    color:#333;
+    thead th {
+        padding:.8rem;
+        height:8rem;
+        text-align:center;
+        background-color:#FAFAFA;
+        border-bottom:.1rem solid var(--form_line);
+        border-right:.1rem solid var(--form_line);
+        &:last-child {
+            border-right:0;
+        }
+    }
+    td {
+        padding:.8rem;
+        height:8rem;
+        text-align:center;
+        background-color:#fff;
+        border-bottom:.1rem solid var(--form_line);
+        border-right:.1rem solid var(--form_line);
+        &:last-child {
+            border-right:0;
+        }
+        &.right-line {
+            border-right:.1rem solid var(--form_line) !important;
+        }
+    }
+}
 .table-scroll {
     position:relative;
     width:100%;
