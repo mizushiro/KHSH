@@ -535,4 +535,18 @@
     .circle-check {
         margin:0 auto;
     }
+    @media screen and (max-width:1023px) {
+        thead, tbody, tfoot {
+            th, td {
+                padding:0.8rem;
+            }
+        }
+        .circle-check {
+            width:1.6rem;
+            height:1.6rem;
+        }
+        table {
+            table-layout:auto;
+        }
+    }
 }
