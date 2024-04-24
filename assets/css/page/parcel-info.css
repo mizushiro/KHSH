@@ -507,6 +507,7 @@
             margin-top:1.2rem;
             .button-base {
                 min-height:5rem;
+                width:100%;
             }
         }
     }

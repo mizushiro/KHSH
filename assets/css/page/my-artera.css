@@ -1118,3 +1118,9 @@
         display:none;
     }
 }
+.mt-60 {
+    margin-top:6rem;
+    @media (max-width:1023px) {
+        margin-top:3rem;
+    }
+}
