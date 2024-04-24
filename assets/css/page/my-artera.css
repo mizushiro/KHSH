@@ -549,6 +549,16 @@
         font-size:1.6rem;
     }
 }
+.text-18 {
+    font-size:1.8rem;
+    color:var(--black);
+    line-height:1.4;
+    word-break:keep-all;
+    font-weight:500;
+    @media screen and (max-width:1023px) {
+        font-size:1.2rem;
+    }
+}
 .fake-table-box {
     border-top:0.2rem solid var(--black);
     /* ~ .fake-table-box {
