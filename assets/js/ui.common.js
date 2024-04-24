@@ -97,7 +97,6 @@
                 !UI.exe.scrollpage ? 
                 UI.exe.scrollpage = new ScrollPage() : '';
                 const footerMotion = (v, n) => {
-                console.log();
                     const _top = document.querySelector('.btn-top');
                     if (v.per_s > 1) { 
                         _top.style.transform = 'translateY('+ (v.element.offsetHeight * -1) / 10 +'rem)';
@@ -108,6 +107,10 @@
                     }
                 }
                 UI.callback.footerScroll = (v) => { footerMotion(v, [0]); }
+
+                document.querySelector('.footer-logo').addEventListener('click', () => {
+                    document.querySelector('html').dataset.ratio === 'false' ?  document.querySelector('html').dataset.ratio = 'true' : document.querySelector('html').dataset.ratio = 'false';
+                });
             }
         });
     }
