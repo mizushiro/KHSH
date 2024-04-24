@@ -45,7 +45,7 @@
     width:auto;
     display:flex;
     flex-wrap:wrap;
-    gap:8rem 5rem;
+    gap:8rem 4rem;
     margin:0 auto;
     .card-artera-item {
         width:calc((100% - 10rem) / 3);
@@ -74,7 +74,7 @@
     position:relative;
     box-shadow:0.6rem 0.6rem 3rem rgba(0,0,0,0.2);
     background-color:var(--white);
-    .title-size-40 {
+    .title-size-34 {
         margin-bottom:2rem;
         span {
             display:block;
@@ -163,7 +163,7 @@
     gap:1.6rem;
     justify-self:flex-end;
     align-self:flex-end;
-    padding:0 3.8rem 6rem;
+    padding:0 5.6rem 5.6rem;
     .button-base {
         min-width:0;
         flex:1;
@@ -230,7 +230,7 @@
     }
 }
 .card-artera-cont {
-    padding:3.8rem 3.8rem 4rem;
+    padding:5rem 5.6rem 4rem;
     width:100%;
     flex:1;
     display:flex;

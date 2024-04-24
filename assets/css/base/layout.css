@@ -176,10 +176,10 @@
                 background-color:var(--navy);
             }
         }
-        @media screen and (max-width:1600px) {
+        /*@media screen and (max-width:1600px) {
             height:6.8rem;
             font-size:2rem;
-        }
+        }*/
        
         @media screen and (max-width:1023px) {
             height:5.2rem;
