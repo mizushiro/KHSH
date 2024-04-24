@@ -132,10 +132,9 @@
     color:#000;
     padding:0 4rem;
 
-    @media screen and (max-width:1380px) {
+    /*@media screen and (max-width:1380px) {
         padding:0 0;
-
-    }
+    }*/
 }
 .nav-dep1-link {
     position:relative;

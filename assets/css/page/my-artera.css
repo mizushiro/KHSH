@@ -671,9 +671,9 @@
         &[data-rows="2"] {
             [data-type="title"] {
                 min-height:16rem;
-                @media screen and (max-width:1400px) {
+                /*@media screen and (max-width:1400px) {
                     min-height:12.8rem;
-                }
+                }*/
                 @media screen and (max-width:1023px) {
                     min-height:4rem;
                 }
@@ -712,7 +712,7 @@
                 min-width:0;
             }
         }
-        @media screen and (max-width:1400px) {
+        /*@media screen and (max-width:1400px) {
             .fake-table-item-cell {
                 font-size:1.6rem;
                 padding:0.8rem 1.2rem;
@@ -721,11 +721,11 @@
                     width:16rem;
                 }
             }
-        }
+        }*/
         @media screen and (max-width:1023px) {
             .fake-table-item-cell {
                 min-height:4rem;
-                font-size:1.5rem;
+                font-size:1.2rem;
                 line-height:2rem;
                 padding:1.2rem 1rem;
                 &[data-type="title"] {
@@ -769,6 +769,7 @@
                 min-height:0;
                 padding:0;
                 &[data-type="title"] {
+                    font-size:1.5rem;
                     width:100%;
                     padding:0;
                     margin-bottom:1rem;

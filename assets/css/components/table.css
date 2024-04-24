@@ -160,6 +160,24 @@
     font-size:2rem;
     font-weight:500;
     color:#333;
+    @media screen and (max-width:1023px) {
+        font-size:1.2rem;
+    }
+    &[data-layout="auto"] {
+        table-layout:auto;
+    }
+    &[data-view="pc"] {
+        @media screen and (max-width:1023px) {
+            display:none;
+        }
+    }
+    &[data-view="mobile"] {
+        display:none;
+        @media screen and (max-width:1023px) {
+            display:table;
+        }
+    }
+    tbody th,
     thead th {
         padding:0.8rem;
         height:8rem;
@@ -170,6 +188,19 @@
         &:last-child {
             border-right:0;
         }
+        @media screen and (max-width:1023px) {
+            height:4rem;
+        }
+    }
+    tbody {
+        @media screen and (max-width:1023px) {
+            ~ tbody {
+                border-top:.2rem solid var(--black);
+            }
+            th {
+                text-align:left;
+            }
+        }
     }
     td {
         padding:0.8rem;
@@ -178,12 +209,46 @@
         background-color:#fff;
         border-bottom:1px solid var(--form_line);
         border-right:1px solid var(--form_line);
+        word-break:break-all;
         &:last-child {
             border-right:0;
         }
         &.right-line {
             border-right:1px solid var(--form_line) !important;
         }
+        @media screen and (max-width:1023px) {
+            height:4rem;
+            text-align:left;
+        }
+    }
+    .tfoot td,
+    .tfoot th,
+    tfoot td,
+    tfoot th {
+        padding:0.8rem 1.6rem;
+        height:8rem;
+        text-align:center;
+        background-color:#F2F9FF;
+        border-right:1px solid var(--form_line);
+        border-bottom:1px solid var(--form_line);
+        &:last-child {
+            border-right:0;
+        }
+        @media screen and (max-width:1023px) {
+            height:4rem;
+            text-align:left;
+        }
+    }
+    tfoot {
+        @media screen and (max-width:1023px) {
+            th + td,
+            td:first-child {
+                border-right:0;
+            }
+        }
+    }
+    [data-color="red"] {
+        color:var(--red) !important;
     }
 }
 .table-scroll {
