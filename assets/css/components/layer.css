@@ -120,11 +120,9 @@ html[data-modal="show"] body {
 
         .table-input {
             border:0;
-            display:flex;
-            justify-content:center;
-            margin-top:-3rem;
-            table {
-                width:auto;
+            width:auto;
+            .form-input{
+                width:100%;
             }
         }
         &[data-gap="M"] {
@@ -148,8 +146,9 @@ html[data-modal="show"] body {
             }
         }
         @media screen and (max-width:1023px) {
-            padding:2rem 2rem 0;
+            padding:2rem 1rem 0;
             .table-input {
+                width:100%;
                 margin-top:0;
                 .col-th {
                     width:12rem;

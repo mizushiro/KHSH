@@ -102,7 +102,9 @@
                     <div class="conts-head mt-l">
                         <h3 class="conts-head-tit">입주날짜 예약</h3>
                     </div>
-                    <table class="table-calendar">
+
+
+                    <table class="table-calendar" data-view="pc">
                         <caption>일주날짜 예약 선택 표입니다.</caption>
                         <colgroup>
                             <col span="7">
@@ -392,6 +394,92 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <div class="datepicker-reserve mt-m" data-view="mobile">
+                        <div class="datepicker-reserve-head">
+                            <button type="button" class="prev-month" aria-label="이전 달"></button>
+                            <div>2024</div>
+                            <button type="button" class="next-month" aria-label="다음 달"></button>
+                        </div>
+                        <table class="table-datepicker">
+                            <caption>2024년 5월</caption>
+                            <colgroup>
+                                <col span="7">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <th scope="col">월</th>
+                                    <th scope="col">화</th>
+                                    <th scope="col">수</th>
+                                    <th scope="col">목</th>
+                                    <th scope="col">금</th>
+                                    <th scope="col">토</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td><button type="button" disabled>1</button></td>
+                                    <td><button type="button" disabled>2</button></td>
+                                    <td><button type="button" disabled>3</button></td>
+                                    <td><button type="button" disabled>4</button></td>
+                                    <td><button type="button" disabled>5</button></td>
+                                    <td><button type="button" disabled>6</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" disabled>7</button></td>
+                                    <td><button type="button" disabled>8</button></td>
+                                    <td><button type="button" disabled>9</button></td>
+                                    <td><button type="button" disabled>10</button></td>
+                                    <td><button type="button" disabled>11</button></td>
+                                    <td><button type="button" disabled>12</button></td>
+                                    <td><button type="button" disabled>13</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" disabled>14</button></td>
+                                    <td><button type="button" disabled>15</button></td>
+                                    <td><button type="button" disabled>16</button></td>
+                                    <td><button type="button" disabled>17</button></td>
+                                    <td><button type="button" disabled>18</button></td>
+                                    <td><button type="button" disabled>19</button></td>
+                                    <td><button type="button" disabled>20</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button" disabled>21</button></td>
+                                    <td><button type="button" class="selected">22</button></td>
+                                    <td><button type="button">23</button></td>
+                                    <td><button type="button">24</button></td>
+                                    <td><button type="button">25</button></td>
+                                    <td><button type="button">26</button></td>
+                                    <td><button type="button">27</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button type="button">28</button></td>
+                                    <td><button type="button">29</button></td>
+                                    <td><button type="button">30</button></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="datepicker-reserve-foot">
+                            <span class="choice-item">
+                                <input type="radio" id="movein-522-1" class="form-radio" name="movein">
+                                <label for="movein-522-1">10:00~11:00</label>
+                            </span>
+                            <span class="choice-item">
+                                <input type="radio" id="movein-522-2" class="form-radio" name="movein">
+                                <label for="movein-522-2">10:00~11:00</label>
+                            </span>
+                            <span class="choice-item">
+                                <input type="radio" id="movein-522-3" class="form-radio" name="movein">
+                                <label for="movein-522-3">10:00~11:00</label>
+                            </span>
+                        </div>
+                    </div>
                     <div class="table-bottom">
                         <a href="#" class="button-base" data-style="bg-primary" data-size="size-60">확인</a>
                     </div>

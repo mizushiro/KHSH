@@ -7,6 +7,8 @@
     justify-content:center;
     border:1px solid transparent;
     text-decoration:none;
+    text-align:center;
+    line-height:1.2;
     /*&:focus {
         text-decoration:underline;
         text-underline-offset:0.3rem;

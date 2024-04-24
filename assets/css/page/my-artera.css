@@ -42,9 +42,9 @@
         }
     }
     .mt-m {
-        margin-top:2.6rem;
+        margin-top:2.6rem !important;
         @media screen and (max-width:1023px) {
-            margin-top:1.6rem;
+            margin-top:1.6rem !important;
         }
     }
     @media screen and (max-width:1023px) {
@@ -85,14 +85,26 @@
     justify-content:space-between;
     align-items:center;
     padding:0 1.4rem 1.2rem;
+    
+    [data-bul] {transform:translateY(.3rem);}
     @media screen and (max-width:1023px) {
         padding:0.6rem 0.6rem;
+
+        &[data-dir-m="col"] {
+            flex-direction:column;
+            align-items: flex-start;
+            margin-bottom:1rem;
+        }
     }
 }
 .conts-head-group {
     display:flex;
     align-items:center;
     gap:3rem;
+
+    @media screen and (max-width:1023px) {
+        gap:1.5rem;
+    }
 }
 .radio-text {
     position:relative;
@@ -187,11 +199,14 @@
     gap:1rem;
     width:100%;
 
+    
+    &[data-size="300"] {
+        max-width: 30rem;
+    }
     &[data-dir="column"] {
         flex-direction:column;
         gap:2rem;
     }
-
     &[data-type="withdrawal-100"] {
         .form-input {
             max-width:80rem;
@@ -200,7 +215,6 @@
             padding:1.2rem;
         }
     }
-    
     &[data-type="email"] {
         .form-select {
             width:16.4rem;
@@ -272,6 +286,12 @@
             margin-top:1rem;
         }
     }
+    @media screen and (max-width:1023px) {
+        .form-select {
+            width:100%;
+        }
+    }
+    
 }
 .gray-box {
     padding:1.6rem 2rem;
@@ -289,6 +309,12 @@
     border:1px solid #ccc;
     overflow:hidden;
     overflow-y:auto;
+
+    @media screen and (max-width:1023px) {
+        padding:1rem;
+        font-size:1.2rem;
+        height:24rem;
+    }
 }
 .desc-box {
     display:flex;
@@ -337,7 +363,7 @@
     .btn-group {
         display:flex;
         gap:2rem;
-        align-items:center;
+        align-items:stretch;
         span {
            color:#ccc;
            font-size:2.2rem; 
@@ -353,7 +379,7 @@
         }
     }
     @media screen and (max-width:1023px) {
-        padding:2rem 1rem;
+        padding:2rem 1.6rem;
         margin-top:3rem;
         flex-direction:column;
         align-items:flex-start;
@@ -468,10 +494,10 @@
     }
     @media screen and (max-width:1023px) {
         li {
-            font-size:1.2rem;
+            font-size:1.5rem;
         }
         [data-bul="hyphen"] {
-            font-size:1.2rem;
+            font-size:1.5rem;
         }
     }
 }
@@ -489,11 +515,13 @@
             font-size:1.7rem;
         }
     }
+    dd[data-bul="dot"] {
+        font-size:1.8rem;
+    }
     @media screen and (max-width:1023px) {
         margin-top:3rem;
         dd[data-bul="dot"] {
             font-size:1.4rem;
-
             &::before {
                 top:0.8rem
             }
@@ -546,7 +574,7 @@
     word-break:keep-all;
     font-weight:500;
     @media screen and (max-width:1023px) {
-        font-size:1.6rem;
+        font-size:1.4rem;
     }
 }
 .text-18 {
@@ -1060,10 +1088,10 @@
 
     @media (max-width:1023px) {
         gap:1rem;
-        flex-direction: column;
+        flex-direction:column;
 
         .bs-step-item {
-            min-width: 100%;
+            min-width:100%;
             border-radius:0.4rem;
             height:20.7rem;
             flex-direction:row;
@@ -1074,14 +1102,14 @@
         .bs-step-tit {
             font-size:1.8rem;
             width:16rem;
-            text-align: center;
+            text-align:center;
         }
         .bs-step-txt {
             flex:1;
-            text-align: left;
+            text-align:left;
             font-size:1.4rem;
 
-            br{display: none;}
+            br{display:none;}
         }
     }
 }

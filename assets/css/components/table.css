@@ -26,6 +26,7 @@
     }
     @media screen and (max-width:1023px) {
         padding:2rem 1rem 3rem;
+        gap:2rem;
     }
     
 }
@@ -42,10 +43,103 @@
     font-weight:500;
     color:#333;
     
-    &[data-noline] {
-        border:0
+    &[data-size="s"] {
+        th {
+            padding:1.8rem 4rem 1.2rem;
+            @media screen and (max-width:1023px) {
+                padding:1rem 1rem;
+            }
+        }
+        td {
+            padding:1.2rem 4rem;
+            @media screen and (max-width:1023px) {
+                padding:0.8rem 0 0.8rem 0;
+            }
+        }
     }
+    [data-noline] {
+         border:0;
+    }
+    &:not([data-noline]) {
+        tbody:last-child tr:last-child td {
+            padding-bottom:4rem
+        };
+        colgroup + tbody tr:first-child {
+            th, td {
+                padding-top:3.6rem
+            }
+        };
 
+        &[data-size="s"] {
+            tbody:last-child tr:last-child td {
+                padding-bottom:4rem
+            };
+            colgroup + tbody tr:first-child {
+                th, td {
+                    padding-top:3.2rem
+                }
+            };
+            @media screen and (max-width:1023px) {
+                tbody:last-child tr:last-child td {
+                    padding-bottom:3rem
+                };
+                colgroup + tbody tr:first-child {
+                    th, td {
+                        padding-top:2.6rem
+                    }
+                };
+            }
+        }
+
+        @media screen and (max-width:1023px) {
+            padding:2.2rem 0;
+
+            tbody:last-child tr:last-child td {
+                padding-bottom:2.8rem
+            };
+            colgroup + tbody tr:first-child {
+                th, td {
+                    padding-top:2.6rem
+                }
+            };
+        }
+    }
+    &[data-layout="auto"] {
+        table-layout:auto;
+    }
+    &[data-th="m"] {
+        th {
+            width:20rem;
+
+            @media screen and (max-width:1023px) {
+                width:auto;
+            }
+        }
+    }
+    &[data-color="gray"] {
+        th {
+            padding: 2.2rem 4rem 1.7rem !important;
+            background-color: #FAFAFA;
+            border-right:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            vertical-align: middle;
+        }
+        td {
+            padding: 2rem 4rem 1.9rem !important;
+            background-color: #FFF;
+            border-left:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+        }
+        @media screen and (max-width:1023px) {
+            th {
+                padding: 1.5rem 1rem !important;
+            }
+            td {
+                padding: 1.5rem !important;
+            }
+        }
+    }
+    
     /* layer in */
     .layer-modal-body & {
         padding:0;
@@ -66,10 +160,10 @@
                 width:12rem;
             }
             th {
-                padding:0.8rem 1rem 0.5rem;
+                padding:0.8rem 1rem 0.5rem 0;
             }
             td {
-                padding:0.5rem 1rem 0.5rem 0;
+                padding:0.5rem 0rem 0.5rem 0;
             }
         }
     }
@@ -95,7 +189,7 @@
         padding:2rem 4rem;
         text-align:left;
         @media screen and (max-width:1023px) {
-            padding:0.8rem 1rem .8rem 0;
+            padding:0.8rem 0 0.8rem 0;
         }
     }
     .choice-item {
@@ -113,7 +207,7 @@
             width:100%;
         }
     }
-
+    
 }
 .table-bottom-add {
     position:relative;
@@ -123,7 +217,9 @@
     transform:translateY(2rem);
     @media screen and (max-width:1023px) {
         padding-left:0;
-        transform:translateY(1.5rem);
+        height:auto;
+        transform:translateY(0);
+        margin-top: 2rem;
         .button-base {
             min-height:3rem;
             font-size:1.4rem;
@@ -140,7 +236,7 @@
     gap:2rem;
     
     @media screen and (max-width:1023px) {
-        margin-top:6.2rem;
+        margin-top:4rem;
         gap:1.5rem;
     }
 }
@@ -194,6 +290,9 @@
         @media screen and (max-width:1023px) {
             ~ tbody {
                 border-top:.2rem solid var(--black);
+            }
+            &.table-basic-div {
+                border:0;
             }
             th {
                 text-align:left;
@@ -414,6 +513,13 @@
     font-size:2rem;
     font-weight:500;
     color:#333;
+
+    &[data-view="pc"] {
+        @media screen and (max-width:1023px) {
+            display:none;
+        }
+    }
+
     @media screen and (max-width:1023px) {
         font-size:1.5rem;
     }
@@ -614,3 +720,99 @@
         }
     }
 }
+
+.datepicker-reserve {
+    position:relative;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:2.4rem 0;
+
+    &[data-view="mobile"] {
+        display:none;
+        @media screen and (max-width:1023px) {
+            display:flex;
+        }
+    }
+
+    .datepicker-reserve-head {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:3.2rem;
+        font-weight:600;
+        button {
+            width:4rem;
+            height:4rem;
+            border-radius:50%;
+            border:1px solid #242A5C;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1rem;
+            
+            &.next-month {
+                rotate:180deg;
+            }
+            &:hover {
+                background-color:var(--navy);
+                background-image:url(../../images/common/swiper-arrow.svg);
+            }
+        }
+    }
+    .datepicker-reserve-foot {
+        display:flex;
+        flex-direction:column;
+        gap:2rem;
+
+        .form-radio {
+            margin-right:0.5rem;
+        }
+    }
+}
+.table-datepicker {
+    position:relative;
+    width:100%;
+    padding:0;
+    border-top:0.2rem solid var(--black);
+    border-bottom:1px solid #CCC;
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-size:2rem;
+    font-weight:500;
+    color:#333;
+
+    @media screen and (max-width:1023px) {
+        font-size:1.5rem;
+    }
+    thead th {
+        background-color:#FAFAFA;
+        border-bottom:1px solid #ccc;
+        font-size:1.5rem;
+        line-height:1;
+        font-weight:500;
+        height: 4rem;
+        text-align:center;
+    }
+    tbody td {
+        background-color:#FFF;
+        font-size:1.5rem;
+        line-height:1;
+        text-align:center;
+        height: 4rem;
+    }
+
+    button {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        background-color: #fff;
+
+        &.selected {
+            background-color:#ED0000;
+            color:#fff;
+        }
+    }
+}
+

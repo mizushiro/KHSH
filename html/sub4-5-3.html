@@ -45,64 +45,86 @@
                         </div>
                     </div>
 
-                    <div class="conts-head mt-l">
+                    <div class="conts-head mt-l" data-dir-m="col">
                         <h3 class="conts-head-tit">신청현황</h3>
                         <div data-bul="star">무순위/잔여세대 청약 신청 자료는 관리자에서 설정한 기간동안만 확인이 가능합니다.</div>
                     </div>
-                    <div class="fake-table-box">
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">신청일시</dt>
-                                <dd class="fake-table-item-cell">
-                                    2024-03-01 12:00:00
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">단지명</dt>
-                                <dd class="fake-table-item-cell">
-                                    포천 금호어울림 센트럴 무순위 청약
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">평형타입</dt>
-                                <dd class="fake-table-item-cell">
-                                    59㎡ – 100세대
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">당첨 발표 일시</dt>
-                                <dd class="fake-table-item-cell">
-                                    2024-03-01 12:00:00
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">신청일시</dt>
-                                <dd class="fake-table-item-cell">
-                                    2024-03-01 12:00:00
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">단지명</dt>
-                                <dd class="fake-table-item-cell">
-                                    포천 금호어울림 센트럴 무순위 청약
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">평형타입</dt>
-                                <dd class="fake-table-item-cell">
-                                    59㎡ – 100세대
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">당첨 발표 일시</dt>
-                                <dd class="fake-table-item-cell">
-                                    2024-03-01 12:00:00
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
+
+                     <table class="table-basic mt-l" data-layout="auto" data-view="pc">
+                        <colgroup>
+                            <col class="fix-th">
+                            <col span="6">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">신청일시</th>
+                            <th scope="col">단지명</th>
+                            <th scope="col">평형타입</th>
+                            <th scope="col">당첨 발표 일시</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2024-03-01 12:00:00</td>
+                            <td>포천 금호어울림 센트럴 무순위 청약</td>
+                            <td>59㎡ – 100세대</td>
+                            <td>2024-04-01 12:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-01 12:00:00</td>
+                            <td>포천 금호어울림 센트럴 무순위 청약</td>
+                            <td>59㎡ – 100세대</td>
+                            <td>2024-04-01 12:00:00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table-basic" data-view="mobile">
+                        <colgroup>
+                            <col style="width:10rem">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">신청일시</th>
+                            <td>2024-03-01 12:00:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">단지명</th>
+                            <td>포천 금호어울림 센트럴 무순위 청약</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">평형타입</th>
+                            <td>59㎡ – 100세대</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">당첨 발표 일시</th>
+                            <td>2024-04-01 12:00:00</td>
+                        </tr>
+                        </tbody>
+
+                        <tbody class="table-basic-div"><tr><td colspan="2"></td></Tr></tbody>
+                        <tbody>
+                        <tr>
+                            <th scope="row">신청일시</th>
+                            <td>2024-03-01 12:00:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">단지명</th>
+                            <td>포천 금호어울림 센트럴 무순위 청약</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">평형타입</th>
+                            <td>59㎡ – 100세대</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">당첨 발표 일시</th>
+                            <td>2024-04-01 12:00:00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    
                 </div>
             </article>
         </main>
