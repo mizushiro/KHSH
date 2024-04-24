@@ -35,6 +35,12 @@
     padding:2rem 0;
     border-bottom:1px solid var(--form_line);
     border-top:0.2rem solid var(--black);
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-size:2rem;
+    font-weight:500;
+    color:#333;
     
     &[data-noline] {
         border:0
@@ -44,45 +50,32 @@
     .layer-modal-body & {
         padding:0;
 
-        table {
-            .col-th {
-                width:16rem;
-            }
-            th {
-                padding:1.4rem 3rem 1rem;
-            }
-            td {
-                padding:1rem 3rem 1rem 0;
-            }
+        .col-th {
+            width:16rem;
+        }
+        th {
+            padding:1.4rem 3rem 1rem;
+        }
+        td {
+            padding:1rem 3rem 1rem 0;
         }
 
         @media screen and (max-width:1023px) {
-            table {
-                font-size:1.5rem;
-                .col-th {
-                    width:12rem;
-                }
-                th {
-                    padding:0.8rem 1rem 0.5rem;
-                }
-                td {
-                    padding:0.5rem 1rem 0.5rem 0;
-                }
+            font-size:1.5rem;
+            .col-th {
+                width:12rem;
+            }
+            th {
+                padding:0.8rem 1rem 0.5rem;
+            }
+            td {
+                padding:0.5rem 1rem 0.5rem 0;
             }
         }
     }
 
-    table {
-        table-layout:fixed;
-        border-collapse:collapse;
-        border-spacing:0;
-        font-size:2rem;
-        font-weight:500;
-        color:#333;
-
-        @media screen and (max-width:1023px) {
-            font-size:1.5rem;
-        }
+    @media screen and (max-width:1023px) {
+        font-size:1.5rem;
     }
     col.col-th {
         width:20.7rem;
@@ -415,18 +408,14 @@
     padding:0;
     border-bottom:1px solid var(--form_line);
     border-top:0.2rem solid var(--black);
-
-    table {
-        table-layout:fixed;
-        border-collapse:collapse;
-        border-spacing:0;
-        font-size:2rem;
-        font-weight:500;
-        color:#333;
-
-        @media screen and (max-width:1023px) {
-            font-size:1.5rem;
-        }
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-size:2rem;
+    font-weight:500;
+    color:#333;
+    @media screen and (max-width:1023px) {
+        font-size:1.5rem;
     }
     thead th {
         background-color:#FAFAFA;
@@ -487,18 +476,15 @@
     width:100%;
     padding:0;
     border-top:0.2rem solid var(--black);
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    font-size:2rem;
+    font-weight:500;
+    color:#333;
 
-    table {
-        table-layout:fixed;
-        border-collapse:collapse;
-        border-spacing:0;
-        font-size:2rem;
-        font-weight:500;
-        color:#333;
-
-        @media screen and (max-width:1023px) {
-            font-size:1.5rem;
-        }
+    @media screen and (max-width:1023px) {
+        font-size:1.5rem;
     }
     tfoot th {
         background-color:#FAFAFA;

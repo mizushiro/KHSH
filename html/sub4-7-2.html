@@ -51,83 +51,81 @@
                         회원정보의 정보수신 여부와는 별도로 회원 가입 시 입력하신 이메일로 보내드립니다.
                     </div>
                     
-                    <div class="table-input mt-m consulting" >
-                        <table>
-                            <caption>고객상담 신청 정보 등록 입력 표입니다.</caption>
-                            <colgroup>
-                                <col class="col-th" />
-                                <col class="col-td" />
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">성명</th>
-                                    <td>김금호</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">문의유형</th>
-                                    <td>
-                                        <div class="form-group">
-                                            <div class="form-select">
-                                                <select title="이메일주소 선택" id="mem3_2">
-                                                    <option value="1" selected>문의유형을 선택해주세요.</option>
-                                                    <option value="2">분양</option>
-                                                    <option value="3">대출</option>
-                                                    <option value="4">해지</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-select">
-                                                <select title="이메일주소 선택">
-                                                    <option value="1" selected>단지명을 선택해주세요.</option>
-                                                    <option value="2">분양</option>
-                                                    <option value="3">대출</option>
-                                                    <option value="4">해지</option>
-                                                </select>
-                                            </div>
+                    <table class="table-input mt-m consulting">
+                        <caption>고객상담 신청 정보 등록 입력 표입니다.</caption>
+                        <colgroup>
+                            <col class="col-th" />
+                            <col class="col-td" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">성명</th>
+                                <td>김금호</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">문의유형</th>
+                                <td>
+                                    <div class="form-group">
+                                        <div class="form-select">
+                                            <select title="이메일주소 선택" id="mem3_2">
+                                                <option value="1" selected>문의유형을 선택해주세요.</option>
+                                                <option value="2">분양</option>
+                                                <option value="3">대출</option>
+                                                <option value="4">해지</option>
+                                            </select>
                                         </div>
-                                        <p data-bul="star">문의유형을 지정하시면 빠른 답변을 받으실 수 있습니다.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="hp1">제목</label>
-                                    </th>
-                                    <td>
-                                        <div class="form-group">
-                                            <input type="text" class="form-input" id="hp1" value="" />
+                                        <div class="form-select">
+                                            <select title="이메일주소 선택">
+                                                <option value="1" selected>단지명을 선택해주세요.</option>
+                                                <option value="2">분양</option>
+                                                <option value="3">대출</option>
+                                                <option value="4">해지</option>
+                                            </select>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="hp2">내용</label>
-                                    </th>
-                                    <td>
-                                        <div class="form-group">
-                                            <textarea class="form-input" id="hp2" >
+                                    </div>
+                                    <p data-bul="star">문의유형을 지정하시면 빠른 답변을 받으실 수 있습니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="hp1">제목</label>
+                                </th>
+                                <td>
+                                    <div class="form-group">
+                                        <input type="text" class="form-input" id="hp1" value="" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="hp2">내용</label>
+                                </th>
+                                <td>
+                                    <div class="form-group">
+                                        <textarea class="form-input" id="hp2" >
 
-                                            </textarea>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">SMS수신동의</th>
-                                    <td>
-                                        <div class="form-group" data-type="rec-info">
-                                            <span class="choice-item">
-                                                <input type="radio" id="hp3-1" class="form-radio" name="hp3">
-                                                <label for="hp3-1">수신</label>
-                                            </span>
-                                            <span class="choice-item">
-                                                <input type="radio" id="hp3-2" class="form-radio" name="hp3">
-                                                <label for="hp3-2">수신하지 않음</label>
-                                            </span>
-                                            <span class="form-innertxt" data-bul="star">1:1문의 SMS 수신동의는 회원정보의 정보수신여부와는 별도로 처리됩니다.</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SMS수신동의</th>
+                                <td>
+                                    <div class="form-group" data-type="rec-info">
+                                        <span class="choice-item">
+                                            <input type="radio" id="hp3-1" class="form-radio" name="hp3">
+                                            <label for="hp3-1">수신</label>
+                                        </span>
+                                        <span class="choice-item">
+                                            <input type="radio" id="hp3-2" class="form-radio" name="hp3">
+                                            <label for="hp3-2">수신하지 않음</label>
+                                        </span>
+                                        <span class="form-innertxt" data-bul="star">1:1문의 SMS 수신동의는 회원정보의 정보수신여부와는 별도로 처리됩니다.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                   
                     <div class="table-bottom">
                         <a href="#" class="button-base" data-style="line-primary" data-size="size-60">취소</a>
