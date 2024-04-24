@@ -2,7 +2,7 @@
 
 .button-base {
     position:relative;
-    display:flex;
+    display:inline-flex;
     align-items:center;
     justify-content:center;
     border:1px solid transparent;
@@ -132,4 +132,10 @@
             word-break:keep-all;
         }
     }
+}
+.table-in-btn {
+    display:flex;
+    gap:.8rem;
+    align-items:center;
+    justify-content:center;
 }

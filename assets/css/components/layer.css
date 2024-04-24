@@ -131,7 +131,17 @@ html[data-modal="show"] body {
             display:flex;
             flex-direction:column;
             gap:4rem;
-            > * {width:100%;}
+            > * {
+                width:100%;
+            }
+            .beige-box {
+                margin:0 2rem;
+                width:auto;
+                ~ .text-24 {
+                    margin:0 2rem;
+                    width:auto;
+                }
+            }
             @media screen and (max-width:1023px) {
                 gap:2rem;
                 padding:3rem 0 0;

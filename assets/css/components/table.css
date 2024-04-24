@@ -87,7 +87,7 @@
     col.col-th {
         width:20.7rem;
         @media screen and (max-width:1023px) {
-            width:10.5rem;
+            width:11.5rem;
         }
     }
     th {
@@ -101,9 +101,8 @@
     td {
         padding:2rem 4rem;
         text-align:left;
-
         @media screen and (max-width:1023px) {
-            padding:0.8rem 1rem;
+            padding:0.8rem 1rem .8rem 0;
         }
     }
     .choice-item {
@@ -198,14 +197,13 @@
         width:100%;
         overflow-x:auto;
         background-color:#fff;
-        padding-right:2rem;
         -webkit-overflow-scrolling:touch;
         /* overscroll-behavior:none; */
         table {
             width:100%;
-            @media screen and (max-width:1023px) {
+            /*@media screen and (max-width:1023px) {
                 width:120rem;
-            }
+            }*/
             &[data-fix="1"] {
                 tr td:first-child,
                 tr th:first-child {
@@ -222,6 +220,23 @@
                     }
                 }
             }
+            /*tr > *:first-child {
+                width:10rem;
+                @media screen and (max-width:1400px) {
+                    width:8rem;
+                }
+                @media screen and (max-width:1023px) {
+                    width:6rem;
+                }
+            }
+            &[data-fix-size="s"] {
+                tr > *:first-child {
+                    width:10rem;
+                    @media screen and (max-width:1023px) {
+                        width:4rem;
+                    }
+                }
+            }*/
         }
         
     }
@@ -233,28 +248,12 @@
         font-weight:500;
         color:#333;
     }
-    .table-scroll-fix table tr > *:first-child {
-        width:11rem;
-        @media screen and (max-width:1400px) {
-            width:9rem;
-        }
-        @media screen and (max-width:1023px) {
-            width:7rem;
-        }
+    col {
+        width:auto;
     }
-    .table-scroll-x table tr > *:first-child {
-        width:10rem;
-        @media screen and (max-width:1400px) {
-            width:8rem;
-        }
-        @media screen and (max-width:1023px) {
-            width:6rem;
-        }
-    }
-    col {width:auto;}
     .thead td,
     thead th {
-        padding:0.8rem;
+        padding:0.8rem 1.6rem;
         height:8rem;
         text-align:center;
         background-color:#FAFAFA;
@@ -265,7 +264,7 @@
         }
     }
     td {
-        padding:0.8rem;
+        padding:0.8rem 1.6rem;
         height:8rem;
         text-align:center;
         background-color:#fff;
@@ -277,9 +276,9 @@
     }
     .tfoot td,
     .tfoot th,
-    tfoot td, 
+    tfoot td,
     tfoot th {
-        padding:0.8rem;
+        padding:0.8rem 1.6rem;
         height:8rem;
         text-align:center;
         background-color:#FAFAFA;
@@ -289,12 +288,13 @@
             border-right:0;
         }
     }
-
+    .button-base {
+        min-width:8.2rem;
+    }
     @media screen and (max-width:1400px) {
         .thead, .tbody, .tfoot, thead, tbody, tfoot {
             th, td {
                 font-size:1.6rem;
-                padding:0.8rem 1.2rem;
                 height:6.4rem;
                 &[data-type="title"] {
                     width:16rem;
@@ -319,13 +319,19 @@
                 height:4rem;
                 font-size:1.5rem;
                 line-height:2rem;
-                padding:1.2rem 1rem;
+                padding:1.2rem 1.6rem;
+                white-space:nowrap;
             }
             th {
-                width:10.5rem;
+                /*width:10.5rem;*/
                 justify-content:flex-start;
                 border-right:1px solid var(--form_line);
             }
+        }
+        .button-base {
+            min-height:3rem;
+            min-width:0;
+            padding:0 1.6rem;
         }
     }
 }
@@ -520,7 +526,7 @@
         }
     }
 }
-.table-scroll {
+/*.table-scroll {
     tr > *:first-child {
         width:15rem;
     }
@@ -529,8 +535,7 @@
             width:11rem;
         }
     }
-
-}
+}*/
 .table-data.repair {
     .circle-check {
         margin:0 auto;

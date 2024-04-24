@@ -191,10 +191,10 @@
         text-indent:-1.6rem;
     }
     @media screen and (max-width:1023px) {
-        font-size:1.2rem;
-        padding-left:0.8rem;
+        font-size:1.4rem;
+        padding-left:1.2rem;
         &::before {
-            text-indent:-0.8rem;
+            text-indent:-1.2rem;
         }
     }
 }
