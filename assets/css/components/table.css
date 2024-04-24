@@ -175,6 +175,11 @@
         display:none;
         @media screen and (max-width:1023px) {
             display:table;
+            .button-base {
+                width:100%;
+                min-height:3rem;
+                font-size:1.2rem;
+            }
         }
     }
     tbody th,
@@ -199,6 +204,9 @@
             }
             th {
                 text-align:left;
+            }
+            td br {
+                display:none;
             }
         }
     }

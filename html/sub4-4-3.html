@@ -64,61 +64,131 @@
                         </fieldset>
                     </div>
 
-                    <div class="table-scroll">
-                        <div class="table-scroll-x">
-                            <table data-fix="1">
-                                <colgroup>
-                                    <col class="fix-th">
-                                    <col span="6">
-                                </colgroup>
-                                <thead>
-                                <tr>
-                                    <th scope="col">예약번호</th>
-                                    <th scope="col">단지명</th>
-                                    <th scope="col">방문목적</th>
-                                    <th scope="col">방문일정</th>
-                                    <th scope="col">방문장소</th>
-                                    <th scope="col">신청일시</th>
-                                    <th scope="col">예약상태</th>
-                                    <th scope="col">관리</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>20240401-100</td>
-                                    <td>청수행정타운 금호호어울림</td>
-                                    <td>모델하우스<br>방문예약</td>
-                                    <td>2020-12-31 <br>14:00~15:00</td>
-                                    <td>OO금호어울림 견본주택</td>
-                                    <td>yyyy-mm-dd <br>hh:mm:ss</td>
-                                    <td>예약</td>
-                                    <td>
-                                        <div class="table-in-btn">
-                                            <button type="button" class="button-base" data-style="bg-primary" data-size="size-40">수정</button>
-                                            <button type="button" class="button-base" data-style="line-primary" data-size="size-40">취소</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>20240401-100</td>
-                                    <td>청수행정타운 금호호어울림</td>
-                                    <td>모델하우스<br>방문예약</td>
-                                    <td>2020-12-31 <br>14:00~15:00</td>
-                                    <td>OO금호어울림 견본주택</td>
-                                    <td>yyyy-mm-dd <br>hh:mm:ss</td>
-                                    <td>예약</td>
-                                    <td>
-                                        <div class="table-in-btn">
-                                            <button type="button" class="button-base" data-style="bg-primary" data-size="size-40">수정</button>
-                                            <button type="button" class="button-base" data-style="line-primary" data-size="size-40">취소</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <table class="table-basic" data-layout="auto" data-view="pc">
+                        <colgroup>
+                            <col class="fix-th">
+                            <col span="6">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">예약번호</th>
+                            <th scope="col">단지명</th>
+                            <th scope="col">방문목적</th>
+                            <th scope="col">방문일정</th>
+                            <th scope="col">방문장소</th>
+                            <th scope="col">신청일시</th>
+                            <th scope="col">예약상태</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>20240401-100</td>
+                            <td>청수행정타운 금호호어울림</td>
+                            <td>모델하우스<br>방문예약</td>
+                            <td>2020-12-31 <br>14:00~15:00</td>
+                            <td>OO금호어울림 견본주택</td>
+                            <td>yyyy-mm-dd <br>hh:mm:ss</td>
+                            <td>예약</td>
+                            <td>
+                                <div class="table-in-btn">
+                                    <button type="button" class="button-base" data-style="bg-primary" data-size="size-40">수정</button>
+                                    <button type="button" class="button-base" data-style="line-primary" data-size="size-40">취소</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20240401-100</td>
+                            <td>청수행정타운 금호호어울림</td>
+                            <td>모델하우스<br>방문예약</td>
+                            <td>2020-12-31 <br>14:00~15:00</td>
+                            <td>OO금호어울림 견본주택</td>
+                            <td>yyyy-mm-dd <br>hh:mm:ss</td>
+                            <td>예약</td>
+                            <td>종료</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                    </div>
+                    <table class="table-basic" data-view="mobile">
+                        <colgroup>
+                            <col style="width:100px">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">예약번호</th>
+                            <td>20240401-100</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">단지명</th>
+                            <td>청수행정타운 금호호어울림</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">방문목적</th>
+                            <td>모델하우스<br>방문예약</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">방문일정</th>
+                            <td>2020-12-31 <br>14:00~15:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">방문장소</th>
+                            <td>OO금호어울림 견본주택</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">신청일시</th>
+                            <td>yyyy-mm-dd <br>hh:mm:ss</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">예약상태</th>
+                            <td>예약</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관리</th>
+                            <td>
+                                <div class="table-in-btn">
+                                    <button type="button" class="button-base" data-style="bg-primary" data-size="size-40">수정</button>
+                                    <button type="button" class="button-base" data-style="line-primary" data-size="size-40">취소</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <th scope="row">예약번호</th>
+                            <td>20240401-100</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">단지명</th>
+                            <td>청수행정타운 금호호어울림</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">방문목적</th>
+                            <td>모델하우스<br>방문예약</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">방문일정</th>
+                            <td>2020-12-31 <br>14:00~15:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">방문장소</th>
+                            <td>OO금호어울림 견본주택</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">신청일시</th>
+                            <td>yyyy-mm-dd <br>hh:mm:ss</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">예약상태</th>
+                            <td>예약</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">관리</th>
+                            <td>종료</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
                 </div>
             </article>
