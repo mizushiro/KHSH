@@ -405,6 +405,12 @@
             color:var(--orange);
         }
     }
+    .progress-bar {
+        height:.8rem;
+        .progress-bar-value {
+            background-color:var(--orange);
+        }
+    }
     @media screen and (max-width:1023px) {
         font-size:1.5rem;
         gap:1.6rem;
