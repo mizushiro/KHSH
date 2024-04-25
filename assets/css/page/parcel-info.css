@@ -103,14 +103,9 @@
             word-break:keep-all;
         }
         &[data-type="point"] {
-            dt {
-                line-height:3.8rem;
-            }
             dd {
-                color:var(--orange);
-                font-size:3.2rem;
-                font-weight:700;
-                line-height:3.8rem;
+                color:var(--black);
+                font-weight:600;
             }
         }
         @media screen and (max-width:1023px) {
@@ -119,15 +114,6 @@
             gap:1.2rem;
             dt {
                 width:5.6rem;
-            }
-            &[data-type="point"] {
-                dt {
-                    line-height:2.8rem;
-                }
-                dd {
-                    font-size:2.4rem;
-                    line-height:2.8rem;
-                }
             }
         }
     }
@@ -145,7 +131,7 @@
     flex-shrink:0;
 }
 .progress-bar {
-    height:0.8rem;
+    height:.4rem;
     flex:1;
     background-color:#D9D9D9;
     position:relative;
@@ -154,7 +140,7 @@
         position:absolute;
         left:0;
         top:0;
-        background-color:var(--orange);
+        background-color:var(--skyblue);
     }
 }
 .card-artera-link {
@@ -171,7 +157,7 @@
     @media screen and (max-width:1023px) {
         padding:0 2rem 3rem;
         gap:1rem;
-        .button-base {
+        .button-base[data-size="size-60"] {
             min-height:3.8rem;
             font-size:1.6rem;
         }
