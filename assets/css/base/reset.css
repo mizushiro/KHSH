@@ -45,7 +45,6 @@ body {
     font-family:'Base', sans-serif;
     color:#000;
     font-size:1.6rem;
-    word-break:keep-all;
     -webkit-font-smoothing:antialiased;
     -webkit-text-size-adjust:none;
     -moz-osx-font-smoothing:grayscale;
