@@ -41,14 +41,14 @@
     }
 }
 .card-artera {
-    max-width:160rem;
+    max-width:148rem;
     width:auto;
     display:flex;
     flex-wrap:wrap;
     gap:8rem 4rem;
     margin:0 auto;
     .card-artera-item {
-        width:calc((100% - 10rem) / 3);
+        width:calc((100% - 8rem) / 3);
     }
     @media screen and (max-width:1023px) {
         gap:4rem 2rem;
