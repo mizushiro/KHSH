@@ -959,11 +959,11 @@ class Tab {
         this.onepanel = opt.onepanel;
         this.callback = opt.callback;
         this.tab = document.querySelector('.mdl-tab[data-tab-id="'+ this.id +'"]');
-        this.tab_btns = this.tab.querySelectorAll('.mdl-tab-btn');
+        this.tab_btns = this.tab?.querySelectorAll('.mdl-tab-btn');
         this.pnl = document.querySelector('.mdl-tab-pnl[data-tab-id="'+ this.id +'"]');
-        this.items = this.pnl.querySelectorAll('.mdl-tab-item');
+        this.items = this.pnl?.querySelectorAll('.mdl-tab-item');
 
-        this.init();
+        this.tab && this.init();
     }
     init() {
         let para = UI.parts.paraGet(this.id);
