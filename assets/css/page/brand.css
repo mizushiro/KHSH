@@ -16,6 +16,13 @@
             background-color:var(--orange);
         }
     }
+    @media screen and (max-width:1023px) {
+        padding:3rem 2rem;
+        margin-top:2rem;
+        ~ .award-box {
+            margin-top:3rem;
+        }
+    }
 }
 .award-content {
     display:flex;
@@ -23,6 +30,10 @@
     gap:16rem;
     max-width:106rem;
     margin:0 auto;
+    @media screen and (max-width:1023px) {
+        flex-direction:column;
+        gap:2.8rem;
+    }
 }
 .award-year {
     width:19rem;
@@ -37,12 +48,20 @@
     color:var(--white);
     line-height:4.8rem;
     font-weight:600;
+    @media screen and (max-width:1023px) {
+        width:10rem;
+        font-size:2rem;
+        line-height:2.8rem;
+    }
 }
 .mini-logo {
     aspect-ratio:53/39;
     display:block;
     width:5.3rem;
     background:url("../../images/common/mini-logo.svg") no-repeat 50% 50% /contain;
+    @media screen and (max-width:1023px) {
+        width:2.4rem;
+    }
 }
 .award-list {
     flex:1;
@@ -54,6 +73,10 @@
         line-height:3.2rem;
         color:var(--black);
         font-weight:500;
+        @media screen and (max-width:1023px) {
+            font-size:1.4rem;
+            line-height:2rem;
+        }
     }
     .magazine-name {
         color:var(--gray_800);
