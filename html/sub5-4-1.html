@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>ARTERA 금호건설</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap">
+        <header class="base-header" data-id="header"></header>
+        <main class="base-main">
+            <div class="sub-title" data-bg="sub5-1">
+                <h2>아이디/비밀번호 찾기</h2>
+                <img src="../assets/images/sub/sub-visual-5-4.jpg" alt="">
+            </div>
+
+            <article class="content-area">
+                <div class="sub-content pt-80">
+
+                    <div class="mdl-tab" data-tab-id="tabBox">
+                        <div class="tab-type-box" data-flex="wrap">
+                            <button type="button" class="mdl-tab-btn" data-tab="1-1">
+                                <span>아이디 찾기</span>
+                            </button>
+                            <button type="button" class="mdl-tab-btn" data-tab="2-1">
+                                <span>비밀번호 찾기</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mdl-tab-pnl" data-tab-id="tabBox">
+                        <section class="mdl-tab-item" data-tab="1-1">
+                            아이디 찾기
+                        </section>
+                        <section class="mdl-tab-item" data-tab="2-1">
+                            비밀번호 찾기
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer class="base-footer" data-id="footer"></footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            UI.exe.idpwTab = new Tab({
+                id: 'tabBox',
+                current: '1-1',
+                callback: (v) => {
+                    console.log(v)
+                }
+            });
+        }); 
+    </script>
+</body>
+</html>
