@@ -631,7 +631,7 @@ html[data-modal="show"] body {
             }
         }
 
-        @media screen and (max-width:1400px) {
+        @media screen and (max-width:1023px) {
             padding:0;
             align-items:flex-start;
             justify-content:flex-start;
@@ -963,7 +963,7 @@ html[data-modal="show"] body {
             }
         }
 
-        @media screen and (max-width:1400px) {
+        @media screen and (max-width:1023px) {
             padding:0;
             align-items:flex-start;
             height:100%;
