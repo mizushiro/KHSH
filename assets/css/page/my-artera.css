@@ -360,6 +360,7 @@
         flex:1;
         font-weight:600;
     }
+  
     .btn-group {
         display:flex;
         gap:2rem;
@@ -392,6 +393,11 @@
                 font-size:1.4rem;
                 min-width:0;
             }
+        }
+        .info-group {
+            width: 100%;
+            text-align: right;
+            justify-content: flex-end;
         }
     }
 }
@@ -836,6 +842,7 @@
         .sub-depth-list,
         .breadcrumbs,
         .sub-title,
+        .sub-depth-nav,
         .base-header,
         .base-footer {
             display:none !important;
@@ -1067,10 +1074,9 @@
         align-items:center;
         height:31.7rem;
         flex-direction:column;
-        padding:2.4rem;
+        padding:2.4rem 1.2rem;
         gap:3rem;
     }
-
     .bs-step-tit {
         font-size:2.8rem;
         font-weight:700;
@@ -1085,7 +1091,11 @@
         line-height:1.4;
         text-align:center;
     }
-
+    @media (max-width:1400px) {
+        .bs-step-txt {
+            br{display:none;}
+        }
+    }
     @media (max-width:1023px) {
         gap:1rem;
         flex-direction:column;

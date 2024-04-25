@@ -582,7 +582,7 @@
     width:100%;
     padding:0;
     border-top:0.2rem solid var(--black);
-    table-layout:fixed;
+    table-layout:auto;
     border-collapse:collapse;
     border-spacing:0;
     font-size:2rem;
@@ -662,6 +662,7 @@
             font-weight:500;
             padding:2.55rem 2.4rem;
             text-align:center;
+            width: 20rem;
             &:first-child {
                 border-left:0;
             }
@@ -675,8 +676,13 @@
         }
         @media screen and (max-width:1600px) {
             thead, tbody, tfoot {
+                th {
+                    width: 10.5rem;
+                    text-align: left;
+                }
                 th, td {
                     font-size:1.6rem;
+                    padding:1rem;
                 }
             }
         }
@@ -687,6 +693,8 @@
         thead, tbody, tfoot {
             th, td {
                 font-size:1.6rem;
+                word-break: break-all;
+                padding:1rem;
             }
         }
     }
