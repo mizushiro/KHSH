@@ -107,10 +107,6 @@
                     }
                 }
                 UI.callback.footerScroll = (v) => { footerMotion(v, [0]); }
-
-                document.querySelector('.footer-logo').addEventListener('click', () => {
-                    document.querySelector('html').dataset.ratio === 'false' ?  document.querySelector('html').dataset.ratio = 'true' : document.querySelector('html').dataset.ratio = 'false';
-                });
             }
         });
     }

@@ -2,25 +2,15 @@
 
 html {
     font-size:10px;
-    &[data-ratio="true"] {
-        @media screen and (max-width:1760px) {
-            font-size:0.5682vw;
-        }  
-        @media screen and (max-width:1023px) {
-            font-size:10px;
-        }
-        @media screen and (max-width:370px) {
-            font-size:2.66vw;
-        }
+    @media screen and (max-width:1760px) {
+        font-size:0.5682vw;
     }
-    &[data-ratio="false"] {
-        @media screen and (max-width:1023px) {
-            font-size:10px;
-        }
-        @media screen and (max-width:370px) {
-            font-size:2.66vw;
-        }
-    } 
+    @media screen and (max-width:1023px) {
+        font-size:10px;
+    }
+    @media screen and (max-width:370px) {
+        font-size:2.66vw;
+    }
 }
 html,body {padding:0;}
 
