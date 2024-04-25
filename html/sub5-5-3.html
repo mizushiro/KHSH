@@ -27,6 +27,139 @@
             <article class="content-area">
                 <div class="sub-content pt-80">
 
+                    <div class="conts-head mt-l" data-dir-m="col">
+                        <h3 class="conts-head-tit">계약정보</h3>
+                        <p class="text-20">분양 계약정보를 수정하시려면 각 사업소에서 본인 확인 절차를 거친 후 변경이 가능합니다.</p>
+                    </div>
+                    <div class="fake-table-box">
+                        <div class="fake-table-row">
+                            <dl class="fake-table-item">
+                                <dt class="fake-table-item-cell" data-type="title" data-bg="sky">회원구분</dt>
+                                <dd class="fake-table-item-cell">일반고객</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="conts-head mt-60">
+                        <h3 class="conts-head-tit">기본정보 입력</h3>
+                        <div data-bul="star">필수 입력사항</div>
+                    </div>
+                    <table class="table-input">
+                        <caption>회원가입을 위한 정보 등록 입력 표입니다.</caption>
+                        <colgroup>
+                            <col class="col-th" />
+                            <col class="col-td" />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">이름</th>
+                            <td>김금호</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="id-value">아이디 <b class="ico-req" aria-label="필수 입력사항">*</b></label>
+                            </th>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-input" id="id-value" value="1234567" />
+                                    <button type="button" class="button-base" data-style="bg-dark" data-size="size-40">중복확인</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="mem1">비밀번호 <b class="ico-req" aria-label="필수 입력사항">*</b></label>
+                            </th>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-input" id="mem1" value="1234567" />
+                                </div>
+                                <p class="form-desc">8~16자의 영문, 숫자, 특수문자의 조합</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="mem1-2">비밀번호 확인 <b class="ico-req" aria-label="필수 입력사항">*</b></label>
+                            </th>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-input" id="mem1-2" value="1234567" />
+                                </div>
+                                <p class="form-desc">동일하게 입력해주세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="mem2">
+                                    핸드폰 번호
+                                    <b class="ico-req" aria-label="필수 입력사항">*</b>
+                                </label>
+                            </th>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-input" value="010-1234-5678" id="mem2" required />
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="mem3">
+                                    이메일 주소
+                                    <b class="ico-req" aria-label="필수 입력사항">*</b>
+                                </label>
+                            </th>
+                            <td>
+                                <div class="form-group" data-type="email">
+                                    <input type="text" class="form-input" value="kumho@naver.com" id="mem3" required />
+                                    <div class="form-select">
+                                        <select title="이메일주소 선택" id="mem3_2">
+                                            <option value="1" selected>naver.com</option>
+                                            <option value="2">daum.com</option>
+                                            <option value="3">nate.com</option>
+                                            <option value="4">gmail.com</option>
+                                            <option value="5">직접입력</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">정보수신여부</th>
+                            <td>
+                                <div class="form-group" data-type="rec-info">
+                                    <span class="choice-item">
+                                        <input type="checkbox" id="mem4-1" class="form-checkbox">
+                                        <label for="mem4-1">이메일</label>
+                                    </span>
+                                    <span class="choice-item">
+                                        <input type="checkbox" id="mem4-2" class="form-checkbox">
+                                        <label for="mem4-2">SMS(문자메시지)</label>
+                                    </span>
+                                    <span class="form-innertxt">금호 아테라에서 제공하는 정보를 받아보실 수 있습니다.</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주소</th>
+                            <td>
+                                <div class="form-group" data-type="zip-code">
+                                    <input type="text" class="form-input" title="우편번호" readonly />
+                                    <button type="button" class="button-base" data-style="bg-dark" data-size="size-40">우편번호</button>
+                                </div>
+                                <div class="form-group" data-type="address">
+                                    <input type="text" class="form-input" title="주소" readonly />
+                                    <input type="text" class="form-input" title="상세주소" />
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="table-bottom">
+                        <a href="#" class="button-base" data-style="line-primary" data-size="size-60">취소</a>
+                        <a href="#" class="button-base" data-style="bg-primary" data-size="size-60">회원가입</a>
+                    </div>
                 </div>
             </article>
         </main>

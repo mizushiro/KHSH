@@ -1134,3 +1134,14 @@
         margin-top:3rem;
     }
 }
+.form-desc {
+    font-size:1.6rem;
+    margin-top:1.6rem;
+    line-height:1.9rem;
+    color:var(--gray_300);
+    @media (max-width:1023px) {
+        font-size:1.2rem;
+        margin-top:.4rem;
+        line-height:1.6rem;
+    }
+}
