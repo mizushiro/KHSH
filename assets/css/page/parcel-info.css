@@ -1277,3 +1277,13 @@
     background:url("../../images/common/ico-noti.svg") no-repeat 50% 50%;
     background-size:contain;
 }
+.admin-image {
+    width:100%;
+    margin-top:2rem;
+    img {
+        width:100%;
+    }
+    @media screen and (max-width:1023px) {
+        margin-top:1rem;
+    }
+}

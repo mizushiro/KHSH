@@ -1,7 +1,7 @@
 .base-footer {
     width:100%;
     background-color:var(--navy);
-    padding:12rem 2.4rem;
+    padding:3.6rem 2.4rem;
     @media screen and (max-width:800px) {
         padding:3rem 2rem;
     }
@@ -14,10 +14,14 @@
     padding:0;
     display:flex;
     justify-content:space-between;
+    .footer-logo {
+        margin-top:3.8rem;
+    }
     @media screen and (max-width:800px) {
         flex-direction:column;
         .footer-logo {
-            margin-bottom:3rem;
+            margin-bottom:2rem;
+            margin-top:0;
             img {
                 width:11rem;
             }
@@ -103,18 +107,19 @@
 
     @media screen and (max-width:800px) {
         align-items:flex-start;
-        font-size:1.5rem;
+        font-size:1.2rem;
+        gap:1.5rem;
         address {
             text-align:left;
-            font-size:1.5rem;
-            line-height:2.1rem;
+            font-size:1.2rem;
+            line-height:1.9rem;
             span {
                 display:block;
             }
         }
         .copyright {
-            margin-top:3rem;
-            font-size:1.4rem;
+            margin-top:2rem;
+            font-size:1.2rem;
         }
     }
 }
