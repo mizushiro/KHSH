@@ -176,3 +176,26 @@
         }
     }
 }
+.board-view-box {
+
+}
+.board-title-area {
+    border-bottom:.2rem solid var(--black);
+    padding:2.4rem 4rem;
+    display:flex;
+    align-items:flex-end;
+    gap:2rem;
+    .board-title {
+        flex:1;
+        font-size:3rem;
+        font-weight:600;
+        line-height:3.6rem;
+        color:var(--black);
+    }
+    .board-date {
+        font-size:2rem;
+        color:var(--gray_800);
+        font-weight:300;
+        flex-shrink:0;
+    }
+}
