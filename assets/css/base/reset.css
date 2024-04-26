@@ -154,6 +154,26 @@ body {
 .base-wrap {
     position:relative;
     width:100%;
+    &[data-page="login"] {
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        .base-main {
+            flex:1;
+            background:url("../../images/sub/login-bg.jpg") no-repeat 50% 50% / cover;
+        }
+        .base-footer {
+            flex-shrink:0;
+        }
+        .content-area {
+            padding:24rem 0 12rem;
+        }
+        @media screen and (max-width:1023px) {
+            .content-area {
+                padding:12rem 2rem 6rem;
+            }
+        }
+    }
 }
 .base-main {
     position:relative;
