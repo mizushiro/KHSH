@@ -3,6 +3,36 @@
     @media screen and (max-width:1023px) {
         margin:3rem 0 4rem;
     }
+    .sub-title & {
+        margin:0;
+        padding-top:6rem;
+        width:58rem;
+        max-width:calc(100% - 8rem);
+        .search-form {
+            gap:1.6rem;
+            padding:0 1.6rem;
+        }
+        .btn-clear {
+            background-color:#545A8E;
+        }
+        .btn-search {
+            background-image:url(../../images/common/ico-search.svg);
+        }
+        input {
+            color:var(--white);
+            font-size:2.4rem;
+        }
+        @media screen and (max-width:1023px) {
+            padding-top:4rem;
+            .search-form {
+                padding:0 .8rem;
+                gap:1.2rem;
+            }
+            input {
+                font-size:2rem;
+            }
+        }
+    }
     .search-form {
         max-width:80rem;
         margin:0 auto;
@@ -243,6 +273,140 @@
         font-size:1.4rem;
         .board-content-data {
             margin-top:2rem;
+        }
+    }
+}
+.sh-desc {
+    font-size:3.6rem;
+    font-weight:500;
+    color:var(--black);
+    line-height:3.6rem;
+    margin-bottom:4rem;
+    .sh-desc-point {
+        color:var(--orange);
+        font-weight:600;
+    }
+    @media screen and (max-width:1023px) {
+        font-size:2rem;
+        line-height:2.8rem;
+        margin-bottom:2rem;
+    }
+}
+.sh-result-list {
+    display:flex;
+    flex-direction:column;
+    gap:4rem;
+    margin-top:2rem;
+    @media screen and (max-width:1023px) {
+        margin-top:0;
+        gap:2rem;
+    }
+    &[data-type="notice"] {
+        border-top:.2rem solid var(--black);
+        gap:0;
+        .sh-result-list-item {
+            padding:2.8rem 2rem;
+            @media screen and (max-width:1023px) {
+                padding:1.6rem 0;
+            }
+        }
+    }
+}
+.sh-result-list-item {
+    padding:0 0 4rem;
+    border-bottom:.1rem solid var(--form_line);
+    display:flex;
+    gap:6.2rem;
+    position:relative;
+    align-items:flex-start;
+    @media screen and (max-width:1023px) {
+        gap:2rem;
+        padding-bottom:2rem;
+    }
+    @media screen and (max-width:600px) {
+        flex-wrap:wrap;
+    }
+    .sh-result-img {
+       aspect-ratio:410/262;
+        width:41rem;
+        flex-shrink:0;
+        img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        @media screen and (max-width:1023px) {
+            width:20rem;
+        }
+        @media screen and (max-width:600px) {
+            width:100%;
+        }
+    }
+    .sh-result-content {
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        gap:4rem;
+        @media screen and (max-width:1023px) {
+            gap:1.2rem;
+        }
+    }
+    .sh-result-name {
+        font-size:4rem;
+        line-height:1.4;
+        font-weight:600;
+        color:var(--black);
+        @media screen and (max-width:1023px) {
+            font-size:2rem;
+        }
+    }
+    .sh-keyword {
+        color:var(--orange);
+    }
+    .sh-result-data-group {
+        display:flex;
+        flex-direction:column;
+        gap:2rem;
+        @media screen and (max-width:1023px) {
+            gap:.4rem;
+        }
+    }
+    .sh-result-data-item {
+        display:flex;
+        font-size:2.4rem;
+        line-height:1.4;
+        .sh-result-data-title {
+            font-weight:600;
+            color:var(--black);
+            width:12rem;
+            @media screen and (max-width:1023px) {
+                width:8rem;
+            }
+        }
+        .sh-result-data-value {
+            font-weight:400;
+            flex:1;
+            color:var(--black);
+        }
+        @media screen and (max-width:1023px) {
+            font-size:1.4rem;
+        }
+    }
+    .sh-result-title {
+        font-size:2rem;
+        font-weight:500;
+        color:var(--black);
+        flex:1;
+        @media screen and (max-width:1023px) {
+            font-size:1.4rem;
+        }
+    }
+    .sh-result-date {
+        font-size:2rem;
+        font-weight:300;
+        color:var(--gray_800);
+        @media screen and (max-width:1023px) {
+            font-size:1.4rem;
         }
     }
 }

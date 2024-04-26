@@ -71,6 +71,9 @@
                 font-size:1.6rem;
                 height:5.6rem;
             }
+            .count-value {
+                color:var(--orange);
+            }
         }
     }
     .mdl-tab-btn {
