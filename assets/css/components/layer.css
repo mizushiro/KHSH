@@ -1,21 +1,23 @@
-html[data-modal="show"] body {
-    overflow-y:hidden;
-    padding-right:1rem;
+html[data-modal="show"][data-device="desktop"] body {
+    padding-right:0.8rem;
     .base-header {
         padding-right:5rem;
     }
-
     &::after {
         content:"";
         display:block;
         position:fixed;
         right:0;
         top:0;
-        width:1rem;
+        width:0.8rem;
         height:100%;
         background-color:#ccc;
         z-index:10;
     }
+}
+
+html[data-modal="show"] body {
+    overflow-y:hidden;
 }
 .layer-modal {
     position:fixed;
@@ -510,6 +512,15 @@ html[data-modal="show"] body {
                 z-index:10;
                 background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
             }
+            .logo {
+                background-image: url(../../images/common/logo-dark.svg) !important;
+            }
+
+            @media (max-width:1023px) {
+                .logo {
+                    background-image: url(../../images/common/logo.svg) !important;
+                } 
+            }
         }
         &[data-state="hide"] {
             .layer-modal-dim {
@@ -594,6 +605,8 @@ html[data-modal="show"] body {
             .nav-dep2 {
                 opacity:1; 
                 padding-bottom:0;
+                padding-top:1.4rem;
+                gap:1.4rem;
             }
             .nav-dep2-link {
                 color:#fff; 
@@ -621,6 +634,7 @@ html[data-modal="show"] body {
                 font-size:2.4rem; 
                 padding:0;
                 width:100%; 
+                font-weight: 400 !important;
                 justify-content:center;
             }
             .nav-dep1-item.etc .nav-dep2 {
