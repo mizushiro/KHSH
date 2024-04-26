@@ -86,7 +86,7 @@
         width:2.4rem;
         height:2.4rem;
         position:relative;
-        border:0.2rem solid var(--form_line);
+        border:0.1rem solid var(--form_line);
         background-color:var(--white);
         border-radius:999em;
         &:checked {

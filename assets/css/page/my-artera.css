@@ -175,6 +175,7 @@
         width:100%;
         padding:2rem;
         height:34rem;
+        resize:none;
     }
     @media screen and (max-width:1023px) {
         .col-th {
@@ -352,6 +353,13 @@
     align-items:center;
     &[data-color="gray"] {
         background-color:#FAFAFA;
+        @media screen and (max-width:1023px) {
+            .btn-group {
+                .button-base {
+                    min-height:4rem;
+                }
+            }
+        }
     }
     &[data-color="skyblue"] {
         background-color:#F2F9FF;
@@ -890,7 +898,7 @@
         }
         @media screen and (max-width:1023px) {
             padding:1.2rem 1rem;
-            font-size:1.8rem;
+            font-size:1.5rem;
             gap:1.6rem;
         }
     }
@@ -944,6 +952,9 @@
     .faq-list-a {
         display:flex;
         gap:4rem;
+        @media screen and (max-width:1023px) {
+           gap:1rem;
+        }
 
     }
     .faq-list-a-tit {
@@ -1043,20 +1054,23 @@
 
     @media (max-width:1023px) {
         .as-content-tit {
-            font-size:1.8rem;
+            font-size:1.7rem;
             font-weight:600;
             margin-bottom:0.4rem;
         }
         .as-content-txt {
-            font-size:1.5rem;
+            font-size:1.4rem;
             font-weight:500;
             color:#333;
         }
         [data-bul="dot"] {
-            font-size:1.5rem;
+            font-size:1.4rem;
             font-weight:500;
             color:#333;
         }
+    }
+    .table-data.repair {
+        margin-top:-2rem;
     }
 }
 .bs-step {
@@ -1098,28 +1112,26 @@
     }
     @media (max-width:1023px) {
         gap:1rem;
-        flex-direction:column;
-
+        flex-wrap:wrap;
         .bs-step-item {
-            min-width:100%;
+            width:calc((100% - 1rem) / 2);
             border-radius:0.4rem;
-            height:20.7rem;
-            flex-direction:row;
-            padding:1.6rem;
+            height:auto;
+            padding:3rem 1.6rem;
             gap:1.6rem;
         }
 
         .bs-step-tit {
-            font-size:1.8rem;
+            font-size:1.5rem;
             width:16rem;
             text-align:center;
         }
         .bs-step-txt {
             flex:1;
-            text-align:left;
-            font-size:1.4rem;
-
-            br{display:none;}
+            font-size:1.2rem;
+            br {
+                display:none;
+            }
         }
     }
 }
@@ -1143,5 +1155,13 @@
         font-size:1.2rem;
         margin-top:.4rem;
         line-height:1.6rem;
+    }
+}
+.consulting-desc {
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    @media (max-width:1023px) {
+        gap:1rem;
     }
 }
