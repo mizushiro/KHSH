@@ -809,19 +809,9 @@
         color:#bbb;
         width:calc((100% - 9.6rem) / 7);
         font-weight:600;
-        &[data-state="end"] {
-            &[data-color="beige"] {
-                background-color:var(--beige);
-                color:var(--navy);
-            }
-            &[data-color="sky"] {
-                background-color:var(--skyblue);
-                color:var(--navy);
-            }
-            &[data-color="navy"] {
-                background-color:var(--navy);
-                color:var(--white);
-            }
+        &[data-state="selected"] {
+            background-color:var(--skyblue);
+            color:var(--navy);
         }
     }
     @media screen and (max-width:1023px) {
