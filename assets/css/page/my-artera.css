@@ -197,6 +197,7 @@
 .form-group {
     display:flex;
     flex-wrap:wrap;
+    align-items: center;
     gap:1rem;
     width:100%;
 
@@ -207,6 +208,8 @@
     &[data-dir="column"] {
         flex-direction:column;
         gap:2rem;
+        align-items: flex-start;
+
     }
     &[data-type="withdrawal-100"] {
         .form-input {
@@ -214,6 +217,14 @@
             width:100%;
             height:10.8rem;
             padding:1.2rem;
+        }
+    }
+    &[data-type="donghosu"] {
+        .form-input {
+            width: 14rem;
+        }
+        .form-input ~ .form-input{
+            margin-left: 3rem;
         }
     }
     &[data-type="email"] {
@@ -1163,5 +1174,30 @@
     gap:2rem;
     @media (max-width:1023px) {
         gap:1rem;
+    }
+}
+
+.as-content-step {
+    position:relative;
+    width:100%;
+
+    .as-content-step-tit {
+        font-size:2.8rem;
+        font-weight:600;
+        line-height:1.4;
+    }
+    .as-content-step-txt {
+        font-size:2.4rem;
+        font-weight:500;
+        line-height:1.4;
+    }
+
+    @media (max-width:1023px) {
+        .as-content-step-tit {
+            font-size:1.7rem;
+        }
+        .as-content-step-txt {
+            font-size:1.4rem;
+        }
     }
 }
