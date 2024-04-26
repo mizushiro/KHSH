@@ -185,17 +185,64 @@
     display:flex;
     align-items:flex-end;
     gap:2rem;
+    @media screen and (max-width:1023px) {
+        padding:1.6rem 0;
+        gap:.8rem;
+    }
     .board-title {
         flex:1;
         font-size:3rem;
         font-weight:600;
         line-height:3.6rem;
         color:var(--black);
+        .board-title-flag {
+            display:block;
+            margin-bottom:1.6rem;
+            color:var(--orange);
+            font-size:2.4rem;
+            line-height:2.8rem;
+            font-weight:500;
+        }
+        @media screen and (max-width:1023px) {
+            font-size:2rem;
+            line-height:2.8rem;
+            .board-title-flag {
+                font-size:1.4rem;
+                margin-bottom:.8rem;
+                line-height:2rem;
+            }
+        }
     }
     .board-date {
         font-size:2rem;
         color:var(--gray_800);
         font-weight:300;
         flex-shrink:0;
+        @media screen and (max-width:1023px) {
+            font-size:1.2rem;
+        }
+    }
+}
+.board-content-area {
+    padding:4rem;
+    border-bottom:.1rem solid var(--form_line);
+    font-size:2rem;
+    font-weight:500;
+    line-height:1.4;
+    color:var(--gray_300);
+    img {
+        max-width:100%;
+        display:block;
+        margin:0 auto;
+    }
+    .board-content-data {
+        margin-top:4rem;
+    }
+    @media screen and (max-width:1023px) {
+        padding:2rem 0;
+        font-size:1.4rem;
+        .board-content-data {
+            margin-top:2rem;
+        }
     }
 }
