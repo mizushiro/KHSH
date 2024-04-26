@@ -161,12 +161,16 @@ body {
         .base-main {
             flex:1;
             background:url("../../images/sub/login-bg.jpg") no-repeat 50% 50% / cover;
+            display:flex;
+            align-items:center;
+            justify-content:center;
         }
         .base-footer {
             flex-shrink:0;
         }
         .content-area {
             padding:24rem 0 12rem;
+            width:100%;
         }
         @media screen and (max-width:1023px) {
             .content-area {
