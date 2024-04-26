@@ -85,15 +85,21 @@
     justify-content:space-between;
     align-items:center;
     padding:0 1.4rem 1.2rem;
-    
     [data-bul] {transform:translateY(.3rem);}
     @media screen and (max-width:1023px) {
         padding:0.6rem 0.6rem;
-
         &[data-dir-m="col"] {
             flex-direction:column;
             align-items: flex-start;
-            margin-bottom:1rem;
+            margin-bottom:.4rem;
+            gap:.4rem;
+        }
+    }
+    .btn-group.text-20 {
+        /*margin-left:auto;*/
+        padding-left:1.6rem;
+        @media screen and (max-width:1023px) {
+            font-size:1.3rem;
         }
     }
 }
@@ -490,6 +496,7 @@
     font-size:3rem;
     line-height:1.4;
     gap:0.8rem;
+    [data-color="point2"],
     b {
         font-weight:600;
     }

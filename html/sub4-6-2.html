@@ -60,266 +60,152 @@
                             <a href="#" class="button-base" data-style="bg-dark" data-size="size-40" data-icon="download">안내서 다운로드</a>
                         </div>
                     </div>
-                    <div class="fake-table-box">
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택 안</dt>
-                                <dd class="fake-table-item-cell">
-                                    1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="3">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">설치 내용</dt>
-                                <dd class="fake-table-item-cell">
-                                    거실+주방+침실1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">금액(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,630,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">부가세(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    363,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">합계(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,993,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택</dt>
-                                <dd class="fake-table-item-cell">
-                                    <span class="choice-item">
-                                        <input type="radio" id="option1-1" name="option1"  class="form-radio">
-                                        <label for="option1-1"><span class="a11y-hidden">거실+주방+침실1 선택</span></label>
-                                    </span>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택 안</dt>
-                                <dd class="fake-table-item-cell">
-                                    1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="3">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">설치 내용</dt>
-                                <dd class="fake-table-item-cell">
-                                    거실+주방+침실1, 2
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">금액(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,630,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">부가세(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    363,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">합계(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,993,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택</dt>
-                                <dd class="fake-table-item-cell">
-                                    <span class="choice-item">
-                                        <input type="radio" id="option1-2" name="option1"  class="form-radio">
-                                        <label for="option1-2"><span class="a11y-hidden">거실+주방+침실1 선택</span></label>
-                                    </span>
-                                </dd>
-                            </dl>
-                        </div>  
-                    </div>
+
+                    <table class="table-basic" data-layout="auto">
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:15%" span="2" data-view="mobile-hidden">
+                            <col style="width:15%">
+                            <col style="width:10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">선택 안</th>
+                            <th scope="col">설치 내용</th>
+                            <th scope="col" data-view="mobile-hidden">금액(원)</th>
+                            <th scope="col" data-view="mobile-hidden">부가세(원)</th>
+                            <th scope="col">합계(원)</th>
+                            <th scope="col">선택</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-align="center">1</td>
+                            <td>거실+주방+침실1</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">3,630,000</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">363,000</td>
+                            <td data-align="right" data-word="nowrap">3,993,000</td>
+                            <td data-align="center">
+                                <span class="choice-item">
+                                    <input type="radio" id="option1-1" name="option1"  class="form-radio" title="거실+주방+침실1 선택">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-align="center">2</td>
+                            <td>거실+주방+침실1, 2</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">3,630,000</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">363,000</td>
+                            <td data-align="right" data-word="nowrap">3,993,000</td>
+                            <td data-align="center">
+                                <span class="choice-item">
+                                    <input type="radio" id="option1-2" name="option1"  class="form-radio" title="거실+주방+침실1, 2 선택">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
                     <div class="conts-head mt-l">
                         <h3 class="conts-head-tit">빌트인 가구/가전</h3>
                     </div>
-                    <div class="fake-table-box">
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택 안</dt>
-                                <dd class="fake-table-item-cell">
-                                    1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="3">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">설치 내용</dt>
-                                <dd class="fake-table-item-cell">
-                                    빌트인냉장고(일반)
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">금액(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,630,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">부가세(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    363,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">합계(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,993,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택</dt>
-                                <dd class="fake-table-item-cell">
-                                    <span class="choice-item">
-                                        <input type="checkbox" id="option2-1"  class="form-checkbox" checked>
-                                        <label for="option2-1"><span class="a11y-hidden">빌트인냉장고(일반) 선택</span></label>
-                                    </span>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택 안</dt>
-                                <dd class="fake-table-item-cell">
-                                    1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="3">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">설치 내용</dt>
-                                <dd class="fake-table-item-cell">
-                                    빌트인냉장고(고급)
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">금액(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,630,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">부가세(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    363,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">합계(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,993,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택</dt>
-                                <dd class="fake-table-item-cell">
-                                    <span class="choice-item">
-                                        <input type="checkbox" id="option2-2"  class="form-checkbox">
-                                        <label for="option2-2"><span class="a11y-hidden">빌트인냉장고(고급) 선택</span></label>
-                                    </span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
+
+                    <table class="table-basic" data-layout="auto">
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:15%" span="2" data-view="mobile-hidden">
+                            <col style="width:15%">
+                            <col style="width:10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">선택 안</th>
+                            <th scope="col">설치 내용</th>
+                            <th scope="col" data-view="mobile-hidden">금액(원)</th>
+                            <th scope="col" data-view="mobile-hidden">부가세(원)</th>
+                            <th scope="col">합계(원)</th>
+                            <th scope="col">선택</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-align="center">1</td>
+                            <td>빌트인냉장고(일반)</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">3,630,000</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">363,000</td>
+                            <td data-align="right" data-word="nowrap">3,993,000</td>
+                            <td data-align="center">
+                                <span class="choice-item">
+                                    <input type="checkbox" id="option2-1" name="option1"  class="form-checkbox" title="빌트인냉장고(일반) 선택">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-align="center">2</td>
+                            <td>빌트인냉장고(고급)</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">3,630,000</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">363,000</td>
+                            <td data-align="right" data-word="nowrap">3,993,000</td>
+                            <td data-align="center">
+                                <span class="choice-item">
+                                    <input type="checkbox" id="option2-2" name="option1"  class="form-checkbox" title="빌트인냉장고(고급) 선택">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
                     <div class="conts-head mt-l">
                         <h3 class="conts-head-tit">기타(공통옵션)</h3>
                     </div>
-                    <div class="fake-table-box">
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택 안</dt>
-                                <dd class="fake-table-item-cell">
-                                    1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="3">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">설치 내용</dt>
-                                <dd class="fake-table-item-cell">
-                                    엔지니어드 스톤(주방상판, 벽)
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">금액(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,630,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">부가세(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    363,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">합계(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,993,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택</dt>
-                                <dd class="fake-table-item-cell">
-                                    <span class="choice-item">
-                                        <input type="checkbox" id="option3-1"  class="form-checkbox" checked>
-                                        <label for="option3-1"><span class="a11y-hidden">엔지니어드 스톤(주방상판, 벽) 선택</span></label>
-                                    </span>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="fake-table-row" data-align="col">
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택 안</dt>
-                                <dd class="fake-table-item-cell">
-                                    1
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="3">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">설치 내용</dt>
-                                <dd class="fake-table-item-cell">
-                                    인출수납장(키큰수납장+가전수납장)
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">금액(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,630,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">부가세(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    363,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="2">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">합계(원)</dt>
-                                <dd class="fake-table-item-cell">
-                                    3,993,000
-                                </dd>
-                            </dl>
-                            <dl class="fake-table-item" data-flex="1">
-                                <dt class="fake-table-item-cell" data-type="title" data-bg="gray">선택</dt>
-                                <dd class="fake-table-item-cell">
-                                    <span class="choice-item">
-                                        <input type="checkbox" id="option3-2"  class="form-checkbox">
-                                        <label for="option3-2"><span class="a11y-hidden">인출수납장(키큰수납장+가전수납장) 선택</span></label>
-                                    </span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div> 
+
+                    <table class="table-basic" data-layout="auto">
+                        <colgroup>
+                            <col style="width:10%">
+                            <col style="width:auto">
+                            <col style="width:15%" span="2" data-view="mobile-hidden">
+                            <col style="width:15%">
+                            <col style="width:10%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">선택 안</th>
+                            <th scope="col">설치 내용</th>
+                            <th scope="col" data-view="mobile-hidden">금액(원)</th>
+                            <th scope="col" data-view="mobile-hidden">부가세(원)</th>
+                            <th scope="col">합계(원)</th>
+                            <th scope="col">선택</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-align="center">1</td>
+                            <td>엔지니어드 스톤(주방상판, 벽)</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">3,630,000</td>
+                            <td data-align="right" data-word="nowrap" data-view="mobile-hidden">363,000</td>
+                            <td data-align="right" data-word="nowrap">3,993,000</td>
+                            <td data-align="center">
+                                <span class="choice-item">
+                                    <input type="checkbox" id="option3-1" name="option1"  class="form-checkbox" title="엔지니어드 스톤(주방상판, 벽) 선택">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-align="center">2</td>
+                            <td>인출수납장(키큰수납장+가전수납장)</td>
+                            <td data-align="right" data-view="mobile-hidden">3,630,000</td>
+                            <td data-align="right" data-view="mobile-hidden">363,000</td>
+                            <td data-align="right">3,993,000</td>
+                            <td data-align="center">
+                                <span class="choice-item">
+                                    <input type="checkbox" id="option3-2" name="option1"  class="form-checkbox" title="인출수납장(키큰수납장+가전수납장) 선택">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
                     <div class="conts-head mt-l">
                         <h3 class="conts-head-tit">계약 체결 일시 및 구비서류</h3>
