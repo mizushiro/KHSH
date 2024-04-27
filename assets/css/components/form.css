@@ -160,6 +160,12 @@ select {
     color:#333;
     font-size:1.8rem;
     z-index:1;
+    span {
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+        word-break:break-all;
+    }
     [data-device="mobile"] & {
         pointer-events:none;
     }
@@ -190,6 +196,7 @@ select {
     }
 }
 .form-select {
+    display: inline-flex;
     position:relative;
     select {
         position:relative;

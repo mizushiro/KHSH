@@ -225,12 +225,30 @@
             padding:1.2rem;
         }
     }
+    &[data-type="complexname"] {
+        @media screen and (max-width:1023px) {
+            flex-direction: column;
+            .button-base {
+                width:100%;
+            }
+        }
+    }
     &[data-type="donghosu"] {
         .form-input {
             width: 14rem;
         }
         .form-input ~ .form-input{
             margin-left: 3rem;
+        }
+        @media screen and (max-width:1023px) {
+            gap:0.5rem;
+           .form-input {
+                width: 100% !important;
+                flex:1;
+            }
+            .form-input ~ .form-input{
+                margin-left: 1.4rem;
+            }
         }
     }
     &[data-type="email"] {
@@ -316,6 +334,26 @@
     background-color:#F5F5F5;
     font-size:1.8rem;
     font-weight:500;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    @media screen and (max-width:1023px) {
+        flex-direction: column;
+        align-items:flex-start;
+        gap:1rem;
+        &[data-type="full"] {
+            width:calc(100% + 4rem);
+            margin-left:-2rem;
+        }
+        .btn-area {
+            width: 100%;
+            > * {
+                flex:1;
+                max-width: 17rem;
+            }
+        }
+    }
 }
 .notice-box {
     max-width:100%;

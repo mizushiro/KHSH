@@ -147,6 +147,36 @@ html[data-modal="show"] body {
                 padding:3rem 0 0;
             }
         }
+        &[data-type="complex-search"] {
+            padding: 4rem 0 6rem;
+            .form-group {
+                width: 100%;
+
+                .form-select {
+                    width:14.6rem;
+                }
+                .form-input {
+                    flex:1;
+                }
+            }
+            @media screen and (max-width:1023px) {
+                padding:1rem 1rem 3rem;
+                .form-group {
+                    flex-direction: column;
+                    .form-select {
+                        flex:1;
+                        width:100%;
+                    }
+                    .form-input {
+                        flex:1;
+                    }
+                    .button-base {
+                        flex:1;
+                        width: 100%;
+                    }
+                }
+            }
+        }
         @media screen and (max-width:1023px) {
             padding:2rem 1rem 0;
             .table-input {
@@ -1059,6 +1089,28 @@ html[data-modal="show"] body {
                     height:3rem;
                     background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
                 }
+            }
+        }
+    }
+
+    .table-basic {
+        tbody th, thead th {
+            height:6rem;
+            font-size:2rem;
+        }
+        tbody td {
+            height:6rem;
+            font-size:2rem;
+        }
+        @media screen and (max-width:1023px) {
+            tbody th, thead th {
+                height:3rem;
+                font-size:1.2rem;
+            }
+            tbody td {
+                height:3rem;
+                font-size:1.2rem;
+                text-align: center;
             }
         }
     }

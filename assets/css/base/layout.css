@@ -17,6 +17,10 @@
     max-width:176rem;
     margin:0 auto;
     padding:0 8rem 15.6rem;
+    &[data-size="full"] {
+        max-width: 100%;
+        padding:0;
+    }
     &.pt-80 {
         padding-top:8rem;
         @media screen and (max-width:1023px) {

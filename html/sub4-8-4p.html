@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>ARTERA 금호건설</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap">
+        <header class="base-header" data-id="header"></header>
+        <main class="base-main">
+            <div class="sub-title" data-bg="sub4-1">
+                <h2>AS센터</h2>
+                <img src="../assets/images/sub/sub-visual-4-1.jpg" alt="">
+            </div>
+
+            <article class="content-area">
+                <div class="sub-depth-nav">
+                    <div class="sub-depth-nav-list scrollbar-4" data-type="auto">
+                        <a href="" class="sub-depth-nav-item">나의 정보</a>
+                        <a href="" class="sub-depth-nav-item">분양대금조회</a>
+                        <a href="" class="sub-depth-nav-item">입주일 예약</a>
+                        <a href="" class="sub-depth-nav-item">방문 사전예약 신청</a>
+                        <a href="" class="sub-depth-nav-item">무순위/잔여세대 청약</a>
+                        <a href="" class="sub-depth-nav-item">옵션신청</a>
+                        <a href="" class="sub-depth-nav-item">1:1문의</a>
+                        <a href="" class="sub-depth-nav-item" data-state="selected">AS센터</a>
+                    </div>
+                </div>
+                <div class="sub-content">
+                    <div class="btn-area-center">
+                        <a href="#" class="button-base" data-style="bg-primary" data-size="size-60" onclick="UI.exe.sub4_8_3p.show();">팝업</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer class="base-footer" data-id="footer"></footer>
+    </div>
+
+    <!-- 단지 검색 -->
+    <section class="layer-modal" data-size="M" data-id="sub4_8_3p" data-state="" role="dialog">
+        <div class="layer-modal-wrap">
+            <div class="layer-modal-header">
+                <h1 class="layer-modal-title">단지 검색</h1>
+                <button type="button" class="layer-modal-close" data-material="close" 
+                    aria-label="닫기"></button>
+            </div>
+            <div class="layer-modal-body" data-type="complex-search">
+                <div class="layer-modal-subject">
+                    <div class="form-group">
+                        <div class="form-select">
+                            <select title="전체 선택">
+                                <option value="1" selected>전체</option>
+                                <option value="2">분양</option>
+                                <option value="3">대출</option>
+                                <option value="4">해지</option>
+                            </select>
+                        </div>
+                        <input type="text" class="form-input" value="" title="단지명" />
+                        <button type="button" class="button-base" data-style="bg-dark" data-size="size-40">검색</button>
+                    </div>
+                </div>
+                <table class="table-basic mt-m" data-layout="auto">
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:auto">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">지역</th>
+                        <th scope="col">단지명</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>전남</td>
+                        <td>순천 금호어울림 더파크 2차</td>
+                    </tr>
+                    <tr>
+                        <td>전남</td>
+                        <td>순천 금호어울림 더파크 2차</td>
+                    </tr>
+                    <tr>
+                        <td>전남</td>
+                        <td>순천 금호어울림 더파크 2차</td>
+                    </tr>
+                    <tr>
+                        <td>전남</td>
+                        <td>순천 금호어울림 더파크 2차</td>
+                    </tr>
+                    <tr>
+                        <td>전남</td>
+                        <td>순천 금호어울림 더파크 2차</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="layer-modal-dim"></div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            UI.form.setSelect();
+
+            //modal    
+            UI.exe.sub4_8_3p = new Layer({
+                id :'sub4_8_3p',
+                type: 'modal',
+                callback: () => {
+                    console.log('modal1 콜백');
+                }
+            });
+            UI.exe.sub4_8_3p.show();
+        }); 
+    </script>
+</body>
+</html>

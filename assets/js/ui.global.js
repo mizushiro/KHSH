@@ -16,6 +16,7 @@
     Global.data = {};
     Global.exe = {};
     Global.callback = {};
+    Global.scrollEventAct = null;
 
     Global.state = {
         isSystemModal: false,
@@ -1533,7 +1534,7 @@ class Layer {
         // select layer
         if (this.type === 'select') {
             console.log(this.select_btn.offsetWidth, this.select_btn.dataset.selectId);
-            document.querySelector('.layer-modal[data-id="'+ this.select_btn.dataset.selectId +'"]').style.width = (this.select_btn.offsetWidth / 10) + 'rem';
+            document.querySelector('.layer-modal[data-id="'+ this.select_btn.dataset.selectId +'"]').style.width = (this.select_btn.offsetWidth) + 'px';
             
             const el_options = this.modal.querySelectorAll('.form-select-option');
             const el_inputs = this.modal.querySelectorAll('input');
@@ -1633,6 +1634,7 @@ class Layer {
         }
     }
 }
+
 class ScrollPage {
     constructor(opt) {
         this.opt = opt;
@@ -1643,7 +1645,18 @@ class ScrollPage {
         } else {
 			this.wraph = this.el_wrap.offsetHeight;
 		}
-        this.el_items = this.el_wrap.querySelectorAll('[data-scroll-callback]');
+
+        this.name = false;
+        if (this.opt) {
+            this.name = opt.name;
+        }
+
+        if (!this.name) {
+            this.el_items = this.el_wrap.querySelectorAll('[data-scroll-callback]');
+        } else {
+            this.el_items = this.el_wrap.querySelectorAll('[data-scroll-callback][data-scroll-name="'+ this.name +'"]');
+        }
+        
         this.sctop = this.el_wrap.scrollTop;
         this.ary_top_s = [];
         this.ary_top_e = [];
@@ -1656,55 +1669,64 @@ class ScrollPage {
         for (let item of this.el_items) {
             const rect = item.getBoundingClientRect();
             this.ary_top_s.push(rect.top + this.sctop)
-            this.ary_top_e.push(rect.top + this.sctop + this.wraph);
+            this.ary_top_e.push(rect.top + this.sctop + rect.height);
             this.ary_top_h.push(rect.height);
         }
-        
-        const act = () => {
-            const n = this.el_wrap.scrollTop;
-            const w_h = window.innerHeight;
 
-            for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
-                const n_s = Number(this.ary_top_s[i]);
-                const n_e = Number(this.ary_top_e[i]);
-                const n_h = Number(this.ary_top_h[i]);
-                let per_s = 0;
-                let per_e = 0;
-
-                const _name = this.el_items[i].dataset.scrollCallback;
-                const if_1 = n_s <= (n + w_h) && (n + w_h) <= n_e;
-                const if_2 = n_e <= (n + w_h) && (n + w_h) <= (n_e + n_h);
-
-                console.log(if_1, if_2, i)
-
-                if (if_1 || if_2) {
-                    if (if_1) {
-                        const _n = n_e - n_s;
-                        const __n = n + w_h - n_s;
-                        let per = Math.ceil((__n / _n * 100) * 1);
-                        per > 100 ? per = 100 : '';
-                        per_s = per;
-                    }
-                    if (if_2) {
-                        const _n = (n_e + n_h) - n_e;
-                        const __n = n + w_h - n_e;
-                        let per = Math.ceil((__n / _n * 100) * 1);
-                        per > 100 ? per = 100 : '';
-                        per_s = 100;
-                        per_e = per;
-                    }
-                    UI.callback[_name] && UI.callback[_name]({
-                        per_s: per_s,
-                        per_e: per_e,
-                        element: this.el_items[i],
-                    });
-                }
-            }
-        }
-        act();
-        window.addEventListener('scroll', act);
+        this.act('start');
+        window.removeEventListener('scroll', this.act);
+        window.addEventListener('scroll', this.act);
         this.wheel();
-        
+    }
+    act = (v) => {
+        const is_start = v;
+        const n = this.el_wrap.scrollTop;
+        const w_h = window.innerHeight;
+        const point = (n + w_h);
+
+        for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
+            const n_s = Number(this.ary_top_s[i]);
+            const n_e = Number(this.ary_top_e[i]);
+            const n_h = Number(this.ary_top_h[i]);
+            let per_s = 0;
+            let per_e = 0;
+
+            const _name = this.el_items[i] && this.el_items[i].dataset.scrollCallback;
+            const if_1 = n_s <= point && point <= n_e;
+            const if_2 = n_e <= point && point <= (n_e + n_h);
+            const if_over = n_e < point; 
+
+            if (is_start && if_over) {
+                //첫실행시 지나간 영역실행
+                UI.callback[_name] && UI.callback[_name]({
+                    per_s: 100,
+                    per_e: per_e,
+                    element: this.el_items[i],
+                });
+            }
+            if (if_1 || if_2) {
+                if (if_1) {
+                    const _n = n_e - n_s;
+                    const __n = n + w_h - n_s;
+                    let per = Math.ceil((__n / _n * 100) * 1);
+                    per > 100 ? per = 100 : '';
+                    per_s = per;
+                }
+                if (if_2) {
+                    const _n = (n_e + n_h) - n_e;
+                    const __n = n + w_h - n_e;
+                    let per = Math.ceil((__n / _n * 100) * 1);
+                    per > 100 ? per = 100 : '';
+                    per_s = 100;
+                    per_e = per;
+                }
+                UI.callback[_name] && UI.callback[_name]({
+                    per_s: per_s,
+                    per_e: per_e,
+                    element: this.el_items[i],
+                });
+            } 
+        }
     }
     wheel() {
         if (this.opt && this.opt.wheel) {

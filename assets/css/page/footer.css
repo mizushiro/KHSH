@@ -133,6 +133,12 @@
     border-radius:50%;
     background:rgba(36, 42, 92, 0.8) url(../../images/common/top.svg) no-repeat 50% 50%;
     background-size:2.4rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    &.off {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
     @media screen and (max-width:1760px) {
         right:2rem;
     }

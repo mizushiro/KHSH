@@ -20,7 +20,7 @@
         <header class="base-header" data-id="header"></header>
         <main class="base-main">
             <!-- visual -->
-            <div class="main-section" data-sec="visual" data-scroll-callback="main1">
+            <div class="main-section" data-sec="visual" data-scroll-name="main" data-scroll-callback="main1">
                 <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
                     <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
                 </video>
@@ -43,7 +43,7 @@
             </div>
 
             <!-- story -->
-            <div class="main-section" data-sec="story" data-scroll-callback="main2">
+            <div class="main-section" data-sec="story" data-scroll-name="main" data-scroll-callback="main2">
                 <video autoplay="" loop="" muted="" playsinline="">
                     <source src="../assets/images/main/240322_mono_01.mp4" type="video/mp4">
                 </video>
@@ -61,7 +61,7 @@
             </div>
 
             <!-- 분양정보 -->
-            <div class="main-section" data-sec="info" data-scroll-callback="main3">
+            <div class="main-section" data-sec="info" data-scroll-name="main" data-scroll-callback="main3">
                 <div class="main-list">
                     <div class="main-list-tit">
                         <h2>분양정보</h2>
@@ -349,7 +349,7 @@
             </div>
 
             <!-- NEWS -->
-            <div class="main-section" data-sec="news" data-scroll-callback="main4">
+            <div class="main-section" data-sec="news" data-scroll-name="main" data-scroll-callback="main4">
                 <div class="main-list">
                     <div class="main-list-tit">
                         <h2>NEWS</h2>
@@ -451,7 +451,7 @@
                 </div>
             </div>
 
-            <div class="main-section" data-sec="etc" data-scroll-callback="main5">
+            <div class="main-section" data-sec="etc" data-scroll-name="main" data-scroll-callback="main5">
                 <div class="main-etc">
                     <div class="main-etc-img">
                         <b class="logo"></b>
@@ -493,7 +493,7 @@
                 </div>
             </div>
         </main>
-        <footer class="base-footer" data-id="footer" data-scroll-callback="footerScroll"></footer>
+        <footer class="base-footer" data-id="footer"></footer>
     </div>
 
     <script>
@@ -560,8 +560,8 @@
             UI.callback.main3 = (v) => { mainMotion3(v, [40]); }
             UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
             UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
-           
             UI.exe.scrollpage = new ScrollPage({
+                name: 'main',
                 wheel: true,
                 wheelscope: 2
             });

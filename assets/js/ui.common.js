@@ -94,19 +94,26 @@
 						behavior: 'smooth'
 					});
                 });
-                !UI.exe.scrollpage ? 
-                UI.exe.scrollpage = new ScrollPage() : '';
-                const footerMotion = (v, n) => {
-                    const _top = document.querySelector('.btn-top');
-                    if (v.per_s > 1) { 
-                        _top.style.transform = 'translateY('+ (v.element.offsetHeight * -1) / 10 +'rem)';
-                        _top.style.position = 'absolute';
+
+                window.addEventListener('scroll', () => {
+                    const s_t = document.querySelector('html').scrollTop;
+                    const w_h = window.innerHeight;
+                    const f_t = document.querySelector('.base-footer').getBoundingClientRect().top;
+                    const add = window.innerWidth > 1023 ? 60 : 20
+
+                    if (s_t < 100) {
+                        btnTop.classList.add('off');
                     } else {
-                        _top.style.transform = 'translateY(0rem)';
-                        _top.style.position = 'fixed';
+                        btnTop.classList.remove('off');
                     }
-                }
-                UI.callback.footerScroll = (v) => { footerMotion(v, [0]); }
+
+                    if (s_t > f_t + s_t - w_h) {
+                        btnTop.style.position = 'absolute';
+                        btnTop.style.bottom = document.querySelector('.base-footer').offsetHeight + add + 'px';
+                    } else {
+                        btnTop.removeAttribute('style');
+                    }
+                })
             }
         });
     }

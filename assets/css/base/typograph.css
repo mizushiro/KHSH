@@ -6,6 +6,7 @@
 	src:local('Pretendard Variable'), url('../../fonts/PretendardVariable.woff2') format('woff2-variations');
     unicode-range:U+AC00-D7A3;
 } */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 @font-face {
 	font-family:'Base';

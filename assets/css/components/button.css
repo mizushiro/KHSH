@@ -37,6 +37,39 @@
             color:var(--white);
         }
     }
+    &[data-style="ghost"] {
+        width: auto;
+        color:var(--white);
+        border-color:var(--white);
+        background-color:transparent;
+        height:6rem;
+        padding:0 3rem;
+        font-size:2.4rem;
+        font-weight:600;
+        gap:2rem;
+         @media (max-width:1023px) {
+            font-size:1.5rem;
+            height:3.8rem;
+            padding:0 2rem;
+        }
+    }
+    &[data-style="line-round"] {
+        color:var(--black);
+        border-color:var(--form_line);
+        background-color:var(--white);
+        height:5.6rem;
+        border-radius:2.8rem;
+        padding:0 5.8rem;
+        font-size:1.8rem;
+
+        @media (max-width:1023px) {
+            font-size: 1.5rem;
+            border-radius: 1.9rem;
+            height:3.8rem;
+            padding:0 2rem;
+        }
+    }
+
 
     &[data-icon="download"]::after {
         content:"";
@@ -80,6 +113,13 @@
                 min-height:3rem;
             }
         }
+    }
+}
+.btn-area {
+    display:flex;
+    gap:1.4rem;
+    @media screen and (max-width:1023px) {
+        gap:1rem;
     }
 }
 .btn-area-center {
@@ -139,4 +179,44 @@
     gap:.8rem;
     align-items:center;
     justify-content:center;
+}
+
+[data-icon="playstore"]::before {
+    content:"";
+    display:block;
+    width:2.4rem;
+    height:2.4rem;
+    margin-right: 0.6rem;
+    background:url(../../images/common/ico-playstore.png) no-repeat 50% 50% / 1.8rem;
+    @media (max-width:1023px) {
+        width:1.7rem;
+        height:1.7rem;
+        background-size: 1rem;
+    }
+}
+[data-icon="appstore"]::before {
+    content:"";
+    display:block;
+    width:2.4rem;
+    height:2.4rem;
+    margin-right: 0.6rem;
+    background:url(../../images/common/ico-appstore.png) no-repeat 50% 50% / 2.4rem;
+    @media (max-width:1023px) {
+        width:1.7rem;
+        height:1.7rem;
+        background-size: 1.7rem;
+    }
+}
+[data-icon-after="download"]::after {
+    content:"";
+    display:block;
+    width:2.4rem;
+    height:2.4rem;
+    margin-right: 0.6rem;
+    background:url(../../images/common/ico-download.svg) no-repeat 50% 50% / 2.4rem;
+    @media (max-width:1023px) {
+        width:1.7rem;
+        height:1.7rem;
+        background-size: 1.7rem;
+    }
 }
