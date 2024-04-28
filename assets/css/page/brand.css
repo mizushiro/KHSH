@@ -891,5 +891,49 @@
             width: 100%;
         }
     }
+    @media screen and (max-width:1023px) {
+        flex-direction: column;
+
+        .history-year {
+            top:0;
+            width: 100%;
+            font-size: 4rem;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            z-index: 2;
+            background:linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0));
+        }
+        .history-list {
+            width: 100%;
+        }
+        .history-box {
+            width: 100%;
+            min-height: auto;
+            padding: 2rem;
+            gap: 2rem;
+            flex-direction: column;
+        }
+        .history-item-txt {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            h4 {
+                font-size: 1.5rem; 
+                text-align: center;
+            }
+            p {
+                font-size: 1.2rem; 
+                text-align: center;
+            }
+        }
+        .history-item-img{
+            width: 36rem;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
 }
 
