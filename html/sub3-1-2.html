@@ -96,26 +96,42 @@
                                     <li class="construction-step-item">준공</li>
                                 </ol>
                             </div>
-                            <div class="year-month-area">
-                                <div class="year-choice">
-                                    <button type="button" class="btn-year-choice" data-type="prev"></button>
-                                    <span class="year-choice-value">2024</span>
-                                    <button type="button" class="btn-year-choice" data-type="next"></button>
+                            
+                            <div class="swiper-dayselect">
+                                <div class="swiper" data-id="dayselect">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <button type="button" class="selected" onclick="alert(1)">2021.04</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2022.02</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2023.01</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2023.02</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2023.04</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2024.01</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2024.02</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2024.03</button>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <button type="button" onclick="alert(1)">2024.04</button>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                <div class="month-choice">
-                                    <button type="button" class="btn-month-choice" data-state="selected">1월</button>
-                                    <button type="button" class="btn-month-choice">2월</button>
-                                    <button type="button" class="btn-month-choice">3월</button>
-                                    <button type="button" class="btn-month-choice">4월</button>
-                                    <button type="button" class="btn-month-choice">5월</button>
-                                    <button type="button" class="btn-month-choice">6월</button>
-                                    <button type="button" class="btn-month-choice">7월</button>
-                                    <button type="button" class="btn-month-choice">8월</button>
-                                    <button type="button" class="btn-month-choice">9월</button>
-                                    <button type="button" class="btn-month-choice">10월</button>
-                                    <button type="button" class="btn-month-choice">11월</button>
-                                    <button type="button" class="btn-month-choice">12월</button>
-                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                             <div class="swiper-viewmap-wrap">
                                 <div class="swiper swiper-viewmap" data-id="viewing">
@@ -206,6 +222,35 @@
             }
              
             //공사진행
+            const dayselectButton = document.querySelectorAll('.swiper-dayselect .swiper button');
+            const actTab = (e) => {
+                const tab = e.currentTarget
+                const tab_selceted = document.querySelector('.swiper-dayselect .swiper button.selected');
+                tab_selceted && tab_selceted.classList.remove('selected');
+                tab.classList.add('selected');
+            }
+            for (const item of dayselectButton) {
+                item.addEventListener('click', actTab);
+            }
+            const swiperDayselect = new Swiper('.swiper-dayselect .swiper', {
+                spaceBetween:0,
+                slidesPerView:5,
+                slidesPerGroup:5,
+                breakpoints:{
+                    0:{
+                        slidesPerView:3,
+                        slidesPerGroup:3,
+                    },
+                    1023:{
+                        slidesPerView:5,
+                        slidesPerGroup:5,
+                    },
+                },
+                navigation:{
+                    nextEl:'.swiper-dayselect .swiper-button-next',
+                    prevEl:'.swiper-dayselect .swiper-button-prev',
+                },
+            });
             const swiperViewingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewing"]', {
                 spaceBetween:10,
                 slidesPerView:3,

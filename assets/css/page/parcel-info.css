@@ -965,6 +965,64 @@
 .icon-list-type2 {
     background-image:url("../../images/common/ico-list-type2-dark.svg");
 }
+.swiper-dayselect { 
+    position: relative;
+    padding:0 8rem;
+    margin-bottom: 8rem;
+    .swiper-slide {
+        button {
+            width: 100%;
+            height: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.4rem;
+            color:#888;
+            border: 1px solid #ccc;
+            border-left:0;
+           
+            &.selected {
+                background-color: var(--navy);
+                border-color: var(--navy);
+                color: #fff;
+            }
+        }
+    }
+    .swiper-wrapper {
+        border-left:1px solid #ccc;
+    }
+    .swiper-button-next {
+        position: absolute;
+        top:0;
+        right:0;
+        left:auto;
+        width: 8.1rem;
+        height: 8rem;
+        border: 1px solid #ccc;
+        background-image: url(../../images/common/swiper-arrow-dark.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 1.2rem;
+        margin-top:0;
+        rotate: 180deg;
+         opacity: 1 !important;
+    }
+    .swiper-button-prev {
+        position: absolute;
+        top:0;
+        left:0;
+        right: auto;
+        width: 8.1rem;
+        height: 8rem;
+        border: 1px solid #ccc;
+        background-image: url(../../images/common/swiper-arrow-dark.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 1.2rem;
+        margin-top:0;
+        opacity: 1 !important;
+    }
+}
 .view-type-box-area {
     display:flex;
     gap:2rem;
