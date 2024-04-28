@@ -400,7 +400,7 @@
                                 <a href="#">
                                     <div class="card-item" data-type="news" data-bg="pattern3">
                                         <div class="card-item-view">
-                                            <h3 class="card-item-tit" data-ellipsis="3">금호 </h3>
+                                            <h3 class="card-item-tit" data-ellipsis="3">금호건설, ‘문수로 금호 어울림 더 퍼스트’ 15(금) 견본주택 개관 금호건설, ‘문수로 금호 어울림 더 퍼스트’ 15(금) 견본주택 개관</h3>
                                             <div class="card-item-desc">
                                                 <div data-ellipsis="5">
                                                 금호건설은 울산광역시 남구 신정동 일원에 공급하는 ‘문수로 금호 어울림 더 퍼스트’금호건설은 울산광
@@ -578,8 +578,8 @@
             }
             UI.exe.infoSwiper = new Swiper('[data-sec="info"] .swiper', {
                 spaceBetween:0,
-                slidesPerView:4,
-                slidesPerGroup:4,
+                slidesPerView:1,
+                slidesPerGroup:1,
                 speed:1000,
                 pagination:{
                     el:'[data-sec="info"] .swiper-pagination',
@@ -595,19 +595,8 @@
                         slidesPerGroup:1,
                         spaceBetween:16,
                     },
-                    800:{
-                         slidesPerView:2 ,
-                        spaceBetween:20,
-                        slidesPerGroup:2,
-                    },
-                    1200:{
-                         slidesPerView:3 ,
-                        spaceBetween:20,
-                        slidesPerGroup:3,
-                    },
-                    1500:{
+                    1024:{
                         slidesPerView:4 ,
-                        spaceBetween:40,
                         slidesPerGroup:4,
                     },
                 },
@@ -627,8 +616,9 @@
                 }
             });
             UI.exe.newsSwiper = new Swiper('[data-sec="news"] .swiper', {
-                spaceBetween:16,
-                slidesPerView:4,
+                spaceBetween:0,
+                slidesPerView:1,
+                slidesPerGroup:1,
                 speed:1000,
                 pagination:{
                     el:'[data-sec="news"] .swiper-pagination',
@@ -644,19 +634,8 @@
                         slidesPerGroup:1,
                         spaceBetween:16,
                     },
-                    800:{
-                         slidesPerView:2 ,
-                        spaceBetween:20,
-                        slidesPerGroup:2,
-                    },
-                    1200:{
-                         slidesPerView:3 ,
-                        spaceBetween:20,
-                        slidesPerGroup:3,
-                    },
-                    1500:{
-                         slidesPerView:4 ,
-                        spaceBetween:40,
+                    1024:{
+                        slidesPerView:4 ,
                         slidesPerGroup:4,
                     },
                 },

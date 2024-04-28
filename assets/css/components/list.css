@@ -1,3 +1,11 @@
+.main-list {
+    @media screen and (min-width:1024px) {
+        .swiper-slide {
+            margin-right:4rem;
+            width:calc((100% - 12rem) / 4) !important;
+        }
+    }
+}
 .card-item {
     position:relative;
     display:flex;
@@ -134,7 +142,7 @@
             }
         }
     }
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:1023px) {
         width:25.5rem;
         aspect-ratio:255/469;
         flex-direction:column;
@@ -269,7 +277,7 @@
                 scale:1.2;
                 transition:scale 4s ease-in;
             }
-            @media screen and (max-width:800px) {
+            @media screen and (max-width:1023px) {
                 .card-item-desc {
                     height:14.4rem;
                 }
@@ -290,7 +298,7 @@
                 }
             }
         }
-        @media screen and (max-width:800px) {
+        @media screen and (max-width:1023px) {
             height:auto;
             aspect-ratio:255/421;
             display:flex;
