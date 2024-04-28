@@ -907,7 +907,8 @@
 
         .history-year {
             top:0;
-            width: 100%;
+            width:calc(100% + 4rem);
+            margin-left:-2rem;
             font-size: 4rem;
             padding-top: 8rem;
             padding-bottom: 4rem;
