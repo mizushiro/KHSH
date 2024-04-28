@@ -195,11 +195,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             const getDirection = () => {
                 const isHorizontal = window.innerWidth <= 1023;
-                const direction = isHorizontal ? 'horizontal' : 'vertical';
+                const direction = isHorizontal ? 'horizontal' :'vertical';
                 const swiperWraps = document.querySelectorAll('.swiper-viewmap-wrap');
 
                 for (item of swiperWraps) {
-                    isHorizontal ? item.dataset.dir = 'horizontal' : item.dataset.dir = 'vertical';
+                    isHorizontal ? item.dataset.dir = 'horizontal' :item.dataset.dir = 'vertical';
                 }
 
                 return direction;
@@ -207,34 +207,34 @@
              
             //공사진행
             const swiperViewingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewing"]', {
-                spaceBetween: 10,
-                slidesPerView: 3,
-                direction: getDirection(),
-                freeMode: true,
-                watchSlidesProgress: true,
-                mousewheel: true,
-                breakpoints: {
-                    1023: {
-                        spaceBetween: 18,
+                spaceBetween:10,
+                slidesPerView:3,
+                direction:getDirection(),
+                freeMode:true,
+                watchSlidesProgress:true,
+                mousewheel:true,
+                breakpoints:{
+                    1023:{
+                        spaceBetween:18,
                     }
                 },
-                on: {
-                    resize: function () {
+                on:{
+                    resize:function () {
                         swiperViewingThumbs.changeDirection(getDirection());
                     }
                 }
             });
             const swiperViewing = new Swiper('.swiper-viewmap[data-id="viewing"]', {
-                spaceBetween: 0,
-                navigation: {
-                    nextEl: '.swiper-viewmap[data-id="viewing"] .swiper-button-next',
-                    prevEl: '.swiper-viewmap[data-id="viewing"] .swiper-button-prev',
+                spaceBetween:0,
+                navigation:{
+                    nextEl:'.swiper-viewmap[data-id="viewing"] .swiper-button-next',
+                    prevEl:'.swiper-viewmap[data-id="viewing"] .swiper-button-prev',
                 },
-                thumbs: {
-                    swiper: swiperViewingThumbs,
+                thumbs:{
+                    swiper:swiperViewingThumbs,
                 },
-                on: {
-                    resize: function () {
+                on:{
+                    resize:function () {
                         swiperViewingThumbs.changeDirection(getDirection());
                     }
                 }

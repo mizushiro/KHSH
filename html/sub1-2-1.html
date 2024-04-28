@@ -243,119 +243,68 @@
                 name:'brand_BI' 
             });
 
-            const actPer = (p, v) =>  {
-                return (p - v[0]) / (v[1] - v[0]);
-            }
             const actScopeValue = (p, v) => {
-                return (p * v[1]) < v[0] ? 0 :  (p * v[1]) > v[1] ? v[1] :  (p * v[1]);
+                return (p * v[1]) < v[0] ? 0 : (p * v[1]) > v[1] ? v[1] : (p * v[1]);
             }
             UI.callback.brand_BI_1 = (v) => { 
-                // console.log('brand_BI_1', v.per_s);
                 const per = v.per_s;
                 const wrap = v.element;
                 const item1 = wrap.querySelector('.brand-BI-head');
                 const item2 = wrap.querySelector('.brand-BI-logo');
                 const item3 = wrap.querySelector('.bi1-bg');
-                
-                const item1_o = [25, 40];
-                const item1_x = [20, 30];
-                const item2_o = [45, 60];
-                const item2_y = [40, 50];
-                const item3_o = [80, 90];
 
-                item1.style.opacity = actScopeValue(actPer(per, item1_o), [0.3, 1]);
-                item1.style.transform = `translateX(-${(100 - actScopeValue(actPer(per, item1_x), [10, 100]))}vw)`;
+                const per_1 = (v.top - 300) / (550 - 300);
+                const per_1_x = (v.top - 180) / (450 - 180);
+                const per_2 = (v.top - 525) / (1100 - 525);
+                const per_2_x = (v.top - 525) / (950 - 525);
+                const per_3 = (v.top - 1200) / (1500 - 1200);
 
-                item2.style.opacity = actScopeValue(actPer(per, item2_o), [0.1, 1]);
-                item2.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item2_y), [10, 100]))}vh)`;
+                item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
+                item1.style.transform = `translateX(-${(100 - actScopeValue(per_1, [10, 100]))}vw)`;
+                item2.style.opacity = actScopeValue(per_2, [0.1, 1]);
+                item2.style.transform = `translateY(${(100 - actScopeValue(per_2_x, [10, 100]))}vh)`;
+                item3.style.opacity = actScopeValue(per_3, [0.1, 1]);
 
-                item3.style.opacity = actScopeValue(actPer(per, item3_o), [0.1, 1]);
-
-                if (per > 85) {
+                if (v.top > 1400) {
                     wrap.classList.add('change');
                 } else {
                     wrap.classList.remove('change');
                 }
             }   
-            UI.callback.brand_BI_2 = (v) => { 
-                const is_mobile = window.innerWidth < 1024;
-                const per = v.per_s;
-                const wrap = v.element;
-                
-                const item1_o = [0, 8];
-                const item1_y = [0, 7];
-                const item2_o = [10, 15];
-                const item2_y = [7, 14];
-                const item1 = wrap.querySelector('.bi-tit-line.a1');
-                const item2 = wrap.querySelector('.bi-cont.a2');
-                item1.style.opacity = actScopeValue(actPer(per, item1_o), [0.1, 1]);
-                item1.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item1_y), [10, 100]))}px)`;
-                item2.style.opacity = actScopeValue(actPer(per, item2_o), [0.1, 1]);
-                item2.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item2_y), [10, 100]))}px)`;
+            const bi_items = document.querySelectorAll('.bi-item[data-scroll-callback="brand_BI_2"] > div');
 
-                const item3_o = [13, 25];
-                const item3_y = [13, 25];
-                const item4_o = [20, 28];
-                const item4_y = [20, 28];
-                const item3 = wrap.querySelector('.bi-tit-line.a3');
-                const item4 = wrap.querySelector('.bi-cont.a4');
-                item3.style.opacity = actScopeValue(actPer(per, item3_o), [0.1, 1]);
-                item3.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item3_y), [10, 100]))}px)`;
-                item4.style.opacity = actScopeValue(actPer(per, item4_o), [0.1, 1]);
-                item4.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item4_y), [10, 100]))}px)`;
-
-                const item5_o = [27, 34];
-                const item5_y = [27, 34];
-                const item6_o = [34, 40];
-                const item6_y = [34, 40];
-                const item5 = wrap.querySelector('.bi-tit-line.a5');
-                const item6 = wrap.querySelector('.bi-cont.a6');
-                item5.style.opacity = actScopeValue(actPer(per, item5_o), [0.1, 1]);
-                item5.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item5_y), [10, 100]))}px)`;
-                item6.style.opacity = actScopeValue(actPer(per, item6_o), [0.1, 1]);
-                item6.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item6_y), [10, 100]))}px)`;
-
-                const item7_o = [40, 47];
-                const item7_y = [40, 47];
-                const item8_o = [46, 51];
-                const item8_y = [46, 51];
-                const item7 = wrap.querySelector('.bi-tit-line.a7');
-                const item8 = wrap.querySelector('.bi-cont.a8');
-                item7.style.opacity = actScopeValue(actPer(per, item7_o), [0.1, 1]);
-                item7.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item7_y), [10, 100]))}px)`;
-                item8.style.opacity = actScopeValue(actPer(per, item8_o), [0.1, 1]);
-                item8.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item8_y), [10, 100]))}px)`;
-
-                const item9_o = [53, 59];
-                const item9_y = [53, 59];
-                const item10_o = [59, 65];
-                const item10_y = [59, 65];
-                const item9 = wrap.querySelector('.bi-tit-line.a9');
-                const item10 = wrap.querySelector('.bi-cont.a10');
-                item9.style.opacity = actScopeValue(actPer(per, item9_o), [0.1, 1]);
-                item9.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item9_y), [10, 100]))}px)`;
-                item10.style.opacity = actScopeValue(actPer(per, item10_o), [0.1, 1]);
-                item10.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item10_y), [10, 100]))}px)`;
-
-                const item13_o = [66, 80];
-                 if (per > 85) {
-                    wrap.style.backgroundColor = '#F6FBFF';
-                } else {
-                    wrap.style.backgroundColor = '#ffffff';
+            const scrollMotion = () => {
+                let ps = [];
+                const ps_add = 320;
+                for (let item of bi_items) {
+                    ps.push(item.getBoundingClientRect().top + document.querySelector('html').scrollTop - ps_add)
                 }
-               
-                const item11_o = is_mobile ? [74, 80] : [66, 73];
-                const item11_y = is_mobile ? [74, 80] : [66, 73];
-                const item12_o = is_mobile ? [80, 90] : [76, 84];
-                const item12_y = is_mobile ? [80, 90] : [76, 84];
-                const item11 = wrap.querySelector('.bi-tit-line.a11');
-                const item12 = wrap.querySelector('.bi-cont.a12');
-                item11.style.opacity = actScopeValue(actPer(per, item11_o), [0.1, 1]);
-                item11.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item11_y), [10, 100]))}px)`;
-                item12.style.opacity = actScopeValue(actPer(per, item12_o), [0.1, 1]);
-                item12.style.transform = `translateY(${(100 - actScopeValue(actPer(per, item12_y), [10, 100]))}px)`;
+
+                UI.callback.brand_BI_2 = (v) => { 
+                    console.log('brand_BI_2', v.top);
+
+                    const is_mobile = window.innerWidth < 1024;
+                    const per = v.per_s;
+                    const wrap = v.element;
+
+                    for (let i = 0; i < bi_items.length; i++) {
+                        const _per = (v.top - (ps[i] - 200)) / (ps[i] - (ps[i] - 200));
+
+                        bi_items[i].style.opacity = actScopeValue(_per, [0.1, 1]);
+                        bi_items[i].style.transform = `translateY(${(100 - actScopeValue(_per, [10, 100]))}px)`;
+                    }
+                    
+                    const item13_o = [66, 80];
+                    if (per > 85) {
+                        wrap.style.backgroundColor = '#F6FBFF';
+                    } else {
+                        wrap.style.backgroundColor = '#ffffff';
+                    }
+                }
+                
             }
-            
+            scrollMotion();
+            window.addEventListener('resize', scrollMotion);
         }); 
     </script>
 </body>

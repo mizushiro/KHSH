@@ -484,7 +484,7 @@
                         <a href="#">
                             <dl>
                                 <dt>
-                                    <span>1 : 1</span> <span>문의</span>
+                                    <span>1 :1</span> <span>문의</span>
                                 </dt>
                                 <dd>궁금하신 내용을 <br class="only-m">직접 상담, <br class="only-d">답변을 <br class="only-m">확인하실 수 있습니다.</dd>
                             </dl>
@@ -528,7 +528,7 @@
             }
             const mainMotion2 = (v, n) => {
                 v.per_s > 85 ?
-                    _header.dataset.color = "dark" : 
+                    _header.dataset.color = "dark" :
                     _header.removeAttribute('data-color');
 
                 if (v.per_s > 85 && v.per_e === 0) {
@@ -543,7 +543,7 @@
             }
             const mainMotion3 = (v, n) => {
                 _header.dataset.color = "dark"
-                // v.element.dataset.state = v.percent > n[0] ? 'on' : 'off';
+                // v.element.dataset.state = v.percent > n[0] ? 'on' :'off';
             }
             const mainMotion4 = (v, n) => {
                 // if (v.per_e < 10 && v.per_s < 10) {
@@ -561,9 +561,9 @@
             UI.callback.main4 = (v) => { mainMotion4(v, [40]); }
             UI.callback.main5 = (v) => { mainMotion5(v, [40]); }
             UI.exe.scrollpage = new ScrollPage({
-                name: 'main',
-                wheel: true,
-                wheelscope: 2
+                name:'main',
+                wheel:true,
+                wheelscope:2
             });
 
             //분양정보 & NEWS 리스트 스와이퍼
@@ -573,104 +573,104 @@
                 const el_num = document.querySelector('[data-sec="'+ _name +'"] .swiper-paginationp-txt');
                 const el_num_b = el_num.querySelector('b');
                 const el_num_span = el_num.querySelector('span');
-                el_num_b.textContent = _this.snapIndex + 1 < 10 ? '0' + (_this.snapIndex + 1) : _this.snapIndex + 1;
-                el_num_span.textContent = _this.snapGrid.length < 10 ? '0' + _this.snapGrid.length : _this.snapGrid.length;
+                el_num_b.textContent = _this.snapIndex + 1 < 10 ? '0' + (_this.snapIndex + 1) :_this.snapIndex + 1;
+                el_num_span.textContent = _this.snapGrid.length < 10 ? '0' + _this.snapGrid.length :_this.snapGrid.length;
             }
             UI.exe.infoSwiper = new Swiper('[data-sec="info"] .swiper', {
-                spaceBetween: 0,
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-                speed: 1000,
-                pagination: {
-                    el: '[data-sec="info"] .swiper-pagination',
-                    clickable: true,
+                spaceBetween:0,
+                slidesPerView:4,
+                slidesPerGroup:4,
+                speed:1000,
+                pagination:{
+                    el:'[data-sec="info"] .swiper-pagination',
+                    clickable:true,
                 },
-                navigation: {
-                    nextEl: '[data-sec="info"] .swiper-button-next',
-                    prevEl: '[data-sec="info"] .swiper-button-prev',
+                navigation:{
+                    nextEl:'[data-sec="info"] .swiper-button-next',
+                    prevEl:'[data-sec="info"] .swiper-button-prev',
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 'auto',
-                        slidesPerGroup: 1,
-                        spaceBetween: 16,
+                breakpoints:{
+                    0:{
+                        slidesPerView:'auto',
+                        slidesPerGroup:1,
+                        spaceBetween:16,
                     },
-                    800: {
-                         slidesPerView: 2 ,
-                        spaceBetween: 20,
-                        slidesPerGroup: 2,
+                    800:{
+                         slidesPerView:2 ,
+                        spaceBetween:20,
+                        slidesPerGroup:2,
                     },
-                    1200: {
-                         slidesPerView: 3 ,
-                        spaceBetween: 20,
-                        slidesPerGroup: 3,
+                    1200:{
+                         slidesPerView:3 ,
+                        spaceBetween:20,
+                        slidesPerGroup:3,
                     },
-                    1500: {
-                        slidesPerView: 4 ,
-                        spaceBetween: 40,
-                        slidesPerGroup: 4,
+                    1500:{
+                        slidesPerView:4 ,
+                        spaceBetween:40,
+                        slidesPerGroup:4,
                     },
                 },
-                on: {
-                    init: (v) => {
+                on:{
+                    init:(v) => {
                         actSwiperPaging({
-                            name: 'info',
-                            target: v
+                            name:'info',
+                            target:v
                         });
                     },
-                    slideChange: (v) => {
+                    slideChange:(v) => {
                         actSwiperPaging({
-                            name: 'info',
-                            target: v
+                            name:'info',
+                            target:v
                         });
                     }
                 }
             });
             UI.exe.newsSwiper = new Swiper('[data-sec="news"] .swiper', {
-                spaceBetween: 16,
-                slidesPerView: 4,
-                speed: 1000,
-                pagination: {
-                    el: '[data-sec="news"] .swiper-pagination',
-                    clickable: true,
+                spaceBetween:16,
+                slidesPerView:4,
+                speed:1000,
+                pagination:{
+                    el:'[data-sec="news"] .swiper-pagination',
+                    clickable:true,
                 },
-                navigation: {
-                    nextEl: '[data-sec="news"] .swiper-button-next',
-                    prevEl: '[data-sec="news"] .swiper-button-prev',
+                navigation:{
+                    nextEl:'[data-sec="news"] .swiper-button-next',
+                    prevEl:'[data-sec="news"] .swiper-button-prev',
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 'auto',
-                        slidesPerGroup: 1,
-                        spaceBetween: 16,
+                breakpoints:{
+                    0:{
+                        slidesPerView:'auto',
+                        slidesPerGroup:1,
+                        spaceBetween:16,
                     },
-                    800: {
-                         slidesPerView: 2 ,
-                        spaceBetween: 20,
-                        slidesPerGroup: 2,
+                    800:{
+                         slidesPerView:2 ,
+                        spaceBetween:20,
+                        slidesPerGroup:2,
                     },
-                    1200: {
-                         slidesPerView: 3 ,
-                        spaceBetween: 20,
-                        slidesPerGroup: 3,
+                    1200:{
+                         slidesPerView:3 ,
+                        spaceBetween:20,
+                        slidesPerGroup:3,
                     },
-                    1500: {
-                         slidesPerView: 4 ,
-                        spaceBetween: 40,
-                        slidesPerGroup: 4,
+                    1500:{
+                         slidesPerView:4 ,
+                        spaceBetween:40,
+                        slidesPerGroup:4,
                     },
                 },
-                on: {
-                    init: (v) => {
+                on:{
+                    init:(v) => {
                         actSwiperPaging({
-                            name: 'news',
-                            target: v
+                            name:'news',
+                            target:v
                         });
                     },
-                    slideChange: (v) => {
+                    slideChange:(v) => {
                          actSwiperPaging({
-                            name: 'news',
-                            target: v
+                            name:'news',
+                            target:v
                         });
                     }
                 }

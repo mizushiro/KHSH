@@ -111,28 +111,33 @@
         document.addEventListener('DOMContentLoaded', () => {
             //select
             UI.exe.promotionSwiper = new Swiper('[data-swiper="promotion"] .swiper', {
-                spaceBetween: 0,
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-                speed: 1000,
-                pagination: {
-                    el: '[data-swiper="promotion"] .swiper-pagination',
-                    clickable: true,
+                spaceBetween:0,
+                slidesPerView:4,
+                slidesPerGroup:4,
+                speed:1000,
+                pagination:{
+                    el:'[data-swiper="promotion"] .swiper-pagination',
+                    clickable:true,
                 },
-                navigation: {
-                    nextEl: '[data-swiper="promotion"] .swiper-button-next',
-                    prevEl: '[data-swiper="promotion"] .swiper-button-prev',
+                navigation:{
+                    nextEl:'[data-swiper="promotion"] .swiper-button-next',
+                    prevEl:'[data-swiper="promotion"] .swiper-button-prev',
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 'auto',
-                        slidesPerGroup: 1,
-                        spaceBetween: 16,
+                breakpoints:{
+                    0:{
+                        slidesPerView:1,
+                        slidesPerGroup:1,
+                        spaceBetween: 8,
                     },
-                    1023: {
-                         slidesPerView: 4,
-                        spaceBetween: 40,
-                        slidesPerGroup: 4,
+                    600:{
+                        slidesPerView:2,
+                        slidesPerGroup:2,
+                        spaceBetween:16,
+                    },
+                    1023:{
+                         slidesPerView:4,
+                        spaceBetween:40,
+                        slidesPerGroup:4,
                     },
                   
                 },

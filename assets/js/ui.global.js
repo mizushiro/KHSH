@@ -19,54 +19,54 @@
     Global.scrollEventAct = null;
 
     Global.state = {
-        isSystemModal: false,
-        device: {
-            info: (() => {
+        isSystemModal:false,
+        device:{
+            info:(() => {
                 for (let i = 0, len = deviceInfo.length; i < len; i++) {
                     if (UA.match(deviceInfo[i]) !== null) {
                         return deviceInfo[i];
                     }
                 }
             })(),
-            width: window.innerWidth,
-            height: window.innerHeight,
-            ios: (/ip(ad|hone|od)/i).test(UA),
-            android: (/android/i).test(UA),
-            app: UA.indexOf('appname') > -1 ? true : false,
-            touch: null,
-            mobile: null,
-            os: (navigator.appVersion).match(/(mac|win|linux)/i)
+            width:window.innerWidth,
+            height:window.innerHeight,
+            ios:(/ip(ad|hone|od)/i).test(UA),
+            android:(/android/i).test(UA),
+            app:UA.indexOf('appname') > -1 ? true :false,
+            touch:null,
+            mobile:null,
+            os:(navigator.appVersion).match(/(mac|win|linux)/i)
         },
-        browser: {
-            ie: UA.match(/(?:msie ([0-9]+)|rv:([0-9\.]+)\) like gecko)/i),
-            local: (/^http:\/\//).test(location.href),
-            firefox: (/firefox/i).test(UA),
-            webkit: (/applewebkit/i).test(UA),
-            chrome: (/chrome/i).test(UA),
-            opera: (/opera/i).test(UA),
-            safari: (/applewebkit/i).test(UA) && !(/chrome/i).test(UA),	
-            size: null
+        browser:{
+            ie:UA.match(/(?:msie ([0-9]+)|rv:([0-9\.]+)\) like gecko)/i),
+            local:(/^http:\/\//).test(location.href),
+            firefox:(/firefox/i).test(UA),
+            webkit:(/applewebkit/i).test(UA),
+            chrome:(/chrome/i).test(UA),
+            opera:(/opera/i).test(UA),
+            safari:(/applewebkit/i).test(UA) && !(/chrome/i).test(UA),	
+            size:null
         },
-        keys: { 
-            tab: 9, 
-            enter: 13, 
-            alt: 18, 
-            esc: 27, 
-            space: 32, 
-            pageup: 33, 
-            pagedown: 34, 
-            end: 35, 
-            home: 36, 
-            left: 37, 
-            up: 38, 
-            right: 39, 
-            down: 40
+        keys:{ 
+            tab:9, 
+            enter:13, 
+            alt:18, 
+            esc:27, 
+            space:32, 
+            pageup:33, 
+            pagedown:34, 
+            end:35, 
+            home:36, 
+            left:37, 
+            up:38, 
+            right:39, 
+            down:40
         },
-        scroll: {
-            y: 0,
-            direction: 'down'
+        scroll:{
+            y:0,
+            direction:'down'
         },		
-        breakPoint: [600, 1400],
+        breakPoint:[600, 1400],
     };
     Global.parts = {
         scroll(){
@@ -76,7 +76,7 @@
 
             const doSomething = (scroll_pos) => {
                 Global.state.scroll.direction = 
-                    Global.state.scroll.y > scroll_pos ? 'up' : Global.state.scroll.y < scroll_pos ? 'down' : ''; 
+                    Global.state.scroll.y > scroll_pos ? 'up' :Global.state.scroll.y < scroll_pos ? 'down' :''; 
                 Global.state.scroll.y = scroll_pos;
                 el_html.dataset.direction = Global.state.scroll.direction;
             }
@@ -104,24 +104,24 @@
 
                 device.touch = device.ios || device.android || (document.ontouchstart !== undefined && document.ontouchstart !== null);
                 device.mobile = device.touch && (device.ios || device.android);
-                device.os = device.os ? device.os[0] : '';
+                device.os = device.os ? device.os[0] :'';
                 device.os = device.os.toLowerCase();
 
-                device.breakpoint = device.width >= Global.state.breakPoint[0] ? true : false;
-                device.col = device.width >= Global.state.breakPoint[1] ? '12' : device.width > Global.state.breakPoint[0] ? '8' : '4';
+                device.breakpoint = device.width >= Global.state.breakPoint[0] ? true :false;
+                device.col = device.width >= Global.state.breakPoint[1] ? '12' :device.width > Global.state.breakPoint[0] ? '8' :'4';
 
                 if (browser.ie) {
                     browser.ie = browser.ie = parseInt( browser.ie[1] || browser.ie[2] );
-                    ( 11 > browser.ie ) ? support.pointerevents = false : '';
-                    ( 9 > browser.ie ) ? support.svgimage = false : '';
+                    ( 11 > browser.ie ) ? support.pointerevents = false :'';
+                    ( 9 > browser.ie ) ? support.svgimage = false :'';
                 } else {
                     browser.ie = false;
                 }
 
                 el_html.dataset.col = device.col;
-                el_html.dataset.browser = browser.chrome ? 'chrome' : browser.firefox ? 'firefox' : browser.opera ? 'opera' : browser.safari ? 'safari' : browser.ie ? 'ie' + browser.ie : 'other';
-                el_html.dataset.platform = device.ios ? "ios" : device.android ? "android" : 'window';
-                el_html.dataset.device = device.mobile ? device.app ? 'app' : 'mobile' : 'desktop';
+                el_html.dataset.browser = browser.chrome ? 'chrome' :browser.firefox ? 'firefox' :browser.opera ? 'opera' :browser.safari ? 'safari' :browser.ie ? 'ie' + browser.ie :'other';
+                el_html.dataset.platform = device.ios ? "ios" :device.android ? "android" :'window';
+                el_html.dataset.device = device.mobile ? device.app ? 'app' :'mobile' :'desktop';
 
                 // const reset_acco = document.querySelectorAll('.base-nav .mdl-acco-body[style]');
                 // if (Number(device.col) === 12) {
@@ -144,10 +144,10 @@
         comma(n) {
             let parts = n.toString().split(".");
 
-            return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+            return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] :"");
         },
         add0(x) {
-            return Number(x) < 10 ? '0' + x : x;
+            return Number(x) < 10 ? '0' + x :x;
         },
         paraGet(paraname) {
             const _tempUrl = window.location.href;
@@ -180,7 +180,7 @@
         RAF(start, end, startTime, duration){
             const _start = start;
             const _end = end;
-            const _duration = duration ? duration : 300;
+            const _duration = duration ? duration :300;
             const unit = (_end - _start) / _duration;
             const endTime = startTime + _duration;
 
@@ -207,20 +207,20 @@
          * include
          * @param {string} opt.id 
          * @param {string} opt.src 
-         * @param {string} opt.type : 'html' | 'json'
-         * @param {boolean} opt.insert : true[insertAdjacentHTML] | false[innerHTML]
+         * @param {string} opt.type :'html' | 'json'
+         * @param {boolean} opt.insert :true[insertAdjacentHTML] | false[innerHTML]
          * @param {function} opt.callback
          * 
          */
         include(opt) {
             let selector = document.querySelector('[data-id="'+ opt.id +'"]');
             const src = opt.src;
-            const type = !opt.type ? 'HTML' : opt.type;
-            const insert = !!opt.insert ? opt.insert : false;
-            const callback = !!opt.callback ? opt.callback : false;
+            const type = !opt.type ? 'HTML' :opt.type;
+            const insert = !!opt.insert ? opt.insert :false;
+            const callback = !!opt.callback ? opt.callback :false;
 console.log(selector,src);
 
- !selector ? selector = document.querySelector('body') : '';
+ !selector ? selector = document.querySelector('body') :'';
 
             if (!!selector && !!src) {
                 switch (type) {
@@ -247,16 +247,16 @@ console.log(selector,src);
             const observer = new ResizeObserver(entries => {
                 for (let entry of entries) {
                     const {width, height} = entry.contentRect;
-                    w === null ? w = width : '';
-                    h === null ? h = height : '';
+                    w === null ? w = width :'';
+                    h === null ? h = height :'';
                     
                     !!timer && clearTimeout(timer);
                     // timer = setTimeout(() => {
                     //     console.log(width, height);
                         opt.callback({
-                            width: width,
-                            height: height,
-                            resize: [w === width ? false : true, h === height ? false : true] 
+                            width:width,
+                            height:height,
+                            resize:[w === width ? false :true, h === height ? false :true] 
                         });
                     // }, 50);
                 }
@@ -267,19 +267,19 @@ console.log(selector,src);
     };
   
     Global.loading = {
-		timerShow : {}, 
-		timerHide : {},
-		options : {
-			selector: null,
-			message : null,
-			styleClass : 'orbit' //time
+		timerShow :{}, 
+		timerHide :{},
+		options :{
+			selector:null,
+			message :null,
+			styleClass :'orbit' //time
 		},
 		show(option){
 			const opt = Object.assign({}, this.options, option);
 			const selector = opt.selector; 
 			const styleClass = opt.styleClass; 
 			const message = opt.message;
-			const el = (selector !== null) ? selector : document.querySelector('body');
+			const el = (selector !== null) ? selector :document.querySelector('body');
 			const el_loadingHides = document.querySelectorAll('.mdl-loading:not(.visible)');
 
 			for (let i = 0, len = el_loadingHides.length; i < len; i++) {
@@ -347,15 +347,15 @@ console.log(selector,src);
 		}
 	}
     Global.scroll = {
-		options : {
-			selector: document.querySelector('html, body'),
-			focus: false,
-			top: 0,
+		options :{
+			selector:document.querySelector('html, body'),
+			focus:false,
+			top:0,
 			left:0,
-			add: 0,
-			align: 'default',
+			add:0,
+			align:'default',
 			effect:'smooth', //'auto'
-			callback: false,	
+			callback:false,	
 		},
 		init() {
 			const el_areas = document.querySelectorAll('.ui-scrollmove-btn[data-area]');
@@ -375,9 +375,9 @@ console.log(selector,src);
 			const el = e.currentTarget;
 			const area = el.dataset.area;
 			const name = el.dataset.name;
-			const add = el.dataset.add === undefined ? 0 : el.dataset.add;
-			const align = el.dataset.align === undefined ? 'default' : el.dataset.align;
-			const callback = el.dataset.callback === undefined ? false : el.dataset.callback;
+			const add = el.dataset.add === undefined ? 0 :el.dataset.add;
+			const align = el.dataset.align === undefined ? 'default' :el.dataset.align;
+			const callback = el.dataset.callback === undefined ? false :el.dataset.callback;
 			let el_area = document.querySelector('.ui-scrollmove[data-area="'+ area +'"]');
 			const item = el_area.querySelector('.ui-scrollbar-item');
 			
@@ -396,13 +396,13 @@ console.log(selector,src);
 			}
 
 			Global.scroll.move({
-				top: top,
-				left: left,
-				add: add,
-				selector: el_area,
-				align: align,
-				focus: el_item,
-				callback: callback
+				top:top,
+				left:left,
+				add:add,
+				selector:el_area,
+				align:align,
+				focus:el_item,
+				callback:callback
 			});
 		},
 		move(option) {
@@ -426,30 +426,30 @@ console.log(selector,src);
 			switch (align) {
 				case 'center':
 					selector.scrollTo({
-						top: Math.abs(top) - (selector.offsetHeight / 2) + add,
-						left: Math.abs(left) - (selector.offsetWidth / 2) - add,
-						behavior: effect
+						top:Math.abs(top) - (selector.offsetHeight / 2) + add,
+						left:Math.abs(left) - (selector.offsetWidth / 2) - add,
+						behavior:effect
 					});
 					break;
 				
 				case 'default':
 				default :
 					selector.scrollTo({
-						top: Math.abs(top) + add,
-						left: Math.abs(left) + add,
-						behavior: effect
+						top:Math.abs(top) + add,
+						left:Math.abs(left) + add,
+						behavior:effect
 					});
 			}
 			this.checkEnd({
-				selector : selector,
-				nowTop : selector.scrollTop, 
-				nowLeft : selector.scrollLeft,
-				align : align,
-				callback : callback,
-				focus : focus
+				selector :selector,
+				nowTop :selector.scrollTop, 
+				nowLeft :selector.scrollLeft,
+				align :align,
+				callback :callback,
+				focus :focus
 			});
 		},
-		checkEndTimer : {},
+		checkEndTimer :{},
 		checkEnd(opt) {
 			const el_selector = opt.selector;
 			const align = opt.align
@@ -481,12 +481,12 @@ console.log(selector,src);
 					nowLeft = el_selector.scrollLeft;
 
 					Global.scroll.checkEnd({
-						selector: el_selector,
-						nowTop: nowTop,
-						nowLeft: nowLeft,
-						align: align,
-						callback: callback,
-						focus: focus
+						selector:el_selector,
+						nowTop:nowTop,
+						nowLeft:nowLeft,
+						align:align,
+						callback:callback,
+						focus:focus
 					});
 				}
 			},100);
@@ -559,9 +559,9 @@ console.log(selector,src);
 			const suffix = wrap.querySelector('.suffix');
 			const isValue = inp.value;
 			let eventType = event.type;
-			const isClear = inp.dataset.clear || inp.type === 'search' ? true : false;
+			const isClear = inp.dataset.clear || inp.type === 'search' ? true :false;
 			let isKeep = inp.dataset.keep;
-			const w_suffix = !!suffix ? suffix.offsetWidth : 0;
+			const w_suffix = !!suffix ? suffix.offsetWidth :0;
 			const paddingR = Number((inp.style.paddingRight).split('px')[0]);
 
 			if (!isClear) {
@@ -591,7 +591,7 @@ console.log(selector,src);
 						btn.remove();
 					}
 				}
-				(!!isKeep) ? (!inp.value) && btnclear() : btnclear();
+				(!!isKeep) ? (!inp.value) && btnclear() :btnclear();
 			}
 
 			switch (eventType) {
@@ -752,15 +752,15 @@ console.log(selector,src);
 
 			const allCheckParent = () => {
 				isAllChecked({
-					name: this.dataset.allcheckParent, 
-					type: 'parent'
+					name:this.dataset.allcheckParent, 
+					type:'parent'
 				});
 			}
 
 			const allCheckChild = () => {
 				isAllChecked({
-					name: this.dataset.allcheckChild, 
-					type: 'child'
+					name:this.dataset.allcheckChild, 
+					type:'child'
 				});
 			}
 			
@@ -781,15 +781,15 @@ console.log(selector,src);
 						child.checked = allChecked;
 					} 
 					
-					n_checked = child.checked && !child.disabled ? ++n_checked : n_checked;
-					n_disabled = child.disabled ? ++n_disabled : n_disabled;
+					n_checked = child.checked && !child.disabled ? ++n_checked :n_checked;
+					n_disabled = child.disabled ? ++n_disabled :n_disabled;
 				}
 
-				parent.checked = (len !== n_checked + n_disabled) ? false : true;
+				parent.checked = (len !== n_checked + n_disabled) ? false :true;
 
 				opt_callback({
-					group: isName,
-					allChecked: parent.checked
+					group:isName,
+					allChecked:parent.checked
 				});
 			}
 			
@@ -797,8 +797,8 @@ console.log(selector,src);
 				if (!el_parents[i].dataset.apply) {
 					el_parents[i].addEventListener('change', allCheckParent);
 					isAllChecked({
-						name: el_parents[i].dataset.allcheckParent, 
-						type: 'child'
+						name:el_parents[i].dataset.allcheckParent, 
+						type:'child'
 					});
 				}
 
@@ -821,8 +821,8 @@ console.log(selector,src);
 					const _id = item.dataset.id;
 					if (!UI.exe[_id]) {
 						UI.exe[_id] = new Layer({
-							id:  _id,
-							type: 'select'
+							id: _id,
+							type:'select'
 						});
 					}
 				} else {
@@ -831,8 +831,8 @@ console.log(selector,src);
 					item.dataset.id = _id;
 				
 					UI.exe[_id] = new Layer({
-						id: _id,
-						type: 'select'
+						id:_id,
+						type:'select'
 					});
 				}
 			}
@@ -877,7 +877,7 @@ class Accordion {
             this.acco_wrap = this.acco_body.children[0];
             this.h = this.acco_wrap.offsetHeight;
             this.acco_item.dataset.expanded !== 'true' ? 
-            this.actShow() :  this.actHide() ;
+            this.actShow() : this.actHide() ;
         }
     }
     showEnd = (e) => {
@@ -885,8 +885,8 @@ class Accordion {
     }
     actShow() {
         this.callback && this.callback({
-            id: this.id,
-            current: UI.parts.getIndex(this.acco_item)
+            id:this.id,
+            current:UI.parts.getIndex(this.acco_item)
         });
         this.acco_item.dataset.expanded = 'true';
         this.acco_body.style.height = (this.h) + 'px';
@@ -940,14 +940,14 @@ class Accordion {
         for (const item of this.acco_items) {
             item.dataset.expanded = 'false';
             const _body = item.querySelector('.mdl-acco-body');
-            _body ? _body.style.height = 0 : '';
+            _body ? _body.style.height = 0 :'';
         }
     }
     allShow() {
         for (const item of this.acco_items) {
             item.dataset.expanded = 'true';
             const _body = item.querySelector('.mdl-acco-body');
-            _body ? _body.style.height = 'auto' : '';
+            _body ? _body.style.height = 'auto' :'';
         }
     }
     
@@ -955,7 +955,7 @@ class Accordion {
 
 class Tab {
     constructor(opt) {
-        this.current = opt.current ? opt.current : false;
+        this.current = opt.current ? opt.current :false;
         this.id = opt.id;
         this.onepanel = opt.onepanel;
         this.callback = opt.callback;
@@ -978,7 +978,7 @@ class Tab {
         }
 
         if (this.current === false) {
-            !!sessionStorage.getItem(this.id) ? this.selected(sessionStorage.getItem(this.id)) :  this.selected(this.tab_btns[0].dataset.tab);
+            !!sessionStorage.getItem(this.id) ? this.selected(sessionStorage.getItem(this.id)) : this.selected(this.tab_btns[0].dataset.tab);
         } else {
             this.selected(this.current);
         }
@@ -992,10 +992,10 @@ class Tab {
             const _rect = _this.getBoundingClientRect();   
             
             UI.scroll.move({ 
-                selector: _wrap, 
-                left: (_rect.left - _rect_wrap.left) + _wrap.scrollLeft + (_rect.width / 2), 
-                add : 0,
-                align: 'center' 
+                selector:_wrap, 
+                left:(_rect.left - _rect_wrap.left) + _wrap.scrollLeft + (_rect.width / 2), 
+                add :0,
+                align:'center' 
             });
         }
     }
@@ -1011,14 +1011,14 @@ class Tab {
         let item;
         if (this.onepanel) {
             item = this.pnl.querySelector('.mdl-tab-item[data-tab]');
-            _selected ? _selected.dataset.selected = false : '';
+            _selected ? _selected.dataset.selected = false :'';
             item.dataset.selected = true;
         } else {
            item = this.pnl.querySelector('.mdl-tab-item[data-tab="'+ tab +'"]');
             const _selected_pnl = this.pnl.querySelector('.mdl-tab-item[data-selected="true"]');
             
-             _selected ? _selected.dataset.selected = false : '';
-            _selected_pnl ? _selected_pnl.dataset.selected = false : '';
+             _selected ? _selected.dataset.selected = false :'';
+            _selected_pnl ? _selected_pnl.dataset.selected = false :'';
             item.dataset.selected = true;
         }
         
@@ -1026,8 +1026,8 @@ class Tab {
 
         this.ps(btn);
         this.callback && this.callback({
-            id: this.id,
-            current: tab
+            id:this.id,
+            current:tab
         });
 
         btn.dataset.selected = true;
@@ -1036,8 +1036,8 @@ class Tab {
 }
 class ToggleUI {
     constructor(opt) {
-        this.scope = !!opt ? opt.scope : false;
-        this.objects = this.scope ? this.scope.querySelectorAll('[data-toggle-object]') : document.querySelectorAll('[data-toggle-object]');
+        this.scope = !!opt ? opt.scope :false;
+        this.objects = this.scope ? this.scope.querySelectorAll('[data-toggle-object]') :document.querySelectorAll('[data-toggle-object]');
         this.init();
     }
     init() {
@@ -1060,15 +1060,15 @@ class ToggleUI {
         const el_target = document.querySelector('[data-toggle-target="'+ is_name +'"]');
 
         let data_state = el_object.dataset.toggleState;
-        let is_state = data_state !== 'true' ? 'true' : 'false';
+        let is_state = data_state !== 'true' ? 'true' :'false';
        
         el_object.dataset.toggleState = is_state;
-        !!el_target ? el_target.dataset.toggleState = is_state : '';
+        !!el_target ? el_target.dataset.toggleState = is_state :'';
               
         !!callbackName && UI.callback[callbackName]({
-            state: is_state,
-            event: type,
-            name: is_name
+            state:is_state,
+            event:type,
+            name:is_name
         });
     }
     actHover = (e) => {
@@ -1081,42 +1081,42 @@ class ToggleUI {
         el_object.dataset.toggleEvent = 'hover';
 
         !!callbackName && UI.callback[callbackName]({
-            state: if_state,
-            event: 'hover',
-            name: is_name
+            state:if_state,
+            event:'hover',
+            name:is_name
         });
     }
 }
 class Layer {
     constructor(opt) {
         const defaults = {
-			type: 'modal', // 
-			classname: '',
+			type:'modal', // 
+			classname:'',
 
             //system
-            ps: 'BL',
+            ps:'BL',
 
             //toast
-            delay: 'short', // short[2s] | long[3.5s]
-            status: 'off',  //assertive[중요도 높은 경우] | polite[중요도가 낮은 경우] | off[default]
-            auto: true,
+            delay:'short', // short[2s] | long[3.5s]
+            status:'off',  //assertive[중요도 높은 경우] | polite[중요도가 낮은 경우] | off[default]
+            auto:true,
 		};
 
         this.opt = Object.assign({}, defaults, opt);
         this.el = {
-            html: document.querySelector('html'),
-            body: document.querySelector('body'),
-            pageScroll: document.querySelector('[data-pagescroll]') ?? document.querySelector('html'),
-            modal: null,
-            modal_wrap: null,
-            btn_close: null,
-            last_layer: null,
+            html:document.querySelector('html'),
+            body:document.querySelector('body'),
+            pageScroll:document.querySelector('[data-pagescroll]') ?? document.querySelector('html'),
+            modal:null,
+            modal_wrap:null,
+            btn_close:null,
+            last_layer:null,
         }
 
         this.id = opt.id;
         this.src = opt.src;
-        this.type = !opt.type ? 'modal' : opt.type; 
-        this.classname  = opt.classname ? opt.classname : '',
+        this.type = !opt.type ? 'modal' :opt.type; 
+        this.classname  = opt.classname ? opt.classname :'',
         this.callback = opt.callback;
         this.callback_close = opt.callback_close;
 
@@ -1126,11 +1126,11 @@ class Layer {
         this.btn = opt.button;
 
         //toast
-        this.delay = opt.delay ? opt.delay : 'short', 
-        this.delaytime = this.delay === 'short' ? 2000 : 3500; //short[2s] | long[3.5s]
-        this.status = opt.status ? opt.status : 'off', 
+        this.delay = opt.delay ? opt.delay :'short', 
+        this.delaytime = this.delay === 'short' ? 2000 :3500; //short[2s] | long[3.5s]
+        this.status = opt.status ? opt.status :'off', 
         //assertive[중요도 높은 경우] | polite[중요도가 낮은 경우] | off[default]
-        this.auto = opt.auto ? opt.auto : true,
+        this.auto = opt.auto ? opt.auto :true,
 
         //system & toast
         this.content = opt.content;
@@ -1174,7 +1174,7 @@ class Layer {
                 this.tooltip();
                 break;
 
-            default: // modal, bottom, dropdow
+            default:// modal, bottom, dropdow
                 if (this.opt.src) {
                     this.setFetch();
                 }
@@ -1213,7 +1213,7 @@ class Layer {
         this.select = document.querySelector('.form-select[data-id="'+ this.id +'"]');
         const select = this.select.querySelector('select');
         const options = select.querySelectorAll('option');
-        const text = select.querySelector('[selected]') ? select.querySelector('[selected]').text : select.title;
+        const text = select.querySelector('[selected]') ? select.querySelector('[selected]').text :select.title;
 
         let html_select_button = `
         <button type="button" class="form-select-btn" data-select-id="${ this.id }_select" value="${ select.value }" tabindex="-1" role="combobox" aria-haspopup="listbox" aria-expanded="false">
@@ -1270,7 +1270,7 @@ class Layer {
         <div class="layer-modal ${ this.classname }" data-id="${ this.id }" data-type="toast" aria-live="${ this.status }">
             <div class="layer-modal-wrap">
                 <div class="layer-modal-body">${ this.content }</div>
-                ${ !this.auto ? '<button type="button" class="layer-modal-close" data-material="close" aria-label="닫기"></button>' : ''}
+                ${ !this.auto ? '<button type="button" class="layer-modal-close" data-material="close" aria-label="닫기"></button>' :''}
             </div>
         </div>`;
         this.el_body.insertAdjacentHTML('beforeend', html_toast);
@@ -1286,10 +1286,10 @@ class Layer {
         <section class="layer-modal" data-id="${ this.id }" data-type="alert">
             <div class="layer-modal-wrap">
                 <div class="layer-modal-body">
-                    ${(!!this.title) ? `<h1 class="layer-modal-tit">${ this.title }</h1>` : ''}
+                    ${(!!this.title) ? `<h1 class="layer-modal-tit">${ this.title }</h1>` :''}
                     <div>${ this.content }</div>
                     <div class="button-base-wrap">
-                        ${(this.btn.length === 2) ? `<button type="button" class="button-base" data-state="cancel" data-style="primary-gray"><span>${ this.btn[1].text }</span></button>` : ''}
+                        ${(this.btn.length === 2) ? `<button type="button" class="button-base" data-state="cancel" data-style="primary-gray"><span>${ this.btn[1].text }</span></button>` :''}
                         <button type="button" class="button-base" data-state="ok" data-style="primary">
                             <span>${ this.btn[0].text }</span>
                         </button>
@@ -1313,11 +1313,11 @@ class Layer {
     setFetch() {
         console.log('setFetch', this.opt.src, UI);
         UI.parts.include({
-            id: 'body',
-            src: this.opt.src + '.html',
-            type: 'HTML',
-            insert: true,
-            callback: () => {
+            id:'body',
+            src:this.opt.src + '.html',
+            type:'HTML',
+            insert:true,
+            callback:() => {
 
                 console.log('setFetch', this.opt.src);
 
@@ -1430,8 +1430,8 @@ class Layer {
         e.type !== 'keyup' && this.hide();
 
         this.callback && this.callback({
-            text:  _this.textContent,
-            value: _this.dataset.value
+            text: _this.textContent,
+            value:_this.dataset.value
         });
     }
     show = (e) =>  {
@@ -1440,66 +1440,66 @@ class Layer {
                 console.log('열려있음');
                 return false;
             }
-            console.log('toast show: ' , this.modal);
+            console.log('toast show:' , this.modal);
         }
 
         const _zindex = 100;
         const _prev = document.querySelector('[data-layer-current="true"]');
         let btn = false;
 
-        (this.type === 'select') ? btn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'_select"]') : '';
-        (this.type === 'dropdown') ? btn = document.querySelector('[data-dropdown="'+ this.id +'"]') : '';
-        (this.type === 'tooltip') ? btn = document.querySelector('.mdl-tooltip[aria-describedby="'+ this.id +'"]') : '';
+        (this.type === 'select') ? btn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'_select"]') :'';
+        (this.type === 'dropdown') ? btn = document.querySelector('[data-dropdown="'+ this.id +'"]') :'';
+        (this.type === 'tooltip') ? btn = document.querySelector('.mdl-tooltip[aria-describedby="'+ this.id +'"]') :'';
 
-        //object position : dropdown & select & tooltip
+        //object position :dropdown & select & tooltip
         if (this.type === 'dropdown' || this.type === 'select' || this.type === 'tooltip') {
             const ps_info = {
-                m_width: this.modal.offsetWidth,
-                m_height: this.modal.offsetHeight,
-                height: btn.offsetHeight,
-                width: btn.offsetWidth,
-                top: btn.getBoundingClientRect().top,
-                left: btn.getBoundingClientRect().left,
-                sc_top: this.pageScroll.scrollTop,
-                sc_left: this.pageScroll.scrollLeft,
+                m_width:this.modal.offsetWidth,
+                m_height:this.modal.offsetHeight,
+                height:btn.offsetHeight,
+                width:btn.offsetWidth,
+                top:btn.getBoundingClientRect().top,
+                left:btn.getBoundingClientRect().left,
+                sc_top:this.pageScroll.scrollTop,
+                sc_left:this.pageScroll.scrollLeft,
             }
             let _top, _left;
 
-            !this.ps ? this.ps = 'BL' : '';
+            !this.ps ? this.ps = 'BL' :'';
 
             switch(this.ps){
-                case 'TL': 
+                case 'TL':
                     _top = ((ps_info.top + ps_info.sc_top) + ps_info.height) + 'px';
                     _left = ((ps_info.left - ps_info.sc_left)) + 'px';
                     break;
-                case 'TC': 
+                case 'TC':
                 break;
-                case 'TR': 
+                case 'TR':
                 break;
-                case 'BL': 
+                case 'BL':
                     _top = ((ps_info.top + ps_info.sc_top) + ps_info.height) + 'px';
                     _left = ((ps_info.left - ps_info.sc_left)) + 'px';
                     break;
-                case 'BC': 
+                case 'BC':
                     _top = ((ps_info.top + ps_info.sc_top) + ps_info.height) + 'px';
                     _left = ((ps_info.left - ps_info.sc_left) + (ps_info.width / 2) - (ps_info.m_width / 2)) + 'px';
                     break;
-                case 'BR': 
+                case 'BR':
                     _top = ((ps_info.top + ps_info.sc_top) + ps_info.height) + 'px';
                     _left = ((ps_info.left - ps_info.sc_left) - (ps_info.m_width - ps_info.width)) + 'px';
                     break;
 
-                case 'LT': 
+                case 'LT':
                 break;
-                case 'LC': 
+                case 'LC':
                 break;
-                case 'LB': 
+                case 'LB':
                 break;
-                case 'RT': 
+                case 'RT':
                 break;
-                case 'RC': 
+                case 'RC':
                 break;
-                case 'RB': 
+                case 'RB':
                 break;
             }
 
@@ -1511,7 +1511,7 @@ class Layer {
         }
 
         if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
-            _prev ? _prev.dataset.layerCurrent = 'false' : '';
+            _prev ? _prev.dataset.layerCurrent = 'false' :'';
             this.modal.dataset.layerCurrent = 'true';
         }
 
@@ -1524,7 +1524,7 @@ class Layer {
 
         // toast, tooltip 자동 생성 자동 hidden 제외
         if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
-            this.html.dataset.layerN = !this.html.dataset.layerN ? 1 : Number(this.html.dataset.layerN) + 1;
+            this.html.dataset.layerN = !this.html.dataset.layerN ? 1 :Number(this.html.dataset.layerN) + 1;
             this.modal.style.zIndex = Number(_zindex) + Number(this.html.dataset.layerN);
             this.modal.dataset.layerN = this.html.dataset.layerN;
         }
@@ -1578,12 +1578,12 @@ class Layer {
     }
     keyCheck = (e) => {
         switch (e.keyCode) {
-            case 13 : e.type === 'keydown' && this.actSelected(e);
+            case 13 :e.type === 'keydown' && this.actSelected(e);
                 break;
             case 38 :
-            case 40 : e.type === 'keyup' && this.actSelected(e);
+            case 40 :e.type === 'keyup' && this.actSelected(e);
                     break;
-            default : e.type === 'keydown' ? this.timer = setTimeout(this.hide, 300) : '';
+            default :e.type === 'keydown' ? this.timer = setTimeout(this.hide, 300) :'';
                 break;
         }
     }
@@ -1699,9 +1699,9 @@ class ScrollPage {
             if (is_start && if_over) {
                 //첫실행시 지나간 영역실행
                 UI.callback[_name] && UI.callback[_name]({
-                    per_s: 100,
-                    per_e: per_e,
-                    element: this.el_items[i],
+                    per_s:100,
+                    per_e:per_e,
+                    element:this.el_items[i],
                 });
             }
             if (if_1 || if_2) {
@@ -1709,21 +1709,22 @@ class ScrollPage {
                     const _n = n_e - n_s;
                     const __n = n + w_h - n_s;
                     let per = Math.ceil((__n / _n * 100) * 1);
-                    per > 100 ? per = 100 : '';
+                    per > 100 ? per = 100 :'';
                     per_s = per;
                 }
                 if (if_2) {
                     const _n = (n_e + n_h) - n_e;
                     const __n = n + w_h - n_e;
                     let per = Math.ceil((__n / _n * 100) * 1);
-                    per > 100 ? per = 100 : '';
+                    per > 100 ? per = 100 :'';
                     per_s = 100;
                     per_e = per;
                 }
                 UI.callback[_name] && UI.callback[_name]({
-                    per_s: per_s,
-                    per_e: per_e,
-                    element: this.el_items[i],
+                    top: n,
+                    per_s:per_s,
+                    per_e:per_e,
+                    element:this.el_items[i],
                 });
             } 
         }
@@ -1735,10 +1736,10 @@ class ScrollPage {
             const doScroll = (v) => {
                 if (v === 'down') {
                     this.pageNum = this.pageNum + 1;
-                    this.pageNum > this.el_items.length - 1 ? this.pageNum = this.el_items.length - 1 : '';
+                    this.pageNum > this.el_items.length - 1 ? this.pageNum = this.el_items.length - 1 :'';
                 } else {
                     this.pageNum = this.pageNum - 1;
-                    this.pageNum < 0 ? this.pageNum = 0 : '';
+                    this.pageNum < 0 ? this.pageNum = 0 :'';
                 }
                 for (const item of this.el_items) {
                     item.dataset.stateWheel = false;
@@ -1746,9 +1747,9 @@ class ScrollPage {
                 this.el_items[this.pageNum].dataset.stateWheel = true;
 
                 this.el_items[this.pageNum].scrollIntoView({
-                    block: "start", 
-                    inline: "nearest", 
-                    behavior: "smooth"
+                    block:"start", 
+                    inline:"nearest", 
+                    behavior:"smooth"
                 });  
             }
            
@@ -1791,12 +1792,10 @@ class ScrollPage {
             }
 
             if (this.opt.wheel) {
-                window.addEventListener('wheel', actWheel, {passive : false});
+                window.addEventListener('wheel', actWheel, {passive :false});
             }
             
         }
     }
 }
-
-
 

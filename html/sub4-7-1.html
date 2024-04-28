@@ -83,7 +83,7 @@
                                                 <div class="faq-list-a-tit">A</div>
                                                 <div class="faq-list-a-body">
                                                     <p>A/S는 금호 어울림 PC웹사이트 또는 A/S하자접수 앱을 통해 접수 가능합니다.</p>
-                                                    <p>1. <b data-color="point2">AS 콜센터 : 080-000-0082</b></p>
+                                                    <p>1. <b data-color="point2">AS 콜센터 :080-000-0082</b></p>
                                                     <p>2. PC웹사이트를 통해 A/S신청하기<br>
                                                     - 고객서비스>A/S센터>A/S신청 메뉴에서 로그인 후 <br>
                                                     단지명과 동/호수 정보를 통해 A/S 신청 가능여부를 확인한 후 신청가능합니다.</p>
@@ -479,16 +479,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             UI.exe.idpwTab = new Tab({
-                id: 'tabFAQ',
-                current: '1',
-                onepanel: true, 
-                callback: (v) => {
+                id:'tabFAQ',
+                current:'1',
+                onepanel:true, 
+                callback:(v) => {
                     console.log(v);
                     if (!UI.exe.faqAco1) {
                         UI.exe.faqAco1 = new Accordion({
                             id :'faqAco1',
-                            current: null,
-                            callback: (v) => {
+                            current:null,
+                            callback:(v) => {
                                 console.log('callback:', v);
                             }
                         });

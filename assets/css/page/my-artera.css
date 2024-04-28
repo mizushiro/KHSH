@@ -90,7 +90,7 @@
         padding:0.6rem 0.6rem;
         &[data-dir-m="col"] {
             flex-direction:column;
-            align-items: flex-start;
+            align-items:flex-start;
             margin-bottom:.4rem;
             gap:.4rem;
         }
@@ -203,18 +203,18 @@
 .form-group {
     display:flex;
     flex-wrap:wrap;
-    align-items: center;
+    align-items:center;
     gap:1rem;
     width:100%;
 
     
     &[data-size="300"] {
-        max-width: 30rem;
+        max-width:30rem;
     }
     &[data-dir="column"] {
         flex-direction:column;
         gap:2rem;
-        align-items: flex-start;
+        align-items:flex-start;
 
     }
     &[data-type="withdrawal-100"] {
@@ -227,7 +227,7 @@
     }
     &[data-type="complexname"] {
         @media screen and (max-width:1023px) {
-            flex-direction: column;
+            flex-direction:column;
             .button-base {
                 width:100%;
             }
@@ -235,19 +235,19 @@
     }
     &[data-type="donghosu"] {
         .form-input {
-            width: 14rem;
+            width:14rem;
         }
         .form-input ~ .form-input{
-            margin-left: 3rem;
+            margin-left:3rem;
         }
         @media screen and (max-width:1023px) {
             gap:0.5rem;
            .form-input {
-                width: 100% !important;
+                width:100% !important;
                 flex:1;
             }
             .form-input ~ .form-input{
-                margin-left: 1.4rem;
+                margin-left:1.4rem;
             }
         }
     }
@@ -336,10 +336,10 @@
     font-weight:500;
     display:flex;
     justify-content:space-between;
-    align-items: center;
+    align-items:center;
     
     @media screen and (max-width:1023px) {
-        flex-direction: column;
+        flex-direction:column;
         align-items:flex-start;
         gap:1rem;
         &[data-type="full"] {
@@ -347,10 +347,10 @@
             margin-left:-2rem;
         }
         .btn-area {
-            width: 100%;
+            width:100%;
             > * {
                 flex:1;
-                max-width: 17rem;
+                max-width:17rem;
             }
         }
     }
@@ -458,9 +458,9 @@
             }
         }
         .info-group {
-            width: 100%;
-            text-align: right;
-            justify-content: flex-end;
+            width:100%;
+            text-align:right;
+            justify-content:flex-end;
         }
     }
 }

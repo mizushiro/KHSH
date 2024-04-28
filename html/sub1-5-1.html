@@ -937,9 +937,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             UI.exe.idpwTab = new Tab({
-                id: 'tabBox',
-                current: '1-1',
-                callback: (v) => {
+                id:'tabBox',
+                current:'1-1',
+                callback:(v) => {
                     const items = document.querySelectorAll('[data-scroll-callback]');
                     for (const item of items) {
                         item.dataset.state = '';
@@ -947,27 +947,27 @@
 
                     setTimeout(()=> {
                         switch(v.current) {
-                            case '1-1': 
-                            !UI.exe.historyScroll1 ? UI.exe.historyScroll1 = new ScrollPage({ name:'history1' }) : UI.exe.historyScroll1.act('start');
+                            case '1-1':
+                            !UI.exe.historyScroll1 ? UI.exe.historyScroll1 = new ScrollPage({ name:'history1' }) :UI.exe.historyScroll1.act('start');
                             break;
 
-                            case '2-1': 
-                            !UI.exe.historyScroll2 ? UI.exe.historyScroll2 = new ScrollPage({ name:'history2' }) : UI.exe.historyScroll2.act('start');
+                            case '2-1':
+                            !UI.exe.historyScroll2 ? UI.exe.historyScroll2 = new ScrollPage({ name:'history2' }) :UI.exe.historyScroll2.act('start');
                             break;
 
-                            case '3-1': 
-                            !UI.exe.historyScroll3 ? UI.exe.historyScroll3 = new ScrollPage({ name:'history3' }) : UI.exe.historyScroll3.act('start');
+                            case '3-1':
+                            !UI.exe.historyScroll3 ? UI.exe.historyScroll3 = new ScrollPage({ name:'history3' }) :UI.exe.historyScroll3.act('start');
                             break;
 
-                            case '4-1': 
-                            !UI.exe.historyScroll4 ? UI.exe.historyScroll4 = new ScrollPage({ name:'history4' }) : UI.exe.historyScroll4.act('start');
+                            case '4-1':
+                            !UI.exe.historyScroll4 ? UI.exe.historyScroll4 = new ScrollPage({ name:'history4' }) :UI.exe.historyScroll4.act('start');
                             break;
                         }
                     },100); 
                 }
             });
             const historyMotion = (v, n) => {
-                v.per_s > n ? v.element.dataset.state = 'view' : v.element.dataset.state = '';
+                v.per_s > n ? v.element.dataset.state = 'view' :v.element.dataset.state = '';
             }
             UI.callback.history1 = (v) => { historyMotion(v, 0); }
             UI.callback.history2 = (v) => { historyMotion(v, 10); }

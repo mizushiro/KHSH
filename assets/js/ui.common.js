@@ -17,19 +17,19 @@
             (!e.shiftKey && e.keyCode == 9) && actClose();
         }
         const onLine = (v) => {
-            const _base = !!v.currentTarget ? v.currentTarget : v;
+            const _base = !!v.currentTarget ? v.currentTarget :v;
             const wrapDep1 = _base.closest('.nav-dep1-item');
             const dep1 = wrapDep1.querySelector('.nav-dep1-link');
             const dep1_on = document.querySelector('.nav-dep1-link[data-state="on"]');
 
-            !!dep1_on ? dep1_on.dataset.state = 'off' : '';
+            !!dep1_on ? dep1_on.dataset.state = 'off' :'';
             dep1.dataset.state = 'on';
         }
         const isIn = (e) => {
             const _this = e.currentTarget;
             const isHeader = !!_this.closest('.base-header');
             onLine(_this);
-            (isHeader) ? _body.dataset.nav = 'open' : _body.dataset.nav = 'close';
+            (isHeader) ? _body.dataset.nav = 'open' :_body.dataset.nav = 'close';
         }
         const actClose = (e) => {
             _body.dataset.nav = 'close';
@@ -69,14 +69,14 @@
     //header
     if (document.querySelector('[data-id="header"]')) {
         UI.parts.include({
-            src: 'common/header.html',
-            id: 'header',
+            src:'common/header.html',
+            id:'header',
             callback:() => {
                 UI.exe.nav();
                 UI.exe.toggle = new ToggleUI();
                 UI.callback.toggle_nav = (v) => {
                     UI.exe.allMenu.show();
-                    // (v.state === 'true') ? UI.exe.allMenu.show() : UI.exe.allMenu.hide();
+                    // (v.state === 'true') ? UI.exe.allMenu.show() :UI.exe.allMenu.hide();
                 }
             }
         });
@@ -84,14 +84,14 @@
     //footer
     if (document.querySelector('[data-id="footer"]')) {
         UI.parts.include({
-            src: 'common/footer.html',
-            id: 'footer',
+            src:'common/footer.html',
+            id:'footer',
             callback:() => {
                 const btnTop = document.querySelector('.btn-top');
                 btnTop.addEventListener('click', () => {
                     document.querySelector('html').scrollTo({
-						top: 0,
-						behavior: 'smooth'
+						top:0,
+						behavior:'smooth'
 					});
                 });
 
@@ -99,7 +99,7 @@
                     const s_t = document.querySelector('html').scrollTop;
                     const w_h = window.innerHeight;
                     const f_t = document.querySelector('.base-footer').getBoundingClientRect().top;
-                    const add = window.innerWidth > 1023 ? 60 : 20
+                    const add = window.innerWidth > 1023 ? 60 :20
 
                     if (s_t < 100) {
                         btnTop.classList.add('off');
@@ -122,14 +122,14 @@
     //전체메뉴
     UI.exe.allMenu = new Layer({
         id :'modal_allMenu',
-        type: 'modal',
-        src: './common/modal_allMenu',
-        callback: () => {
+        type:'modal',
+        src:'./common/modal_allMenu',
+        callback:() => {
             if (!UI.exe.navMobile) {
                 UI.exe.navMobile = new Accordion({
                     id :'navMobile',
-                    current: null,
-                    callback: (v) => {
+                    current:null,
+                    callback:(v) => {
                         console.log('callback:', v);
                     }
                 });
@@ -139,9 +139,9 @@
     //검색
     UI.exe.search = new Layer({
         id :'modal_search',
-        type: 'modal',
-        src: './common/modal_search',
-        callback: () => {
+        type:'modal',
+        src:'./common/modal_search',
+        callback:() => {
             
         }
     });

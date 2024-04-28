@@ -211,11 +211,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             const getDirection = () => {
                 const isHorizontal = window.innerWidth <= 1023;
-                const direction = isHorizontal ? 'horizontal' : 'vertical';
+                const direction = isHorizontal ? 'horizontal' :'vertical';
                 const swiperWraps = document.querySelectorAll('.swiper-viewmap-wrap');
 
                 for (item of swiperWraps) {
-                    isHorizontal ? item.dataset.dir = 'horizontal' : item.dataset.dir = 'vertical';
+                    isHorizontal ? item.dataset.dir = 'horizontal' :item.dataset.dir = 'vertical';
                 }
 
                 return direction;
@@ -223,69 +223,69 @@
           
 
             const swiperViewmapThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewmap"]', {
-                spaceBetween: 10,
-                slidesPerView: 3,
-                direction: getDirection(),
-                freeMode: true,
-                watchSlidesProgress: true,
-                mousewheel: true,
-                breakpoints: {
-                    1023: {
-                        spaceBetween: 18,
+                spaceBetween:10,
+                slidesPerView:3,
+                direction:getDirection(),
+                freeMode:true,
+                watchSlidesProgress:true,
+                mousewheel:true,
+                breakpoints:{
+                    1023:{
+                        spaceBetween:18,
                     }
                 },
-                on: {
-                    resize: function () {
+                on:{
+                    resize:function () {
                         swiperViewmapThumbs.changeDirection(getDirection());
                     }
                 }
             });
             const swiperViewmap = new Swiper('.swiper-viewmap[data-id="viewmap"]', {
-                spaceBetween: 0,
-                navigation: {
-                    nextEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-next',
-                    prevEl: '.swiper-viewmap[data-id="viewmap"] .swiper-button-prev',
+                spaceBetween:0,
+                navigation:{
+                    nextEl:'.swiper-viewmap[data-id="viewmap"] .swiper-button-next',
+                    prevEl:'.swiper-viewmap[data-id="viewmap"] .swiper-button-prev',
                 },
-                thumbs: {
-                    swiper: swiperViewmapThumbs,
+                thumbs:{
+                    swiper:swiperViewmapThumbs,
                 },
-                on: {
-                    resize: function () {
+                on:{
+                    resize:function () {
                         swiperViewmapThumbs.changeDirection(getDirection());
                     }
                 }
             });
 
             const swiperPdrawingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="pdrawing"]', {
-                spaceBetween: 10,
-                slidesPerView: 3,
-                direction: getDirection(),
-                freeMode: true,
-                watchSlidesProgress: true,
-                mousewheel: true,
-                breakpoints: {
-                    1023: {
-                        spaceBetween: 18,
+                spaceBetween:10,
+                slidesPerView:3,
+                direction:getDirection(),
+                freeMode:true,
+                watchSlidesProgress:true,
+                mousewheel:true,
+                breakpoints:{
+                    1023:{
+                        spaceBetween:18,
                     }
                 },
-                on: {
-                    resize: function () {
+                on:{
+                    resize:function () {
                         swiperPdrawingThumbs.changeDirection(getDirection());
                     }
                 }
             });
         
             const swiperPdrawing = new Swiper('.swiper-viewmap[data-id="pdrawing"]', {
-                spaceBetween: 0,
-                navigation: {
-                    nextEl: '.swiper-viewmap[data-id="pdrawing"] .swiper-button-next',
-                    prevEl: '.swiper-viewmap[data-id="pdrawing"] .swiper-button-prev',
+                spaceBetween:0,
+                navigation:{
+                    nextEl:'.swiper-viewmap[data-id="pdrawing"] .swiper-button-next',
+                    prevEl:'.swiper-viewmap[data-id="pdrawing"] .swiper-button-prev',
                 },
-                thumbs: {
-                    swiper: swiperPdrawingThumbs,
+                thumbs:{
+                    swiper:swiperPdrawingThumbs,
                 },
-                on: {
-                    resize: function () {
+                on:{
+                    resize:function () {
                         swiperPdrawingThumbs.changeDirection(getDirection());
                     }
                 }

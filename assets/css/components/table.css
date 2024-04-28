@@ -118,24 +118,24 @@
     }
     &[data-color="gray"] {
         th {
-            padding: 2.2rem 4rem 1.7rem !important;
-            background-color: #FAFAFA;
+            padding:2.2rem 4rem 1.7rem !important;
+            background-color:#FAFAFA;
             border-right:1px solid #ccc;
             border-bottom:1px solid #ccc;
-            vertical-align: middle;
+            vertical-align:middle;
         }
         td {
-            padding: 2rem 4rem 1.9rem !important;
-            background-color: #FFF;
+            padding:2rem 4rem 1.9rem !important;
+            background-color:#FFF;
             border-left:1px solid #ccc;
             border-bottom:1px solid #ccc;
         }
         @media screen and (max-width:1023px) {
             th {
-                padding: 1.5rem 1rem !important;
+                padding:1.5rem 1rem !important;
             }
             td {
-                padding: 1.5rem !important;
+                padding:1.5rem !important;
             }
         }
     }
@@ -259,7 +259,7 @@
         padding-left:0;
         height:auto;
         transform:translateY(0);
-        margin-top: 2rem;
+        margin-top:2rem;
         .button-base {
             min-height:3rem;
             font-size:1.4rem;
@@ -735,7 +735,7 @@
             font-weight:500;
             padding:2.55rem 2.4rem;
             text-align:center;
-            width: 20rem;
+            width:20rem;
             &:first-child {
                 border-left:0;
             }
@@ -750,8 +750,8 @@
         @media screen and (max-width:1023px) {
             thead, tbody, tfoot {
                 th {
-                    width: 10.5rem;
-                    text-align: left;
+                    width:10.5rem;
+                    text-align:left;
                 }
                 th, td {
                     font-size:1.2rem;
@@ -766,7 +766,7 @@
         thead, tbody, tfoot {
             th, td {
                 font-size:1.2rem;
-                word-break: break-all;
+                word-break:break-all;
                 padding:1rem;
             }
         }
@@ -875,7 +875,7 @@
         font-size:1.5rem;
         line-height:1;
         font-weight:500;
-        height: 4rem;
+        height:4rem;
         text-align:center;
     }
     tbody td {
@@ -883,14 +883,14 @@
         font-size:1.5rem;
         line-height:1;
         text-align:center;
-        height: 4rem;
+        height:4rem;
     }
 
     button {
-        width: 3.2rem;
-        height: 3.2rem;
-        border-radius: 50%;
-        background-color: #fff;
+        width:3.2rem;
+        height:3.2rem;
+        border-radius:50%;
+        background-color:#fff;
 
         &.selected {
             background-color:#ED0000;

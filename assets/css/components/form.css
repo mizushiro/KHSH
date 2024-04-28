@@ -196,7 +196,7 @@ select {
     }
 }
 .form-select {
-    display: inline-flex;
+    display:inline-flex;
     position:relative;
     select {
         position:relative;

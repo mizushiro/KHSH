@@ -148,9 +148,9 @@ html[data-modal="show"] body {
             }
         }
         &[data-type="complex-search"] {
-            padding: 4rem 0 6rem;
+            padding:4rem 0 6rem;
             .form-group {
-                width: 100%;
+                width:100%;
 
                 .form-select {
                     width:14.6rem;
@@ -162,7 +162,7 @@ html[data-modal="show"] body {
             @media screen and (max-width:1023px) {
                 padding:1rem 1rem 3rem;
                 .form-group {
-                    flex-direction: column;
+                    flex-direction:column;
                     .form-select {
                         flex:1;
                         width:100%;
@@ -172,7 +172,7 @@ html[data-modal="show"] body {
                     }
                     .button-base {
                         flex:1;
-                        width: 100%;
+                        width:100%;
                     }
                 }
             }
@@ -543,12 +543,12 @@ html[data-modal="show"] body {
                 background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
             }
             .logo {
-                background-image: url(../../images/common/logo-dark.svg) !important;
+                background-image:url(../../images/common/logo-dark.svg) !important;
             }
 
             @media (max-width:1023px) {
                 .logo {
-                    background-image: url(../../images/common/logo.svg) !important;
+                    background-image:url(../../images/common/logo.svg) !important;
                 } 
             }
         }
@@ -664,7 +664,7 @@ html[data-modal="show"] body {
                 font-size:2.4rem; 
                 padding:0;
                 width:100%; 
-                font-weight: 400 !important;
+                font-weight:400 !important;
                 justify-content:center;
             }
             .nav-dep1-item.etc .nav-dep2 {
@@ -1110,7 +1110,7 @@ html[data-modal="show"] body {
             tbody td {
                 height:3rem;
                 font-size:1.2rem;
-                text-align: center;
+                text-align:center;
             }
         }
     }

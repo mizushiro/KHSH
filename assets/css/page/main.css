@@ -478,7 +478,7 @@
 }
 
 /* mobile */
-@media screen and (max-width:800px) {
+@media screen and (max-width:1023px) {
     /* main */
     .main-section {
         min-height:0 !important;
@@ -539,7 +539,6 @@
             }
         }
     }
-
     [data-sec="info"] .swiper,
     [data-sec="news"] .swiper {
         overflow:visible;

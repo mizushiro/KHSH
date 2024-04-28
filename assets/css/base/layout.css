@@ -18,7 +18,7 @@
     margin:0 auto;
     padding:0 8rem 15.6rem;
     &[data-size="full"] {
-        max-width: 100%;
+        max-width:100%;
         padding:0;
     }
     &.pt-80 {
@@ -116,7 +116,7 @@
     margin-bottom:8rem;
     position:sticky;
     top:0;
-    /*border-bottom: 1px solid #ccc;*/
+    /*border-bottom:1px solid #ccc;*/
     background-color:var(--white);
     z-index:2;
     &::before {
