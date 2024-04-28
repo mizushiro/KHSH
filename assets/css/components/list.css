@@ -221,9 +221,7 @@
             min-height:12.3rem;
         }
         .card-item-date {
-            position:absolute;
-            bottom:8rem;
-            left:4rem;
+            padding-bottom:6.4rem;
             width:100%;
             font-size:2rem;
             font-weight:200;
@@ -237,7 +235,7 @@
             font-size:2.3rem;
             color:#000;
             padding:0;
-            height:10rem;
+            height:0;
             overflow:hidden;
             transition:all 0.3s ease-out;
             justify-content:flex-start;
@@ -256,17 +254,16 @@
             .card-item-view {
                 top:0;
                 opacity:1;
-                padding-bottom:6.3rem;
                 transition:padding 0.3s ease;
             }
             .card-item-tit {
                 min-height:12.3rem;
             }
-            .card-item-date {
+            /*.card-item-date {
                 opacity:0;
-            }
+            }*/
             .card-item-desc {
-                height:24.4rem;
+                height:18rem;
                 opacity:1;
                 transition:all 0.3s ease-out;
             }
@@ -277,9 +274,9 @@
                 scale:1.2;
                 transition:scale 4s ease-in;
             }
-            @media screen and (max-width:1023px) {
+            /*@media screen and (max-width:1023px) {
                 .card-item-desc {
-                    height:14.4rem;
+                    height:16rem;
                 }
                 .card-item-tit {
                     font-size:2.1rem;
@@ -296,7 +293,7 @@
                 .card-item-date {
                     padding-top:1.6rem;
                 }
-            }
+            }*/
         }
         @media screen and (max-width:1023px) {
             height:auto;
@@ -327,7 +324,9 @@
                 top:0;
             }
             .card-item-date {
-                display:none;
+                padding-bottom:0;
+                padding-top:.4rem;
+                font-size:1.5rem;
             }
             [data-ellipsis="5"] {
                 -webkit-line-clamp:3;
