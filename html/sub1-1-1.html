@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <title>ARTERA 금호건설</title>
+
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/ui.global.js"></script>
+    <script src="../assets/js/ui.common.js"></script>
+
+    <link rel="stylesheet" href="../assets/lib/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="base-wrap" data-page="story">
+        <header class="base-header" data-id="header"></header>
+        <main class="base-main">
+            <!-- visual -->
+            <div class="story-section" data-sec="visual" data-scroll-name="story" data-scroll-callback="story1">
+                <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
+                    <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                </video>
+                
+                <div class="video-control-group">
+                    <button type="button" class="video-control" aria-label="소리끄기" data-sound="on"></button>
+                </div>
+                <div class="dim"></div>
+            </div>
+
+            <!-- story -->
+            <div class="story-section" data-sec="story" data-scroll-name="story" data-scroll-callback="story2">
+                
+                <div class="stroy-card">
+                   <video autoplay="" loop="" muted="" playsinline="">
+                        <source src="../assets/images/main/240322_mono_01.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="story-section" data-sec="story" data-scroll-name="story" data-scroll-callback="story3">
+                <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
+                    <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                </video>
+            </div>
+ 
+
+             
+        </main>
+        <footer class="base-footer" data-id="footer"></footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // UI.exe.storyVod = document.querySelector('#storyVod');
+            // UI.exe.storyVod.controls = false;
+            
+            // const videoContral = document.querySelector('.video-control');
+            // const actSoundControl = (e) => {
+            //     const _this = e.currentTarget;
+            //     if (_this.dataset.state === 'on') {
+            //         _this.dataset.state = 'off';
+            //         _this.setAttribute('aria-label', 'sound off');
+            //         UI.exe.storyVod.pause();
+            //     } else {
+            //         UI.exe.storyVod.play();
+            //         _this.dataset.state = 'on';
+            //         _this.setAttribute('aria-label', 'sound on');
+            //     }
+            // }
+            // videoContral.addEventListener('click', actSoundControl);
+
+            //화면단위 효과
+            const _header = document.querySelector('.base-header');
+            const storyMotion1 = (v, n) => {
+                const dim = v.element.querySelector('.dim');
+                dim.style.opacity = v.per_e * 0.01
+            }
+            const storyMotion2 = (v, n) => {
+                console.log('2222222',v,n)
+            }
+            const storyMotion3 = (v, n) => {
+                
+            }
+            
+            UI.callback.story1 = (v) => { storyMotion1(v, [40]); }
+            UI.callback.story2 = (v) => { storyMotion2(v, [60]); }
+            UI.callback.story3 = (v) => { storyMotion3(v, [40]); }
+            UI.exe.scrollStoryPage = new ScrollPage({
+                name:'story',
+                wheel:true,
+                wheelscope:2
+            });
+        }); 
+    </script>
+</body>
+</html>

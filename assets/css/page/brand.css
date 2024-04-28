@@ -816,6 +816,16 @@
     .sub-depth-nav {
         margin-bottom: 0;
     }
+    .history-tit{
+        font-family: 'Poppins';
+        font-size: 8rem;
+        color: var(--skyblue);
+        font-weight: 600;
+        position: sticky;
+        top:18rem;
+        margin-top: 18rem;
+        text-align: center;
+    }
 }
 .history-wrap {
     display: flex;
@@ -835,10 +845,11 @@
         font-weight:600;
         opacity: 0;
         color:var(--navy);
-        transform: translateX(-100vw);
+        transform: translateX(-5rem);
         transition: all .75s ease;
 
     }
+    
     .history-list {
         padding: 88rem 0 0;
         width: 103rem;
@@ -848,7 +859,7 @@
         
     }
     .history-item:first-child {
-        opacity: 1;
+        opacity: 0;
     }
     .history-item {
         min-height: 44rem;
@@ -903,6 +914,7 @@
             z-index: 2;
             background:linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0));
         }
+        
         .history-list {
             width: 100%;
         }

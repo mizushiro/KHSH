@@ -36,6 +36,9 @@
                     </div>
                 </div>
                 <div class="sub-content">
+                    <!-- <div class="history-tit">
+                        HISTORY
+                    </div> -->
                     <div class="history-wrap">
                         <div class="history-year">
                             <div class="mdl-count" data-id="year"></div>
@@ -274,23 +277,35 @@
                 name:'brand_history' 
             });
 
+
+
             const actPer = (p, v) =>  {
                 return (p - v[0]) / (v[1] - v[0]);
             }
             const actScopeValue = (p, v) => {
                 return (p * v[1]) < v[0] ? 0 : (p * v[1]) > v[1] ? v[1] : (p * v[1]);
             }
-            const items = document.querySelectorAll('.history-item');
-            const rect_h = items[0].getBoundingClientRect().height;
+            
+            
+
+
             UI.callback.brand_history_1 = (v) => { 
+                const items = document.querySelectorAll('.history-item');
+                const rect_h = items[0].getBoundingClientRect().height;
+                const h2 = document.querySelector('.sub-title').getBoundingClientRect().height;
+                const h3 = document.querySelector('.base-footer').getBoundingClientRect().height;
+                const h4 = document.querySelector('.sub-depth-nav').getBoundingClientRect().height;
+                document.querySelector('.history-list').style.paddingBottom = (window.innerHeight - rect_h - h2 - h4 - 40 ) + 'px';
+                
                 const per = v.per_s;
                 const wrap = v.element;
-                const items = wrap.querySelectorAll('.history-item');
+                // const items = wrap.querySelectorAll('.history-item');
                 const year =  document.querySelector('.history-year');
-                
-                const per_history = (v.top - 600) / (700 - 600);
+                const array_base = [500, 600];
+
+                const per_history = (v.top - array_base[0]) / (array_base[1] - array_base[0]);
                 year.style.opacity = (actScopeValue(per_history, [0.3, 1]));
-                year.style.transform = `translateX(-${(100 - actScopeValue(per_history, [10, 100]))}vw)`;
+                year.style.transform = `translateX(-${(100 - actScopeValue(per_history, [10, 100]))}px)`;
 
                 document.querySelector('.history-wrap').style.opacity = (actScopeValue(actPer(per, [0, 10]), [0.3, 1]));
 
@@ -300,14 +315,13 @@
                     ps.push(item.getBoundingClientRect().top + document.querySelector('html').scrollTop - ps_add)
                 }
 
-                const array_base = [900, 1000];
                 let current = 0;
 
                 for (let i = 0; i < items.length; i++) {
                     const _per = (v.top - (ps[i] - 200)) / (ps[i] - (ps[i] - 200));
 
                     items[i].style.opacity = actScopeValue(_per, [0.1, 1]);
-                    items[i].style.transform = `translateY(${(100 - actScopeValue(_per, [10, 100]))}px)`;
+                    items[i].style.transform = `translateY(${(100 - actScopeValue(_per, [10, 100])) / 2}px)`;
 
                     console.log(v.top, ps[i]);
                     if (v.top > ps[i]) {
@@ -317,8 +331,6 @@
                 }
                 year.textContent = items[current].dataset.year;
             }
-            
-            
         }); 
     </script>
 </body>
