@@ -127,14 +127,22 @@
     position:fixed;
     bottom:6rem;
     right:6rem;
-    width:4.8rem;
+    width:6.4rem;
     aspect-ratio:1/1;
     z-index:3;
     border-radius:50%;
-    background:rgba(36, 42, 92, 0.8) url(../../images/common/top.svg) no-repeat 50% 50%;
+    background-color:var(--skyblue);
     background-size:2.4rem;
     opacity:1;
     transition:opacity 0.3s ease;
+    font-size:1.8rem;
+    font-weight:500;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
+    gap:.4rem;
     &.off {
         opacity:0;
         transition:opacity 0.3s ease;
@@ -146,5 +154,18 @@
         bottom:2rem;
         width:3.2rem;
         background-size:1.6rem;
+    }
+    .ico-top {
+        aspect-ratio:1/1;
+        width:1.6rem;
+        background:url("../../images/common/top.svg") no-repeat 50% 50%;
+        background-size:contain;
+    }
+    @media screen and (max-width:1023px) {
+        font-size:0;
+        gap:0;
+        .ico-top {
+            width:1.2rem;
+        }
     }
 }
