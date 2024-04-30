@@ -61,4 +61,109 @@
     background-color:rgba(255,255,255,.78);
     border-radius:2rem;
     margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    @media screen and (max-width:1023px) {
+        padding:6rem 2.8rem;
+    }
+}
+.login-desc {
+    font-size:2rem;
+    line-height:2.4rem;
+    color:var(--navy);
+    text-align:center;
+    font-weight:500;
+    margin-bottom:1.8rem;
+    @media screen and (max-width:1023px) {
+        font-size:1.6rem;
+    }
+}
+.ico-login-logo {
+    aspect-ratio:252/32;
+    background:url("../../images/sub/login-logo.svg") no-repeat 50% 50%;
+    background-size:contain;
+    width:25.2rem;
+    @media screen and (max-width:1023px) {
+        width:18rem;
+    }
+}
+.login-form {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:2.4rem;
+    margin-top:6rem;
+    .button-base {
+        margin-top:1.6rem;
+        min-height:5rem;
+    }
+    @media screen and (max-width:1023px) {
+        margin-top:3rem;
+        gap:1.6rem;
+        .button-base {
+            margin-top:1.2rem;
+        }
+    }
+}
+.login-form-item {
+    border-bottom:.1rem solid var(--navy);
+    display:flex;
+    width:100%;
+    padding:0 2rem;
+    input {
+        border:none;
+        background-color:transparent;
+        outline:none;
+        height:5.2rem;
+        font-size:2rem;
+        padding:0;
+        flex:1;
+        font-weight:500;
+        min-width:0;
+    }
+    ::placeholder {
+        color:var(--navy);
+    }
+    i {
+        flex-shrink:0;
+    }
+    .ico-id,
+    .ico-pw {
+        aspect-ratio:1/1;
+        width:2rem;
+        background-size:contain;
+    }
+    .ico-id {
+        background:url("../../images/sub/ico-id.svg") no-repeat 50% 50%;
+    }
+    .ico-pw {
+        background:url("../../images/sub/ico-pw.svg") no-repeat 50% 50%;
+    }
+}
+.login-link {
+    margin-top:8rem;
+    display:flex;
+    gap:2rem;
+    align-items:center;
+    justify-content:center;
+    .login-link-item {
+        font-size:1.6rem;
+        font-weight:500;
+        color:var(--navy);
+    }
+    .login-line {
+        width:.1rem;
+        height:.9rem;
+        background-color:var(--navy);
+        flex-shrink:0;
+    }
+    @media screen and (max-width:1023px) {
+        margin-top:4rem;
+        gap:1.6rem;
+        .login-link-item {
+            font-size:1.3rem;
+        }
+    }
 }
