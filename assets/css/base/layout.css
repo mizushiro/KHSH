@@ -16,7 +16,7 @@
 .sub-content {
     position: relative;
     z-index: 0;
-    max-width:176rem;
+    max-width:156rem;
     margin:0 auto;
     padding:0 8rem 15.6rem;
     &[data-size="full"] {
@@ -63,7 +63,7 @@
         left:50%;
         transform:translateX(-50%);
         bottom:13.2rem;
-        max-width:168rem;
+        max-width:148rem;
         padding:0 4rem;
         font-size:5rem;
         font-weight:600;
@@ -136,12 +136,12 @@
     }
     .sub-depth-nav-list {
         display:flex;
-        max-width:160rem;
+        max-width:140rem;
         margin:0 auto;
         &[data-type="auto"] {
             .sub-depth-nav-item {
                 flex:none;
-                padding:0 4rem;
+                padding:0 2.8rem;
                  /*@media screen and (max-width:1400px) {
                     padding:0 3rem;
                 }*/

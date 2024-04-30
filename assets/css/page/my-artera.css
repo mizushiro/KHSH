@@ -1246,3 +1246,24 @@
         }
     }
 }
+.as-img {
+    display:flex;
+    justify-content:center;
+    img {
+        max-width:120rem;
+        &[data-view="mobile"] {
+            display:none;
+        }
+    }
+    @media (max-width:1023px) {
+        img {
+            max-width:100%;
+            &[data-view="mobile"] {
+                display:block;
+            }
+            &[data-view="pc"] {
+                display:none;
+            }
+        }
+    }
+}
