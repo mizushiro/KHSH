@@ -218,6 +218,14 @@
     flex-direction:column;
     @media screen and (max-width:1023px) {
         padding:2rem;
+        .title-size-34 {
+            min-height:7.2rem;
+        }
+    }
+    @media screen and (max-width:767px) {
+        .title-size-34 {
+            min-height:3.6rem;
+        }
     }
 }
 .card-artera-state {
