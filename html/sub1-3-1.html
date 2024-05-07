@@ -19,9 +19,9 @@
     <div class="base-wrap">
         <header class="base-header" data-id="header"></header>
         <main class="base-main">
-            <div class="sub-title" data-bg="sub1-5">
+            <div class="sub-title" data-bg="sub1-3">
                 <h2>히스토리</h2>
-                <img src="../assets/images/sub/sub-visual-1-5.jpg" alt="">
+                <img src="../assets/images/sub/sub-visual-1-3.jpg" alt="">
             </div>
 
             <article class="content-area" data-brand="history">
@@ -40,11 +40,17 @@
                         HISTORY
                     </div> -->
                     <div class="history-wrap">
-                        
-                        <div class="history-year">
-                            2023
+                        <div class="history-yeartxt">
+                            
+                            <div class="history-txt">
+                                금호건설이 <br>걸어온 길
+                            </div>
+                            <div class="history-year">
+                                2023
+                            </div>
+                            <div class="bg"></div>
                         </div>
-                        <div class="bg"></div>
+                        
                         <div class="history-list" 
                         data-scroll-name="brand_history" data-scroll-callback="brand_history_1">
  
@@ -145,49 +151,43 @@
                             </div>
                             <div class="history-item" data-year="2008">
                                 <div class="history-box">
-                                    <div class="history-item-txt">
-                                        <h4>2008 어울림 표준화</h4>
-                                        <p>토탈 디자인 진행</p>
+                                    <div class="history-box-group">
+                                        <div class="history-item-txt">
+                                            <h4>2008 어울림 표준화</h4>
+                                            <p>토탈 디자인 진행</p>
+                                        </div>
+                                        <div class="history-item-img">
+                                            <img src="../assets/images/history/h2008_1.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div class="history-item-img">
-                                        <img src="../assets/images/history/h2008_1.jpg" alt="">
+                                    <div class="history-box-group">
+                                        <div class="history-item-txt">
+                                            <h4>GOOD DESIGN 선정</h4>
+                                            <p>해자정원 방배 어울림</p>
+                                        </div>
+                                        <div class="history-item-img">
+                                            <img src="../assets/images/history/h2008_2.jpg" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                            <div class="history-item" data-year="2008">
-                                <div class="history-box">
-                                    <div class="history-item-txt">
-                                        <h4>GOOD DESIGN 선정</h4>
-                                        <p>해자정원 방배 어울림</p>
+                                    <div class="history-box-group">
+                                        <div class="history-item-txt">
+                                            <h4>KIDP 원장상</h4>
+                                            <p>한글 방화문</p>
+                                        </div>
+                                        <div class="history-item-img">
+                                            <img src="../assets/images/history/h2008_3.jpg" alt="">
+                                        </div>
                                     </div>
-                                    <div class="history-item-img">
-                                        <img src="../assets/images/history/h2008_2.jpg" alt="">
+                                    <div class="history-box-group">
+                                        <div class="history-item-txt">
+                                            <h4>GOOD DESIGN 선정</h4>
+                                            <p>아트 측벽(Art wall) <br>용인동백타운하우스</p>
+                                        </div>
+                                        <div class="history-item-img">
+                                            <img src="../assets/images/history/h2008_4.jpg" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                            <div class="history-item" data-year="2008">
-                                <div class="history-box">
-                                    <div class="history-item-txt">
-                                        <h4>KIDP 원장상</h4>
-                                        <p>한글 방화문</p>
-                                    </div>
-                                    <div class="history-item-img">
-                                        <img src="../assets/images/history/h2008_3.jpg" alt="">
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="history-item" data-year="2008">
-                                <div class="history-box">
-                                    <div class="history-item-txt">
-                                        <h4>GOOD DESIGN 선정</h4>
-                                        <p>아트 측벽(Art wall) <br>용인동백타운하우스</p>
-                                    </div>
-                                    <div class="history-item-img">
-                                        <img src="../assets/images/history/h2008_4.jpg" alt="">
-                                    </div>
+                                   
                                 </div>
                                 
                             </div>
@@ -296,21 +296,37 @@
                 const h2 = document.querySelector('.sub-title').getBoundingClientRect().height;
                 const h3 = document.querySelector('.base-footer').getBoundingClientRect().height;
                 const h4 = document.querySelector('.sub-depth-nav').getBoundingClientRect().height;
-                document.querySelector('.history-list').style.paddingBottom = (window.innerHeight - rect_h - h2 - h4 - 40 ) + 'px';
+                document.querySelector('.history-list').style.paddingBottom = (window.innerHeight - (rect_h /2) - h2 - h4 - 60 ) + 'px';
                 
                 const per = v.per_s;
                 const wrap = v.element;
                 // const items = wrap.querySelectorAll('.history-item');
                 const year =  document.querySelector('.history-year');
+                const txt =  document.querySelector('.history-txt');
+                const bg =  document.querySelector('[data-brand="history"]');
                 const array_base = [500, 600];
+                const array_base2 = [400, 500];
+                const array_base3 = [100, 200];
 
                 const per_history = (v.top - array_base[0]) / (array_base[1] - array_base[0]);
                 year.style.opacity = (actScopeValue(per_history, [0.3, 1]));
                 year.style.transform = `translateX(-${(100 - actScopeValue(per_history, [10, 100]))}px)`;
 
+                const per_history2 = (v.top - array_base2[0]) / (array_base2[1] - array_base2[0]);
+                txt.style.opacity = (actScopeValue(per_history2, [0.3, 1]));
+                txt.style.transform = `translateX(-${(100 - actScopeValue(per_history2, [10, 100]))}px)`;
+
+                const per_history3 = (v.top - array_base3[0]) / (array_base3[1] - array_base3[0]);
+                // bg.style.transform = `translateY(${(0 - actScopeValue(per_history2, [10, 100]))}px)`;
+                if (v.top > array_base2[0]) {
+                    bg.style.backgroundAttachment = 'fixed';
+                } else {
+                    bg.style.backgroundAttachment = 'initial';
+                }
+
                 document.querySelector('.history-wrap').style.opacity = (actScopeValue(actPer(per, [0, 10]), [0.3, 1]));
 
-                const ps_add = 320;
+                const ps_add =  window.innerHeight / 2;
                 const ps = [];
                 for (let item of items) {
                     ps.push(item.getBoundingClientRect().top + document.querySelector('html').scrollTop - ps_add)

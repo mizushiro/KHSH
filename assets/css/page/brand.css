@@ -135,7 +135,7 @@
             background:url(../../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
         }
         .sticky-timeline {
-            height:250dvh;
+            height:180dvh;
         }
         .sticky-item {
             position:absolute;
@@ -243,8 +243,6 @@
             .sticky-item {
                 gap:4rem;
                 flex-direction:column;
-
-                
                 .sticky-group {
                     gap:4rem;
                     flex-direction:column;
@@ -340,7 +338,7 @@
         gap:8rem;
         z-index:1; 
 
-        transition:backgroudColor .5s ease;
+        transition:all .5s ease;
 
         .bi-tit-line {
             margin-top:8rem;
@@ -809,11 +807,16 @@
             left:0;
             gap:0.8rem;
         }
+        .swiper-slide {
+            aspect-ratio:initial
+        }
         
     }
 }
 [data-brand="history"] {
-    background: #F8FCFF;
+    background:#F8FCFF url(../../images/history/bg.png) no-repeat  calc(50% - 46rem ) 26rem / 57.6rem;
+    background-attachment: initial;
+
     .sub-depth-nav {
         margin-bottom: 0;
     }
@@ -835,36 +838,70 @@
     top:8rem;
     opacity: 0;
     transition: all .75s ease;
-    background:url(../../images/history/bg.png) no-repeat 0 27.5rem / 57.6rem;
-    background-attachment:fixed;
-   
-    .history-year {
+
+    .bg {
         position: sticky;
-        top:8rem;
+        left:-11rem;
+        top:0;
+        width: 57.6rem;
+        height: 57rem;
+        transform: translateY(35rem);
+        
+        transition: all .75s ease;
+    }
+    .history-yeartxt {
+        position: sticky;
+        top: calc(50% - 17rem);
         width: 57rem;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        gap:1.6rem;
         align-items: flex-start;
-        padding:16rem 0 0;
-        font-size:8rem;
+        padding-left:4rem;
+        
+    }
+    .history-year {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        font-size:10rem;
+        letter-spacing: 0;
         font-weight:600;
+        text-align: left;
         opacity: 0;
         color:var(--navy);
         transform: translateX(-5rem);
         transition: all .75s ease;
-
+        font-family: 'Poppins';
+        z-index:1;
     }
-    
+    .history-txt {
+        color:var(--navy);
+        padding:0 0 0;
+        transform: translateX(-5rem);
+        font-size: 5rem;
+        line-height: 7.5rem;
+        font-weight: 600;
+        text-align: left;
+        transition: all .75s ease;
+        font-family: 'Poppins';
+        z-index:1;
+    }
     .history-list {
         padding: 88rem 0 0;
         width: 103rem;
-        gap:0;
+        gap:12rem;
         display: flex;
         flex-direction: column;
         
     }
     .history-item:first-child {
         opacity: 0;
+    }
+    .history-item:nth-child(2n) {
+        .history-box {
+            background-color: #FFF6F1;
+        }
     }
     .history-item {
         min-height: 44rem;
@@ -876,16 +913,29 @@
         transform: translateY(10rem);
         transition: all .75s ease;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        &[data-year="2008"] .history-box{
+            flex-direction: column;
+            display: flex;
+            gap:8rem;
+        }
+        .history-box-group {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
     .history-box {
         width: 100%;
-        min-height: 36rem;
-        padding: 0 8rem;
+        min-height: 6.4rem;
+        padding: 8rem;
         display: flex;
-        background-color: #FAFBFD;
-        align-items: center;
-        justify-content: space-between;
+        background-color: #E8F3FF;
+        align-items: flex-start;
+        justify-content: center;
+        gap:4rem;
+       
     }
     .history-item-txt {
         h4 {

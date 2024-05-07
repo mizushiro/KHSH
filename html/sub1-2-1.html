@@ -255,8 +255,10 @@
 
                 const per_1 = (v.top - 300) / (550 - 300);
                 const per_1_x = (v.top - 180) / (450 - 180);
+
                 const per_2 = (v.top - 525) / (1100 - 525);
                 const per_2_x = (v.top - 525) / (950 - 525);
+
                 const per_3 = (v.top - 1200) / (1500 - 1200);
 
                 item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
@@ -275,11 +277,11 @@
 
             const scrollMotion = () => {
                 let ps = [];
-                const ps_add = 320;
+                const ps_add = window.innerHeight / 2;
                 for (let item of bi_items) {
                     ps.push(item.getBoundingClientRect().top + document.querySelector('html').scrollTop - ps_add)
                 }
-
+console.log(ps);
                 UI.callback.brand_BI_2 = (v) => { 
                     console.log('brand_BI_2', v.top);
 
@@ -293,9 +295,14 @@
                         bi_items[i].style.opacity = actScopeValue(_per, [0.1, 1]);
                         bi_items[i].style.transform = `translateY(${(100 - actScopeValue(_per, [10, 100]))}px)`;
                     }
-                    
-                    const item13_o = [66, 80];
-                    if (per > 85) {
+                    console.log(v.top, ps[11])
+                    if (v.top > ps[1] && v.top < ps[2]) {
+                        wrap.style.backgroundColor = '#FCFCFC';
+                    } 
+                    else if (v.top > ps[7] && v.top < ps[8]) {
+                        wrap.style.backgroundColor = '#FCFCFC';
+                    }    
+                    else if (v.top > ps[11]) {
                         wrap.style.backgroundColor = '#F6FBFF';
                     } else {
                         wrap.style.backgroundColor = '#ffffff';
