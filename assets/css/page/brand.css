@@ -813,6 +813,7 @@
     }
 }
 [data-brand="history"] {
+    background: #F8FCFF;
     .sub-depth-nav {
         margin-bottom: 0;
     }
@@ -829,10 +830,14 @@
 }
 .history-wrap {
     display: flex;
+    position: sticky;
     align-items: flex-start;
+    top:8rem;
     opacity: 0;
     transition: all .75s ease;
-
+    background:url(../../images/history/bg.png) no-repeat 0 27.5rem / 57.6rem;
+    background-attachment:fixed;
+   
     .history-year {
         position: sticky;
         top:8rem;
