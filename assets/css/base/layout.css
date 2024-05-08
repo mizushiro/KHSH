@@ -133,11 +133,13 @@
     }
     @media screen and (max-width:1023px) {
         margin-bottom:2.8rem;
+        &::-webkit-scrollbar {display: none !important; }
     }
     .sub-depth-nav-list {
         display:flex;
         max-width:140rem;
         margin:0 auto;
+        
         &[data-type="auto"] {
             .sub-depth-nav-item {
                 flex:none;
@@ -150,6 +152,7 @@
                 }
             }
         }
+       
     }
     .sub-depth-nav-item {
         flex:1;

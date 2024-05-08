@@ -48,7 +48,6 @@
                             <div class="history-year">
                                 2023
                             </div>
-                            <div class="bg"></div>
                         </div>
                         
                         <div class="history-list" 
@@ -296,7 +295,13 @@
                 const h2 = document.querySelector('.sub-title').getBoundingClientRect().height;
                 const h3 = document.querySelector('.base-footer').getBoundingClientRect().height;
                 const h4 = document.querySelector('.sub-depth-nav').getBoundingClientRect().height;
-                document.querySelector('.history-list').style.paddingBottom = (window.innerHeight - (rect_h /2) - h2 - h4 - 60 ) + 'px';
+console.log(UI.state.device.mobile)
+                if (UI.state.device.mobile) {
+                    document.querySelector('.history-list').style.paddingBottom = '0px';
+                } else {
+                    document.querySelector('.history-list').style.paddingBottom = (window.innerHeight - (rect_h /2) - h2 - h4 - 60 ) + 'px';
+                }
+                
                 
                 const per = v.per_s;
                 const wrap = v.element;
@@ -340,7 +345,6 @@
                     items[i].style.opacity = actScopeValue(_per, [0.1, 1]);
                     items[i].style.transform = `translateY(${(100 - actScopeValue(_per, [10, 100])) / 2}px)`;
 
-                    console.log(v.top, ps[i]);
                     if (v.top > ps[i]) {
                         current = i;
                     }

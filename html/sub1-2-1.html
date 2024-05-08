@@ -44,8 +44,8 @@
                                 <div class="bi1-bg"></div>
                                 <div class="sticky-group">
                                     <div class="brand-BI-head">
-                                        <h3 class="brand-BI-head-tit">ARTERA는 금호건설이 지은 대지 위의 예술을 의미합니다.</h3>
-                                        <p class="brand-BI-head-txt">앞선 주거 문화가 바탕이 된 일상의 공간을 통해 고객의 삶에 진정한 아름다움을 선사하겠다는 의지를 담고 있습니다.</p>
+                                        <h3 class="brand-BI-head-tit">ARTERA는 금호건설이 지은 <br class="only-m">대지 위의 예술을 의미합니다.</h3>
+                                        <p class="brand-BI-head-txt">앞선 주거 문화가 바탕이 된 일상의 공간을 통해<br class="only-m"> 고객의 삶에 진정한 아름다움을 선사하겠다는 <br class="only-m">의지를 담고 있습니다.</p>
                                         <button type="button" class="button-base" data-style="ghost" data-icon-after="download">금호건설 아테라 BI 다운로드</button>
                                     </div>
                                     <div class="brand-BI-logo">
@@ -253,25 +253,36 @@
                 const item2 = wrap.querySelector('.brand-BI-logo');
                 const item3 = wrap.querySelector('.bi1-bg');
 
-                const per_1 = (v.top - 300) / (550 - 300);
-                const per_1_x = (v.top - 180) / (450 - 180);
+                const aa = [400, 800]
+                const aa2 = [200, 700]
+                const bb = [700, 1200]
+console.log(v.top)
+                const per_1 = (v.top - aa[0]) / (aa[1] - aa[0]);
+                const per_1_x = (v.top - aa2[0]) / (aa2[1] - aa2[0]);
 
-                const per_2 = (v.top - 525) / (1100 - 525);
-                const per_2_x = (v.top - 525) / (950 - 525);
+                const per_2 = (v.top - bb[0]) / (bb[1] - bb[0]);
+                const per_2_x = (v.top - bb[0]) / (bb[1] - bb[0]);
 
-                const per_3 = (v.top - 1200) / (1500 - 1200);
-
-                item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
-                item1.style.transform = `translateX(-${(100 - actScopeValue(per_1, [10, 100]))}vw)`;
-                item2.style.opacity = actScopeValue(per_2, [0.1, 1]);
-                item2.style.transform = `translateY(${(100 - actScopeValue(per_2_x, [10, 100]))}vh)`;
-                item3.style.opacity = actScopeValue(per_3, [0.1, 1]);
-
-                if (v.top > 1400) {
-                    wrap.classList.add('change');
+                // const per_3 = (v.top - 1200) / (1500 - 1200);
+                if (UI.state.device.mobile) {
+                    item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
+                    item1.style.transform = `translateY(${(50 - actScopeValue(per_1, [10, 50]))}vw)`;
+                    item2.style.opacity = actScopeValue(per_2, [0.1, 1]);
+                    item2.style.transform = `translateY(${(100 - actScopeValue(per_2_x, [10, 100])) * -1}vh)`;
                 } else {
-                    wrap.classList.remove('change');
+                    item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
+                    item1.style.transform = `translateX(-${(50 - actScopeValue(per_1, [10, 50]))}vw)`;
+                    item2.style.opacity = actScopeValue(per_2, [0.1, 1]);
+                    item2.style.transform = `translateY(${(100 - actScopeValue(per_2_x, [10, 100]))}vh)`;
                 }
+                
+                // item3.style.opacity = actScopeValue(per_3, [0.1, 1]);
+
+                // if (v.top > 1400) {
+                //     wrap.classList.add('change');
+                // } else {
+                //     wrap.classList.remove('change');
+                // }
             }   
             const bi_items = document.querySelectorAll('.bi-item[data-scroll-callback="brand_BI_2"] > div');
 
@@ -281,10 +292,8 @@
                 for (let item of bi_items) {
                     ps.push(item.getBoundingClientRect().top + document.querySelector('html').scrollTop - ps_add)
                 }
-console.log(ps);
-                UI.callback.brand_BI_2 = (v) => { 
-                    console.log('brand_BI_2', v.top);
 
+                UI.callback.brand_BI_2 = (v) => { 
                     const is_mobile = window.innerWidth < 1024;
                     const per = v.per_s;
                     const wrap = v.element;
@@ -295,7 +304,7 @@ console.log(ps);
                         bi_items[i].style.opacity = actScopeValue(_per, [0.1, 1]);
                         bi_items[i].style.transform = `translateY(${(100 - actScopeValue(_per, [10, 100]))}px)`;
                     }
-                    console.log(v.top, ps[11])
+
                     if (v.top > ps[1] && v.top < ps[2]) {
                         wrap.style.backgroundColor = '#FCFCFC';
                     } 

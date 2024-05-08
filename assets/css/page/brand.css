@@ -131,11 +131,12 @@
     
     [data-scroll-callback="brand_BI_1"] {
         .sticky-wrapper {
+            overflow: hidden;
             top:0;
             background:url(../../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
         }
         .sticky-timeline {
-            height:180dvh;
+            height:240dvh;
         }
         .sticky-item {
             position:absolute;
@@ -154,7 +155,7 @@
                 justify-content:center;
                 align-items:center;
                 gap:32rem;
-                transition:all 0.7s ease;
+                /* transition:all 2.7s ease; */
             }
             .brand-BI-head {
                 position:relative;
@@ -166,25 +167,25 @@
                 align-items:flex-start;
                 opacity:0;
                 transform:translateX(-100vw);
-                transition:all 0.7s ease;
+                transition:all 1.2s ease-out;
 
                 .brand-BI-head-tit {
                     font-size:4rem;
                     font-weight:600;
                     color:#fff;
                     line-height:1.3;
-                    transition:color 0.7s ease;
+                    /* transition:color 1.7s ease; */
                 }
                 .brand-BI-head-txt {
                     font-size:2.4rem;
                     font-weight:500;
                     color:#fff;
                     line-height:1.6;
-                    transition:color 0.7s ease;
+                    /* transition:color 1.7s ease; */
                 }
                 .button-base {
                     margin-top:2rem;
-                    transition:all 0.7s ease;
+                    /* transition:all 1.7s ease; */
                 }
             }
             .brand-BI-logo {
@@ -192,7 +193,7 @@
                 z-index:1;
                 width:53.8rem;
                 height:23.3rem;
-                transition:all 0.7s ease;
+                transition:all 1.2s ease-out;
                 opacity:0;
                 transform:translateY(100vh);
                 
@@ -240,12 +241,15 @@
         }
 
         @media screen and (max-width:1023px) {
+            .sticky-timeline {
+                height:340dvh;
+            }
             .sticky-item {
                 gap:4rem;
                 flex-direction:column;
                 .sticky-group {
-                    gap:4rem;
-                    flex-direction:column;
+                    gap:10rem;
+                    flex-direction:column-reverse;
                 }
                 .brand-BI-head {
                     align-items:center;
@@ -254,11 +258,11 @@
                     gap:1.6rem;
                     .brand-BI-head-txt{
                         text-align:center;
-                        font-size:1.6rem;
+                        font-size:1.5rem;
                     }
                     .brand-BI-head-tit{
                         text-align:center;
-                        font-size:2rem;
+                        font-size:2.5rem;
                     }
                 }
                 .brand-BI-logo {
@@ -276,7 +280,7 @@
         gap:1.7rem;
         max-width:118rem;
         width:100%;
-        transition:all 0.7s ease;
+        transition:all 0.9s ease-out;
         opacity:0;
         /* transform:translateY(10rem); */
         h3 {
@@ -830,6 +834,14 @@
         margin-top: 18rem;
         text-align: center;
     }
+    @media screen and (max-width:1023px) {
+        background:#F8FCFF url(../../images/history/bg.png) no-repeat 0 30% / 100%;
+        background-attachment: fixed !important;
+
+        .sub-content {
+            padding-bottom: 0;
+        }
+    }
 }
 .history-wrap {
     display: flex;
@@ -839,20 +851,10 @@
     opacity: 0;
     transition: all .75s ease;
 
-    .bg {
-        position: sticky;
-        left:-11rem;
-        top:0;
-        width: 57.6rem;
-        height: 57rem;
-        transform: translateY(35rem);
-        
-        transition: all .75s ease;
-    }
     .history-yeartxt {
         position: sticky;
         top: calc(50% - 17rem);
-        width: 57rem;
+        width: 41rem;
         display: flex;
         flex-direction: column;
         gap:1.6rem;
@@ -880,6 +882,7 @@
         padding:0 0 0;
         transform: translateX(-5rem);
         font-size: 5rem;
+        opacity: 0;
         line-height: 7.5rem;
         font-weight: 600;
         text-align: left;
@@ -912,8 +915,6 @@
         opacity: 0;
         transform: translateY(10rem);
         transition: all .75s ease;
-        align-items: center;
-        justify-content: space-between;
         &[data-year="2008"] .history-box{
             flex-direction: column;
             display: flex;
@@ -932,7 +933,7 @@
         padding: 8rem;
         display: flex;
         background-color: #E8F3FF;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         gap:4rem;
        
@@ -959,16 +960,35 @@
     }
     @media screen and (max-width:1023px) {
         flex-direction: column;
+        
+        .history-yeartxt {
+            top:0;
+            width: calc(100% + 4rem);
+            padding-top: 6rem;
+            margin-left: -2rem;
+            gap:0;
+            flex-direction: row;
+            align-items: center;
+            gap:1.2rem;
+            padding-bottom: 1.2rem;
+            background-color: #F8FCFF;
+            z-index: 2;
 
+            .history-txt {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+        }
+        
         .history-year {
             top:0;
             width:calc(100% + 4rem);
-            margin-left:-2rem;
+            margin-left:0;
             font-size: 4rem;
-            padding-top: 8rem;
-            padding-bottom: 4rem;
+            padding-top: 0;
+            padding-bottom: 0;
             z-index: 2;
-            background:linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0));
+            /* background:linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0)); */
         }
         
         .history-list {
@@ -995,7 +1015,7 @@
             }
         }
         .history-item-img{
-            width: 36rem;
+            width: 100%;
 
             img {
                 display: block;
