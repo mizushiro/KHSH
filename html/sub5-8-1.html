@@ -243,17 +243,17 @@
                         </p>
                         <h4 class="privacy-sub-title">[개인정보처리방침 개정 이력]</h4>
                         <p class="privacy-desc-24">
-                            <a href="">2023년 1월 20일 개정안</a><br>
-                            <a href="">2022년 8월 22일 개정안</a><br>
-                            <a href="">2021년 8월 27일 개정안</a><br>
-                            <a href="">2021년 4월 23일 개정안</a><br>
-                            <a href="">2021년 3월 24일 개정안</a><br>
-                            <a href="">2021년 1월 14일 개정안</a><br>
-                            <a href="">2018년 1월 1일 개정안</a><br>
-                            <a href="">2017년 9월 21일 개정안</a><br>
-                            <a href="">2016년 2월 5일 개정안</a><br>
-                            <a href="">2012년 1월 2일 개정안</a><br>
-                            <a href="">2008년 10월 30일 개정안</a>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2023년 1월 20일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2022년 8월 22일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 8월 27일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 4월 23일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 3월 24일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 1월 14일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2018년 1월 1일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2017년 9월 21일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2016년 2월 5일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2012년 1월 2일 개정안</button><br>
+                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2008년 10월 30일 개정안</button>
                         </p>
                     </div>
                 </div>
@@ -262,10 +262,40 @@
         <footer class="base-footer" data-id="footer"></footer>
     </div>
 
+    <section class="layer-modal" data-size="L" data-id="sub5_8_1p" data-state="" role="dialog">
+        <div class="layer-modal-wrap">
+            <div class="layer-modal-header">
+                <h1 class="layer-modal-title">이전 개인정보처리방침(2023.1.20 개정안)</h1>
+                <button type="button" class="layer-modal-close" data-material="close"
+                        aria-label="닫기"></button>
+            </div>
+            <div class="layer-modal-body">
+                <div class="privacy-preview">
+                    <p>
+                        정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다.<br>
+                        아래의 기관은 회사와는 별개의 기관으로서, 회사의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나
+                        보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다.<br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="layer-modal-dim"></div>
+    </section>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             //select
             UI.form.setSelect();
+
+            //modal
+            UI.exe.sub5_8_1p = new Layer({
+                id :'sub5_8_1p',
+                type:'modal',
+                callback:() => {
+                    console.log('modal1 콜백');
+                }
+            });
         }); 
     </script>
 </body>

@@ -69,7 +69,7 @@
     font-weight:500;
     color:var(--gray_300);
     line-height:3.4rem;
-    a {
+    .btn-privacy {
         font-weight:500;
         color:var(--gray_300);
         text-decoration:underline;
@@ -152,5 +152,12 @@
         @media screen and (max-width:1023px) {
             pointer-events:auto;
         }
+    }
+}
+.privacy-preview {
+    font-size:2.4rem;
+    padding-bottom:4rem;
+    @media screen and (max-width:1023px) {
+        font-size:1.4rem;
     }
 }

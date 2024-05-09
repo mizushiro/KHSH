@@ -86,6 +86,7 @@ html[data-modal="show"] body {
         font-weight:600;
         @media screen and (max-width:1023px) {
             font-size:2rem;
+            line-height:2.2rem;
         }
     }
     .layer-modal-subject {
