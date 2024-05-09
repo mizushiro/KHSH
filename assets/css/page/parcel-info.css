@@ -1340,3 +1340,74 @@
         margin-top:1rem;
     }
 }
+.card-artera-sh {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:4rem;
+    margin-bottom:4rem;
+    @media screen and (max-width:1023px) {
+        flex-direction:column;
+        gap:1.2rem;
+    }
+}
+.card-artera-sh-item {
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    .form-select {
+        min-width:20rem;
+    }
+    @media screen and (max-width:1023px) {
+        width:100%;
+        .card-artera-sh-form {
+            flex:1;
+        }
+        .form-select {
+            width:100%;
+        }
+    }
+}
+.card-artera-sh-title {
+    font-size:2.4rem;
+    color:#000;
+    font-weight:500;
+    @media screen and (max-width:1023px) {
+        font-size:1.6rem;
+        width:5.2rem;
+        flex-shrink:0;
+    }
+}
+.card-artera-sh-input {
+    border:.1rem solid var(--form_line);
+    height:4rem;
+    display:flex;
+    width:40rem;
+    align-items:center;
+    padding:0 1rem 0 2rem;
+    @media screen and (max-width:1023px) {
+        height:3rem;
+        width:auto;
+        flex:1;
+        padding:0;
+    }
+    .input-sh {
+        min-width:0;
+        flex:1;
+        height:100%;
+        border:none;
+        @media screen and (max-width:1023px) {
+            padding-left:1.2rem;
+        }
+    }
+    .btn-search {
+        position: relative;
+        aspect-ratio:1/1;
+        width:3.8rem;
+        background: url(../../images/common/ico-search-dark.svg) no-repeat 50% 50% / 1.6rem;
+        flex-shrink:0;
+        @media screen and (max-width:1023px) {
+            width:2.8rem;
+        }
+    }
+}

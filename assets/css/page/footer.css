@@ -160,7 +160,7 @@
     align-items:center;
     justify-content:center;
     line-height:1;
-    gap:.4rem;
+    gap:.6rem;
     &.off {
         opacity:0;
         transition:opacity 0.3s ease;
@@ -174,7 +174,7 @@
         background-size:1.6rem;
     }
     .ico-top {
-        aspect-ratio:1/1;
+        aspect-ratio:16/12;
         width:1.6rem;
         background:url("../../images/common/top.svg") no-repeat 50% 50%;
         background-size:contain;

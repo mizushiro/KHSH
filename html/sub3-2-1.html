@@ -32,6 +32,27 @@
                     </div>
                 </div>
                 <div class="sub-content">
+                    <div class="card-artera-sh">
+                        <div class="card-artera-sh-item">
+                            <span class="card-artera-sh-title">지역</span>
+                            <div class="card-artera-sh-form">
+                                <div class="form-select">
+                                    <select title="지역 선택" id="test_a0_1">
+                                        <option value="1" selected="">전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-artera-sh-item">
+                            <span class="card-artera-sh-title">단지명</span>
+                            <div class="card-artera-sh-form">
+                                <div class="card-artera-sh-input">
+                                    <input type="text" class="input-sh" />
+                                    <button type="button" class="btn-search" aria-label="검색"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-artera">
                         <div class="card-artera-item">
                             <a href="#" class="card-artera-img">
@@ -266,7 +287,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-
+            //select
+            UI.form.setSelect();
         }); 
     </script>
 </body>
