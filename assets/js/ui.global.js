@@ -1764,7 +1764,7 @@ class ScrollPage {
                         } else {
                             doScroll('down');
                         }
-                    }, 300);
+                    }, 100);
                 } else {
                     if (e.deltaY < 0 && this.ary_top_s[this.opt.wheelscope] >= this.el_wrap.scrollTop){
                         e.preventDefault();
@@ -1773,7 +1773,7 @@ class ScrollPage {
                             if (e.deltaY < 0){
                                 doScroll('up');
                             }
-                        }, 300);
+                        }, 100);
                        
                     } else {
                         if (this.ary_top_s[this.opt.wheelscope] > this.el_wrap.scrollTop) {
@@ -1783,7 +1783,7 @@ class ScrollPage {
                                 wheelTimer = setTimeout(() => {
                                     this.pageNum = scope;
                                     doScroll('up');
-                                }, 300);
+                                }, 100);
                                 
                             }
                         }
