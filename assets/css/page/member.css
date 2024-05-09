@@ -184,6 +184,7 @@
         margin-top:2rem;
         @media screen and (max-width:1023px) {
             font-size:1.4rem;
+            margin-top:1rem;
         }
     }
     .box-group {
@@ -450,5 +451,17 @@
         @media screen and (max-width:1023px) {
             margin-bottom:2rem;
         }
+    }
+}
+.ic-ok {
+    display:block;
+    aspect-ratio:1/1;
+    width:8rem;
+    background:url("../../images/common/ico-ok.svg") no-repeat 50% 50%;
+    background-size:contain;
+    margin:0 auto 4rem;
+    @media screen and (max-width:1023px) {
+        width:4rem;
+        margin-bottom:2rem;
     }
 }
