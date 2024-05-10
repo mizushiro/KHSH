@@ -626,6 +626,17 @@
     display:flex;
     flex-direction:column;
     gap:4rem;
+    padding-bottom:4rem;
+    &::after {
+        content:"";
+        position:absolute;
+        width:200vw;
+        height:50%;
+        bottom:-1rem;
+        left:-100vw;
+        background-color:#F7F7F7;
+        z-index:-1;
+    }
     iframe {
         width:100%;
         height:100%;
@@ -669,7 +680,6 @@
     }
     @media screen and (max-width:1023px) {
         width:auto;
-        background-color:#f7f7f7;
         padding:2rem;
         margin:0 -2rem;
         gap:2.4rem;

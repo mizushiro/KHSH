@@ -912,12 +912,20 @@
             display:none !important;
         }
         .app-detils-info {
-            margin-top:0 !important;
+            margin-top:1rem !important;
+        }
+        .table-basic {
+            thead, tfoot, tbody {
+                th, td {
+                    padding:1.2rem !important;
+                    height:auto !important;
+                }
+            }
         }
         .table-data {
             thead, tfoot, tbody {
                 th, td {
-                    padding:1rem;
+                    padding:1.2rem;
                 }
             }
         }
@@ -927,9 +935,15 @@
         .print-logo {
             display:block;
             position:absolute;
-            top:1cm; 
+            top:0;
             right:0;
             width:3cm;
+            img {
+                width:20rem;
+            }
+        }
+        .mt-l {
+            margin-top:4rem !important;
         }
     }
 }
