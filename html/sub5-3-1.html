@@ -48,8 +48,102 @@
         <footer class="base-footer" data-id="footer"></footer>
     </div>
 
+    <!-- 비빌번호 변경 -->
+    <section class="layer-modal" data-size="L" data-id="sub5_3_1p" data-state="" role="dialog">
+        <div class="layer-modal-wrap">
+            <div class="layer-modal-header">
+                <h1 class="layer-modal-title">비밀번호 변경 안내</h1>
+                <button type="button" class="layer-modal-close" data-material="close" aria-label="닫기"></button>
+            </div>
+            <div class="layer-modal-body" data-pd="s">
+                <div class="layer-modal-subject">
+                    고객님의 소중한 개인정보 보호를 위해, <br class="only-m"><em data-color="point">지금 비밀번호를 변경해 주세요!</em>
+                </div>
+                <div class="password-change-info">
+                    <p class="text-18" data-align="center">
+                        아테라에서는 고객님의 개인정보를 안전하게 보호하고, 개인정보도용으로 인한 피해를 예방하기 위해<br>
+                        <span class="text-red">6개월 이상 비밀번호를 변경하지 않은 경우</span> 비밀번호 변경을 안내하고 있습니다.
+                    </p>
+                    <div class="password-change-form">
+                        <table class="table-input" data-noline data-layout="auto">
+                            <caption>비밀번호 변경 입력 표입니다.</caption>
+                            <colgroup>
+                                <col />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <label for="pwchg1">현재 비밀번호</label>
+                                </th>
+                                <td>
+                                    <div class="form-group">
+                                        <input type="password" class="form-input" id="pwchg1" value="" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="pwchg2">새 비밀번호</label>
+                                </th>
+                                <td>
+                                    <div class="form-group">
+                                        <input type="password" class="form-input" id="pwchg2" value="" />
+                                    </div>
+                                    <p class="pw-desc">8~16자리의 영문, 숫자, 특수문자 조합</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="pwchg3">새 비밀번호 확인</label>
+                                </th>
+                                <td>
+                                    <div class="form-group">
+                                        <input type="password" class="form-input" id="pwchg3" value="" />
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="yellow-box">
+                    <p class="dot-type-16">
+                        쉬운 비밀번호나 자주 쓰는 사이트의 비밀번호가 같을 경우 도용하기 쉬우므로 주기적으로 변경하셔서 사용하는 것이 좋습니다.
+                    </p>
+                    <p class="dot-type-16">
+                        아이디와 주민등록번호, 생일, 전화번호 등 개인정보와 관련된 숫자, 연속된 숫자, 반복된 문자 등 다른 사람이 쉽게 알아낼 수 있는 비밀번호는
+                        개인정보 유출의 위험이 높으므로 사용을 자제해 주시기 바랍니다.
+                    </p>
+                    <p class="dot-type-16">
+                        [다음에 변경하기] 버튼을 클릭 해 비밀번호 변경을 연기하시면 1개월 후 다시 안내해 드립니다. 조금 불편하시더라도 지금 비밀번호를 변경해 주십시오.
+                    </p>
+                </div>
+            </div>
+            <div class="layer-modal-footer">
+                <button type="button" class="button-base" data-style="bg-primary" data-size="size-60" onclick="UI.exe.sub5_3_1p.hide()">
+                    <span>비밀번호변경</span>
+                </button>
+                <button type="button" class="button-base" data-style="line-primary" data-size="size-60" onclick="UI.exe.sub5_3_1p.hide()">
+                    <span>다음에 변경하기</span>
+                </button>
+            </div>
+        </div>
+        <div class="layer-modal-dim"></div>
+    </section>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
+            //modal
+            UI.exe.sub5_3_1p = new Layer({
+                id :'sub5_3_1p',
+                type:'modal',
+                callback:() => {
+                    console.log('modal1 콜백');
+                }
+            });
+            UI.exe.sub5_3_1p.show();
 
         }); 
     </script>

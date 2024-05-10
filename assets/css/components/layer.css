@@ -120,7 +120,12 @@ html[data-modal="show"] body {
         padding:6rem 2rem 0;
         max-height:calc(100vh - 35rem);
         overflow-y:auto;
-
+        &[data-pd="s"] {
+            padding-top:4rem;
+            @media screen and (max-width:1023px) {
+                padding-top:2rem;
+            }
+        }
         .table-input {
             border:0;
             width:auto;
@@ -200,11 +205,11 @@ html[data-modal="show"] body {
 
         .button-base {
             max-width:20rem;
-            padding:0 1.8rem;
+            padding:0 .8rem;
         }
 
         @media screen and (max-width:1023px) {
-            padding:2rem 2rem 3rem;
+            padding:2rem 1rem 3rem;
             gap:1rem;
         }
     }
