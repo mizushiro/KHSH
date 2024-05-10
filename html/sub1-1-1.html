@@ -21,14 +21,12 @@
         <main class="base-main">
             <!-- visual -->
             <div class="story-section" data-sec="visual" data-scroll-name="story" data-scroll-callback="story1">
-                <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
+                <!-- <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
                     <source src="../assets/images/story/brand_visual_video.mp4" type="video/mp4">
-                </video>
+                </video> -->
                 
-                <div class="video-control-group">
-                    <button type="button" class="video-control" aria-label="소리끄기" data-sound="on"></button>
-                </div>
-                <div class="dim"></div>
+                <button type="button" class="sound-control" aria-label="소리끄기" data-sound="on"></button>
+                <img src="../assets/images/story/story_bg.jpg" alt="" class="story-img">
             </div>
 
             <!-- story -->
@@ -44,6 +42,7 @@
                         가장 앞선 주거문화를 담은 공간
                     </p>
                </div>
+               <img src="../assets/images/story/stroy2.jpg" alt="" class="story-img">
             </div>
             <div class="story-section s3" data-sec="story" data-scroll-name="story" data-scroll-callback="story3">
                 <div class="story-text-group">
@@ -56,6 +55,7 @@
                         아름답게 비추는 집의 모습입니다.
                     </p>
                </div>
+               <img src="../assets/images/story/stroy3.jpg" alt="" class="story-img">
             </div>
 
             <div class="story-section s4" data-sec="story" data-scroll-name="story" data-scroll-callback="story4">
@@ -64,24 +64,25 @@
                         당신의 삶을 비추는 아름다움
                     </p>
                     <div class="brand-BI-logo">
-                    <svg width="538" height="233" viewBox="0 0 538 233" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_4465_7712)">
-                        <path d="M186.371 178.649H216.893V233H234.189V178.649H265.026V165.644H186.371V178.649Z" fill="white"/>
-                        <path d="M276.098 233H347.131V219.994H293.393V205.831H336.626V192.813H293.393V178.649H347.131V165.644H276.098V233Z" fill="white"/>
-                        <path d="M37.2742 165.644L0 233H18.9835L27.1211 217.567H67.5823L75.7198 233H94.7033L57.4418 165.644H37.2742ZM33.9864 204.561L47.3643 179.19L60.7421 204.561H33.9864Z" fill="white"/>
-                        <path d="M500.74 165.644H480.559L443.285 233H462.281L470.419 217.567H510.88L519.018 233H538.014L500.74 165.644ZM477.272 204.561L490.649 179.19L504.027 204.561H477.272Z" fill="white"/>
-                        <path d="M178.498 188.435C178.498 175.845 168.282 165.644 155.673 165.644H101.695V165.656V233H118.991V178.649H151.579C156.996 178.649 161.392 183.039 161.392 188.448C161.392 193.857 156.996 198.246 151.579 198.246H127.569L159.704 233H181.522L159.981 210.812C170.525 208.812 178.498 199.555 178.498 188.435Z" fill="white"/>
-                        <path d="M437.024 188.435C437.024 175.845 426.808 165.644 414.198 165.644H360.221V165.656V233H377.516V178.649H410.104C415.521 178.649 419.917 183.039 419.917 188.448C419.917 193.857 415.521 198.246 410.104 198.246H386.095L418.229 233H440.047L418.506 210.812C429.05 208.812 437.024 199.555 437.024 188.435Z" fill="white"/>
-                        <path d="M284.11 0H253.89L190.881 65.5706V114.865H238.333L269.007 79.7211L299.68 114.865H347.133V65.5706L284.11 0Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_4465_7712">
-                        <rect width="538" height="233" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
+                        <svg width="538" height="233" viewBox="0 0 538 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_4465_7712)">
+                            <path d="M186.371 178.649H216.893V233H234.189V178.649H265.026V165.644H186.371V178.649Z" fill="white"/>
+                            <path d="M276.098 233H347.131V219.994H293.393V205.831H336.626V192.813H293.393V178.649H347.131V165.644H276.098V233Z" fill="white"/>
+                            <path d="M37.2742 165.644L0 233H18.9835L27.1211 217.567H67.5823L75.7198 233H94.7033L57.4418 165.644H37.2742ZM33.9864 204.561L47.3643 179.19L60.7421 204.561H33.9864Z" fill="white"/>
+                            <path d="M500.74 165.644H480.559L443.285 233H462.281L470.419 217.567H510.88L519.018 233H538.014L500.74 165.644ZM477.272 204.561L490.649 179.19L504.027 204.561H477.272Z" fill="white"/>
+                            <path d="M178.498 188.435C178.498 175.845 168.282 165.644 155.673 165.644H101.695V165.656V233H118.991V178.649H151.579C156.996 178.649 161.392 183.039 161.392 188.448C161.392 193.857 156.996 198.246 151.579 198.246H127.569L159.704 233H181.522L159.981 210.812C170.525 208.812 178.498 199.555 178.498 188.435Z" fill="white"/>
+                            <path d="M437.024 188.435C437.024 175.845 426.808 165.644 414.198 165.644H360.221V165.656V233H377.516V178.649H410.104C415.521 178.649 419.917 183.039 419.917 188.448C419.917 193.857 415.521 198.246 410.104 198.246H386.095L418.229 233H440.047L418.506 210.812C429.05 208.812 437.024 199.555 437.024 188.435Z" fill="white"/>
+                            <path d="M284.11 0H253.89L190.881 65.5706V114.865H238.333L269.007 79.7211L299.68 114.865H347.133V65.5706L284.11 0Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_4465_7712">
+                            <rect width="538" height="233" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
                 </div>
-               </div>
+                <img src="../assets/images/story/stroy4.jpg" alt="" class="story-img">
             </div>
  
 
@@ -112,24 +113,38 @@
 
             //화면단위 효과
             const _header = document.querySelector('.base-header');
-            const storyMotion1 = (v, n) => {
-                const dim = v.element.querySelector('.dim');
-                dim.style.opacity = v.per_e * 0.01
+            const storyMotion1 = (v) => {
             }
-            const storyMotion2 = (v, n) => {
-                console.log('2222222',v,n)
+            const storyMotion2 = (v) => {
+                if (v.per_s > 80) {
+                    v.element.dataset.scrollOn = 'true';
+                } else {
+                    v.element.dataset.scrollOn = 'false';
+                }
             }
-            const storyMotion3 = (v, n) => {
-                
+            const storyMotion3 = (v) => {
+                if (v.per_s > 80) {
+                    v.element.dataset.scrollOn = 'true';
+                } else {
+                    v.element.dataset.scrollOn = 'false';
+                }
+            }
+            const storyMotion4 = (v) => {
+                if (v.per_s > 80) {
+                    v.element.dataset.scrollOn = 'true';
+                } else {
+                    v.element.dataset.scrollOn = 'false';
+                }
             }
             
-            UI.callback.story1 = (v) => { storyMotion1(v, [40]); }
-            UI.callback.story2 = (v) => { storyMotion2(v, [60]); }
-            UI.callback.story3 = (v) => { storyMotion3(v, [40]); }
+            UI.callback.story1 = (v) => { storyMotion1(v); }
+            UI.callback.story2 = (v) => { storyMotion2(v); }
+            UI.callback.story3 = (v) => { storyMotion3(v); }
+            UI.callback.story4 = (v) => { storyMotion3(v); }
             UI.exe.scrollStoryPage = new ScrollPage({
                 name:'story',
                 wheel:true,
-                wheelscope:2
+                wheelscope:3
             });
         }); 
     </script>
