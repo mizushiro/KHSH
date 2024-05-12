@@ -35,6 +35,7 @@
                 <div class="video-control-group">
                     <button type="button" class="video-control" aria-label="재생/정지" data-state="play"></button>
                     <progress id="progress-bar" class="video-bar" min="0" max="100" value="0"></progress>
+                    <button type="button" class="sound-control" aria-label="소리끄기" data-sound="off"></button>
                     <!-- <div class="swiper-pagination"></div> -->
                     <!-- <button type="button" class="swiper-button-prev" aria-label="이전"></button>
                     <button type="button" class="swiper-button-next" aria-label="다음"></button> -->
@@ -501,6 +502,7 @@
             //비쥬얼 영상
             UI.exe.visualVideo = document.querySelector('#visualVideo');
             UI.exe.visualVideo.controls = false;
+            //플레이
             UI.exe.visualVideo.addEventListener('timeupdate', function(){
                 const progressBar = document.querySelector('#progress-bar');
                 progressBar.value = Math.floor((100 / UI.exe.visualVideo.duration) * UI.exe.visualVideo.currentTime);
@@ -520,6 +522,24 @@
             }
             videoContral.addEventListener('click', actPlayStop);
 
+            //사운드
+            const soundContral = document.querySelector('.sound-control');
+            const actSoundControl = (e) => {
+                const _this = e.currentTarget;
+                if (_this.dataset.sound === 'on') {
+                    _this.dataset.sound = 'off';
+                    _this.setAttribute('aria-label', 'sound off');
+                    UI.exe.visualVideo.muted = true;
+                } else {
+                    UI.exe.visualVideo.muted = false;
+                    _this.dataset.sound = 'on';
+                    _this.setAttribute('aria-label', 'sound on');
+                }
+            }
+            soundContral.addEventListener('click', actSoundControl);
+
+
+
             //화면단위 효과
             const _header = document.querySelector('.base-header');
             const mainMotion1 = (v, n) => {
@@ -533,6 +553,10 @@
 
                 if (v.per_s > 85 && v.per_e === 0) {
                     v.element.dataset.scrollView = 'true';
+
+                    soundContral.dataset.sound = 'off';
+                    soundContral.setAttribute('aria-label', 'sound off');
+                    UI.exe.visualVideo.muted = true;
                 } 
                 else if (v.per_s < 85 && v.per_e === 0) {
                     v.element.dataset.scrollView = 'false';

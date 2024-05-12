@@ -1079,14 +1079,11 @@
             transition: all 2.4s linear;
         }
     }
-    .sound-control {
-        position: absolute;
-        top:8rem; 
-        right:2.4rem;
-        width: 2.3rem;
-        height: 2.3rem;
-        z-index: 2;
-        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+    .sound-control{
+        left:50%;
+        right:auto;
+        top:18.5rem; 
+        margin-left: 80rem;
     }
     .story-img {
         width: 100%;
@@ -1172,5 +1169,27 @@
                 width: 80vw;
             }
         }
+        .sound-control{
+            left:auto;
+            width: 3rem;
+            height: 3rem;
+            right:1.5rem;
+            top:8.5rem; 
+            margin-left: 0;
+        }
+    }
+}
+.sound-control {
+    position: absolute;
+    
+    width: 2.3rem;
+    height: 2.3rem;
+    z-index: 2;
+    background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+    &[data-sound="off"] {
+        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+    }
+    &[data-sound="on"] {
+        background: url(../../images/common/ico-sound-on.svg) no-repeat 50% 50% / 2.3rem;
     }
 }

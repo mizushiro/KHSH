@@ -21,12 +21,11 @@
         <main class="base-main">
             <!-- visual -->
             <div class="story-section" data-sec="visual" data-scroll-name="story" data-scroll-callback="story1">
-                <!-- <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
+                <video autoplay="" loop="" muted="" playsinline="" id="storyVod">
                     <source src="../assets/images/story/brand_visual_video.mp4" type="video/mp4">
-                </video> -->
+                </video>
                 
-                <button type="button" class="sound-control" aria-label="소리끄기" data-sound="on"></button>
-                <img src="../assets/images/story/story_bg.jpg" alt="" class="story-img">
+                <button type="button" class="sound-control" aria-label="소리끄기" data-sound="off"></button>
             </div>
 
             <!-- story -->
@@ -93,23 +92,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // UI.exe.storyVod = document.querySelector('#storyVod');
-            // UI.exe.storyVod.controls = false;
+            UI.exe.storyVod = document.querySelector('#storyVod');
             
-            // const videoContral = document.querySelector('.video-control');
-            // const actSoundControl = (e) => {
-            //     const _this = e.currentTarget;
-            //     if (_this.dataset.state === 'on') {
-            //         _this.dataset.state = 'off';
-            //         _this.setAttribute('aria-label', 'sound off');
-            //         UI.exe.storyVod.pause();
-            //     } else {
-            //         UI.exe.storyVod.play();
-            //         _this.dataset.state = 'on';
-            //         _this.setAttribute('aria-label', 'sound on');
-            //     }
-            // }
-            // videoContral.addEventListener('click', actSoundControl);
+            const videoContral = document.querySelector('.sound-control');
+            const actSoundControl = (e) => {
+                const _this = e.currentTarget;
+                if (_this.dataset.sound === 'on') {
+                    _this.dataset.sound = 'off';
+                    _this.setAttribute('aria-label', 'sound off');
+                    UI.exe.storyVod.muted = true;
+                } else {
+                    UI.exe.storyVod.muted = false;
+                    _this.dataset.sound = 'on';
+                    _this.setAttribute('aria-label', 'sound on');
+                }
+            }
+            videoContral.addEventListener('click', actSoundControl);
 
             //화면단위 효과
             const _header = document.querySelector('.base-header');
@@ -118,6 +116,10 @@
             const storyMotion2 = (v) => {
                 if (v.per_s > 80) {
                     v.element.dataset.scrollOn = 'true';
+
+                    videoContral.dataset.sound = 'off';
+                    videoContral.setAttribute('aria-label', 'sound off');
+                    UI.exe.storyVod.muted = true;
                 } else {
                     v.element.dataset.scrollOn = 'false';
                 }

@@ -91,7 +91,16 @@
         height:8rem;
         padding:0;
 
-        /* .btn-search {background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 2.5rem;} */
+        .btn-etc-nav {
+            width:3rem;
+            height:3rem;
+            background:url(../../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
+        }
+        .btn-search {
+            width:3rem;
+            height:3rem;
+            background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 2.5rem;
+        }
     }
 }
 
