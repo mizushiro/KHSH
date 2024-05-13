@@ -371,9 +371,13 @@
 
 .main-list {
     width:100%;
+    max-width:140rem;
     padding:0;
+    position:relative;
     .swiper {
-        max-width:172rem;
+        /*width:calc(100% + 3.2rem);*/
+        margin-left:-1.6rem;
+        margin-right:-1.6rem;
         padding-bottom:6rem;
         @media screen and (max-width:900px) {
             padding-bottom:4rem;
@@ -407,7 +411,7 @@
         }
     }
     .swiper-paginationp-txt {
-        display:flex;
+        display:none;
         gap:1.6rem;
         align-items:center;
         font-size:2rem;
@@ -419,27 +423,24 @@
     }
     .swiper-button-prev,
     .swiper-button-next {
-        position:relative !important;
-        width:6rem;
-        height:6rem;
         display:flex;
         justify-content:center;
         align-items:center;
         border-radius:50%;
-        border:1px solid var(--navy) !important;
         margin:0;
-        top:auto;
+        top:50%;
         opacity:1;
         left:auto;
         right:auto;
         background:url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
-        &:hover {
-            background-color:var(--navy);
-            background-image:url(../../images/common/swiper-arrow.svg);
-        }
+    }
+    .swiper-button-prev {
+        left:-4.8rem;
+        top:50%;
     }
     .swiper-button-next {
         transform:rotate(180deg);
+        right:-4.8rem;
     }
     .swiper-pagination-bullet {
         min-width:16.3rem;
@@ -465,7 +466,6 @@
 }
 .main-list-tit {
     width:100%;
-    max-width:172rem;
     margin:0 auto 6rem;
     display:flex;
     align-items:center;
@@ -534,12 +534,13 @@
                 width:3.2rem;
                 height:3.2rem;
                 background-size:0.74rem;
+                display:none;
             }
             .swiper-pagination {
                 bottom:1.5rem !important;
                 margin-right:0 !important;
-                left:47% !important;
-                width:calc(100% - 18rem) !important;
+                left:50% !important;
+                width:80% !important;
                 &:before {
                     height:0.2rem;
                 }
