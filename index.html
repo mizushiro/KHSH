@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩리스트 | 금호건설 브랜드 홈페이지 리뉴얼</title>
+    <style>
+        html{font-size:10px;}
+        /* ui codinglist */
+        .codinglist {
+            position:relative;
+            width:850px;
+            caption p {font-size:3rem; padding:2rem 0; margin:0; font-weight:700 ; color:#242A5C;}
+            table{
+                table-layout:auto;
+                width:100%;
+                border-collapse:collapse;
+                border-spacing:0;
+                th{background-color:#eeeeee;}
+                th, td{
+                    border:.1rem solid #a9abc5;
+                    color:#242A5C;
+                    padding:.6rem;
+                    font-size:1.2rem;
+                }
+                tbody{border-top:.3rem solid #a9abc5}
+                tr.ok td{
+                    background-color:#edf5fd; color:#000; font-weight:500;
+                    a{color:#F47F3F !important; font-weight:700;}
+                }
+                tr.ing td{
+                    background-color:#fdfbed; 
+                }
+                tr.ing2 td{
+                    background-color:#f2f2f2;
+                }
+                td:last-child {
+                    text-align:center;
+                }
+            }
+            .state-info {
+                display:flex;
+                gap:2rem;
+                align-items:center;
+                font-size:1.4rem;
+                margin-bottom:1.2rem;
+            }
+            .state-ing {
+                color:#03c75a;
+                &::before {
+                    content:'▲';
+                }
+            }
+            .state-end {
+                color:red;
+                &::before {
+                    content:'●';
+                }
+            }
+        }
+        .wrap {
+            display:flex;
+            justify-content:center;
+            width:auto;
+            margin:0 auto;
+            gap:2rem;
+        }
+        .iframe{
+            margin-top:0;
+            width:calc(192rem / 2);
+            height:calc(100dvh - 4rem);
+            border:0.1rem solid #ccc;
+            background-color:#fff;
+            display:block;
+            position:sticky;
+            top:2rem;
+            overflow:hidden;
+            @media screen and (max-width:1023px) {
+                display:none;
+            }
+             > div{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                color:#fff;
+                font-weight:700;
+                width:100%;
+                padding:.4rem 1rem;
+                font-size:1.4rem;
+                background-color:#242A5C;
+                height:3rem;
+                box-sizing:border-box;
+            }
+            a {
+                color:#fff;
+            }
+            button {
+                width:2rem;
+                height:2rem;
+                background-color:#03c75a;
+                border:0;
+            }
+            iframe{
+                width:calc(100% * 2);
+                height:calc((100dvh - 4rem) * 2);
+                scale:0.5;
+                transform-origin:0 0;
+            }
+        }
+
+        .iframe.m {
+            margin-top:0;
+            width:calc(36rem * 1);
+            height:100dvh;
+            border:0.1rem solid #ccc;
+            background-color:#fff;
+            display:block;
+            position:sticky;
+            top:2rem;
+            overflow:hidden;
+            @media screen and (max-width:1023px) {
+                display:none;
+            }
+             > div{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                color:#fff;
+                font-weight:700;
+                width:100%;
+                padding:.4rem 1rem;
+                font-size:1.4rem;
+                background-color:#242A5C;
+                height:3rem;
+                box-sizing:border-box;
+            }
+            a {
+                color:#fff;
+            }
+            button {
+                width:2rem;
+                height:2rem;
+                background-color:#e2bb0e;
+                border:.1rem solid #fff;
+            }
+            iframe{
+                width:calc(100%);
+                height:calc(100dvh - 4rem);
+                scale:1;
+                transform-origin:0 0;
+            }
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="iframe">
+            <div>
+                <a href=""></a>
+                <button type="button"></button>
+            </div>
+            
+            <iframe src="./html/guide.html" frameborder="0"></iframe>
+        </div>
+
+        <div class="codinglist">
+            <table>
+                <caption>
+                    <p>금호건설 브랜드 홈페이지 리뉴얼</p>
+                    <div class="state-info">
+                        <span>
+                            <span class="state-ing"></span> :미확정 영역 제외하고 진행 완료
+                        </span>
+                        <span>
+                            <span class="state-end"></span> :전체 진행 완료
+                        </span>
+                    </div>
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">유형</th>
+                        <th scope="col">파일명</th>
+                        <th scope="col">D1</th>
+                        <th scope="col">D2</th>
+                        <th scope="col">D3</th>
+                        <th scope="col">D4</th>
+                        <th scope="col">현황</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/guide.html">guide.html</a></td>
+                        <td>가이드</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/main.html">main.html</a></td>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <!-- 브랜드 -->
+                <tbody>
+                <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-1-1.html">sub1-1-1.html</a></td>
+                        <td>브랜드</td>
+                        <td>아테라 스토리</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-2-1.html">sub1-2-1.html</a></td>
+                        <td>브랜드</td>
+                        <td>BI소개</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-3-1.html">sub1-3-1.html</a></td>
+                        <td>브랜드</td>
+                        <td>히스토리</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-4-1.html">sub1-4-1.html</a></td>
+                        <td>브랜드</td>
+                        <td>홍보영상</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-5-1.html">sub1-5-1.html</a></td>
+                        <td>브랜드</td>
+                        <td>수상실적</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-6-1.html">sub1-6-1.html</a></td>
+                        <td>브랜드</td>
+                        <td>아테라뉴스</td>
+                        <td>목록</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub1-6-2.html">sub1-6-2.html</a></td>
+                        <td>브랜드</td>
+                        <td>아테라뉴스</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <!-- 분양정보 -->
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub2-1-1.html">sub2-1-1.html</a></td>
+                        <td>분양정보</td>
+                        <td>분양단지</td>
+                        <td>목록</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub2-1-2.html">sub2-1-2.html</a></td>
+                        <td>분양정보</td>
+                        <td>분양단지</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub2-2-1.html">sub2-2-1.html</a></td>
+                        <td>분양정보</td>
+                        <td>분양일정</td>
+                        <td>목록보기</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub2-2-2.html">sub2-2-2.html</a></td>
+                        <td>분양정보</td>
+                        <td>분양일정</td>
+                        <td>캘린더보기</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <!-- 단지정보 -->
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub3-1-1.html">sub3-1-1.html</a></td>
+                        <td>단지정보</td>
+                        <td>공사단지</td>
+                        <td>목록</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub3-1-2.html">sub3-1-2.html</a></td>
+                        <td>단지정보</td>
+                        <td>공사단지</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub3-2-1.html">sub3-2-1.html</a></td>
+                        <td>단지정보</td>
+                        <td>입주단지</td>
+                        <td>목록</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub3-2-2.html">sub3-2-2.html</a></td>
+                        <td>단지정보</td>
+                        <td>입주단지</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub3-3-1.html">sub3-3-1.html</a></td>
+                        <td>단지정보</td>
+                        <td>입주단지</td>
+                        <td>입주가이드</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <!-- 마이 아테라 -->
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-1.html">sub4-1-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보(일반고객)</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-2.html">sub4-1-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보(일반고객)</td>
+                        <td>회원정보</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-3.html">sub4-1-3.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보(분양고객)</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-4.html">sub4-1-4.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보(분양고객)</td>
+                        <td>회원정보</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-5.html">sub4-1-5.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보</td>
+                        <td>분양고객 전환하기 - 비밀번호 재확인</td>
+                        <td></td>
+                        <td></td>
+                    </tr> -->
+
+                    <tr class="ok">
+                        <td>popup</td>
+                        <td><a target="_page" href="./html/sub4-1-5p.html">sub4-1-5p.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보</td>
+                        <td>분양고객 전환하기</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-6.html">sub4-1-6.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보</td>
+                        <td>계약정보</td>
+                        <td></td>
+                        <td></td>
+                    </tr> -->
+
+                     <tr class="ok">
+                        <td>popup</td>
+                        <td><a target="_page" href="./html/sub4-1-6p.html">sub4-1-6p.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보</td>
+                        <td>비밀번호 변경</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-1-7.html">sub4-1-7.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>마이 아테라 정보</td>
+                        <td>회원탈퇴</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-2-1.html">sub4-2-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>분양대금 납부조회</td>
+                        <td>분양계약내역/입금내역</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-2-2.html">sub4-2-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>분양대금 납부조회</td>
+                        <td>예상납부액조회</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-3-1.html">sub4-3-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>입주일 예약</td>
+                        <td>입주예약(신청기간 전)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-3-2.html">sub4-3-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>입주일 예약</td>
+                        <td>입주예약(신청기간 중)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>popup</td>
+                        <td><a target="_page" href="./html/sub4-3-3p.html">sub4-3-3p.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>입주일 예약</td>
+                        <td>입주일 예약</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-3-4.html">sub4-3-4.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>입주일 예약</td>
+                        <td>예약조회</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-4-1.html">sub4-4-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>방문 사전예약 신청</td>
+                        <td>방문예약 신청</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-4-2.html">sub4-4-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>방문 사전예약 신청</td>
+                        <td>일반 방문예약 확인/취소</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>popup</td>
+                        <td><a target="_page" href="./html/sub4-4-3p.html">sub4-4-3p.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>방문 사전예약 신청</td>
+                        <td>일반 방문예약 확인/취소</td>
+                        <td>방문예약 확인하기</td>
+                        <td></td>
+                    </tr> -->
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-4-3.html">sub4-4-3.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>방문 사전예약 신청</td>
+                        <td>당첨자 및 계약자 방문예약 확인/취소</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>popup</td>
+                        <td><a target="_page" href="./html/sub4-4-4p.html">sub4-4-4p.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>방문 사전예약 신청</td>
+                        <td>당첨자 및 계약자 방문예약 확인/취소</td>
+                        <td>입주일 예약</td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-5-1.html">sub4-5-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>무순위/잔여세대 청약</td>
+                        <td>무순위/잔여세대 청약 신청(자격여부)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-5-2.html">sub4-5-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>무순위/잔여세대 청약</td>
+                        <td>무순위/잔여세대 청약 신청(청약신청하기)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-5-3.html">sub4-5-3.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>무순위/잔여세대 청약</td>
+                        <td>무순위/잔여 세대 청약 확인</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-6-1.html">sub4-6-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>옵션신청</td>
+                        <td>옵션예약 신청(단계1)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-6-2.html">sub4-6-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>옵션신청</td>
+                        <td>옵션예약 신청(단계2)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-6-3.html">sub4-6-3.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>옵션신청</td>
+                        <td>옵션예약 신청(단계3)</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-6-4.html">sub4-6-4.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>옵션신청</td>
+                        <td>옵션예약 신청(옵션신청 내역)</td>
+                        <td>프린트(ctri+P)</td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                   
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-6-5.html">sub4-6-5.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>옵션신청</td>
+                        <td>옵션예약 확인/취소</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-7-1.html">sub4-7-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>1:1 문의</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-7-2.html">sub4-7-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>1:1 문의</td>
+                        <td>문의하기</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-7-3.html">sub4-7-3.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>1:1 문의</td>
+                        <td>문의내역화면확인</td>
+                        <td></td>
+                        <td></td>
+                    </tr> -->
+
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-8-1.html">sub4-8-1.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>AS신청</td>
+                        <td>AS운영안내</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-8-2.html">sub4-8-2.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>AS신청</td>
+                        <td>AS처리절차</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub4-8-3.html">sub4-8-3.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>AS신청</td>
+                        <td>AS신청</td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>popup</td>
+                        <td><a target="_page" href="./html/sub4-8-4p.html">sub4-8-4p.html</a></td>
+                        <td>마이 아테라</td>
+                        <td>AS신청</td>
+                        <td>AS신청</td>
+                        <td>단지검색</td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-1-1.html">sub5-1-1.html</a></td>
+                        <td>공지사항</td>
+                        <td>목록</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-1-2.html">sub5-1-2.html</a></td>
+                        <td>공지사항</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-2-1.html">sub5-2-1.html</a></td>
+                        <td>이벤트</td>
+                        <td>상세</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-3-1.html">sub5-3-1.html</a></td>
+                        <td>로그인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-4-1.html">sub5-4-1.html</a></td>
+                        <td>아이디/비밀번호 찾기</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-5-1.html">sub5-5-1.html</a></td>
+                        <td>회원가입</td>
+                        <td>(단계1)</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-5-2.html">sub5-5-2.html</a></td>
+                        <td>회원가입</td>
+                        <td>(단계2)</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-5-3.html">sub5-5-3.html</a></td>
+                        <td>회원가입</td>
+                        <td>(단계3)</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-5-4.html">sub5-5-4.html</a></td>
+                        <td>회원가입</td>
+                        <td>(단계4)</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-6-1.html">sub5-6-1.html</a></td>
+                        <td>담당자 연락처</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-7-1.html">sub5-7-1.html</a></td>
+                        <td>통합검색</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                    <tr class="ok">
+                        <td>page</td>
+                        <td><a target="_page" href="./html/sub5-8-1.html">sub5-8-1.html</a></td>
+                        <td>개인정보처리방침</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="state-end"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+    </div>
+    
+    <script>
+        const links = document.querySelectorAll('td a');
+        const btn = document.querySelector('.iframe button');
+        for (const item of links) {
+            item.addEventListener('mouseover', (e) => {
+                const _this = e.currentTarget;
+                const _href = _this.href;
+
+                document.querySelector('.iframe iframe').setAttribute('src', _href);
+                document.querySelector('.iframe a').setAttribute('href', _href);
+                document.querySelector('.iframe a').textContent = _href
+            })
+        }
+        btn.addEventListener('click', () => {
+            const ifr = document.querySelector('.iframe');
+
+            ifr.classList.contains('m') ? ifr.classList.remove('m') :ifr.classList.add('m')
+        });
+    </script>
+</body>
+
+</html>
