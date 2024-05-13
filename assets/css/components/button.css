@@ -220,3 +220,17 @@
         background-size:1.7rem;
     }
 }
+.btn-more-area {
+    margin-top:8rem;
+    display:flex;
+    justify-content:center;
+    .button-base {
+        min-width:30rem;
+    }
+    @media (max-width:1023px) {
+        margin-top:4rem;
+        .button-base {
+            max-width:100%;
+        }
+    }
+}
