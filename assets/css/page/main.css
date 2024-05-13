@@ -379,6 +379,10 @@
         margin-left:-1.6rem;
         margin-right:-1.6rem;
         padding-bottom:6rem;
+        @media screen and (max-width:1023px) {
+            margin-left:0;
+            margin-right:0;
+        }
         @media screen and (max-width:900px) {
             padding-bottom:4rem;
         }
