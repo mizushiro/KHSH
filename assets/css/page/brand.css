@@ -1184,11 +1184,11 @@
     width: 2.3rem;
     height: 2.3rem;
     z-index: 2;
-    background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+    background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
     &[data-sound="off"] {
-        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
     }
     &[data-sound="on"] {
-        background: url(../../images/common/ico-sound-on.svg) no-repeat 50% 50% / 2.3rem;
+        background: url(../../images/common/ico-sound-on.svg) no-repeat 50% 50% / 1.6rem;
     }
 }
