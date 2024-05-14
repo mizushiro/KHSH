@@ -1078,6 +1078,27 @@
             transition: all 2.4s linear;
         }
     }
+    .s3 {
+        overflow: visible;
+        .story-text-group {
+            p {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            span {
+                display: block;
+                opacity: 0;
+                transform: translateX(-10rem);
+                transition: all 1.5s linear;
+            }
+            span + span {
+                transform: translateX(10rem);
+                transition: all 1.4s linear;
+            }
+        }
+        
+        
+    }
     .sound-control{
         left:50%;
         right:auto;
@@ -1128,7 +1149,15 @@
             p {
                 opacity: 1;
                 transform: translateY(0);
-                
+                span {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                span + span {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
             }
             .brand-BI-logo {
                 opacity: 1;
