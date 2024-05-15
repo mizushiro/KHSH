@@ -1,0 +1,59 @@
+.ready-area {
+    width:100%;
+    min-height:100vh;
+    background:url("../../images/sub/ready-bg.png") no-repeat 50% 50% #0D134C;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 2.8rem;
+}
+.ready-box {
+    max-width:96rem;
+    padding:8.8rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5.6rem;
+    border:.1rem solid rgba(255,255,255,.4);
+    background-color:rgba(0,0,0,.2);
+    @media screen and (max-width:1023px) {
+        gap:1.6rem;
+        padding:5.5rem 0;
+        width:100%;
+    }
+}
+.ico-ready-logo {
+    aspect-ratio:309/137;
+    background:url("../../images/sub/ready-logo.svg") no-repeat 50% 50%;
+    background-size:contain;
+    width:30.9rem;
+    @media screen and (max-width:1023px) {
+        width:12.2rem;
+    }
+}
+.ready-box .ico-line {
+    height:.4rem;
+    width:6.8rem;
+    background-color:var(--white);
+    @media screen and (max-width:1023px) {
+        height:.2rem;
+        width:2.6rem;
+    }
+}
+.ready-desc {
+    font-size:4rem;
+    line-height:1.4;
+    color:var(--white);
+    font-weight:400;
+    text-align:center;
+    @media screen and (max-width:1023px) {
+        font-size:2rem;
+        margin-top:2rem;
+    }
+}
+.ready-desc .point-color {
+    font-weight:800;
+    color:#f7e1c4;
+}
