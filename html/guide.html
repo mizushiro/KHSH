@@ -124,7 +124,7 @@
                     <t3>select</t3>
                     <div class="box-row">
                         <div class="form-select" data-id="test_a0_1">
-                            <select title="년도 선택" id="test_a0_1">
+                            <select title="년도 선택" id="test_a0_1" onchange="console.log(1111)">
                                 <option value="1" selected="">2024</option>
                                 <option value="2">2023</option>
                                 <option value="3">2022</option>
@@ -132,7 +132,18 @@
                                 <option value="5">2020</option>
                             </select>
                         </div>
-                        <button type="button" id="qaa">aaaa</button>
+                        <button type="button" id="qaa">option생성</button>
+
+
+                        <div class="form-select" data-id="test_a0_2">
+                            <select title="년도 선택" id="test_a0_2" onchange="console.log(2222)">
+                                <option value="1" selected="">2024</option>
+                                <option value="2">2023</option>
+                                <option value="3">2022</option>
+                                <option value="4">2021</option>
+                                <option value="5">2020</option>
+                            </select>
+                        </div>
                     </div>
           
 

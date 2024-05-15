@@ -817,12 +817,9 @@ console.log(selector,src);
 			const selects = document.querySelectorAll('.form-select');
 			let n = 0;
 			for (let item of selects) {
-
-                
 				if (!!item.dataset.id) {
 					const _id = item.dataset.id;
 
-                    console.log(!UI.exe[_id])
 					if (!UI.exe[_id]) {
 						UI.exe[_id] = new Layer({
 							id: _id,
@@ -1209,18 +1206,12 @@ class Layer {
         }
     }
     reset() {
-        console.log('reset', this.id)
         this.resetSelect()
         this.madeSelect()
-
-        // const layerSelect = document.querySelector('.layer-modal[data-id="'+this.id+'"]');
-        // layerSelect.querySelector('.form-select-wrap').
     }
     resetSelect() {
         this.selectBtn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'_select"]');
         this.selectLayer = document.querySelector('.layer-modal[data-type="select"][data-id="'+ this.id +'_select"]');
-
-console.log(this.selectBtn, this.id);
 
         this.selectBtn && this.selectBtn.remove();
         this.selectLayer && this.selectLayer.remove();
@@ -1249,7 +1240,6 @@ console.log(this.selectBtn, this.id);
                     <ul class="form-select-wrap">`;
 
         for (let i = 0, len = options.length; i < len; i++) {
-            console.log(options[i].text);
             html_select += `
             <li>
                 <input type="radio" id="${ this.id }_r${ i }" value="${ options[i].value }"  name="${ this.id }_r" ${ ((options[i].selected) && 'checked') }>
@@ -1335,9 +1325,6 @@ console.log(this.selectBtn, this.id);
             type:'HTML',
             insert:true,
             callback:() => {
-
-                console.log('setFetch', this.opt.src);
-
                 let _btn = document.createElement('button');
                 _btn.type = 'button';
                 _btn.setAttribute('aria-lable', '마지막 구간입니다. 클릭하시면 닫힙니다.');
@@ -1435,6 +1422,7 @@ console.log(this.selectBtn, this.id);
         _tooltip.remove();
     }
     actSelected = (e) => {
+        console.log('option',e);
         let _this = e.currentTarget;
        
         if (_this.type === 'radio') {
@@ -1445,7 +1433,9 @@ console.log(this.selectBtn, this.id);
         this.select.querySelector('select option[value="'+ _this.dataset.value +'"]').selected = true;
        
         e.type !== 'keyup' && this.hide();
+        console.log('option',this.callback);
 
+        this.select.querySelector('select').dispatchEvent(new Event('change'));
         this.callback && this.callback({
             text: _this.textContent,
             value:_this.dataset.value
@@ -1454,10 +1444,8 @@ console.log(this.selectBtn, this.id);
     show = (e) =>  {
         if (this.type === 'toast') {
             if (this.modal.dataset.state === 'show') {
-                console.log('열려있음');
                 return false;
             }
-            console.log('toast show:' , this.modal);
         }
 
         const _zindex = 100;
@@ -1532,9 +1520,6 @@ console.log(this.selectBtn, this.id);
             this.modal.dataset.layerCurrent = 'true';
         }
 
-        console.log( this.modal);
-
-
         this.modal || this.src && this.setFetch();
         this.modal.dataset.state = 'show';
         this.focus = document.activeElement;
@@ -1550,7 +1535,6 @@ console.log(this.selectBtn, this.id);
         
         // select layer
         if (this.type === 'select') {
-            console.log(this.select_btn.offsetWidth, this.select_btn.dataset.selectId);
             document.querySelector('.layer-modal[data-id="'+ this.select_btn.dataset.selectId +'"]').style.width = (this.select_btn.offsetWidth) + 'px';
             
             const el_options = this.modal.querySelectorAll('.form-select-option');
