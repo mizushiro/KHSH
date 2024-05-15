@@ -336,10 +336,9 @@
         width:100%;
         height:100%;
         display:flex;
-        flex-direction:column;
         justify-content:center;
         align-items:center;
-        gap:8rem;
+        gap:4.8rem;
         z-index:1; 
 
         transition:all .5s ease;
@@ -448,7 +447,7 @@
                     width:100%;
                     display:flex;
                     align-items:center;
-                    padding:6rem 0;
+                    padding:4rem 0;
                     border-bottom:1px solid rgba(36, 42, 92, 0.18);
                 }
                 dt {
@@ -1079,6 +1078,27 @@
             transition: all 2.4s linear;
         }
     }
+    .s3 {
+        overflow: visible;
+        .story-text-group {
+            p {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            span {
+                display: block;
+                opacity: 0;
+                transform: translateX(-10rem);
+                transition: all 1.5s linear;
+            }
+            span + span {
+                transform: translateX(10rem);
+                transition: all 1.4s linear;
+            }
+        }
+        
+        
+    }
     .sound-control{
         left:50%;
         right:auto;
@@ -1129,7 +1149,15 @@
             p {
                 opacity: 1;
                 transform: translateY(0);
-                
+                span {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                span + span {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
             }
             .brand-BI-logo {
                 opacity: 1;
@@ -1185,11 +1213,11 @@
     width: 2.3rem;
     height: 2.3rem;
     z-index: 2;
-    background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+    background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
     &[data-sound="off"] {
-        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 2.3rem;
+        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
     }
     &[data-sound="on"] {
-        background: url(../../images/common/ico-sound-on.svg) no-repeat 50% 50% / 2.3rem;
+        background: url(../../images/common/ico-sound-on.svg) no-repeat 50% 50% / 1.6rem;
     }
 }

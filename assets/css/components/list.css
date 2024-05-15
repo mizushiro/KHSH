@@ -1,8 +1,8 @@
 .main-list {
     @media screen and (min-width:1024px) {
         .swiper-slide {
-            margin-right:4rem;
-            width:calc((100% - 12rem) / 4) !important;
+            padding:0 1.6rem;
+            /*width:calc((100% - 9.6rem) / 4) !important;*/
         }
     }
 }
@@ -24,7 +24,7 @@
         transition:all 0.2s ease-in;
     }
     .card-item-tit {
-        font-size:4rem;
+        font-size:3.4rem;
         font-weight:500;
         color:#fff;
         opacity:1;
@@ -199,7 +199,7 @@
         }
     }
     &[data-type="news"] {
-        height:59.6rem;
+        height:55.3rem;
         .card-item-view {
             position:relative;
             padding:8rem 4rem 0;
@@ -212,13 +212,13 @@
         .card-item-tit {
             width:100%;
             color:#000;
-            font-size:3.4rem;
+            font-size:3rem;
             font-weight:600;
-            line-height:1.2;
+            line-height:3.4rem;
             height:auto;
             word-break:break-all;
             margin-bottom:3.4rem;
-            min-height:12.3rem;
+            min-height:10.2rem;
         }
         .card-item-date {
             padding-bottom:6.4rem;
@@ -256,9 +256,9 @@
                 opacity:1;
                 transition:padding 0.3s ease;
             }
-            .card-item-tit {
-                min-height:12.3rem;
-            }
+            /*.card-item-tit {
+                min-height:10.2rem;
+            }*/
             /*.card-item-date {
                 opacity:0;
             }*/
@@ -305,8 +305,9 @@
             .card-item-tit {
                 font-size:2.1rem;
                 margin-bottom:2rem;
-                min-height:7.7rem !important;
-                max-height:7.7rem;
+                line-height:2.4rem;
+                min-height:7.2rem !important;
+                max-height:7.2rem;
             }
             .card-item-desc {
                 font-size:1.6rem;
