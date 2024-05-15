@@ -122,7 +122,7 @@
                     </div>
                     <t3>select</t3>
                     <div class="box-row">
-                        <div class="form-select">
+                        <div class="form-select" data-id="test_a0_1">
                             <select title="년도 선택" id="test_a0_1">
                                 <option value="1" selected="">2024</option>
                                 <option value="2">2023</option>
@@ -131,7 +131,7 @@
                                 <option value="5">2020</option>
                             </select>
                         </div>
-                        
+                        <button type="button" id="qaa">aaaa</button>
                     </div>
           
 
@@ -383,6 +383,17 @@
                 type:'toast',
                 content:'안녕하세요<br> 저장이 완료되었습니다.'
             });
+
+            document.querySelector('#qaa').addEventListener('click', () => {
+               
+
+                const html = '<option value="2">추가옵션</option>';
+
+document.querySelector('#test_a0_1').insertAdjacentHTML('beforeend', html);
+console.log(UI.exe.test_a0_1.resetSelect)
+UI.form.setSelect();
+
+            })
            
         }); 
     </script>

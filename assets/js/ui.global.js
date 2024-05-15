@@ -817,14 +817,20 @@ console.log(selector,src);
 			const selects = document.querySelectorAll('.form-select');
 			let n = 0;
 			for (let item of selects) {
+
+                
 				if (!!item.dataset.id) {
 					const _id = item.dataset.id;
+
+                    console.log(!UI.exe[_id])
 					if (!UI.exe[_id]) {
 						UI.exe[_id] = new Layer({
 							id: _id,
 							type:'select'
 						});
-					}
+					} else {
+                        UI.exe[_id].reset();
+                    }
 				} else {
 					const _id = 'select_' + Date.now() + n;
 					n = n + 1;
@@ -1202,9 +1208,19 @@ class Layer {
                 break;
         }
     }
+    reset() {
+        console.log('reset', this.id)
+        this.resetSelect()
+        this.madeSelect()
+
+        // const layerSelect = document.querySelector('.layer-modal[data-id="'+this.id+'"]');
+        // layerSelect.querySelector('.form-select-wrap').
+    }
     resetSelect() {
-        this.selectBtn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'"]');
-        this.selectLayer = document.querySelector('.layer-modal[data-type="select"][data-select-id="'+ this.id +'"]');
+        this.selectBtn = document.querySelector('.form-select-btn[data-select-id="'+ this.id +'_select"]');
+        this.selectLayer = document.querySelector('.layer-modal[data-type="select"][data-id="'+ this.id +'_select"]');
+
+console.log(this.selectBtn, this.id);
 
         this.selectBtn && this.selectBtn.remove();
         this.selectLayer && this.selectLayer.remove();
@@ -1233,6 +1249,7 @@ class Layer {
                     <ul class="form-select-wrap">`;
 
         for (let i = 0, len = options.length; i < len; i++) {
+            console.log(options[i].text);
             html_select += `
             <li>
                 <input type="radio" id="${ this.id }_r${ i }" value="${ options[i].value }"  name="${ this.id }_r" ${ ((options[i].selected) && 'checked') }>
