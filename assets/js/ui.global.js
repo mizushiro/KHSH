@@ -218,9 +218,8 @@
             const type = !opt.type ? 'HTML' :opt.type;
             const insert = !!opt.insert ? opt.insert :false;
             const callback = !!opt.callback ? opt.callback :false;
-console.log(selector,src);
 
- !selector ? selector = document.querySelector('body') :'';
+            !selector ? selector = document.querySelector('body') :'';
 
             if (!!selector && !!src) {
                 switch (type) {
@@ -1044,7 +1043,6 @@ class ToggleUI {
         this.init();
     }
     init() {
-        console.log(this.objects);
         for (let item of this.objects) {
             if (item.dataset.event !== 'on') {
                 item.dataset.event = 'on';
@@ -1075,7 +1073,6 @@ class ToggleUI {
         });
     }
     actHover = (e) => {
-        console.log(e);
         const el_object = e.currentTarget;
         const callbackName = el_object.dataset.callback;
         const is_name = el_object.dataset.toggleObject;
@@ -1318,7 +1315,6 @@ class Layer {
         this.init();
     }
     setFetch() {
-        console.log('setFetch', this.opt.src, UI);
         UI.parts.include({
             id:'body',
             src:this.opt.src + '.html',
@@ -1422,7 +1418,6 @@ class Layer {
         _tooltip.remove();
     }
     actSelected = (e) => {
-        console.log('option',e);
         let _this = e.currentTarget;
        
         if (_this.type === 'radio') {
@@ -1433,7 +1428,6 @@ class Layer {
         this.select.querySelector('select option[value="'+ _this.dataset.value +'"]').selected = true;
        
         e.type !== 'keyup' && this.hide();
-        console.log('option',this.callback);
 
         this.select.querySelector('select').dispatchEvent(new Event('change'));
         this.callback && this.callback({
@@ -1603,22 +1597,18 @@ class Layer {
         this.focus.focus();
        
         if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
-            console.log(Number(this.html.dataset.layerN));
             if (Number(this.html.dataset.layerN) !== 0) {
                 document.querySelector('.layer-modal[data-layer-n="'+ this.html.dataset.layerN +'"]').dataset.layerCurrent = 'true';
             }
         }
         
         if (this.type === 'tooltip') {
-            console.log('tooltip', this.modal);
             this.modal.remove();
         }
     }
     hideAct = () => {
         clearTimeout(this.timer);
         if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
-
-            console.log('hide', Number(this.html.dataset.layerN));
             this.html.dataset.layerN = Number(this.html.dataset.layerN) - 1;
         }
         
