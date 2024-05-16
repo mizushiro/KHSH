@@ -541,6 +541,11 @@
     @media screen and (max-width:1023px) {
         font-size:2rem;
     }
+    ~ .table-input {
+        .form-select {
+            min-width:16rem;
+        }
+    }
 }
 .conts-body {
     display:flex;
