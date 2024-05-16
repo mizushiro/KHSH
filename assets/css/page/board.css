@@ -330,6 +330,17 @@
        aspect-ratio:410/262;
         width:41rem;
         flex-shrink:0;
+        background-color:#F6FAFC;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        .ico-no-data-logo {
+            opacity:.2;
+            width:12rem;
+            @media screen and (max-width:1023px) {
+                width:8rem;
+            }
+        }
         img {
             width:100%;
             height:100%;
