@@ -243,18 +243,18 @@
                             시행일자:2024년 1월 1일
                         </p>
                         <h4 class="privacy-sub-title">[개인정보처리방침 개정 이력]</h4>
-                        <p class="privacy-desc-24">
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2023년 1월 20일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2022년 8월 22일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 8월 27일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 4월 23일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 3월 24일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2021년 1월 14일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2018년 1월 1일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2017년 9월 21일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2016년 2월 5일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2012년 1월 2일 개정안</button><br>
-                            <button type="button" class="btn-privacy" onclick="UI.exe.sub5_8_1p.show();">2008년 10월 30일 개정안</button>
+                        <p class="privacy-desc-24"> 
+                            <button type="button" class="btn-privacy" data-date="d230120"  >2023년 1월 20일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date="d230822"  >2022년 8월 22일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2021년 8월 27일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2021년 4월 23일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2021년 3월 24일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2021년 1월 14일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2018년 1월 1일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2017년 9월 21일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2016년 2월 5일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date=""  >2012년 1월 2일 개정안</button><br>
+                            <button type="button" class="btn-privacy" data-date="" >2008년 10월 30일 개정안</button>
                         </p>
                     </div>
                 </div>
@@ -295,8 +295,40 @@
                 type:'modal',
                 callback:() => {
                     console.log('modal1 콜백');
+                    const modal = document.querySelector('[data-id="sub5_8_1p"]');
+                    const title = modal.querySelector('.layer-modal-title')
+                    const cont = modal.querySelector('.layer-modal-body')
+
+                    title.textContent = terms[termsId].title;
+                    cont.innerHTML = terms[termsId].cont;
                 }
             });
+            let termsId = null;
+            const btns =  document.querySelectorAll('.btn-privacy');
+            for (let item of btns) {
+                item.addEventListener('click', (e) => {
+                    console.log(1111)
+                    const _this = e.currentTarget;
+                    const _date = _this.dataset.date;
+
+                    termsId = _date;
+                    UI.exe.sub5_8_1p.show();
+
+                });
+            }
+
+            const terms = {
+                d230120 : {
+                    title :  '약관제목',
+                    cont : '<div class="privacy-preview">약관내용1</div>'
+
+                },
+                d230822 : {
+                    title :  '약관제목2',
+                    cont : '<div class="privacy-preview">약관내용2</div>'
+
+                }
+            }
         }); 
     </script>
 </body>
