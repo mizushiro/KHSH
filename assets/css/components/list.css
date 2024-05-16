@@ -6,12 +6,33 @@
         }
     }
 }
+.ico-no-data-logo {
+    aspect-ratio:160/93;
+    width:16rem;
+    background:url("../../images/common/no-image-logo2.svg") no-repeat 50% 50%;
+    background-size:contain;
+    @media screen and (max-width:1023px) {
+        width:12rem;
+    }
+}
 .card-item {
     position:relative;
     display:flex;
     align-items:flex-end;
     overflow:hidden;
     height:50rem;
+    .no-data-card {
+        position:absolute;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        top:0;
+        left:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:#E7EEF5;
+    }
     .card-item-view {
         position:absolute;
         width:100%;
