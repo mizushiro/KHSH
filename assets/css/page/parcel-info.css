@@ -633,6 +633,9 @@
     .ico-no-data-logo {
         opacity:.2;
         width:10rem;
+        @media screen and (max-width:1023px) {
+            width:5.2rem;
+        }
     }
 }
 .swiper-viewmap .swiper-button-prev,
