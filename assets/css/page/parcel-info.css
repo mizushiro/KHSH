@@ -550,6 +550,9 @@
     background-color:#F6FAFC;
     .ico-no-data-logo {
         opacity:.2;
+        @media screen and (max-width:1023px) {
+            width:10rem;
+        }
     }
     img {
         display:block;
@@ -575,7 +578,7 @@
             height:23.4rem;
         }
         .artera-detailview-img {
-            aspect-ratio:640/753;
+            aspect-ratio:468/306;
             width:auto;
             height:auto;
         }
