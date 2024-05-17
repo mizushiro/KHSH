@@ -286,6 +286,8 @@
         }
     }
 }
+.g_table02,
+.g_table01_box,
 .table-basic {
     border-top:0.2rem solid var(--black);
     width:100%;
