@@ -368,7 +368,7 @@
     @media screen and (max-width:1023px) {
         padding:1rem;
         font-size:1.2rem;
-        height:24rem;
+        max-height:24rem;
     }
     .privacy-desc-list {
         margin-bottom:2rem;
