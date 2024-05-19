@@ -1686,7 +1686,7 @@ class ScrollPage {
             const if_1 = n_s <= point && point <= n_e;
             const if_2 = n_e <= point && point <= (n_e + n_h);
             const if_over = n_e < point; 
-
+console.log(is_start, if_over)
             if (is_start && if_over) {
                 //첫실행시 지나간 영역실행
                 UI.callback[_name] && UI.callback[_name]({

@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="sub-content" data-size="full">
-                    <section class="bi-item" data-scroll-name="brand_BI" data-scroll-callback="brand_BI_1">
+                    <section class="bi-item n1" data-scroll-name="brand_BI" data-scroll-callback="brand_BI_1">
                         <div class="sticky-wrapper">
                             <!-- sec1 -->
                             <div class="sticky-item">
@@ -73,7 +73,7 @@
                         <div class="sticky-timeline"></div>
                     </section>
 
-                    <section class="bi-item" data-scroll-name="brand_BI" data-scroll-callback="brand_BI_2">
+                    <section class="bi-item n2" data-scroll-name="brand_BI" data-scroll-callback="brand_BI_2">
                         
                         <div class="bi-tit-line a1">
                             <h3>Symbol Mark</h3>
@@ -240,53 +240,35 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            UI.exe.brandBI = new ScrollPage({ 
-                name:'brand_BI' 
-            });
+            UI.exe.brand_BI = new ScrollPage({ name:'brand_BI' })
 
+
+            const brand_BI_M = (v, n) => {
+                console.log(v)
+                v.per_s > n ? v.element.dataset.state = 'view' : v.element.dataset.state = '';
+
+                const per = v.per_s;
+                const wrap = v.element;
+                const item0 = wrap.querySelector('.brand-BI-head');
+                const item1 = wrap.querySelector('.brand-BI-head-txt');
+                const item2 = wrap.querySelector('.brand-BI-head .button-base');
+                const item3 = wrap.querySelector('.brand-BI-logo');
+
+                v.per_s > 24 ? item0.dataset.state = 'view' : item0.dataset.state = ''; 
+                v.per_s > 38 ? item1.dataset.state = 'view' : item1.dataset.state = ''; 
+                v.per_s > 58 ? item2.dataset.state = 'view' : item2.dataset.state = '';
+                v.per_s > 78 ? item3.dataset.state = 'view' : item3.dataset.state = '';
+                
+
+
+            }
+            UI.callback.brand_BI_1 = (v) => { brand_BI_M(v, 0); }
+            UI.exe.brand_BI.act('start');
+            
             const actScopeValue = (p, v) => {
                 return (p * v[1]) < v[0] ? 0 : (p * v[1]) > v[1] ? v[1] : (p * v[1]);
             }
-            UI.callback.brand_BI_1 = (v) => { 
-                const per = v.per_s;
-                const wrap = v.element;
-                const item1 = wrap.querySelector('.brand-BI-head');
-                const item2 = wrap.querySelector('.brand-BI-logo');
-                const item3 = wrap.querySelector('.bi1-bg');
-
-                const aa = [400, 800]
-                const aa2 = [200, 700]
-                const bb = [700, 1200]
-console.log(v.top)
-                const per_1 = (v.top - aa[0]) / (aa[1] - aa[0]);
-                const per_1_x = (v.top - aa2[0]) / (aa2[1] - aa2[0]);
-
-                const per_2 = (v.top - bb[0]) / (bb[1] - bb[0]);
-                const per_2_x = (v.top - bb[0]) / (bb[1] - bb[0]);
-
-                // const per_3 = (v.top - 1200) / (1500 - 1200);
-                if (UI.state.device.mobile) {
-                    item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
-                    item1.style.transform = `translateY(${(50 - actScopeValue(per_1, [10, 50]))}vw)`;
-                    item2.style.opacity = actScopeValue(per_2, [0.1, 1]);
-                    item2.style.transform = `translateY(${(100 - actScopeValue(per_2_x, [10, 100])) * -1}vh)`;
-                } else {
-                    item1.style.opacity = actScopeValue(per_1, [0.3, 1]);
-                    item1.style.transform = `translateX(-${(50 - actScopeValue(per_1, [10, 50]))}vw)`;
-                    item2.style.opacity = actScopeValue(per_2, [0.1, 1]);
-                    item2.style.transform = `translateY(${(100 - actScopeValue(per_2_x, [10, 100]))}vh)`;
-                }
-                
-                // item3.style.opacity = actScopeValue(per_3, [0.1, 1]);
-
-                // if (v.top > 1400) {
-                //     wrap.classList.add('change');
-                // } else {
-                //     wrap.classList.remove('change');
-                // }
-            }   
             const bi_items = document.querySelectorAll('.bi-item[data-scroll-callback="brand_BI_2"] > div');
-
             const scrollMotion = () => {
                 let ps = [];
                 const ps_add = window.innerHeight / 2;

@@ -165,27 +165,42 @@
                 gap:3.7rem;
                 flex-direction:column;
                 align-items:flex-start;
-                opacity:0;
-                transform:translateX(-100vw);
-                transition:all 1.2s ease-out;
+               
 
                 .brand-BI-head-tit {
+                    position: relative;
                     font-size:4rem;
                     font-weight:600;
                     color:#fff;
                     line-height:1.3;
-                    /* transition:color 1.7s ease; */
+                    opacity:0;
+                    transform:translateX(-100vw);
+                    transition:transform 1.7s ease, opacity 1.7s ease;
                 }
                 .brand-BI-head-txt {
                     font-size:2.4rem;
                     font-weight:500;
                     color:#fff;
                     line-height:1.6;
-                    /* transition:color 1.7s ease; */
+                    opacity:0;
+                    transform:translateX(-100vw);
+                    transition:transform 1.7s ease, opacity 1.7s ease;
+
+                    &[data-state="view"] {
+                        opacity:1;
+                        transform:translateX(0vw);
+                    }
                 }
                 .button-base {
                     margin-top:2rem;
-                    /* transition:all 1.7s ease; */
+                    opacity:0;
+                    transform:translateX(-100vw);
+                    transition:transform 1.7s ease, opacity 1.7s ease;
+
+                    &[data-state="view"] {
+                        opacity:1;
+                        transform:translateX(0vw);
+                    }
                 }
             }
             .brand-BI-logo {
@@ -203,6 +218,11 @@
                         fill:#fff;
                         transition:all 0.7s ease;
                     }
+                }
+
+                &[data-state="view"] {
+                    opacity:1;
+                    transform:translateX(0vw);
                 }
             }
             .bi1-bg {
@@ -239,6 +259,12 @@
                 }
             }
         }
+        &[data-state="view"] {
+            .brand-BI-head .brand-BI-head-tit {
+                opacity:1;
+                transform:translateX(0vw);
+            }
+        }
 
         @media screen and (max-width:1023px) {
             .sticky-timeline {
@@ -256,6 +282,9 @@
                     width:100%;
                     padding:0 4rem;
                     gap:1.6rem;
+                    margin-top: -60dvh;
+                    transition:margin 1.2s ease-out;
+
                     .brand-BI-head-txt{
                         text-align:center;
                         font-size:1.5rem;
@@ -264,10 +293,15 @@
                         text-align:center;
                         font-size:2.5rem;
                     }
+
+                    &[data-state="view"] {
+                        margin-top: 0;
+                    }
                 }
                 .brand-BI-logo {
                     width:27rem;
                     height:12rem;
+                    transform:translateY(10vh);
                 }
             }
         }

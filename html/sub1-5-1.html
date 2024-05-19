@@ -949,19 +949,27 @@
                     setTimeout(()=> {
                         switch(v.current) {
                             case '1-1':
-                            !UI.exe.historyScroll1 ? UI.exe.historyScroll1 = new ScrollPage({ name:'history1' }) :UI.exe.historyScroll1.act('start');
+                            !UI.exe.historyScroll1 ? 
+                                UI.exe.historyScroll1 = new ScrollPage({ name:'history1' }) :
+                                UI.exe.historyScroll1.act('start');
                             break;
 
                             case '2-1':
-                            !UI.exe.historyScroll2 ? UI.exe.historyScroll2 = new ScrollPage({ name:'history2' }) :UI.exe.historyScroll2.act('start');
+                            !UI.exe.historyScroll2 ? 
+                                UI.exe.historyScroll2 = new ScrollPage({ name:'history2' }) :
+                                UI.exe.historyScroll2.act('start');
                             break;
 
                             case '3-1':
-                            !UI.exe.historyScroll3 ? UI.exe.historyScroll3 = new ScrollPage({ name:'history3' }) :UI.exe.historyScroll3.act('start');
+                            !UI.exe.historyScroll3 ? 
+                                UI.exe.historyScroll3 = new ScrollPage({ name:'history3' }) :
+                                UI.exe.historyScroll3.act('start');
                             break;
 
                             case '4-1':
-                            !UI.exe.historyScroll4 ? UI.exe.historyScroll4 = new ScrollPage({ name:'history4' }) :UI.exe.historyScroll4.act('start');
+                            !UI.exe.historyScroll4 ? 
+                                UI.exe.historyScroll4 = new ScrollPage({ name:'history4' }) :
+                                UI.exe.historyScroll4.act('start');
                             break;
                         }
                     },100); 
