@@ -4,6 +4,11 @@
         padding-top:8rem;
     }
 }*/
+.base-wrap {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
 .content-area {
     &[data-bg="sky"] {
         background-color:var(--skyblue);

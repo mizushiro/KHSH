@@ -181,6 +181,7 @@ body {
 .base-main {
     position:relative;
     z-index:0;
+    flex:1;
 }
 [data-device="desktop"] {
     ::-webkit-scrollbar {opacity:0; visibility:hidden;}

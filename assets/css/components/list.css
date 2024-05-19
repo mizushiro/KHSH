@@ -50,9 +50,11 @@
     }
     .card-item-tit {
         font-size:3.4rem;
+        line-height:4rem;
         font-weight:500;
         color:#fff;
         opacity:1;
+        min-height:8rem;
         transition:all 0.2s ease-in;
     }
     .card-item-img {
@@ -100,6 +102,7 @@
             margin-top:2.8rem;
             width:100%;
             margin-bottom:2rem;
+            min-height:0;
         }
     }
     .card-item-desc dl {
@@ -149,7 +152,7 @@
             background:linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1) 100%);
         }
     }
-    @media screen and (max-width:1700px) {
+   /* @media screen and (max-width:1700px) {
         .card-item-tit {
             font-size:3.2rem;
         }
@@ -166,7 +169,7 @@
                 font-size:2rem;
             }
         }
-    }
+    }*/
     @media screen and (max-width:1023px) {
         width:25.5rem;
         aspect-ratio:255/469;

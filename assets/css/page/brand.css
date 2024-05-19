@@ -1096,8 +1096,6 @@
                 transition: all 1.4s linear;
             }
         }
-        
-        
     }
     .sound-control{
         left:50%;
@@ -1157,7 +1155,6 @@
                     opacity: 1;
                     transform: translateX(0);
                 }
-            }
             }
             .brand-BI-logo {
                 opacity: 1;

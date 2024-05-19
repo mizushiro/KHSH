@@ -48,6 +48,9 @@
     line-height:3.6rem;
     margin-bottom:0.8rem;
     margin-top:3rem;
+    &.mt-0 {
+        margin-top:0;
+    }
     @media screen and (max-width:1023px) {
         font-size:1.6rem;
         line-height:2.4rem;
@@ -90,6 +93,20 @@
         padding-left:1.4rem;
         margin-top:0.8rem;
     }
+    &[data-type="number"] {
+        text-indent:-2rem;
+        padding-left:2rem;
+        margin-top:0.8rem;
+        @media screen and (max-width:1023px) {
+            text-indent:-1.6rem;
+            padding-left:1.6rem;
+        }
+    }
+    &[data-type="kor"] {
+        text-indent:-2rem;
+        padding-left:2rem;
+        margin-top:0.8rem;
+    }
     @media screen and (max-width:1023px) {
         font-size:1.5rem;
         line-height:2rem;
@@ -97,6 +114,19 @@
 }
 .privacy-desc-list {
     margin-top:0.8rem;
+    &[data-size="small"] {
+        .privacy-desc-item {
+            font-size:2rem;
+            @media screen and (max-width:1023px) {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                &::before {
+                    width:.4rem;
+                    top:1rem;
+                }
+            }
+        }
+    }
 }
 .privacy-desc-item {
     line-height:3.4rem;
@@ -118,6 +148,10 @@
     @media screen and (max-width:1023px) {
         font-size:1.6rem;
         line-height:2.4rem;
+        &::before {
+            width:.4rem;
+            top:1rem;
+        }
     }
 }
 .privacy-content-area {
@@ -231,5 +265,14 @@
         col {
             width:auto !important;
         }
+    }
+}
+.privacy-depth {
+    margin:.8rem 0 0 2rem;
+    + .privacy-desc-20 {
+        margin-top:1.6rem;
+    }
+    @media screen and (max-width:1023px) {
+        margin-left:1.6rem;
     }
 }
