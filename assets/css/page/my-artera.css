@@ -810,6 +810,10 @@
             &:not([data-type="title"]) {
                 flex:1;
             }
+            &[data-direction="col"] {
+                flex-direction:column;
+                align-items:flex-start;
+            }
             .form-select {
                 width:100%;
             }
@@ -1271,7 +1275,7 @@
     display:flex;
     justify-content:center;
     img {
-        max-width:120rem;
+        max-width:108.5rem;
         &[data-view="mobile"] {
             display:none;
         }
@@ -1286,5 +1290,48 @@
                 display:none;
             }
         }
+    }
+}
+.app-btn-group {
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.2rem;
+    @media (max-width:1023px) {
+        gap:.4rem;
+    }
+}
+.link-app {
+    display:flex;
+    width:22.6rem;
+    border:.1rem solid var(--form_line);
+    border-radius:999em;
+    align-items:center;
+    justify-content:center;
+    gap:.8rem;
+    font-size:1.8rem;
+    height:5.6rem;
+    margin-top:.4rem;
+    @media (max-width:1023px) {
+        width:12rem;
+        height:3.2rem;
+        font-size:1.2rem;
+    }
+}
+.ico-play-store {
+    aspect-ratio:18/22;
+    width:1.8rem;
+    background:url("../../images/sub/icon-play-store.svg") 50% 50% no-repeat;
+    background-size:contain;
+    @media (max-width:1023px) {
+        width:1.2rem;
+    }
+}
+.ico-app-store {
+    aspect-ratio:19/22;
+    width:1.9rem;
+    background:url("../../images/sub/icon-app-store.svg") 50% 50% no-repeat;
+    background-size:contain;
+    @media (max-width:1023px) {
+        width:1.2rem;
     }
 }
