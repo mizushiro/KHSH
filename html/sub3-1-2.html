@@ -102,13 +102,13 @@
                                 <div class="swiper" data-id="dayselect">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <button type="button" class="selected" onclick="alert(1)">2021.04</button>
+                                            <button type="button" class="selected" onclick="UI.exe.swiperItemSet('d201903')">2021.04</button>
                                         </div>
                                         <div class="swiper-slide">
-                                            <button type="button" onclick="alert(1)">2022.02</button>
+                                            <button type="button" onclick="UI.exe.swiperItemSet('d201904')">2022.02</button>
                                         </div>
                                         <div class="swiper-slide">
-                                            <button type="button" onclick="alert(1)">2023.01</button>
+                                            <button type="button" onclick="UI.exe.swiperItemSet('d201905')">2023.01</button>
                                         </div>
                                         <div class="swiper-slide">
                                             <button type="button" onclick="alert(1)">2023.02</button>
@@ -252,6 +252,26 @@
                     prevEl:'.swiper-dayselect .swiper-button-prev',
                 },
             });
+
+            
+            const data = {
+                d201903 : ['../assets/images/dummy/detail_3.jpg', '../assets/images/dummy/detail_3.jpg', '../assets/images/dummy/detail_3.jpg', '../assets/images/dummy/detail_3.jpg'],
+                d201904 : ['../assets/images/dummy/detail_1.jpg', '../assets/images/dummy/detail_1.jpg', '../assets/images/dummy/detail_1.jpg'],
+                d201905 : ['../assets/images/dummy/detail_2.jpg', '../assets/images/dummy/detail_2.jpg'],
+            }
+
+
+            
+
+            
+
+
+
+
+
+
+
+
             const swiperViewingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewing"]', {
                 spaceBetween:10,
                 slidesPerView:3,
@@ -286,6 +306,30 @@
                     }
                 }
             });
+
+            
+            UI.exe.swiperItemSet = (v) => {
+                swiperViewingThumbs.slideTo(0);
+                swiperViewing.slideTo(0);
+                const _data = data[v];
+                const swiper1 = document.querySelector('.swiper-viewmap .swiper-wrapper');
+                const swiper2 = document.querySelector('.swiper-viewmap-thumbs .swiper-wrapper');
+                let swiper_html = ``;
+                for (let i = 0; i < _data.length; i++) {
+                    swiper_html += `
+                    <div class="swiper-slide">
+                            <div class="artera-detailview-img">
+                            <img src="${_data[i]}" alt="">
+                        </div>
+                    </div>`;
+                }
+                console.log(swiper1)
+                swiper1.innerHTML = swiper_html;
+                swiper2.innerHTML = swiper_html;
+                swiperViewingThumbs.updateSlides()
+                swiperViewing.updateSlides()
+
+            }
         }); 
     </script>
 </body>
