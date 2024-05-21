@@ -87,15 +87,15 @@
 
                         <div class="artera-detail-body">
                             <div class="construction-step-area">
-                                <ol class="construction-step">
-                                    <li class="construction-step-item">공사준비</li>
-                                    <li class="construction-step-item">토공사</li>
-                                    <li class="construction-step-item">기초공사</li>
-                                    <li class="construction-step-item" data-state="selected">지하층<br />골조공사</li>
-                                    <li class="construction-step-item">지상층<br />골조공사</li>
-                                    <li class="construction-step-item">마감공사</li>
-                                    <li class="construction-step-item">준공</li>
-                                </ol>
+                                <div class="construction-step">
+                                    <button type="button" class="construction-step-item">공사준비</button>
+                                    <button type="button" class="construction-step-item">토공사</button>
+                                    <button type="button" class="construction-step-item">기초공사</button>
+                                    <button type="button" class="construction-step-item" data-state="selected">지하층<br />골조공사</button>
+                                    <button type="button" class="construction-step-item">지상층<br />골조공사</button>
+                                    <button type="button" class="construction-step-item">마감공사</button>
+                                    <button type="button" class="construction-step-item">준공</button>
+                                </div>
                             </div>
                             
                             <div class="swiper-dayselect">
@@ -259,18 +259,6 @@
                 d201904 : ['../assets/images/dummy/detail_1.jpg', '../assets/images/dummy/detail_1.jpg', '../assets/images/dummy/detail_1.jpg'],
                 d201905 : ['../assets/images/dummy/detail_2.jpg', '../assets/images/dummy/detail_2.jpg'],
             }
-
-
-            
-
-            
-
-
-
-
-
-
-
 
             const swiperViewingThumbs = new Swiper('.swiper-viewmap-thumbs[data-id="viewing"]', {
                 spaceBetween:10,
