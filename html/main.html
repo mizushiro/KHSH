@@ -471,8 +471,44 @@
         <footer class="base-footer" data-id="footer"></footer>
     </div>
 
+    <!--<div class="main-notice-popup">
+        <div class="notice-popup-box">
+            <img src="https://picsum.photos/id/83/400/500" alt="" class="main-notice-img">
+            <div class="notice-popup-bottom">
+                <span class="choice-item">
+                    <input type="checkbox" id="checkbox1-1" class="form-checkbox">
+                    <label for="checkbox1-1">오늘 하루 이 창을 열지 않음</label>
+                </span>
+            </div>
+        </div>
+    </div>-->
+    <section class="layer-modal" data-size="S" data-id="main_p" data-state="" role="dialog">
+        <div class="layer-modal-wrap">
+            <img src="https://picsum.photos/id/83/400/500" alt="" class="main-notice-img">
+            <div class="notice-popup-bottom">
+                <span class="choice-item">
+                    <input type="checkbox" id="checkbox1-1" class="form-checkbox">
+                    <label for="checkbox1-1">오늘 하루 이 창을 열지 않음</label>
+                </span>
+                <button type="button" class="layer-modal-close" data-material="close" aria-label="닫기"></button>
+            </div>
+        </div>
+        <div class="layer-modal-dim"></div>
+    </section>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // modal
+            UI.exe.main_p = new Layer({
+                id :'main_p',
+                type:'modal',
+                callback:() => {
+                    console.log('modal1 콜백');
+                    UI.form.setSelect();
+                }
+            });
+            UI.exe.main_p.show();
+
             //비쥬얼 영상
             UI.exe.visualVideo = document.querySelector('#visualVideo');
             UI.exe.visualVideo.controls = false;

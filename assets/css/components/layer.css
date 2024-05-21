@@ -250,6 +250,13 @@ html[data-modal="show"] body {
             max-width:60rem;
         }
     }
+    &[data-size="S"] {
+        .layer-modal-wrap {
+            width:100%;
+            max-width:40rem;
+            padding:0;
+        }
+    }
 
     &[data-type="alert"],
     &[data-type="modal"] {
