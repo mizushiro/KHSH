@@ -1238,6 +1238,7 @@
             display:flex;
             gap:6rem;
             align-items:center;
+            flex:1;
         }
         .info-data-name {
             font-size:3rem;
@@ -1245,6 +1246,7 @@
             font-weight:500;
             line-height:3.6rem;
             word-break:keep-all;
+            flex:1;
         }
         .info-data-address {
             font-size:2.4rem;
@@ -1252,6 +1254,7 @@
             font-weight:400;
             line-height:2.8rem;
             word-break:keep-all;
+            flex:1;
         }
         .info-item-site {
             margin-left:auto;
@@ -1318,6 +1321,7 @@
                 .button-base {
                     min-height:3.6rem;
                     font-size:1.6rem;
+                    width:100%;
                 }
             }
         }
