@@ -527,6 +527,16 @@
     align-items:center;
     height:5.4rem;
     padding:0 2.6rem;
+    &[data-state="complete"] {
+        background-color:var(--black);
+    }
+    &[data-state="ing"] {
+        background-color:var(--orange);
+    }
+    &[data-state="wait"] {
+        background-color:var(--skyblue);
+        color:var(--navy);
+    }
     @media screen and (max-width:1023px) {
         height:3.6rem;
         padding:0 1.8rem;
