@@ -136,7 +136,7 @@
             background:url(../../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
         }
         .sticky-timeline {
-            height:240dvh;
+            height:180dvh;
         }
         .sticky-item {
             position:absolute;

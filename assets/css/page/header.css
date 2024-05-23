@@ -13,6 +13,7 @@
 .logo {
     display:block;
     position:relative;
+    z-index: 2;
     flex-shrink:0;
     width:21.2rem;
     height:2.8rem;
