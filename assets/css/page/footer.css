@@ -41,6 +41,7 @@
         gap:.8rem 2.5rem;
         flex-wrap:wrap;
         overflow:hidden;
+        align-items:center;
         a {
             position:relative;
             white-space:nowrap;
@@ -55,6 +56,9 @@
             position:absolute;
             left:-1.3rem;
             top:50%;
+        }
+        .sns-wrap {
+            margin-left:-.8rem;
         }
     }
     address {
@@ -149,7 +153,6 @@
     flex-wrap:wrap;
     width:100%;
     @media screen and (max-width:800px) {
-        flex-direction:column;
         justify-content:flex-start;
         align-items:flex-start;
     }
