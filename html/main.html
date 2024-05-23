@@ -23,7 +23,9 @@
             <!-- visual -->
             <div class="main-section" data-sec="visual" data-scroll-name="main" data-scroll-callback="main1">
                 <video autoplay="" loop="" muted="" playsinline="" id="visualVideo">
-                    <source src="../assets/images/main/main_sec_visual_video1.mp4" type="video/mp4">
+                    <source src="../assets/images/main/main_sec_visual_video1.mp4" data-src="../assets/images/main/main_sec_visual_video1.mp4" 
+                    data-src-m="../assets/images/main/test.mp4"
+                    type="video/mp4">
                 </video>
                 <!-- <div class="visual-txt">
                     <div class="effect-wrap" data-eff="hidden-up">
@@ -499,7 +501,42 @@
             UI.exe.main_p.show();
 
             //비쥬얼 영상
+            
+            let current_device = UI.state.device.breakpoint2;
+            
             UI.exe.visualVideo = document.querySelector('#visualVideo');
+            if (current_device === 'mobile') {
+                const source = UI.exe.visualVideo.querySelector('source')
+                source.setAttribute('src', source.dataset.srcM);
+                UI.exe.visualVideo.load();
+                UI.exe.visualVideo = document.querySelector('#visualVideo');
+            } else {
+                const source = UI.exe.visualVideo.querySelector('source')
+                source.setAttribute('src', source.dataset.src);
+                UI.exe.visualVideo.load();
+                UI.exe.visualVideo = document.querySelector('#visualVideo');
+            }
+            const resizeAct = () => {
+                if (current_device !== UI.state.device.breakpoint2) {
+                    current_device = UI.state.device.breakpoint2
+                    console.log('change');
+                    const videoContral = document.querySelector('.video-control');
+                    videoContral.dataset.state = 'play';
+                    videoContral.setAttribute('aria-label', 'pause');
+
+                    if (current_device === 'mobile') {
+                        const source = UI.exe.visualVideo.querySelector('source')
+                        source.setAttribute('src', source.dataset.srcM);
+                        UI.exe.visualVideo.load();
+                    } else {
+                        const source = UI.exe.visualVideo.querySelector('source')
+                        source.setAttribute('src', source.dataset.src);
+                        UI.exe.visualVideo.load();
+                    }
+                } 
+            }
+            window.addEventListener('resize', resizeAct);
+
             UI.exe.visualVideo.controls = false;
             //플레이
             UI.exe.visualVideo.addEventListener('timeupdate', function(){

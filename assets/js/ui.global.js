@@ -67,6 +67,7 @@
             direction:'down'
         },		
         breakPoint:[600, 1400],
+        breakPoint2:1024,
     };
     Global.parts = {
         scroll(){
@@ -106,7 +107,7 @@
                 device.mobile = device.touch && (device.ios || device.android);
                 device.os = device.os ? device.os[0] :'';
                 device.os = device.os.toLowerCase();
-
+                device.breakpoint2 = device.width >= Global.state.breakPoint2 ? 'pc' : 'mobile';
                 device.breakpoint = device.width >= Global.state.breakPoint[0] ? true :false;
                 device.col = device.width >= Global.state.breakPoint[1] ? '12' :device.width > Global.state.breakPoint[0] ? '8' :'4';
 
