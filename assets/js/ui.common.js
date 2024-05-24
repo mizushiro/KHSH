@@ -125,6 +125,7 @@
         type:'modal',
         src:'./common/modal_allMenu',
         callback:() => {
+            loginCheck();
             if (!UI.exe.navMobile) {
                 UI.exe.navMobile = new Accordion({
                     id :'navMobile',

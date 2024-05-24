@@ -27,7 +27,11 @@
                     <source src="../assets/images/story/brand_visual_video.mp4" type="video/mp4">
                 </video>
                 
-                <button type="button" class="sound-control" aria-label="소리끄기" data-sound="off"></button>
+                <div class="video-control-group">
+                    <button type="button" class="video-control" aria-label="재생/정지" data-state="play"></button>
+                    <progress id="progress-bar" class="video-bar" min="0" max="100" value="0" style="margin-right:10px;"></progress>
+                    <button type="button" class="sound-control" aria-label="소리끄기" data-sound="off"></button>
+                </div>
             </div>
 
             <!-- story -->
@@ -95,8 +99,28 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             UI.exe.storyVod = document.querySelector('#storyVod');
-            
-            const videoContral = document.querySelector('.sound-control');
+            UI.exe.storyVod.controls = false;
+            UI.exe.storyVod.addEventListener('timeupdate', function(){
+                const progressBar = document.querySelector('#progress-bar');
+                progressBar.value = Math.floor((100 / UI.exe.storyVod.duration) * UI.exe.storyVod.currentTime);
+            }, false);
+
+            const videoContral = document.querySelector('.video-control');
+            const actPlayStop = (e) => {
+                const _this = e.currentTarget;
+                if (_this.dataset.state === 'play') {
+                    _this.dataset.state = 'pause';
+                    _this.setAttribute('aria-label', 'play');
+                    UI.exe.storyVod.pause();
+                } else {
+                    UI.exe.storyVod.play();
+                    _this.dataset.state = 'play';
+                    _this.setAttribute('aria-label', 'pause');
+                }
+            }
+            videoContral.addEventListener('click', actPlayStop);
+
+            const soundContral = document.querySelector('.sound-control');
             const actSoundControl = (e) => {
                 const _this = e.currentTarget;
                 if (_this.dataset.sound === 'on') {
@@ -109,7 +133,7 @@
                     _this.setAttribute('aria-label', 'sound on');
                 }
             }
-            videoContral.addEventListener('click', actSoundControl);
+            soundContral.addEventListener('click', actSoundControl);
 
             //화면단위 효과
             const _header = document.querySelector('.base-header');
