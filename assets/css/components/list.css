@@ -240,11 +240,11 @@
         .card-item-tit {
             width:100%;
             color:#000;
-            font-size:3rem;
+            font-size:2.6rem;
             font-weight:600;
             line-height:3.4rem;
             height:auto;
-            word-break:break-all;
+            word-break:keep-all;
             margin-bottom:3.4rem;
             min-height:10.2rem;
         }
@@ -258,7 +258,7 @@
         .card-item-desc {
             position:relative;
             top:0;
-            word-break:break-all;
+            word-break:keep-all;
             opacity:0;
             font-size:2.3rem;
             color:#000;
@@ -270,6 +270,7 @@
 
             [data-ellipsis] {
                 min-height:17.4rem;
+                text-align:left;
             }
             .date {
                 width:100%;
