@@ -95,9 +95,9 @@
             height:4rem;
             margin-right:1.2rem;
             transform:translateY(-.2rem);
-            background:url(../../images/common/swiper-play.svg) no-repeat 50% 50% / 1.2rem;
+            background:url(../../images/common/swiper-pause.svg) no-repeat 50% 50% / 1.2rem;
             &[data-state="pause"] {
-                 background:url(../../images/common/swiper-pause.svg) no-repeat 50% 50% / 1.2rem;
+                 background:url(../../images/common/swiper-play.svg) no-repeat 50% 50% / 1.2rem;
             }
         }
     }
