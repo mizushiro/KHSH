@@ -73,10 +73,26 @@
             display:flex;
             align-items:center;
             z-index:2;
+            gap:1.2rem;
+            .sound-control {
+                position: relative;
+                top:0; right:0;
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        @media screen and (max-width:1400px) {
+            .video-control-group{
+                width: 100%;
+                right: 0;
+                margin: 0 auto;
+                justify-content: center;
+            }
+            ::-webkit-progress-bar{flex:1;}
         }
         .video-bar {
             -webkit-appearance:none;
-            transform:translateY(.3rem);
+            transform:translateY(.5rem);
         }
         ::-webkit-progress-bar {
             background-color:rgba(255,255,255,0.3);
@@ -93,7 +109,6 @@
             z-index:1;
             width:4rem;
             height:4rem;
-            margin-right:1.2rem;
             transform:translateY(-.2rem);
             background:url(../../images/common/swiper-pause.svg) no-repeat 50% 50% / 1.2rem;
             &[data-state="pause"] {

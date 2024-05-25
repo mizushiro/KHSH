@@ -135,6 +135,7 @@
         font-weight:300;
         color:var(--gray_800);
         flex-shrink:0;
+        font-family:'Verdana', 'sans-serif';
         @media screen and (max-width:1023px) {
             font-size:1.3rem;
         }
