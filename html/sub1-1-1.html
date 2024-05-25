@@ -64,7 +64,7 @@
             </div>
 
             <div class="story-section s4" data-sec="story" data-scroll-name="story" data-scroll-callback="story4">
-                <div class="story-text-group">
+                <div class="story-group">
                     <p class="story-text-1">
                         당신의 삶을 비추는 아름다움
                     </p>
@@ -140,25 +140,40 @@
             const storyMotion1 = (v) => {
             }
             const storyMotion2 = (v) => {
-                if (v.per_s > 80) {
+                console.log(v)
+                if (v.per_s > 30) {
                     v.element.dataset.scrollOn = 'true';
 
                     videoContral.dataset.sound = 'off';
                     videoContral.setAttribute('aria-label', 'sound off');
                     UI.exe.storyVod.muted = true;
+
+
+                    if (v.per_e > 90) {
+                        v.element.dataset.scrollOn = 'false';
+                    } else {
+                        v.element.dataset.scrollOn = 'true';
+                    }
+
                 } else {
                     v.element.dataset.scrollOn = 'false';
                 }
             }
             const storyMotion3 = (v) => {
-                if (v.per_s > 80) {
+                if (v.per_s > 30) {
                     v.element.dataset.scrollOn = 'true';
+
+                    if (v.per_e > 90) {
+                        v.element.dataset.scrollOn = 'false';
+                    } else {
+                        v.element.dataset.scrollOn = 'true';
+                    }
                 } else {
                     v.element.dataset.scrollOn = 'false';
                 }
             }
             const storyMotion4 = (v) => {
-                if (v.per_s > 80) {
+                if (v.per_s > 30) {
                     v.element.dataset.scrollOn = 'true';
                 } else {
                     v.element.dataset.scrollOn = 'false';
