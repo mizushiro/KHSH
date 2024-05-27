@@ -179,6 +179,15 @@
                 }
             }
         }
+        .button-base {
+            &[data-size="size-40"] {
+                min-width:5.4rem;
+            }
+        }
+        .mobile-full {
+            width:100% !important;
+            flex:none !important;
+        }
     }
     /* layer in */
     .layer-modal-body & {
