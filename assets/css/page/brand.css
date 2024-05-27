@@ -185,7 +185,6 @@
                     opacity:0;
                     transform:translateX(-100vw);
                     transition:transform 1.7s ease, opacity 1.7s ease;
-
                     &[data-state="view"] {
                         opacity:1;
                         transform:translateX(0vw);
@@ -196,7 +195,6 @@
                     opacity:0;
                     transform:translateX(-100vw);
                     transition:transform 1.7s ease, opacity 1.7s ease;
-
                     &[data-state="view"] {
                         opacity:1;
                         transform:translateX(0vw);

@@ -195,6 +195,7 @@
         font-size:2rem;
         line-height:2.4rem;
         font-weight:600;
+        font-family:'verdana','sans-serif';
         a {
             pointer-events:none;
         }
@@ -331,7 +332,8 @@
        aspect-ratio:410/262;
         width:41rem;
         flex-shrink:0;
-        background-color:#F6FAFC;
+        background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+        background-size:cover;
         display:flex;
         align-items:center;
         justify-content:center;

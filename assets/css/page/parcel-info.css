@@ -202,7 +202,8 @@
     align-items:center;
     flex-shrink:0;
     aspect-ratio:501/327;
-    background-color:#F6FAFC;
+    background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+    background-size:cover;
     img {
         display:block;
         width:100%;
@@ -474,7 +475,8 @@
     align-items:center;
     flex-shrink:0;
     align-self:flex-start;
-    background-color:#F6FAFC;
+    background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+    background-size:cover;
     .ico-no-data-logo {
         opacity:.2;
     }
@@ -642,7 +644,8 @@
     justify-content:center;
     align-items:center;
     flex-shrink:0;
-    background-color:#F6FAFC;
+    background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+    background-size:cover;
     .ico-no-data-logo {
         opacity:.2;
         width:10rem;
