@@ -259,6 +259,13 @@ html[data-modal="show"] body {
             padding:0;
         }
     }
+    &[data-size="auto"] {
+        .layer-modal-wrap {
+            width:auto;
+            padding:0;
+            max-width:calc(100% - 4rem);
+        }
+    }
 
     &[data-type="alert"],
     &[data-type="modal"] {
