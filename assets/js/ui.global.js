@@ -1204,6 +1204,7 @@ class Layer {
         }
     }
     reset() {
+        console.log();
         this.resetSelect()
         this.madeSelect()
     }

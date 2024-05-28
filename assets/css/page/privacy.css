@@ -276,3 +276,12 @@
         margin-left:1.6rem;
     }
 }
+.terms-select {
+    padding: 1.4rem 2.4rem 0;
+    display: flex;
+    justify-content: flex-end;
+    gap:.8rem;
+}
+.terms-select  .button-base {
+    min-height: 3rem;
+}

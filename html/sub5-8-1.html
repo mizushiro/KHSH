@@ -26,6 +26,14 @@
             </div>
 
             <article class="content-area">
+                <div class="terms-select">
+                    <div class="form-select" data-id="terms_change">
+                        <select title="개정안 선택" id="terms_change">
+                            <option value="1" selected=""></option>
+                        </select>
+                    </div>
+                    <button type="button" class="button-base" data-style="bg-primary" data-size="size-40" id="perms_move">이동</button>
+                </div>
                 <div class="sub-content pt-80">
                     <div class="privacy-gray-box">
                         <h3 class="privacy-title">개인정보처리방침</h3>
@@ -242,20 +250,6 @@
                             공고일자:2023년 12월 20일<br>
                             시행일자:2024년 1월 1일
                         </p>
-                        <h4 class="privacy-sub-title">[개인정보처리방침 개정 이력]</h4>
-                        <p class="privacy-desc-24"> 
-                            <button type="button" class="btn-privacy" data-date="d230120"  >2023년 1월 20일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date="d230822"  >2022년 8월 22일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2021년 8월 27일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2021년 4월 23일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2021년 3월 24일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2021년 1월 14일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2018년 1월 1일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2017년 9월 21일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2016년 2월 5일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date=""  >2012년 1월 2일 개정안</button><br>
-                            <button type="button" class="btn-privacy" data-date="" >2008년 10월 30일 개정안</button>
-                        </p>
                     </div>
                 </div>
             </article>
@@ -303,19 +297,38 @@
                     cont.innerHTML = terms[termsId].cont;
                 }
             });
-            let termsId = null;
-            const btns =  document.querySelectorAll('.btn-privacy');
-            for (let item of btns) {
-                item.addEventListener('click', (e) => {
-                    console.log(1111)
-                    const _this = e.currentTarget;
-                    const _date = _this.dataset.date;
-
-                    termsId = _date;
-                    UI.exe.sub5_8_1p.show();
-
-                });
+            
+            
+            //개정안 select
+            const termslist = [
+                {name: '2023년 1월 20일 개정안' , value: 'd230120'},
+                {name: '2022년 8월 22일 개정안' , value: 'd220822'},
+                {name: '2021년 8월 27일 개정안' , value: 'd210827'},
+                {name: '2021년 4월 23일 개정안' , value: 'd210423'},
+                {name: '2021년 3월 24일 개정안' , value: 'd210324'},
+                {name: '2021년 1월 14일 개정안' , value: 'd210114'},
+                {name: '2018년 1월 1일 개정안' , value: 'd180101'},
+                {name: '2017년 9월 21일 개정안' , value: 'd170921'},
+                {name: '2016년 2월 5일 개정안' , value: 'd160205'},
+                {name: '2012년 1월 2일 개정안' , value: 'd120102'},
+                {name: '2008년 10월 30일 개정안' , value: 'd081030'},
+            ]
+            const termsselect = document.querySelector('#terms_change');
+            const btmTermGo = document.querySelector('#perms_move');
+            let termsOption = ``;
+            for (let i = 0; i < termslist.length; i++) {
+                termsOption += `<option value="${termslist[i].value}">${termslist[i].name}</option>`;
             }
+            termsselect.innerHTML = termsOption;
+            let termsId = null;
+            UI.exe.terms_change.reset();
+            btmTermGo.addEventListener('click', (e) => {
+
+                console.log(termsselect.value)
+
+                termsId = termsselect.value;
+                UI.exe.sub5_8_1p.show();
+            });
 
             const terms = {
                 d230120 : {
@@ -560,7 +573,7 @@
                         '</div>'
 
                 },
-                d230822 : {
+                d220822 : {
                     title :  '약관제목2',
                     cont : '<div class="privacy-preview">약관내용2</div>'
 
