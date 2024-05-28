@@ -311,7 +311,6 @@
         align-items:center;
         gap:1.7rem;
         max-width:118rem;
-        width:100%;
         transition:all 0.9s ease-out;
         opacity:0;
         /* transform:translateY(10rem); */
@@ -770,7 +769,7 @@
     }
     .swiper-pagination {
         top:auto !important;
-        bottom:0rem !important;
+        bottom:0 !important;
     }
     .swiper-pagination-bullet {
         min-width:16.3rem;
@@ -821,7 +820,7 @@
             top:auto; 
             gap:1.6rem;
             position:absolute;
-            bottom:0rem;
+            bottom:0;
             left:0;
             padding:0;
             width:100%;
@@ -837,7 +836,7 @@
             display: flex;
             bottom:1.5rem !important;
             margin-right:0 !important;
-            left:0% !important;
+            left:0 !important;
             width:calc(100% - 10rem) !important;
             &:before {
                 height:0.2rem;
@@ -1012,7 +1011,6 @@
             width: 100%;
             padding-top: 6rem;
             margin-left: 0;
-            gap:0;
             align-items: center;
             gap:1.2rem;
             padding-bottom: 1.2rem;
