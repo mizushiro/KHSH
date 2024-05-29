@@ -550,10 +550,6 @@
     display:block;
     width:100%;
     margin:0 auto;
-    .swiper-button-next.swiper-button-disabled,
-    .swiper-button-prev.swiper-button-disabled {
-        opacity:0;
-    }
 }
 .artera-detailview-img {
     overflow:hidden;
