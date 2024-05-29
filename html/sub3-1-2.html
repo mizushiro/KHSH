@@ -142,7 +142,7 @@
                                                 <img src="../assets/images/dummy/detail_3.jpg" alt="">
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <!-- <div class="swiper-slide">
                                             <div class="artera-detailview-img">
                                                 <img src="../assets/images/dummy/detail_2.jpg" alt="">
                                             </div>
@@ -161,7 +161,7 @@
                                             <div class="artera-detailview-img">
                                                 <img src="../assets/images/dummy/detail_1.jpg" alt="">
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="swiper-button-next"></div>
                                     <div class="swiper-button-prev"></div>
@@ -173,7 +173,7 @@
                                                 <img src="../assets/images/dummy/detail_3.jpg" alt="">
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <!-- <div class="swiper-slide">
                                             <div class="artera-detailview-img">
                                                 <img src="../assets/images/dummy/detail_2.jpg" alt="">
                                             </div>
@@ -192,7 +192,7 @@
                                             <div class="artera-detailview-img">
                                                 <img src="../assets/images/dummy/detail_1.jpg" alt="">
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -289,6 +289,13 @@
                     swiper:swiperViewingThumbs,
                 },
                 on:{
+                    init: (v) => {
+                        console.log(v.slides.length)
+                        if (v.slides.length <= 1) {
+                            document.querySelector('.swiper-viewmap[data-id="viewing"] .swiper-button-next').remove()
+                            document.querySelector('.swiper-viewmap[data-id="viewing"] .swiper-button-prev').remove()
+                        }
+                    },
                     resize:function () {
                         swiperViewingThumbs.changeDirection(getDirection());
                     }

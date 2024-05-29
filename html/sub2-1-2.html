@@ -80,27 +80,7 @@
                                                 <img src="../assets/images/dummy/detail_3.jpg" alt="">
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <i class="ico-no-data-logo"></i>
-                                                <!--<img src="../assets/images/dummy/detail_2.jpg" alt="">-->
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                     <div class="swiper-button-next"></div>
                                     <div class="swiper-button-prev"></div>
@@ -112,27 +92,7 @@
                                                 <img src="../assets/images/dummy/detail_3.jpg" alt="">
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <i class="ico-no-data-logo"></i>
-                                                <!--<img src="../assets/images/dummy/detail_2.jpg" alt="">-->
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="artera-detailview-img">
-                                                <img src="../assets/images/dummy/detail_1.jpg" alt="">
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -240,6 +200,7 @@
                     }
                 },
                 on:{
+                    
                     resize:function () {
                         swiperViewmapThumbs.changeDirection(getDirection());
                     }
@@ -255,6 +216,13 @@
                     swiper:swiperViewmapThumbs,
                 },
                 on:{
+                    init: (v) => {
+                        console.log(v.slides.length)
+                        if (v.slides.length <= 1) {
+                            document.querySelector('.swiper-viewmap[data-id="viewmap"] .swiper-button-next').remove()
+                            document.querySelector('.swiper-viewmap[data-id="viewmap"] .swiper-button-prev').remove()
+                        }
+                    },
                     resize:function () {
                         swiperViewmapThumbs.changeDirection(getDirection());
                     }
@@ -291,6 +259,13 @@
                     swiper:swiperPdrawingThumbs,
                 },
                 on:{
+                    init: (v) => {
+                        console.log(v.slides.length)
+                        if (v.slides.length <= 1) {
+                            document.querySelector('.swiper-viewmap[data-id="pdrawing"] .swiper-button-next').remove()
+                            document.querySelector('.swiper-viewmap[data-id="pdrawing"] .swiper-button-prev').remove()
+                        }
+                    },
                     resize:function () {
                         swiperPdrawingThumbs.changeDirection(getDirection());
                     }
