@@ -276,3 +276,17 @@
         margin-left:1.6rem;
     }
 }
+.terms-select {
+    padding: 0 0 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    gap:.8rem;
+    @media screen and (max-width:1023px) {
+        .form-select {
+            flex:1;
+        }
+    }
+}
+.terms-select  .button-base {
+    min-height: 3rem;
+}

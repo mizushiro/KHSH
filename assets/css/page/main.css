@@ -3,6 +3,7 @@
 }
 .main-section {
     position:relative;
+    overflow: hidden;
     width:100%;
     &[data-sec="visual"] {
         height:100dvh;
