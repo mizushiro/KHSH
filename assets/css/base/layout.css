@@ -148,7 +148,7 @@
         &[data-type="auto"] {
             .sub-depth-nav-item {
                 flex:none;
-                padding:0 2.8rem;
+                padding:0 2.4rem;
                  /*@media screen and (max-width:1400px) {
                     padding:0 3rem;
                 }*/
