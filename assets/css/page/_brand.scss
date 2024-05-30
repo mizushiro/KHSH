@@ -136,7 +136,7 @@
             background:url(../../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
         }
         .sticky-timeline {
-            height:180dvh;
+            height:200dvh;
         }
         .sticky-item {
             position:absolute;
@@ -194,7 +194,7 @@
                 z-index:1;
                 width:53.8rem;
                 height:23.3rem;
-                transition:all 1.2s ease-out;
+                transition:all 2.2s ease-out;
                 opacity:0;
 
                 svg {
@@ -861,13 +861,13 @@
         margin-top: 20rem;
         text-align: center;
         scale:1;
-        transition: all 0.3s ease-out;
+        transition: all 0.6s ease-out;
     }
     .history-tit.on{
         opacity: 0;
         scale:0;
         top: 40rem;
-        transition: all 0.3s ease-out;
+        transition: all 0.6s ease-out;
     }
     @media screen and (max-width:1023px) {
         background-image: none;

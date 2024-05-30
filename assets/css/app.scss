@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@import './base/reset';
+@import './base/variable';
+@import './base/typograph';
+@import './base/layout';
+
+@import './components/attribute';
+@import './components/tab';
+@import './components/accordion';
+@import './components/button';
+@import './components/form';
+@import './components/table';
+@import './components/layer';
+@import './components/effect';
+@import './components/list';
+@import './components/layer';
+@import './components/visual';
+
+@import './page/header';
+@import './page/footer';
+@import './page/main';
+@import './page/parcel-info';
+@import './page/my-artera';
+@import './page/board';
+@import './page/privacy';
+@import './page/brand';
+@import './page/member';
+@import './page/story';
+@import './page/ready';
