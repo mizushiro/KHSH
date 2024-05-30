@@ -125,9 +125,8 @@
         flex-direction: column;
         gap: 5rem;
         overflow: hidden;
-        /* transform: translateX(-20rem); */
+        transform: translateX(-20rem);
         opacity: 0;
-        filter: blur(1rem);
 
         transition: all 1.8s ease;
         p {
@@ -153,7 +152,6 @@
         }
         .brand-BI-logo {
             opacity: 0;
-            filter: blur(1rem);
             transition: opacity 1.8s ease-in;
         }
     }
@@ -181,9 +179,8 @@
     .s3 {
         overflow: visible;
         .story-text-group {
-            /* transform: translateX(20rem); */
+            transform: translateX(20rem);
             opacity: 0;
-            filter: blur(1rem);
             span {
                 display: block;
             }
@@ -221,16 +218,13 @@
         .story-text-group {
             transform: translateX(0) !important;
             opacity: 1 !important;
-            filter: blur(0);
         }
         .story-group{
             text-align: center;
             opacity: 1;
-            filter: blur(0);
         }
         &.s4 .story-group .brand-BI-logo {
             opacity: 1;
-            filter: blur(0);
             transition: opacity 1.8s ease-in;
         }
     } 
