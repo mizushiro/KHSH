@@ -173,32 +173,20 @@
                     font-weight:600;
                     color:#fff;
                     line-height:1.3;
-                    opacity:0;
-                    transform:translateX(-100vw);
-                    transition:transform 1.7s ease, opacity 1.7s ease;
+
                 }
                 .brand-BI-head-txt {
                     font-size:2.4rem;
                     font-weight:500;
                     color:#fff;
                     line-height:1.6;
-                    opacity:0;
-                    transform:translateX(-100vw);
-                    transition:transform 1.7s ease, opacity 1.7s ease;
-                    &[data-state="view"] {
-                        opacity:1;
-                        transform:translateX(0vw);
-                    }
+                    opacity:1;
+
                 }
                 .button-base {
                     margin-top:2rem;
-                    opacity:0;
-                    transform:translateX(-100vw);
-                    transition:transform 1.7s ease, opacity 1.7s ease;
-                    &[data-state="view"] {
-                        opacity:1;
-                        transform:translateX(0vw);
-                    }
+                    opacity:1;
+
                 }
             }
             .brand-BI-logo {
@@ -208,8 +196,7 @@
                 height:23.3rem;
                 transition:all 1.2s ease-out;
                 opacity:0;
-                transform:translateY(100vh);
-                
+
                 svg {
                     width:100%;
                     path {
@@ -220,12 +207,11 @@
 
                 &[data-state="view"] {
                     opacity:1;
-                    transform:translateX(0vw);
                 }
             }
             .bi1-bg {
                 position:absolute;
-                top:0; 
+                top:0;
                 left:0;
                 width:100%;
                 height:100%;
@@ -234,7 +220,7 @@
                 z-index:0;
             }
         }
-        
+
         &.change {
             .sticky-item .brand-BI-logo svg path {
                 fill:#12255B;
@@ -317,7 +303,7 @@
         h3 {
             font-size:4rem;
             font-weight:600;
-            color:var(--navy); 
+            color:var(--navy);
         }
         &::after {
             content:"";
@@ -349,7 +335,7 @@
         transition:all 0.7s ease;
 
         @media screen and (max-width:1023px) {
-            font-size:1.6rem; 
+            font-size:1.6rem;
             gap:2rem;
             flex-direction:column;
             padding:0 2rem;
@@ -359,7 +345,7 @@
             }
         }
     }
-    
+
     [data-scroll-callback="brand_BI_2"] {
         background-color:#fff;
         flex-direction:column;
@@ -370,7 +356,7 @@
         justify-content:center;
         align-items:center;
         gap:4.8rem;
-        z-index:1; 
+        z-index:1;
 
         transition:all .5s ease;
 
@@ -867,13 +853,21 @@
     }
     .history-tit{
         font-family: 'Poppins';
-        font-size: 8rem;
-        color: var(--skyblue);
+        font-size: 12rem;
+        color: var(--navy);
         font-weight: 600;
         position: sticky;
-        top:18rem;
-        margin-top: 18rem;
+        top:10rem;
+        margin-top: 20rem;
         text-align: center;
+        scale:1;
+        transition: all 0.3s ease-out;
+    }
+    .history-tit.on{
+        opacity: 0;
+        scale:0;
+        top: 40rem;
+        transition: all 0.3s ease-out;
     }
     @media screen and (max-width:1023px) {
         background-image: none;

@@ -37,14 +37,15 @@
                     </div>
                 </div>
                 <div class="sub-content">
-                    <!-- <div class="history-tit">
-                        HISTORY
-                    </div> -->
+                    <div class="history-tit">
+                        ARTERA HISTORY
+                    </div>
                     <div class="history-wrap">
+
                         <div class="history-yeartxt">
                             
                             <div class="history-txt">
-                                금호건설이 <br>걸어온 길
+                                <div>금호건설이</div> <div>걸어온 길</div>
                             </div>
                             <div class="history-year">
                                 2024
@@ -295,18 +296,12 @@
             UI.exe.brandBI = new ScrollPage({ 
                 name:'brand_history' 
             });
-
-
-
             const actPer = (p, v) =>  {
                 return (p - v[0]) / (v[1] - v[0]);
             }
             const actScopeValue = (p, v) => {
                 return (p * v[1]) < v[0] ? 0 : (p * v[1]) > v[1] ? v[1] : (p * v[1]);
             }
-            
-            
-
 
             UI.callback.brand_history_1 = (v) => { 
                 const items = document.querySelectorAll('.history-item');
@@ -314,19 +309,20 @@
                 const h2 = document.querySelector('.sub-title').getBoundingClientRect().height;
                 const h3 = document.querySelector('.base-footer').getBoundingClientRect().height;
                 const h4 = document.querySelector('.sub-depth-nav').getBoundingClientRect().height;
-console.log(UI.state.device.mobile)
+
                 if (UI.state.device.mobile) {
                     document.querySelector('.history-list').style.paddingBottom = '0px';
                 } else {
                     document.querySelector('.history-list').style.paddingBottom = (window.innerHeight - (rect_h /2) - h2 - h4 - 60 ) + 'px';
                 }
                 
-                
+
                 const per = v.per_s;
                 const wrap = v.element;
                 // const items = wrap.querySelectorAll('.history-item');
                 const year =  document.querySelector('.history-year');
                 const txt =  document.querySelector('.history-txt');
+                const tit =  document.querySelector('.history-tit');
                 const bg =  document.querySelector('[data-brand="history"]');
                 const array_base = [500, 600];
                 const array_base2 = [400, 500];
@@ -335,7 +331,11 @@ console.log(UI.state.device.mobile)
                 const per_history = (v.top - array_base[0]) / (array_base[1] - array_base[0]);
                 year.style.opacity = (actScopeValue(per_history, [0.3, 1]));
                 year.style.transform = `translateX(-${(100 - actScopeValue(per_history, [10, 100]))}px)`;
-
+                if (v.top > 410) {
+                    tit.classList.add('on')
+                } else {
+                    tit.classList.remove('on')
+                }
                 const per_history2 = (v.top - array_base2[0]) / (array_base2[1] - array_base2[0]);
                 txt.style.opacity = (actScopeValue(per_history2, [0.3, 1]));
                 txt.style.transform = `translateX(-${(100 - actScopeValue(per_history2, [10, 100]))}px)`;
