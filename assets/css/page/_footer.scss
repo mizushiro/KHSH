@@ -89,16 +89,16 @@
                 display:block;
                 width:100%;
                 height:100%;
-                background:#1B2258 url(../../images/common/sns-p.svg) no-repeat 50% 50% / 2.1rem;
+                background:#1B2258 url(../images/common/sns-p.svg) no-repeat 50% 50% / 2.1rem;
             }
             &[data-sns="f"]::after { 
-                background:#1B2258 url(../../images/common/sns-f.svg) no-repeat 50% 50% / 1.1rem;
+                background:#1B2258 url(../images/common/sns-f.svg) no-repeat 50% 50% / 1.1rem;
             }
             &[data-sns="i"]::after { 
-                background:#1B2258 url(../../images/common/sns-i.svg) no-repeat 50% 50% / 2.4rem;
+                background:#1B2258 url(../images/common/sns-i.svg) no-repeat 50% 50% / 2.4rem;
             }
             &[data-sns="y"]::after { 
-                background:#1B2258 url(../../images/common/sns-y.svg) no-repeat 50% 50% / 2.4rem;
+                background:#1B2258 url(../images/common/sns-y.svg) no-repeat 50% 50% / 2.4rem;
             }
         }
         .sns-link:hover::after{
@@ -192,7 +192,7 @@
     .ico-top {
         aspect-ratio:16/12;
         width:1.6rem;
-        background:url("../../images/common/top.svg") no-repeat 50% 50%;
+        background:url("../images/common/top.svg") no-repeat 50% 50%;
         background-size:contain;
     }
     @media screen and (max-width:1023px) {

@@ -148,9 +148,9 @@
             width:4rem;
             height:4rem;
             transform:translateY(-.2rem);
-            background:url(../../images/common/swiper-pause.svg) no-repeat 50% 50% / .8rem;
+            background:url(../images/common/swiper-pause.svg) no-repeat 50% 50% / .8rem;
             &[data-state="pause"] {
-                 background:url(../../images/common/swiper-play.svg) no-repeat 50% 50% / .8rem;
+                 background:url(../images/common/swiper-play.svg) no-repeat 50% 50% / .8rem;
             }
         }
         @media screen and (max-width:1400px) {
@@ -219,7 +219,7 @@
                 display:block;
                 width:3.4rem;
                 height:1.5rem;
-                background:url(../../images/common/link-arrow.svg) no-repeat 50% 50% / 3.4rem;
+                background:url(../images/common/link-arrow.svg) no-repeat 50% 50% / 3.4rem;
             }
             img {
                 width:20rem; 
@@ -273,7 +273,7 @@
             justify-content:center;
             align-items:center;
             flex:1;
-            background:url(../../images/main/etc-visual.jpg) no-repeat 50% 90% / cover;
+            background:url(../images/main/etc-visual.jpg) no-repeat 50% 90% / cover;
         }
         .logo {
             width:30.8rem; 
@@ -299,7 +299,7 @@
                         color:#fff;
                     }
                     dt::before {
-                        background-image:url(../../images/common/simbol-white.svg);
+                        background-image:url(../images/common/simbol-white.svg);
                     }
                 }
                 &:nth-child(2) {
@@ -323,7 +323,7 @@
                 display:block;
                 width:6rem;
                 height:4.5rem;
-                background:url(../../images/common/simbol.svg) no-repeat 50% 50% / 6rem;
+                background:url(../images/common/simbol.svg) no-repeat 50% 50% / 6rem;
                 margin-bottom:4.8rem;
             }
             dd {
@@ -351,7 +351,7 @@
 
                     &:nth-child(2) {
                         dt,dd {color:#fff;}
-                        dt::before {background-image:url(../../images/common/simbol-white.svg)}
+                        dt::before {background-image:url(../images/common/simbol-white.svg)}
                     }
                 }
                 dt {font-size:2.5rem; margin-bottom:2rem;flex-direction:column; display:flex; line-height:1.4;}
@@ -435,7 +435,7 @@
         opacity:1;
         left:auto;
         right:auto;
-        background:url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
+        background:url(../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
     }
     .swiper-button-prev {
         left:-4.8rem;
@@ -492,7 +492,7 @@
         position:absolute;
         width:9.2rem;
         height:0.7rem;
-        background:url(../../images/common/ico-more.svg) no-repeat 0 50% / 9.2rem;
+        background:url(../images/common/ico-more.svg) no-repeat 0 50% / 9.2rem;
     }
 }
 
@@ -621,7 +621,7 @@
                 margin-bottom:2rem;
             }
             a:nth-child(2) dt::before {
-                background-image:url(../../images/common/simbol-white.svg);
+                background-image:url(../images/common/simbol-white.svg);
             }
             dd {
                 font-size:1.2rem; 

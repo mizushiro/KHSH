@@ -2,10 +2,10 @@
     .base-header {
         background-color:transparent;
 
-        .logo { background-image:url(../../images/common/logo.svg);}
-        .btn-nav {background-image:url(../../images/common/ico-nav.svg);}
-        .btn-search {background-image:url(../../images/common/ico-search.svg);}
-        .btn-etc-nav {background-image:url(../../images/common/ico-nav.svg);}
+        .logo { background-image:url(../images/common/logo.svg);}
+        .btn-nav {background-image:url(../images/common/ico-nav.svg);}
+        .btn-search {background-image:url(../images/common/ico-search.svg);}
+        .btn-etc-nav {background-image:url(../images/common/ico-nav.svg);}
         .nav-dep1-item {color:#fff;}
         .nav-dep1-link {color:#fff;}
     }   
@@ -17,7 +17,7 @@
     flex-shrink:0;
     width:21.2rem;
     height:2.8rem;
-    background:url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
+    background:url(../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
 
     @media screen and (max-width:1023px) {
         width:12.4rem;
@@ -69,22 +69,22 @@
         position:relative;
         width:5rem;
         height:5rem;
-        background:url(../../images/common/ico-nav-dark.svg) no-repeat 50% 50% / 2.3rem;
+        background:url(../images/common/ico-nav-dark.svg) no-repeat 50% 50% / 2.3rem;
     }
     .btn-search {
         position:relative;
         width:5rem;
         height:5rem;
-        background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+        background:url(../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
     }
     .btn-etc-nav {
         position:relative;
         width:5rem;
         height:5rem;
-        background:url(../../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
+        background:url(../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
 
         /* &[data-toggle-state="true"] {
-        background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
+        background:url(../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
         } */
     }
 
@@ -95,12 +95,12 @@
         .btn-etc-nav {
             width:3rem;
             height:3rem;
-            background:url(../../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
+            background:url(../images/common/ico-nav.svg) no-repeat 50% 50% / 2.3rem;
         }
         .btn-search {
             width:3rem;
             height:3rem;
-            background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 2.5rem;
+            background:url(../images/common/ico-search.svg) no-repeat 50% 50% / 2.5rem;
         }
     }
 }
@@ -197,17 +197,17 @@
     background-color:rgba(255,255,255,1);
 
     .logo {
-        background-image:url(../../images/common/logo-dark.svg)
+        background-image:url(../images/common/logo-dark.svg)
     }
     .btn-search {
-        background-image:url(../../images/common/ico-search-dark.svg);
+        background-image:url(../images/common/ico-search-dark.svg);
     }
     .nav-dep1-link {
         color:#000;
     }
     .btn-etc-nav,
     .btn-nav {
-        background-image:url(../../images/common/ico-nav-dark.svg);
+        background-image:url(../images/common/ico-nav-dark.svg);
     }
 }
 
@@ -217,9 +217,9 @@
         height:60rem;
         transition:background-color 0.3s cubic-bezier(.07,.26,0,.93), height 0.4s cubic-bezier(.07,.26,0,.93);
 
-        .logo {background-image:url(../../images/common/logo-dark.svg)}
-        .btn-search {background-image:url(../../images/common/ico-search-dark.svg);}
-        .btn-etc-nav {background-image:url(../../images/common/ico-nav-dark.svg);}
+        .logo {background-image:url(../images/common/logo-dark.svg)}
+        .btn-search {background-image:url(../images/common/ico-search-dark.svg);}
+        .btn-etc-nav {background-image:url(../images/common/ico-nav-dark.svg);}
         .nav-dep2 {opacity:1;transition:opacity 0.4s ease-in;}
         .nav-dep2-item > a {pointer-events:initial;}
         .nav-dep1-link {

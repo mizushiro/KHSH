@@ -18,7 +18,7 @@
         display:block;
         width:0.8rem;
         height:1.2rem;
-        background:url(../../images/common/ico-breadcrumbs-arrow.svg) no-repeat 50% 50% / 0.8rem;
+        background:url(../images/common/ico-breadcrumbs-arrow.svg) no-repeat 50% 50% / 0.8rem;
         margin-right:2.4rem;
     }
     li:first-child::before {
@@ -183,7 +183,7 @@
         display:block;
         aspect-ratio:33/34;
         width:2rem;
-        background:url(../../images/common/ico-tel.svg) no-repeat 50% 50%;
+        background:url(../images/common/ico-tel.svg) no-repeat 50% 50%;
         background-size:contain;
     }
     @media screen and (max-width:1023px) {
@@ -202,7 +202,7 @@
     align-items:center;
     flex-shrink:0;
     aspect-ratio:501/327;
-    background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+    background:url("../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
     background-size:cover;
     img {
         display:block;
@@ -293,18 +293,18 @@
         padding:0 0.4rem;
     }
     .paging-first {
-        background:url(../../images/common/paging-arrow2.svg) no-repeat 50% 50% / 2.1rem;
+        background:url(../images/common/paging-arrow2.svg) no-repeat 50% 50% / 2.1rem;
     }
     .paging-last {
-        background:url(../../images/common/paging-arrow2.svg) no-repeat 50% 50% / 2.1rem;
+        background:url(../images/common/paging-arrow2.svg) no-repeat 50% 50% / 2.1rem;
         rotate:180deg;
     }
     .paging-next {
-        background:url(../../images/common/paging-arrow.svg) no-repeat 50% 50% / 2.1rem;
+        background:url(../images/common/paging-arrow.svg) no-repeat 50% 50% / 2.1rem;
         rotate:180deg;
     }
     .paging-prev {
-        background:url(../../images/common/paging-arrow.svg) no-repeat 50% 50% / 2.1rem;
+        background:url(../images/common/paging-arrow.svg) no-repeat 50% 50% / 2.1rem;
     }
     @media screen and (max-width:1023px) {
         padding:6rem 0;
@@ -475,7 +475,7 @@
     align-items:center;
     flex-shrink:0;
     align-self:flex-start;
-    background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+    background:url("../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
     background-size:cover;
     .ico-no-data-logo {
         opacity:.2;
@@ -644,7 +644,7 @@
     justify-content:center;
     align-items:center;
     flex-shrink:0;
-    background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+    background:url("../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
     background-size:cover;
     .ico-no-data-logo {
         opacity:.2;
@@ -668,7 +668,7 @@
     opacity:1;
     left:auto;
     right:auto;
-    background:rgba(255,255,255,0.8) url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
+    background:rgba(255,255,255,0.8) url(../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
     @media screen and (max-width:1023px) {
         width:3rem;
         height:3rem;
@@ -737,7 +737,7 @@
         &[data-expanded="true"] {
             .mdl-acco-btn {
                 &::after {
-                    background-image:url("../../images/common/ico-minus.svg");
+                    background-image:url("../images/common/ico-minus.svg");
                 }
             }
         }
@@ -755,7 +755,7 @@
             background-position:50% 50%;
             background-repeat:no-repeat;
             background-size:contain;
-            background-image:url("../../images/common/ico-plus.svg");
+            background-image:url("../images/common/ico-plus.svg");
         }
         @media screen and (max-width:1023px) {
             padding-right:1rem;
@@ -902,7 +902,7 @@
             height:6rem;
             border-radius:999em;
             border:1px solid var(--navy);
-            background-image:url(../../images/common/swiper-arrow-dark.svg);
+            background-image:url(../images/common/swiper-arrow-dark.svg);
             background-repeat:no-repeat;
             background-position:50% 50%;
             background-size:1.2rem;
@@ -911,7 +911,7 @@
             }
             &:hover {
                 background-color:var(--navy);
-                background-image:url(../../images/common/swiper-arrow.svg);
+                background-image:url(../images/common/swiper-arrow.svg);
             }
         }
     }
@@ -941,10 +941,10 @@
         padding-right:2rem;
         [data-state="selected"] {
             .icon-list-type1 {
-                background-image:url("../../images/common/ico-list-type1.svg");
+                background-image:url("../images/common/ico-list-type1.svg");
             }
             .icon-list-type2 {
-                background-image:url("../../images/common/ico-list-type2.svg");
+                background-image:url("../images/common/ico-list-type2.svg");
             }
         }
     }
@@ -1005,10 +1005,10 @@
     width:2rem;
 }
 .icon-list-type1 {
-    background-image:url("../../images/common/ico-list-type1-dark.svg");
+    background-image:url("../images/common/ico-list-type1-dark.svg");
 }
 .icon-list-type2 {
-    background-image:url("../../images/common/ico-list-type2-dark.svg");
+    background-image:url("../images/common/ico-list-type2-dark.svg");
 }
 .swiper-dayselect { 
     position: relative;
@@ -1044,7 +1044,7 @@
         width: 8.1rem;
         height: 8rem;
         border: 1px solid #ccc;
-        background-image: url(../../images/common/swiper-arrow-gray.svg);
+        background-image: url(../images/common/swiper-arrow-gray.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: 1.2rem;
@@ -1060,7 +1060,7 @@
         width: 8.1rem;
         height: 8rem;
         border: 1px solid #ccc;
-        background-image: url(../../images/common/swiper-arrow-gray.svg);
+        background-image: url(../images/common/swiper-arrow-gray.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: 1.2rem;
@@ -1367,7 +1367,7 @@
     aspect-ratio:25/30;
     width:2.5rem;
     display:block;
-    background:url("../../images/common/ico-noti.svg") no-repeat 50% 50%;
+    background:url("../images/common/ico-noti.svg") no-repeat 50% 50%;
     background-size:contain;
 }
 .admin-image {
@@ -1446,7 +1446,7 @@
         position: relative;
         aspect-ratio:1/1;
         width:3.8rem;
-        background: url(../../images/common/ico-search-dark.svg) no-repeat 50% 50% / 1.6rem;
+        background: url(../images/common/ico-search-dark.svg) no-repeat 50% 50% / 1.6rem;
         flex-shrink:0;
         @media screen and (max-width:1023px) {
             width:2.8rem;

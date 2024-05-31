@@ -844,14 +844,14 @@
             display:flex;
             justify-content:center;
             align-items:center;
-            background:url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1rem;
+            background:url(../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1rem;
             
             &.next-month {
                 rotate:180deg;
             }
             &:hover {
                 background-color:var(--navy);
-                background-image:url(../../images/common/swiper-arrow.svg);
+                background-image:url(../images/common/swiper-arrow.svg);
             }
         }
     }

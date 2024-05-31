@@ -16,7 +16,7 @@
             background-color:#545A8E;
         }
         .btn-search {
-            background-image:url(../../images/common/ico-search.svg);
+            background-image:url(../images/common/ico-search.svg);
         }
         input {
             color:var(--white);
@@ -64,7 +64,7 @@
         aspect-ratio:1/1;
         border-radius:50%;
         flex-shrink:0;
-        background:var(--navy) url(../../images/common/input-clear.svg) no-repeat 50% 50%;
+        background:var(--navy) url(../images/common/input-clear.svg) no-repeat 50% 50%;
         background-size:1rem;
         @media screen and (max-width:1023px) {
             width:2rem;
@@ -75,7 +75,7 @@
         width:2.8rem;
         aspect-ratio:1/1;
         flex-shrink:0;
-        background:url(../../images/common/ico-search-dark.svg) no-repeat 50% 50%;
+        background:url(../images/common/ico-search-dark.svg) no-repeat 50% 50%;
         background-size:contain;
         @media screen and (max-width:1023px) {
             width:2rem;
@@ -332,7 +332,7 @@
        aspect-ratio:410/262;
         width:41rem;
         flex-shrink:0;
-        background:url("../../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
+        background:url("../images/common/no-data-card-bg-wide.jpg") 50% 50% no-repeat;
         background-size:cover;
         display:flex;
         align-items:center;

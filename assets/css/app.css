@@ -9326,7 +9326,7 @@ html[data-modal=show] body {
   font-weight: 500;
   line-height: 2.4rem;
   padding: 1.8rem 2.4rem;
-  word-break: keep-all;
+  word-break: break-all;
   gap: 1rem;
 }
 .fake-table-box .fake-table-item .fake-table-item-cell[data-type=title] {
@@ -11669,9 +11669,10 @@ html[data-modal=show] body {
   margin-bottom: 0;
 }
 [data-brand=history] .history-tit {
+  transform: scale(1, 0.85);
   font-family: "Poppins";
   font-size: 12rem;
-  color: var(--navy);
+  color: var(--skyblue);
   font-weight: 600;
   position: sticky;
   top: 10rem;
@@ -12727,7 +12728,7 @@ html[data-modal=show] body {
 }
 [data-page=story] [data-scroll-on=true].s4 .story-group .brand-BI-logo {
   opacity: 1;
-  transition: opacity 5.8s ease-in;
+  transition: opacity 3.5s ease-in;
 }
 @media screen and (max-width: 1023px) {
   [data-page=story] .story-text-group {

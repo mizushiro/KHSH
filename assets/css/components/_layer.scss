@@ -106,7 +106,7 @@ html[data-modal="show"] body {
         width:3rem;
         height:3rem;
         z-index:10;
-        background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
+        background:url(../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
 
         @media screen and (max-width:1023px) {
             width:2.2rem;
@@ -562,15 +562,15 @@ html[data-modal="show"] body {
                 top:4rem;
                 right:1rem;
                 z-index:10;
-                background:url(../../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
+                background:url(../images/common/ico-nav-close.svg) no-repeat 50% 50% / 2.2rem;
             }
             .logo {
-                background-image:url(../../images/common/logo-dark.svg) !important;
+                background-image:url(../images/common/logo-dark.svg) !important;
             }
 
             @media (max-width:1023px) {
                 .logo {
-                    background-image:url(../../images/common/logo.svg) !important;
+                    background-image:url(../images/common/logo.svg) !important;
                 } 
             }
         }
@@ -731,7 +731,7 @@ html[data-modal="show"] body {
                     padding-right:0;
 
                     .logo {
-                        background-image:url(../../images/common/logo.svg);
+                        background-image:url(../images/common/logo.svg);
                         background-size:12.4rem 1.6rem;
                     }
                 }
@@ -746,7 +746,7 @@ html[data-modal="show"] body {
                     top:0 ;
                     right:0;
                     z-index:10;
-                    background:url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+                    background:url(../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
                 }
             }
             &[data-state="hide"] {
@@ -825,7 +825,7 @@ html[data-modal="show"] body {
                         display:block;
                         width:2.3rem;
                         height:2.3rem;
-                        background:url(../../images/common/nav-acco-open.svg) no-repeat 50% 50% / 2.3rem;
+                        background:url(../images/common/nav-acco-open.svg) no-repeat 50% 50% / 2.3rem;
                     }
                 }
                 .mdl-acco-head::after {
@@ -845,7 +845,7 @@ html[data-modal="show"] body {
                         transition:width .3s ease-in;
                     }
                     .mdl-acco-tit::after {
-                        background-image:url(../../images/common/nav-acco-close.svg)
+                        background-image:url(../images/common/nav-acco-close.svg)
                     }
                 }
                 .nav-dep2-link {
@@ -948,7 +948,7 @@ html[data-modal="show"] body {
             padding:0 4rem;
             border:0;
             .logo {
-                background:url(../../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
+                background:url(../images/common/logo.svg) no-repeat 0 0 / 21.2rem;
             }
             .layer-modal-header-wrap {
                 position:relative;
@@ -964,7 +964,7 @@ html[data-modal="show"] body {
                 top:0;
                 right:1rem;
                 z-index:10;
-                background:url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+                background:url(../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
             }
         }
         &[data-state="hide"] {
@@ -1017,7 +1017,7 @@ html[data-modal="show"] body {
                 width:2rem;
                 height:2rem;
                 border-radius:50%;
-                background:#545A8E url(../../images/common/input-clear.svg) no-repeat 50% 50% / 1rem;
+                background:#545A8E url(../images/common/input-clear.svg) no-repeat 50% 50% / 1rem;
             }
             .btn-search {
                 position:absolute;
@@ -1025,7 +1025,7 @@ html[data-modal="show"] body {
                 bottom:1.4rem;
                 width:3rem;
                 height:3rem;
-                background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+                background:url(../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
             }
         }
 
@@ -1051,7 +1051,7 @@ html[data-modal="show"] body {
                 .logo {
                     width:12.3rem;
                     height:1.6rem;
-                    background:url(../../images/common/logo.svg) no-repeat 0 0 / 12.3rem;
+                    background:url(../images/common/logo.svg) no-repeat 0 0 / 12.3rem;
                 }
 
                 .layer-modal-header-wrap {
@@ -1065,7 +1065,7 @@ html[data-modal="show"] body {
                     top:0;
                     right:0;
                     z-index:10;
-                    background:url(../../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
+                    background:url(../images/common/ico-nav-close-dark.svg) no-repeat 50% 50% / 2.2rem;
                 }
             }
             .layer-modal-body {
@@ -1101,7 +1101,7 @@ html[data-modal="show"] body {
                     width:2rem;
                     height:2rem;
                     border-radius:50%;
-                    background:#545A8E url(../../images/common/input-clear.svg) no-repeat 50% 50% / 1rem;
+                    background:#545A8E url(../images/common/input-clear.svg) no-repeat 50% 50% / 1rem;
                 }
                 .btn-search {
                     position:absolute;
@@ -1109,7 +1109,7 @@ html[data-modal="show"] body {
                     bottom:1.4rem;
                     width:3rem;
                     height:3rem;
-                    background:url(../../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
+                    background:url(../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;
                 }
             }
         }

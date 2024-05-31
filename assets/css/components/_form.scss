@@ -22,7 +22,7 @@
     &[type="date"] {
         position:relative;
         width:100%;
-        background:#fff url(../../images/common/ico-date.svg) no-repeat right 1.2rem top 0.4rem / 2.5rem;
+        background:#fff url(../images/common/ico-date.svg) no-repeat right 1.2rem top 0.4rem / 2.5rem;
         padding-right:4rem;
         &::-webkit-calendar-picker-indicator {
             position:absolute; 
@@ -68,7 +68,7 @@
                 display:block;
                 aspect-ratio:18/13;
                 width:1.8rem;
-                background:url("../../images/common/ico-check.svg") no-repeat 50% 50%;
+                background:url("../images/common/ico-check.svg") no-repeat 50% 50%;
                 background-size:contain;
             }
         }
@@ -185,7 +185,7 @@ select {
         display:block;
         aspect-ratio:5/9;
         width:.9rem;
-        background-image:url("../../images/common/ico-select.svg");
+        background-image:url("../images/common/ico-select.svg");
         background-position:50% 50%;
         background-repeat:no-repeat;
         background-size:contain;

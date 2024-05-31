@@ -1,7 +1,7 @@
 .ready-area {
     width:100%;
     min-height:100vh;
-    background:url("../../images/sub/ready-bg.png") no-repeat 50% 50% #0D134C;
+    background:url("../images/sub/ready-bg.png") no-repeat 50% 50% #0D134C;
     background-size:cover;
     display:flex;
     justify-content:center;
@@ -26,7 +26,7 @@
 }
 .ico-ready-logo {
     aspect-ratio:309/137;
-    background:url("../../images/sub/ready-logo.svg") no-repeat 50% 50%;
+    background:url("../images/sub/ready-logo.svg") no-repeat 50% 50%;
     background-size:contain;
     width:30.9rem;
     @media screen and (max-width:1023px) {

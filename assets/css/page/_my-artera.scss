@@ -793,7 +793,7 @@
             font-weight:500;
             line-height:2.4rem;
             padding:1.8rem 2.4rem;
-            word-break:keep-all;
+            word-break:break-all;
             gap:1rem;
             &[data-type="title"] {
                 justify-content:center;
@@ -988,7 +988,7 @@
         &[data-expanded="true"] {
             .mdl-acco-btn {
                 &::after {
-                    background-image:url("../../images/common/ico-minus.svg");
+                    background-image:url("../images/common/ico-minus.svg");
                 }
             }
         }
@@ -1006,7 +1006,7 @@
             background-position:50% 50%;
             background-repeat:no-repeat;
             background-size:contain;
-            background-image:url("../../images/common/ico-plus.svg");
+            background-image:url("../images/common/ico-plus.svg");
         }
         @media screen and (max-width:1023px) {
             padding-right:1rem;
@@ -1326,7 +1326,7 @@
 .ico-play-store {
     aspect-ratio:18/22;
     width:1.8rem;
-    background:url("../../images/sub/icon-play-store.svg") 50% 50% no-repeat;
+    background:url("../images/sub/icon-play-store.svg") 50% 50% no-repeat;
     background-size:contain;
     @media (max-width:1023px) {
         width:1.2rem;
@@ -1335,7 +1335,7 @@
 .ico-app-store {
     aspect-ratio:19/22;
     width:1.9rem;
-    background:url("../../images/sub/icon-app-store.svg") 50% 50% no-repeat;
+    background:url("../images/sub/icon-app-store.svg") 50% 50% no-repeat;
     background-size:contain;
     @media (max-width:1023px) {
         width:1.2rem;

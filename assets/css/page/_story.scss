@@ -92,9 +92,9 @@
                 height:4rem;
                 margin-right:1.2rem;
                 transform:translateY(-.2rem);
-                background:url(../../images/common/swiper-pause.svg) no-repeat 50% 50% / 1.2rem;
+                background:url(../images/common/swiper-pause.svg) no-repeat 50% 50% / 1.2rem;
                 &[data-state="pause"] {
-                     background:url(../../images/common/swiper-play.svg) no-repeat 50% 50% / 1.2rem;
+                     background:url(../images/common/swiper-play.svg) no-repeat 50% 50% / 1.2rem;
                 }
             }
             .sound-control {
@@ -225,7 +225,7 @@
         }
         &.s4 .story-group .brand-BI-logo {
             opacity: 1;
-            transition: opacity 5.8s ease-in;
+            transition: opacity 3.5s ease-in;
         }
     } 
 

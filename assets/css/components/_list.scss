@@ -9,7 +9,7 @@
 .ico-no-data-logo {
     aspect-ratio:160/93;
     width:16rem;
-    background:url("../../images/common/no-image-logo2.svg") no-repeat 50% 50%;
+    background:url("../images/common/no-image-logo2.svg") no-repeat 50% 50%;
     background-size:contain;
     @media screen and (max-width:1023px) {
         width:10rem;
@@ -31,7 +31,7 @@
         display:flex;
         justify-content:center;
         align-items:center;
-        background:url("../../images/common/no-data-card-bg.jpg") no-repeat 50% 50%;
+        background:url("../images/common/no-data-card-bg.jpg") no-repeat 50% 50%;
         background-size:cover;
         .ico-no-data-logo {
             opacity:.2;

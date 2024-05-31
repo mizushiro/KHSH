@@ -87,7 +87,7 @@
     aspect-ratio:53/39;
     display:block;
     width:5.3rem;
-    background:url("../../images/common/mini-logo.svg") no-repeat 50% 50% /contain;
+    background:url("../images/common/mini-logo.svg") no-repeat 50% 50% /contain;
     @media screen and (max-width:1023px) {
         width:2.4rem;
     }
@@ -133,7 +133,7 @@
         .sticky-wrapper {
             overflow: hidden;
             top:0;
-            background:url(../../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
+            background:url(../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
         }
         .sticky-timeline {
             height:200dvh;
@@ -733,10 +733,10 @@
         opacity:1;
         left:auto;
         right:auto;
-        background:url(../../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
+        background:url(../images/common/swiper-arrow-dark.svg) no-repeat 50% 50% / 1.2rem;
         &:hover {
             background-color:var(--navy);
-            background-image:url(../../images/common/swiper-arrow.svg);
+            background-image:url(../images/common/swiper-arrow.svg);
         }
     }
     .swiper-control-group {
@@ -845,16 +845,17 @@
     }
 }
 [data-brand="history"] {
-    background:#F8FCFF url(../../images/history/bg.png) no-repeat  calc(50% - 46rem ) 26rem / 57.6rem;
+    background:#F8FCFF url(../images/history/bg.png) no-repeat  calc(50% - 46rem ) 26rem / 57.6rem;
     background-attachment: initial;
 
     .sub-depth-nav {
         margin-bottom: 0;
     }
     .history-tit{
+        transform: scale(1, 0.85);
         font-family: 'Poppins';
         font-size: 12rem;
-        color: var(--navy);
+        color: var(--skyblue);
         font-weight: 600;
         position: sticky;
         top:10rem;
@@ -1010,7 +1011,7 @@
             padding-bottom: 1.2rem;
             padding-left: 0;
             z-index: 2;
-            background:#F8FCFF url(../../images/history/bg.png) no-repeat 50% 8rem/ 34rem;
+            background:#F8FCFF url(../images/history/bg.png) no-repeat 50% 8rem/ 34rem;
             background-attachment: fixed !important;
     
             .history-txt {
@@ -1081,11 +1082,11 @@
 
 .sound-control {
     z-index: 2;
-    background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
+    background: url(../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
     &[data-sound="off"] {
-        background: url(../../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
+        background: url(../images/common/ico-sound-off.svg) no-repeat 50% 50% / 1.6rem;
     }
     &[data-sound="on"] {
-        background: url(../../images/common/ico-sound-on.svg) no-repeat 50% 50% / 1.6rem;
+        background: url(../images/common/ico-sound-on.svg) no-repeat 50% 50% / 1.6rem;
     }
 }
