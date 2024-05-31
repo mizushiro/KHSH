@@ -11035,7 +11035,7 @@ html[data-modal=show] body {
   z-index: 1;
   width: 53.8rem;
   height: 23.3rem;
-  transition: all 2.2s ease-out;
+  transition: opacity 2.2s ease-out;
   opacity: 0;
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .brand-BI-logo svg {
@@ -11043,7 +11043,6 @@ html[data-modal=show] body {
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .brand-BI-logo svg path {
   fill: #fff;
-  transition: all 0.7s ease;
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .brand-BI-logo[data-state=view] {
   opacity: 1;
@@ -11089,7 +11088,7 @@ html[data-modal=show] body {
     flex-direction: column;
   }
   [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .sticky-group {
-    gap: 10rem;
+    gap: 0;
     flex-direction: column-reverse;
   }
   [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .brand-BI-head {
@@ -11113,8 +11112,7 @@ html[data-modal=show] body {
   }
   [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .brand-BI-logo {
     width: 27rem;
-    height: 12rem;
-    transform: translateY(10vh);
+    height: 27rem;
   }
 }
 [data-brand=BI] .bi-tit-line {
