@@ -11694,6 +11694,10 @@ html[data-modal=show] body {
   [data-brand=history] .sub-content {
     padding-bottom: 0;
   }
+  [data-brand=history] .history-tit {
+    margin-top: 10rem;
+    font-size: 4rem;
+  }
 }
 
 .history-wrap {
