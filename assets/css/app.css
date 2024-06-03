@@ -6352,6 +6352,11 @@ html[data-modal=show] body {
     flex: 1;
   }
 }
+@media screen and (max-width: 1023px) {
+  .main-section[data-sec=visual] .video-control-group {
+    bottom: 2rem !important;
+  }
+}
 .main-section[data-sec=story] {
   height: 100dvh;
   display: flex;
@@ -12757,6 +12762,7 @@ html[data-modal=show] body {
   }
   [data-page=story] .video-control-group {
     right: auto !important;
+    bottom: 2rem !important;
   }
 }
 
