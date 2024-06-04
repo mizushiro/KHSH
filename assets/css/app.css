@@ -3450,7 +3450,7 @@ html[data-modal=show] body {
   .layer-modal.all-menu .layer-modal-wrap {
     background-color: #fff;
     border-radius: 0;
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
     max-width: 34rem;
     animation-name: nav_show;
@@ -5086,7 +5086,7 @@ html[data-modal=show] body {
   .layer-modal.all-menu .layer-modal-wrap {
     background-color: #fff;
     border-radius: 0;
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
     max-width: 34rem;
     animation-name: nav_show;
@@ -6192,7 +6192,7 @@ html[data-modal=show] body {
   }  */
 }
 .main-section[data-sec=visual] {
-  height: 100dvh;
+  height: 100vh;
   display: flex;
 }
 .main-section[data-sec=visual] .dim {
@@ -6210,7 +6210,7 @@ html[data-modal=show] body {
 }
 .main-section[data-sec=visual] .swiper-slide {
   display: flex;
-  height: 100dvh;
+  height: 100vh;
   align-items: center;
   width: 100%;
 }
@@ -6358,7 +6358,7 @@ html[data-modal=show] body {
   }
 }
 .main-section[data-sec=story] {
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6381,7 +6381,7 @@ html[data-modal=show] body {
   width: 100%;
   max-width: 142.6rem;
   height: 72rem;
-  max-height: 70dvh;
+  max-height: 70vh;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: center;
@@ -6785,12 +6785,12 @@ html[data-modal=show] body {
   .main-section[data-sec=info] {
     padding: 0 2rem;
     height: 100%;
-    min-height: 100dvh;
+    min-height: 100vh;
   }
   .main-section[data-sec=news] {
     padding: 0 2rem;
     height: 100%;
-    min-height: 100dvh;
+    min-height: 100vh;
   }
   .main-section[data-sec=etc] {
     display: flex;
@@ -10974,7 +10974,7 @@ html[data-modal=show] body {
   outline: 1px solid blue;
 }
 [data-brand=BI] .sticky-timeline {
-  margin-top: -100dvh;
+  margin-top: -100vh;
   width: 100%;
 }
 [data-brand=BI] .sticky-wrapper {
@@ -10988,10 +10988,9 @@ html[data-modal=show] body {
   background: url(../images/BI/BI_1_bg.jpg) no-repeat 50% 50%/cover;
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-timeline {
-  height: 200dvh;
+  height: 200vh;
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item {
-  background-color: blue;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -11088,7 +11087,7 @@ html[data-modal=show] body {
 }
 @media screen and (max-width: 1023px) {
   [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-timeline {
-    height: 340dvh;
+    height: 340vh;
   }
   [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item {
     gap: 4rem;
@@ -11103,7 +11102,7 @@ html[data-modal=show] body {
     width: 100%;
     padding: 0 4rem;
     gap: 1.6rem;
-    margin-top: -60dvh;
+    margin-top: -60vh;
     transition: margin 1.2s ease-out;
   }
   [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item .brand-BI-head .brand-BI-head-txt {
@@ -12534,7 +12533,7 @@ html[data-modal=show] body {
   width: 100%;
 }
 [data-page=story] .story-section[data-sec=visual] {
-  height: 100dvh;
+  height: 100vh;
   display: flex;
 }
 [data-page=story] .story-section[data-sec=visual] .dim {
@@ -12627,7 +12626,7 @@ html[data-modal=show] body {
   height: 4rem;
 }
 [data-page=story] .story-section[data-sec=story] {
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12774,7 +12773,7 @@ html[data-modal=show] body {
 @keyframes cardZoom {
   0% {
     max-width: 116.8rem;
-    max-height: 70dvh;
+    max-height: 70vh;
   }
   100% {
     max-width: 100%;

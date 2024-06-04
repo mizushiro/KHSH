@@ -11,7 +11,7 @@
         width:100%;
 
         &[data-sec="visual"] {
-            height:100dvh;
+            height:100vh;
             display:flex;
             .dim {
                 position:absolute; 
@@ -104,7 +104,7 @@
             }
         }
         &[data-sec="story"] {
-            height:100dvh;
+            height:100vh;
             display:flex;
             justify-content:center;
             align-items:center;
@@ -267,7 +267,7 @@
 @keyframes cardZoom {
     0% {
         max-width:116.8rem;
-        max-height:70dvh;
+        max-height:70vh;
     }
     100% {
         max-width: 100%;

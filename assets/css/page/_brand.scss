@@ -121,7 +121,7 @@
         outline: 1px solid blue;
     }
     .sticky-timeline {
-        margin-top:-100dvh;
+        margin-top:-100vh;
         width:100%;
     }
     .sticky-wrapper {
@@ -138,10 +138,9 @@
             background:url(../images/BI/BI_1_bg.jpg) no-repeat 50% 50% / cover;
         }
         .sticky-timeline {
-            height:200dvh;
+            height:200vh;
         }
         .sticky-item {
-            background-color: blue;
             position:absolute;
             width:100%;
             height:100%;
@@ -254,7 +253,7 @@
 
         @media screen and (max-width:1023px) {
             .sticky-timeline {
-                height:340dvh;
+                height:340vh;
             }
             .sticky-item {
                 gap:4rem;
@@ -268,7 +267,7 @@
                     width:100%;
                     padding:0 4rem;
                     gap:1.6rem;
-                    margin-top: -60dvh;
+                    margin-top: -60vh;
                     transition:margin 1.2s ease-out;
 
                     .brand-BI-head-txt{
