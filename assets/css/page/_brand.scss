@@ -118,6 +118,7 @@
     }
     .bi-item {
         width:100%;
+        outline: 1px solid red;
     }
     .sticky-timeline {
         margin-top:-100dvh;
@@ -130,7 +131,7 @@
     }
     
     [data-scroll-callback="brand_BI_1"] {
-        outline: 1px solid red;
+        
         .sticky-wrapper {
             overflow: hidden;
             top:0;
