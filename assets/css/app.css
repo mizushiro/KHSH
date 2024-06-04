@@ -11451,6 +11451,9 @@ html[data-modal=show] body {
   justify-content: center;
   flex-direction: column;
 }
+.vod-wrap .swiper-button-lock {
+  display: none !important;
+}
 
 .vod-item {
   width: 120rem;

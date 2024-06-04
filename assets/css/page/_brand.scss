@@ -633,6 +633,9 @@
     display:flex;
     justify-content:center;
     flex-direction:column;
+    .swiper-button-lock {
+        display:none !important;
+    }
 }
 .vod-item {
     width:120rem;
