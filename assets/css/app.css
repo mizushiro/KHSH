@@ -10971,7 +10971,6 @@ html[data-modal=show] body {
 }
 [data-brand=BI] .bi-item {
   width: 100%;
-  outline: 1px solid blue;
 }
 [data-brand=BI] .sticky-timeline {
   margin-top: -100vh;
