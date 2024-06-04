@@ -10971,15 +10971,16 @@ html[data-modal=show] body {
 }
 [data-brand=BI] .bi-item {
   width: 100%;
+  outline: 1px solid red;
 }
 [data-brand=BI] .sticky-timeline {
   margin-top: -100dvh;
   width: 100%;
 }
 [data-brand=BI] .sticky-wrapper {
-  position: sticky;
+  position: relative;
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-wrapper {
   overflow: hidden;
@@ -10990,6 +10991,7 @@ html[data-modal=show] body {
   height: 200dvh;
 }
 [data-brand=BI] [data-scroll-callback=brand_BI_1] .sticky-item {
+  background-color: red;
   position: absolute;
   width: 100%;
   height: 100%;
