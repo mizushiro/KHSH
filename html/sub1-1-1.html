@@ -100,9 +100,22 @@
         document.addEventListener('DOMContentLoaded', () => {
             UI.exe.storyVod = document.querySelector('#storyVod');
             UI.exe.storyVod.controls = false;
+
+            const currentWidth = window.innerWidth;
+            if(currentWidth < 1024) {
+                UI.exe.storyVod.src = "../assets/images/story/brand_visual_video_mo.mp4";
+            }
+            
             UI.exe.storyVod.addEventListener('timeupdate', function(){
                 const progressBar = document.querySelector('#progress-bar');
-                progressBar.value = Math.floor((100 / UI.exe.storyVod.duration) * UI.exe.storyVod.currentTime);
+                const duration = UI.exe.storyVod.duration;
+                const currentTime = UI.exe.storyVod.currentTime;
+
+                if (isFinite(duration) && isFinite(currentTime) && duration > 0) {
+                    progressBar.value = Math.floor((100 / duration) * currentTime);
+                } else {
+                    progressBar.value = 0;
+                }
             }, false);
 
             const videoContral = document.querySelector('.video-control');
